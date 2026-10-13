@@ -48,5 +48,24 @@
   "limits": [
     "실기기 키보드 미검증",
     "기존 QA/성능 보류 유지"
-  ]
+  ],
+  "production": {
+    "commit": "e210e683ad1c2b688c0ad2e4f5cfc273e606bc10",
+    "deploymentId": "dpl_4Zn8ktEknRZCHBNh9kC7iJKLq9Jy",
+    "state": "READY",
+    "url": "https://it-center-food-map.vercel.app",
+    "http": 200,
+    "tilesLoaded": 35,
+    "teamsVisible": [
+      "백엔드개발팀",
+      "프론트엔드개발팀"
+    ],
+    "browserViewportChecks": [
+      "1440x900",
+      "390x844"
+    ],
+    "overflow": false,
+    "rankingPanel": true,
+    "fixtureWrites": false
+  }
 }
