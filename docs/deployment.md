@@ -53,3 +53,7 @@ vercel curl / --deployment <deployment-url> --scope tunggary2-navercoms-projects
 ## 첫 제품 릴리스 실행 기록
 
 2026-10-13 기능 PR #9 → develop, 릴리스 PR #10·#11 → main을 거쳤다. main `ccdd483705134e7c521a1913fd032b964fe65fe7`은 Production READY(`dpl_BujwNnjcZzkSdBxT1psmR8naP4FK`)이며 framework Vite/output dist와 운영 주소 HTTP200을 확인했다. 주요 직접 경로200·없는asset404·CSP, 운영 Supabase 공개읽기4개200·기본분류3/팀0/revision1도 확인했다. 초기 지도 SDK CSP 누락을 실제 CDN t1.kakaocdn.net 허용으로 수정했고, 지도 타일 최종 DOM/네트워크 검증은 메인 담당에 인계했다. 원본 QA56통과·9보류와 정식 성능 미통과를 유지하며 실제 팀·관리자 계정 입력이 남아 있다.
+
+## 지도 UI 개편 릴리스 (2026-10-14)
+
+기능 PR #17→develop `d56d726` 반영. 기능 `d2d7f87` Preview `it-center-food-bu86xw6xj-tunggary2-navercoms-projects.vercel.app` READY 및 vercel curl로 보호된 HTML/CSS/JS를 확인했다. 타입/build·Vitest24개와 로컬 실제 UI 검증을 통과했다. main PR #18 이후 Production 상태/커밋/운영 응답을 확인한다. 운영 팀2개 selectable=true·등록0·revision2이며 실기기/기존 성능 보류는 유지한다.
