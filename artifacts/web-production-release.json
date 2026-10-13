@@ -1,0 +1,145 @@
+{
+  "checkedAt": "2026-10-13T14:26:37.258Z",
+  "canonical": "https://it-center-food-map.vercel.app",
+  "commit": "6de5c32660cc5363b5d51bde22d97514ebb9e079",
+  "deployment": {
+    "id": "dpl_D1oTcbbXqbPt8EwUq65Y1fowk7fe",
+    "url": "it-center-food-jz8l5iztx-tunggary2-navercoms-projects.vercel.app",
+    "state": "READY",
+    "target": "production",
+    "framework": "vite",
+    "outputDirectory": "dist"
+  },
+  "responses": [
+    {
+      "path": "/",
+      "status": 200,
+      "root": true,
+      "csp": "default-src 'self'; script-src 'self' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.daumcdn.net https://*.kakao.com https://*.supabase.co; connect-src 'self' https://*.supabase.co https://dapi.kakao.com https://t1.daumcdn.net; object-src 'none'; base-uri 'self'; frame-ancestors 'self'",
+      "asset": "/assets/index-rqOvKHle.js"
+    },
+    {
+      "path": "/rankings",
+      "status": 200,
+      "root": true,
+      "csp": "default-src 'self'; script-src 'self' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.daumcdn.net https://*.kakao.com https://*.supabase.co; connect-src 'self' https://*.supabase.co https://dapi.kakao.com https://t1.daumcdn.net; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+    },
+    {
+      "path": "/booth",
+      "status": 200,
+      "root": true,
+      "csp": "default-src 'self'; script-src 'self' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.daumcdn.net https://*.kakao.com https://*.supabase.co; connect-src 'self' https://*.supabase.co https://dapi.kakao.com https://t1.daumcdn.net; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+    },
+    {
+      "path": "/admin",
+      "status": 200,
+      "root": true,
+      "csp": "default-src 'self'; script-src 'self' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.daumcdn.net https://*.kakao.com https://*.supabase.co; connect-src 'self' https://*.supabase.co https://dapi.kakao.com https://t1.daumcdn.net; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+    },
+    {
+      "path": "/register",
+      "status": 200,
+      "root": true,
+      "csp": "default-src 'self'; script-src 'self' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.daumcdn.net https://*.kakao.com https://*.supabase.co; connect-src 'self' https://*.supabase.co https://dapi.kakao.com https://t1.daumcdn.net; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+    },
+    {
+      "path": "/me",
+      "status": 200,
+      "root": true,
+      "csp": "default-src 'self'; script-src 'self' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.daumcdn.net https://*.kakao.com https://*.supabase.co; connect-src 'self' https://*.supabase.co https://dapi.kakao.com https://t1.daumcdn.net; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+    },
+    {
+      "path": "/targets/00000000-0000-4000-8000-000000000000",
+      "status": 200,
+      "root": true,
+      "csp": "default-src 'self'; script-src 'self' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.daumcdn.net https://*.kakao.com https://*.supabase.co; connect-src 'self' https://*.supabase.co https://dapi.kakao.com https://t1.daumcdn.net; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+    },
+    {
+      "path": "/assets/does-not-exist.js",
+      "status": 404,
+      "root": false,
+      "csp": "default-src 'self'; script-src 'self' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://*.daumcdn.net https://*.kakao.com https://*.supabase.co; connect-src 'self' https://*.supabase.co https://dapi.kakao.com https://t1.daumcdn.net; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+    }
+  ],
+  "asset": {
+    "path": "/assets/index-rqOvKHle.js",
+    "status": 200,
+    "productionRefEmbedded": false,
+    "stagingRefEmbedded": false,
+    "runtimeConfigChunks": [
+      {
+        "path": "/assets/api-vILhLlf8.js",
+        "status": 200,
+        "productionRefEmbedded": true,
+        "stagingRefEmbedded": false
+      }
+    ]
+  },
+  "backend": [
+    {
+      "path": "auth/v1/settings",
+      "status": 200,
+      "disable_signup": true
+    },
+    {
+      "path": "rest/v1/rpc/read_revision",
+      "status": 200,
+      "revision": "1"
+    },
+    {
+      "path": "rest/v1/rpc/read_catalog",
+      "status": 200,
+      "revision": "1",
+      "teamCount": 0,
+      "categoryCount": 3
+    },
+    {
+      "path": "rest/v1/rpc/read_explore",
+      "status": 200,
+      "revision": "1",
+      "pinCount": 0,
+      "rankingCount": 0
+    },
+    {
+      "path": "rest/v1/rpc/read_booth",
+      "status": 200,
+      "revision": "1",
+      "pinCount": 0
+    }
+  ],
+  "probeCorrection": "Initial release probe used a nonexistent RPC name and returned404; actual application read_* RPCs verified200.",
+  "final": {
+    "checkedAt": "2026-10-13T14:31:26.498Z",
+    "commit": "ccdd483705134e7c521a1913fd032b964fe65fe7",
+    "deployment": {
+      "id": "dpl_BujwNnjcZzkSdBxT1psmR8naP4FK",
+      "url": "it-center-food-fgg112oyx-tunggary2-navercoms-projects.vercel.app",
+      "state": "READY",
+      "target": "production",
+      "framework": "vite",
+      "outputDirectory": "dist"
+    },
+    "rootStatus": 200,
+    "cspAllowsObservedKakaoCDN": true,
+    "root": true,
+    "catalog": {
+      "status": 200,
+      "revision": "1",
+      "teams": 0,
+      "categories": [
+        {
+          "name": "맛집",
+          "kind": "PLACE"
+        },
+        {
+          "name": "산책",
+          "kind": "COURSE"
+        },
+        {
+          "name": "카페",
+          "kind": "PLACE"
+        }
+      ]
+    }
+  }
+}
