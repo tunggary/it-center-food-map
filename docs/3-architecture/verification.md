@@ -8,7 +8,7 @@
 
 | 게이트 | 수행 내용 | 통과/실패 기준 |
 | --- | --- | --- |
-| G1 무료 실행 환경 | Vite/React 빌드, Deno 공통 타입, SQL RPC 권한, Pages 직접 링크 | 유료 기능 없이 최소 읽기/쓰기 가능, 비밀 번들 노출0 |
+| G1 무료 실행 환경 | Vite/React 빌드, Deno 공통 타입, SQL RPC 권한, Vercel 직접 링크 | 유료 기능 없이 최소 읽기/쓰기 가능, 비밀 번들 노출0 |
 | G2 사진 | magick-wasm CLI 배포 번들·초기화·최대2MP JPEG 처리 | 실제 Edge CPU≤1.5초·메모리≤192MB 목표, 공급자 2초/256MB 상한 미초과. 형식/크기 우회 거절 |
 | G3 현장 입력 | iPhone Safari/Android Chrome 경로 점 추가·사진 선택·방향 | 실제 이름/경로 저장·HEIC 처리 안내·정상 JPEG 완결, Web Locks/저장소 초기화 확인 |
 | G4 공개 조회 성능 | 실제 무료 DB의 read_revision + snapshot +100명 | 별도 정상 부하에서 3초/2초/5초를 실측. 무료 API 무제한만 보고 통과시키지 않음 |

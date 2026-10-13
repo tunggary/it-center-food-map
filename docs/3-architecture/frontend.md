@@ -14,7 +14,7 @@
 | `/booth` | 전체 팀 카테고리별 랭킹·핀 필터·상단 순서 알림 |
 | `/admin/login`, `/admin/*` | 인증·목록 관리·정정·삭제 영향 확인 |
 
-React Router browser history를 쓰고 Pages의 SPA fallback을 설정한다. 직접 상세 링크/새로고침도 index.html을 받아야 하며 JS/CSS/없는 asset까지 HTML로 바꾸지 않는다. API는 Supabase URL로 명시적으로 호출한다.
+React Router browser history를 쓰고 Vercel의 `vercel.json`에 SPA rewrite를 설정한다. 구현 시 `/`, `/rankings`, `/targets/:id`, `/register`, `/courses/new`, `/me/:path*`, `/booth`, `/admin/:path*`만 `/index.html`로 연결한다. 직접 상세 링크/새로고침도 index.html을 받아야 하며 JS/CSS/없는 asset까지 HTML로 바꾸지 않는다. API는 Supabase URL로 명시적으로 호출한다.
 
 서버 데이터는 Query, 필터는 URL, 작성 초안은 작성 화면 상태, 자격만 localStorage다. 서버 count를 optimistic +1로 확정하지 않는다. 성공 응답과 최신 상세를 확인한 뒤 완료 표시한다. 새 등록의 category가 원래 필터와 달라 안 보이면 상세 전체 보기로 전환하되 돌아갈 필터는 보존한다.
 

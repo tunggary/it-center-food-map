@@ -4,7 +4,7 @@
 
 ## 참여자 자격
 
-Cloudflare Pages와 Supabase는 서로 다른 출처다. Supabase 도메인의 쿠키를 Pages에서 같은 출처 cookie처럼 사용할 수 있다고 가정하지 않는다. **참여자 bearer 토큰을 앱 origin의 localStorage에 보관**한다. HttpOnly 보호를 포기하는 대가가 있으므로 외부 HTML 삽입 금지·CSP·토큰 로그 금지를 적용한다.
+Vercel 정적 앱과 Supabase는 서로 다른 출처다. Supabase 도메인의 쿠키를 Vercel 앱에서 같은 출처 cookie처럼 사용할 수 있다고 가정하지 않는다. **참여자 bearer 토큰을 앱 origin의 localStorage에 보관**한다. HttpOnly 보호를 포기하는 대가가 있으므로 외부 HTML 삽입 금지·CSP·토큰 로그 금지를 적용한다.
 
 1. 지도/랭킹 열람에는 토큰이 필요 없다. 작성/내 정보 진입 때 `foodmap.identity` Web Lock을 얻고 저장소를 다시 읽는다.
 2. 자격이 없으면 `crypto.getRandomValues`로 32바이트 토큰을 생성하여 **네트워크 요청 전에** 저장한다. 서버가 원문을 발급한 뒤 응답이 유실되는 문제를 피한다.
@@ -44,7 +44,7 @@ Data API 노출 schema는 `public`. 테이블은 `app_private`에 둔다. `publi
 
 ## 브라우저 보안·요청 제한
 
-CORS는 운영 pages.dev origin·지정한 preview origin·로컬 개발 origin만 정확히 허용한다. 쓰기는 Origin도 검사하지만 CORS/Origin을 인증 대용으로 사용하지 않는다. custom bearer는 브라우저가 타 사이트에 자동 첨부하지 않으므로 쿠키 기반 CSRF 토큰은 사용하지 않는다. XSS에는 취약하므로 문구·닉네임·코스명은 텍스트로만 렌더링한다.
+CORS는 운영 프로젝트의 정확한 vercel.app origin·지정한 preview origin·로컬 개발 origin만 정확히 허용한다. 모든 `*.vercel.app`을 허용하지 않는다. 카카오 JS 키의 웹 도메인도 같은 실제 운영 주소와 허용할 preview 주소로 제한한다. 쓰기는 Origin도 검사하지만 CORS/Origin을 인증 대용으로 사용하지 않는다. custom bearer는 브라우저가 타 사이트에 자동 첨부하지 않으므로 쿠키 기반 CSRF 토큰은 사용하지 않는다. XSS에는 취약하므로 문구·닉네임·코스명은 텍스트로만 렌더링한다.
 
 CSP는 self 스크립트와 검증한 카카오 SDK 출처만 허용하고 object-src none, base-uri self를 적용한다. 허용 목록은 실제 SDK 네트워크로 검증한다. API 응답·사진은 `no-store`, `X-Content-Type-Options: nosniff`.
 

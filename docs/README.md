@@ -1,7 +1,7 @@
 # 프로젝트 구축 및 개선 절차
 
 완성차 IT 센터 CA 활동의 한 부스에서 함께 참여할 웹 서비스를 아래 순서로 구축한다.
-현재는 PRD·사용자 스토리 전체를 바탕으로 **[무료 운영 세부 설계](3-architecture/README.md)**를 작성했다. 스택·인증·DB·API·화면·동기화·사진·운영·검증을 주제별로 나눠 `docs/3-architecture/`에 모았다. 월0원·기존 자원 없음·행사 집중 사용은 확정이고, 휴면/제품 정책의 일부 기본값은 가정이다. 문서 작성 완료와 구현·단계 전체 완료는 구분한다.
+현재는 PRD·사용자 스토리 전체를 바탕으로 **[무료 운영 세부 설계](3-architecture/README.md)**를 작성했다. 스택·인증·DB·API·화면·동기화·사진·운영·검증을 주제별로 나눠 `docs/3-architecture/`에 모았다. 월0원·개인 프로젝트·Vercel Hobby 배포·기존 자원 없음·행사 집중 사용은 확정이고, 휴면/제품 정책의 일부 기본값은 가정이다. 문서 작성 완료와 구현·단계 전체 완료는 구분한다.
 
 ## 작성 문서
 
@@ -36,11 +36,13 @@
 
 - 배포 파이프라인 작업 (2026-10-13): 개인 계정 `tunggary2@naver.com`의 Hobby scope `tunggary2-navercoms-projects`에 `it-center-food-map` 프로젝트를 생성하고 GitHub 저장소를 연결했다. API로 개인 소유·Hobby·저장소 연결·Production 브랜치 `main`을 확인했다. 정적 준비 페이지와 `public/` 출력 설정, [배포 절차](deployment.md)를 추가하고 최초 Git 자동 배포 `48f0a16`의 READY·보호된 배포 HTML·[Production](https://it-center-food-map.vercel.app)의 HTTP 200을 확인했다. 제품 구현·QA·피드백 창구는 미완료이므로 단계 체크는 유지한다. 후속 feature·develop·release Preview READY와 PR #4 머지 후 main `d68541b`의 Production READY·운영 페이지 응답도 확인했다. 관리 콘솔은 https://vercel.com/tunggary2-navercoms-projects/it-center-food-map 이다. 다음 작업은 React/Vite 앱과 Supabase·카카오 연동 구현이다. 기존 폴더의 미커밋 Vercel 설계 변경은 별도 작업으로 보존한다.
 
+- 배포처 변경 작업 (2026-10-13): 사용자 지정에 따라 개인 프로젝트의 정적 웹 배포를 Vercel Hobby로 변경했다. React/Vite·Supabase·카카오 구성은 유지하고 `vercel.app`, SPA rewrite, CORS/지도 허용 도메인, Vercel CDN 요청/전송 한도를 관련 설계·ADR·PRD에 반영했다. `feature/vercel-hobby-docs` 브랜치에서 문서만 수정했으며 서비스 생성·배포는 수행하지 않았다. 로컬 링크·앵커426개와 `git diff --check`를 확인해 통과했다. Cloudflare 표기는 이전 결정/대안 이력에만 남았고 QA 미실행44·판정 보류21 상태를 유지했다.
+
 - 저장소 공개 작업 (2026-10-13): [tunggary/it-center-food-map](https://github.com/tunggary/it-center-food-map) 공개 저장소를 생성했다. 기존 설계 문서 35개와 프로젝트 지침을 `feature/design-docs` 브랜치에 업로드하고, 루트 README에 주요 문서 링크를 추가했다. GitHub의 공개 설정과 원격 파일 목록, 로컬 문서 링크의 대상 파일 존재를 확인했다. `develop`·`main`에는 PR을 거쳐 반영한다. 저장소 공개는 제품 배포가 아니므로 단계별 체크 상태는 유지한다. 제품 관련 남은 사항과 다음 작업은 아래와 같다.
 
 - 작업일: 2026-10-13
 - 이전 작업: PRD·스토리16개·QA65개와 최초 유료 기반 설계를 작성했다. 이후 사용자에게 월0원·기존 자원 없음·행사 집중 후 가끔 사용이라는 답변을 받았다.
-- 진행 내용·주요 결정: 무료 세부 설계안을 `docs/3-architecture/`에 모았다. React/Vite·Cloudflare Pages Free·Supabase Free·카카오 지도를 선택하고, 공개 읽기 RPC와 Edge 쓰기 검증/단일 DB 트랜잭션을 분리했다. 기존 제안 ADR6개를 같은 번호로 개정하고 PRD §10에는 합의된 비용 조건만 반영했다.
+- 이전 무료안의 진행 내용·주요 결정: 무료 세부 설계안을 `docs/3-architecture/`에 모았다. React/Vite·Cloudflare Pages Free·Supabase Free·카카오 지도를 선택하고, 공개 읽기 RPC와 Edge 쓰기 검증/단일 DB 트랜잭션을 분리했다. 기존 제안 ADR6개를 같은 번호로 개정하고 PRD §10에는 합의된 비용 조건만 반영했다.
 - 재검토: 무료 Realtime의 초당100메시지 제한을 확인해 대화 중 잠정 추천을 철회했다. 변경 감지는 Data API 직접2초조회, 부스 알림은 DB 기록으로 분리한다. 서로 다른 출처의 참여자 자격은 bearer+해시, 사진은 작은 JPEG+Edge WASM으로 바꿨다. 유료 자동 백업 대신 수동 복원 절차와 실제 한계를 기록했다.
 - 검증: 공식 문서·요금/한도·패키지 후보를 확인했다. 문서35개·설계폴더20개를 대상으로 로컬 링크/앵커421개, 스토리16개·QA65개·DEC12개·드라이버18개 연결, ADR6개의 필수 절을 점검해 통과했다. 이전 스택은 대안/변경 이력으로만 남도록 확인했다. 제품 코드·서비스 개설·배포·실제 성능 시험은 수행하지 않았다. 기존 QA 미실행44·판정 보류21 유지.
 - 남은 사항: 질문한 휴면 수동 재개 허용 여부, 실제 행사 조건/팀 목록/지도 권한, 제품 정책 기본안 검토. 세부 설계안은 작성 완료이며 ADR 상태는 미검증 가정을 구분하기 위해 제안됨으로 유지한다. 첫 버전 범위/시각 디자인/제품 검증이 모두 완료된 것은 아니므로 단계1~3 전체 체크는 유지한다.

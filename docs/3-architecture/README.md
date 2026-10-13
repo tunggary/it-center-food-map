@@ -2,11 +2,11 @@
 
 [프로젝트 진행](../README.md) · [PRD](../1-prd.md) · [사용자 스토리](../2-user-story.md) · [용어](../../GLOSSARY.md)
 
-최종 갱신: 2026-10-13. **세부 설계안 작성 완료, 구현·성능 검증 전**. 예산은 월 0원, 기존 유료 자원 없이 새 구성, 행사에 사용이 집중되고 이후 가끔 참여한다는 사용자 답변을 반영했다. 미확인 제품 정책은 [기본안과 가정](policies.md)으로 구분한다.
+최종 갱신: 2026-10-13. **세부 설계안 작성 완료, 구현·성능 검증 전**. 예산은 월 0원, 기존 유료 자원 없이 새 구성, 행사에 사용이 집중되고 이후 가끔 참여한다는 사용자 답변을 반영했다. 사용자가 개인 프로젝트로 운영하고 Vercel을 사용하기로 정해 정적 배포처를 Vercel Hobby로 변경했다. 미확인 제품 정책은 [기본안과 가정](policies.md)으로 구분한다.
 
 ## 결론
 
-**React/Vite 정적 앱 + Cloudflare Pages Free + Supabase Free(PostgreSQL·Edge Functions·Storage·관리자 Auth) + 카카오 지도**를 사용한다.
+**React/Vite 정적 앱 + Vercel Hobby + Supabase Free(PostgreSQL·Edge Functions·Storage·관리자 Auth) + 카카오 지도**를 사용한다.
 
 - 공개 조회와 변경 번호 확인은 **Data API의 읽기 전용 RPC**를 직접 호출한다. 2초 조회마다 Edge Function을 실행하지 않는다.
 - 참여자 자격·검색·쓰기·사진은 Edge Functions에서 검증한다. 여러 데이터 변경은 **DB 함수 한 번 = 트랜잭션 한 번**으로 처리한다.
@@ -35,11 +35,11 @@
 
 ## ADR
 
-아래 6개는 기존 `제안됨` ADR을 같은 번호로 개정했다. 기존 승인 결정을 조용히 뒤집은 것은 아니며, 각 문서 끝에 변경 이력을 남겼다. **모두 제안됨**: 무료 예산은 합의됐지만 세부 운영 가정과 실제 검증이 남아 있다.
+아래 6개는 기존 `제안됨` ADR을 같은 번호로 개정했다. 기존 승인 결정을 조용히 뒤집은 것은 아니며, 각 문서 끝에 변경 이력을 남겼다. **모두 제안됨**: 무료 예산과 개인 프로젝트의 Vercel 배포처는 확정됐지만 세부 운영 가정과 실제 검증이 남아 있다.
 
 | 번호 | 결정 |
 | --- | --- |
-| [0001](adr/0001-modular-monolith-stack.md) | 정적 앱과 관리형 무료 백엔드로 역할 분리 |
+| [0001](adr/0001-modular-monolith-stack.md) | Vercel Hobby 정적 앱과 Supabase 무료 백엔드로 역할 분리 |
 | [0002](adr/0002-domain-and-transactions.md) | 정규화 원장과 DB 함수 트랜잭션 |
 | [0003](adr/0003-identity-and-authorization.md) | 브라우저 bearer 자격과 관리자 인증 분리 |
 | [0004](adr/0004-kakao-map-and-courses.md) | 카카오 실제 장소·직접 작성 산책 경로 |
