@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import type { Announcement, Booth, EventPage, TargetDetail } from '../../shared/contracts';
+import type { Announcement, Booth, EventPage } from '../../shared/contracts';
 import { rpc } from '../lib/api';
 import { useCatalog, useSync } from '../lib/state';
 import { restoreBoothCursor } from '../lib/revisions';
 import { ErrorNotice, FiltersForm, Loading, useFilters } from '../components/ui';
-import { MapView } from '../components/Map';
+import { MapScene, MapPanel, MapToolbar, MapMessages } from '../components/MapScene';
+import { TargetContent } from './Target';
+import { Icon } from '../components/Icon';
 import { RankingList } from './Explore';
 const CURSOR_KEY = 'foodmap.booth:v1';
 export default function BoothPage() {
@@ -14,7 +16,6 @@ export default function BoothPage() {
   const [filters, change] = useFilters();
   const [selected, setSelected] = useState('');
   const snapshot = useQuery({ queryKey: ['booth', filters.categoryId], queryFn: ({ signal }) => rpc<Booth>('read_booth', { p_pin_category_id: filters.categoryId }, signal) });
-  const course = useQuery({ queryKey: ['target', selected], enabled: !!selected, queryFn: ({ signal }) => rpc<TargetDetail>('read_target', { p_target_id: selected, p_team_id: null, p_category_id: null, p_cursor: null, p_expected_revision: null }, signal) });
   const [announcement, setAnnouncement] = useState<Announcement | null>(null), [error, setError] = useState<unknown>();
   const latest = useRef('0'), displayed = useRef<string | null>(null);
   latest.current = sync.observedRevision !== '0' ? sync.observedRevision : snapshot.data?.revision ?? '0';
@@ -60,5 +61,5 @@ export default function BoothPage() {
     void rpc<Announcement>('read_announcement', { p_event_revision: revision }).then(value => { if (active && displayed.current === revision) setAnnouncement(value.skip ? null : value); }).catch(setError);
     return () => { active = false; };
   }, [sync.observedRevision]);
-  return <section className="booth"><header className="booth-heading"><Link to="/">IT센터 최애 지도</Link><h1>우리의 최애가 모이고 있어요</h1><p>전체 팀 · 카테고리별 랭킹</p></header><div className="announcement" role="status" aria-live="polite">{announcement && !announcement.skip ? <><strong>{announcement.nickname}</strong> · {announcement.teamName}<span>{announcement.targetName}을 최애로 등록했어요!</span></> : <span>동료들의 새 최애를 기다려요</span>}</div>{error ? <ErrorNotice error={error}/> : null}{snapshot.error ? <ErrorNotice error={snapshot.error} retry={() => void snapshot.refetch()}/> : null}{snapshot.isPending ? <Loading/> : null}{catalog.data ? <FiltersForm catalog={catalog.data} filters={filters} onChange={change} teams={false}/> : null}<div className="booth-grid"><MapView pins={snapshot.data?.pins} points={course.data?.target.kind === 'COURSE' ? course.data.target.points ?? [] : []} onSelect={setSelected} selectedId={selected}/><aside>{snapshot.data?.categoryRankings.map(category => <section key={category.categoryId}><h2>{category.categoryName}</h2><RankingList items={category.rankings.slice(0, 5)} query={`category=${category.categoryId}`}/>{!category.rankings.length ? <p>첫 최애를 기다려요.</p> : null}<Link to={`/rankings?category=${category.categoryId}`}>전체 보기</Link></section>)}</aside></div>{selected ? <Link to={`/targets/${selected}`}>선택한 장소·코스 상세 보기</Link> : null}<p className="muted">부스 화면을 전경에 유지하고 PC 절전을 꺼 주세요.</p></section>;
+  return <MapScene pins={snapshot.data?.pins} onSelect={setSelected} selectedId={selected} className="booth-scene"><MapToolbar booth/><h1 className="booth-title">우리의 최애가 모이고 있어요</h1><div className="floating-filters">{catalog.data ? <FiltersForm catalog={catalog.data} filters={filters} onChange={change} teams={false}/> : null}</div><MapMessages>{error ? <ErrorNotice error={error}/> : null}{snapshot.error ? <ErrorNotice error={snapshot.error} retry={() => void snapshot.refetch()}/> : null}</MapMessages>{selected ? <TargetContent key={selected} id={selected} onClose={() => setSelected('')}/> : <MapPanel title="카테고리별 최애 랭킹" eyebrow="LIVE FAVORITES" className="booth-rankings">{snapshot.isPending ? <Loading/> : null}{snapshot.data?.categoryRankings.map(category => <section className="category-ranking" key={category.categoryId}><h2>{category.categoryName}</h2><RankingList items={category.rankings.slice(0, 5)} onSelect={setSelected}/>{!category.rankings.length ? <p className="muted">첫 최애를 기다려요.</p> : null}<Link className="text-link" to={`/rankings?category=${category.categoryId}`}>전체 보기 <Icon name="chevron"/></Link></section>)}</MapPanel>}<div className="booth-announcement" role="status" aria-live="polite"><span className="announcement-icon"><Icon name="bell"/></span><div><small>{announcement && !announcement.skip ? '방금 도착한 새로운 최애' : '우리의 취향이 모이는 지도'}</small><p>{announcement && !announcement.skip ? <><strong>{announcement.nickname} · {announcement.teamName}</strong> 님이 <strong>{announcement.targetName}</strong>을 최애로 등록했어요!</> : '동료들의 새 최애를 기다려요'}</p></div></div></MapScene>;
 }
