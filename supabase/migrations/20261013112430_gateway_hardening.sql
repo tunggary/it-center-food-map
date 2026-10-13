@@ -1,0 +1,17 @@
+create function public.gateway_replay(p_actor uuid,p_payload jsonb) returns jsonb language plpgsql security definer set search_path='' as $$begin perform app_private.require_identity(p_actor);return app_private.replay('participant',p_actor,p_payload);end$$;
+revoke all on function public.gateway_replay(uuid,jsonb) from public,anon,authenticated;
+grant execute on function public.gateway_replay(uuid,jsonb) to service_role;
+-- Fail before a missing target can eliminate the guard CTE through join planning.
+create function app_private.checked_target(p_id uuid,p_revision text) returns app_private.targets language plpgsql stable set search_path='' as $$declare t app_private.targets;begin select * into t from app_private.targets where id=p_id;if not found then perform app_private.fail('TARGET_GONE');end if;if p_revision is not null and p_revision<>(select revision::text from app_private.app_state where id=1) then perform app_private.fail('SNAPSHOT_CHANGED');end if;return t;end$$;
+create or replace function public.read_target(p_target_id uuid,p_team_id uuid default null,p_category_id uuid default null,p_cursor text default null,p_expected_revision text default null) returns jsonb language sql stable security definer set search_path='' as $$with s as(select * from app_private.app_state where id=1),t as materialized(select x.* from app_private.checked_target(p_target_id,p_expected_revision) x),filtered as(select f.* from app_private.favorites f join app_private.participants p on p.id=f.participant_id cross join t where f.target_id=p_target_id and(p_team_id is null or p.team_id=p_team_id) and(p_category_id is null or f.category_id=p_category_id)),page as(select * from filtered where p_cursor is null or (created_at,id)<((split_part(p_cursor,'|',1))::timestamptz,(split_part(p_cursor,'|',2))::uuid) order by created_at desc,id desc limit 21),visible as(select * from page order by created_at desc,id desc limit 20) select jsonb_build_object('revision',s.revision::text,'dataEpoch',s.data_epoch,'target',app_private.target_json(t),'filteredCount',(select count(*) from filtered),'totalCount',(select count(*) from app_private.favorites where target_id=p_target_id),'favorites',coalesce((select jsonb_agg(app_private.favorite_json(f) order by f.created_at desc,f.id desc) from visible f),'[]'::jsonb),'nextCursor',case when(select count(*) from page)>20 then(select created_at::text||'|'||id::text from visible order by created_at,id limit 1) else null end) from s cross join t$$;
+-- Dedicated non-login owner has privileges on the domain schema, not provider schemas.
+do $$begin if not exists(select 1 from pg_roles where rolname='foodmap_gateway') then create role foodmap_gateway nologin;end if;end$$;
+grant foodmap_gateway to postgres;
+grant usage,create on schema public,app_private to foodmap_gateway;
+do $$declare r record;begin
+for r in select tablename from pg_tables where schemaname='app_private' loop execute format('alter table app_private.%I owner to foodmap_gateway',r.tablename);end loop;
+for r in select p.oid::regprocedure sig from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='app_private' or(n.nspname='public' and(p.proname like 'read_%' or p.proname like 'gateway_%')) loop execute format('alter function %s owner to foodmap_gateway',r.sig);end loop;
+end$$;
+revoke all on all functions in schema app_private from public,anon,authenticated;
+
+revoke create on schema public,app_private from foodmap_gateway;
