@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- 저장소 공개 작업 (2026-10-13): [tunggary/it-center-food-map](https://github.com/tunggary/it-center-food-map) 공개 저장소를 생성했다. 기존 설계 문서 35개와 프로젝트 지침을 `feature/design-docs` 브랜치에 업로드하고, 루트 README에 주요 문서 링크를 추가했다. GitHub의 공개 설정과 원격 파일 목록, 로컬 문서 링크의 대상 파일 존재를 확인했다. `develop`·`main`에는 PR을 거쳐 반영한다. 저장소 공개는 제품 배포가 아니므로 단계별 체크 상태는 유지한다. 제품 관련 남은 사항과 다음 작업은 아래와 같다.
+
 - 작업일: 2026-10-13
 - 이전 작업: PRD·스토리16개·QA65개와 최초 유료 기반 설계를 작성했다. 이후 사용자에게 월0원·기존 자원 없음·행사 집중 후 가끔 사용이라는 답변을 받았다.
 - 진행 내용·주요 결정: 무료 세부 설계안을 `docs/3-architecture/`에 모았다. React/Vite·Cloudflare Pages Free·Supabase Free·카카오 지도를 선택하고, 공개 읽기 RPC와 Edge 쓰기 검증/단일 DB 트랜잭션을 분리했다. 기존 제안 ADR6개를 같은 번호로 개정하고 PRD §10에는 합의된 비용 조건만 반영했다.
