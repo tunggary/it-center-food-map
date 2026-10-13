@@ -1,0 +1,74 @@
+{
+  "local": {
+    "existingLocalRowsUnchanged": true,
+    "revisionUnchanged": true
+  },
+  "staging": {
+    "before": {
+      "admins": 1,
+      "categories": 10,
+      "favorites": 10146,
+      "identities": 200,
+      "participants": 200,
+      "revision": "147",
+      "teams": 30
+    },
+    "after": {
+      "admins": 1,
+      "categories": 13,
+      "favorites": 10146,
+      "identities": 200,
+      "participants": 200,
+      "revision": "148",
+      "teams": 30
+    },
+    "otherDomainCountsPreserved": true,
+    "verification": "Actual SELECT checked immediately after applying; prior 10-category performance artifacts are unchanged."
+  },
+  "production": {
+    "before": {
+      "admins": 0,
+      "categories": 0,
+      "favorites": 0,
+      "identities": 0,
+      "participants": 0,
+      "revision": "0",
+      "teams": 0
+    },
+    "after": {
+      "admins": 0,
+      "categories": 3,
+      "favorites": 0,
+      "identities": 1,
+      "participants": 0,
+      "revision": "1",
+      "teams": 0
+    },
+    "defaultCategories": [
+      {
+        "id": "89153045-d334-4dbb-8240-d35a8e13cb5a",
+        "kind": "PLACE",
+        "name": "맛집",
+        "selectable": true,
+        "version": 1
+      },
+      {
+        "id": "542ec178-1d7f-4e49-af51-367b9f6ff69c",
+        "kind": "COURSE",
+        "name": "산책",
+        "selectable": true,
+        "version": 1
+      },
+      {
+        "id": "6324f3ca-79a5-4950-a747-519d551416ec",
+        "kind": "PLACE",
+        "name": "카페",
+        "selectable": true,
+        "version": 1
+      }
+    ],
+    "teamsAndAdminsUnchanged": true,
+    "favoritesAndParticipantsUnchanged": true,
+    "concurrentIdentityObservation": "0->1 observed during release audit; migration has no identity writes. Preserve this row and confirm audit source."
+  }
+}
