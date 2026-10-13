@@ -61,7 +61,7 @@ D8은 외부 장애 때 D5를 지키기 위한 도출 기준이다. 불변 규�
 | Q2 | 로그인 없이 본인 수정 권한을 보장하려면? | R3·D3·C3 | 브라우저 bearer 비밀 + 서버 해시 검증; 관리자 별도 Auth, 제안 | [ADR-0003](adr/0003-identity-and-authorization.md) |
 | Q3 | 실제 장소와 산책 경로를 어떤 지도 기능으로 표현할까? | R4·C1·C2·D6·D8 | 카카오 검색·지도 + 직접 경로 작성, 제안 | [ADR-0004](adr/0004-kakao-map-and-courses.md) |
 | Q4 | 5초 갱신과 순서 있는 알림을 함께 만족하려면? | D1·D2·D4·D5·R5 | Data API 직접 2초 revision 조회 + DB 알림 기록, 제안 | [ADR-0005](adr/0005-state-sync-and-announcements.md) |
-| Q5 | 100명과 행사 후 운영에 필요한 배포 단위는? | D1·D7·C1·C4 | React/Vite + Pages Free + Supabase Free, 제안 | [ADR-0001](adr/0001-modular-monolith-stack.md) |
+| Q5 | 100명과 행사 후 운영에 필요한 배포 단위는? | D1·D7·C1·C4 | React/Vite + Vercel Hobby + Supabase Free, 제안 | [ADR-0001](adr/0001-modular-monolith-stack.md) |
 | Q6 | 사진 실패·재시도·삭제를 어떻게 일치시킬까? | R5·R6·D5·D8 | 브라우저 축소/WASM 검증 + DB 연결 + 객체 청소, 제안 | [ADR-0006](adr/0006-photo-lifecycle.md) |
 | Q7 | 알림 커서의 순서·복구·삭제 정책은? | D4·D5·R2 | 커밋 직렬 revision, 표시 완료 커서, 삭제된 등록은 건너뜀; 제안 | ADR-0005 결과에서 파생, 같은 ADR에 해결 |
 | Q8 | 여러 탭·첫 등록 응답 유실·삭제 후 재시도는? | D3·R1·R5 | 작성 전 세션 준비 + 요청 키/결과 참조; 제안 | ADR-0003·0002에 해결 |
@@ -74,7 +74,7 @@ D8은 외부 장애 때 D5를 지키기 위한 도출 기준이다. 불변 규�
 [설계 목차](README.md)와 [스택](stack.md)에 최종 구조를 모았다.
 
 ```text
-휴대폰/부스/관리자 → Cloudflare Pages의 React/Vite 정적 앱
+휴대폰/부스/관리자 → Vercel Hobby의 React/Vite 정적 앱
   ├─ Kakao Web SDK: 실제 장소·직접 경로
   ├─ 공개 read RPC → Supabase Data API → PostgreSQL
   ├─ 참여자 bearer / 관리자 JWT → Edge Functions → gateway RPC 한 번
@@ -111,7 +111,7 @@ Redis·전용 API 서버·Realtime·PostGIS·유료 이미지 변환은 넣지 �
 
 ### 구조를 가르는 조건
 
-- **A1 비용: 합의 완료.** 사용자 답변은 무료만·기존 자원 없음·행사 집중 후 가끔 사용이다. 유료안은 채택하지 않는다. C4 추가, ADR-0001·0003·0005·0006 개정.
+- **A1 비용: 합의 완료.** 사용자 답변은 무료만·기존 자원 없음·행사 집중 후 가끔 사용이다. 유료안은 채택하지 않는다. C4 추가, ADR-0001·0003·0005·0006 개정. 이후 사용자가 개인 프로젝트로 Vercel 배포를 지정해 ADR-0001의 호스팅을 Vercel Hobby로 변경했다.
 - **A2 산책 입력:** 직접 점을 찍는 경로를 구현 기본안으로 둔다. 자동 보행 길찾기는 포함하지 않는다. 별도 명시 답변 전이므로 가정 표시 유지. ADR-0004.
 - **A3 측정 조건:** 동시100명·3/2/5초·첫 사용2분은 PRD 확정. 데이터량/지속 시간/표본/네트워크는 [검증 계획](verification.md)의 제안 기준이며 실제 행사 조건 확인 후 판정한다.
 - **A8 휴면:** 수동 재개 허용 여부를 사용자에게 질문한 상태. 답변 전에는 무료 우선·운영자 수동 재개로 설계하되 항상 즉시 사용 가능을 보장하지 않는다. 거절 시 ADR-0001 재검토.
@@ -135,3 +135,5 @@ Redis·전용 API 서버·Realtime·PostGIS·유료 이미지 변환은 넣지 �
 - 2026-10-13: 무료 Realtime 초당100메시지와100명 fan-out을 대조해 ADR-0005 재검토. 대화의 잠정 Realtime 추천 대신 Data API 직접 조회 선택; 알림 원장은 유지.
 - 2026-10-13: 출처 분리로 기존 HttpOnly cookie 가정이 성립하지 않아 ADR-0003을 bearer 방식으로 개정. Auth 익명 가입의 공유IP 한도도 비교.
 - 2026-10-13: Edge의 Sharp 미지원·CPU2초를 확인해 ADR-0006을 브라우저 사전 축소+WASM으로 변경. 무료 운영의 휴면/수동 백업 가정을 별도 기록.
+
+- 2026-10-13: 사용자 개인 프로젝트·Vercel 선택으로 Q5/ADR-0001을 재검토해 정적 호스팅을 Vercel Hobby로 변경. CDN 요청/전송 한도·vercel.app·SPA rewrite·CORS를 갱신했고 Supabase 서버 경계는 유지했다.
