@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- 지도 UI 운영 반영·실제 배포 확인 (2026-10-14): 기능 PR #17→develop, 릴리스 PR #18→main(e210e68), 역반영 PR #19→develop 완료. 개인 Production dpl_4Zn8ktEknRZCHBNh9kC7iJKLq9Jy READY·운영HTTP200·실제 지도타일35개 정상 로딩을 확인했다. 운영 PC1440×900/모바일390×844에서 전체지도·페이지overflow없음·랭킹패널 진입과 팀2개 필터 노출을 확인했다. 운영 검증은 공개조회만 수행하고 QA등록은 만들지 않았다. 코드24개테스트/타입/build 통과, local/QA/prod 팀migration 반영 완료. 8단계의 배포/기술확인은 수행했으나 실기기 키보드·현장 피드백에 대한 최종 해결 확인은 남아 미체크를 유지한다. 원본QA56통과·9보류/정식성능 미통과를 새UI합격으로 바꾸지 않는다. 다음은 사용자 실제모바일 사용/디자인 피드백에 따른 후속개선이다.
+
 - 지도 UI 기능 PR·릴리스 준비 (2026-10-14): feature PR #17을 develop(d56d726)에 merge했다. 기능d2d7f87의 Preview READY와 인증보호 유지 상태의 HTML/CSS/JS 정상응답·map-scene/map-panel 스타일을 확인했다. release/map-first-ui에서 main PR #18을 준비했다. 팀은 개인 QA/운영에 반영 완료, 코드/테스트는24개 통과. 다음은 main 머지→최종 Production READY/운영 지도·팀필터 확인→릴리스 develop 역반영이다. 운영 배포 완료는 아직 기록하지 않는다.
 
 - 지도 UI·팀 추가 개발검증 완료 (2026-10-14): Vitest24개/타입/build·diff검사 통과. 실제 로컬 브라우저로 모바일390×844/PC1440×900/부스1920×1080 지도 전체 크기·overflow없음·지도DOM유지/복귀·시트버튼/드래그·선택핀 비가림을 확인했다. 장소 검색결과핀6개→등록201/최신상세200→수정/닉네임저장/본인삭제, 코스점/선→등록/본인삭제를 수행했다. QA자료는 로컬에서만 생성했고 새등록2건을 본인삭제했으며 기존자료는 유지했다. 팀migration은 local/QA/prod 각각dry-run→적용, 운영팀2개 selectable=true·등록0·revision2, local재적용 시 revision/기존등록 무변경을 확인했다. 6·7단계는 완료, 8단계는 Preview/운영 배포 확인 전으로 유지한다. 원본QA보류/실기기/성능은 통과로 바꾸지 않는다. 다음은 feature→develop/릴리스→main PR 및 최종 READY/운영 응답 확인이다.
