@@ -1,5 +1,7 @@
 # 개인 Vercel 자동 배포
 
+최종 지도 수정 확인 (2026-10-13): PR #13의 main `e0e3562`와 PR #14의 develop 반영을 완료했다. Production `dpl_H7fvqNLnqdJUVQxNgVEywFCXG8y8` READY·HTTP200을 확인했고, CSP에 실제 SDK `t1.kakaocdn.net`과 타일 `mts.kakaocdn.net`을 허용했다. Aside 운영 화면에서 지도 SDK와 512px 타일21개의 정상 로딩을 직접 확인했다. 이전 CSP가 캐시된 페이지는 강력 새로고침으로 갱신한다.
+
 ## 대상
 
 - GitHub: https://github.com/tunggary/it-center-food-map

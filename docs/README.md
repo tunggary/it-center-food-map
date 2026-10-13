@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- 운영 지도 직접 수정·확인 (2026-10-13): 사용자 요청에 따라 메인이 CSP에 실제 타일 호스트 `mts.kakaocdn.net`을 추가하고 PR #13으로 main, PR #14로 develop에 반영했다. main `e0e3562`의 Production `dpl_H7fvqNLnqdJUVQxNgVEywFCXG8y8` READY·HTTP200·새 CSP를 직접 조회했다. Aside 운영 화면에서 Kakao Map 생성자와 512px 타일21개의 정상 로딩, 지도 축척·Kakao 링크를 확인했다. 기존 페이지에 이전 CSP가 캐시돼 있으면 강력 새로고침이 필요하다. QA56통과·9보류와 정식 성능 미통과는 유지하며, 실제 팀·관리자 명단은 입력 전이다.
+
 - Git 릴리스·실제 운영 배포 확인 (2026-10-13): 기능 PR #9를 develop에, release/first-product의 PR #10·#11을 main에 병합했다. main `ccdd483`의 개인 Vercel Production READY와 Vite/dist 설정, canonical 운영 HTML200·직접경로200·없는asset404, 운영ref만 포함한 설정chunk·공개읽기 RPC4개200·기본분류3/팀0/revision1을 실제 확인했다. 첫 배포의 지도 SDK CDN CSP 누락은 관측한 t1.kakaocdn.net만 허용해 보완했다. 후속 브라우저에서 SDK 초기화 뒤 mts.kakaocdn.net 타일 요청을 관측했으며 지도 타일의 최종 성공 판정은 메인 담당의 직접 검증으로 인계한다. 원본 QA56통과·9보류, 정식 성능 미통과, 실제 팀·사전 관리자 계정 입력 전 상태를 유지한다. 증거는 artifacts/web-production-release.json이며 문서 결과는 release→develop 역반영 PR로 남긴다.
 
 - 운영 초기 분류 보완 (2026-10-13): PRD의 확정 초기 분류인 맛집/카페(PLACE)·산책(COURSE)만 새 migration으로 준비했다. 개인 조직/두 project ref를 CLI로 재확인한 뒤 local·검증·운영에서 해당 migration1개만 dry-run→적용하고 읽기 결과를 확인했다. 기존 동일 kind/정규화 분류는 ON CONFLICT로 이름·선택상태·version을 유지하며 실제 삽입 때만 전역 잠금 아래 revision1회 증가한다. 로컬은 전체 분류/팀/등록/자격/관리자행hash와 revision이 그대로였다. 검증은 분류10→13·revision147→148이며 당시 측정한 10분류 성능 자료는 보존한다. 운영은 분류0→3·revision0→1, 실제 팀/관리자/등록/프로필0을 유지했다. 동시 릴리스 조회 중 준비 자격1개가 관측돼 그 행은 보존하고 감사 호출 출처를 별도 확인한다(이 migration은 자격행을 변경하지 않는다). 가짜 팀/관리자 명단은 추가하지 않았다. 증거는 `artifacts/default-categories-verification.json`이며 새 성능/실기기/전체 QA 통과로 처리하지 않는다. 남은 출시 입력은 실제 팀과 관리자 명단이며 릴리스 담당의 후속 PR/배포 기록에 이 변경을 반영한다.
