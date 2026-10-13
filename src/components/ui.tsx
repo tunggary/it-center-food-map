@@ -14,7 +14,7 @@ export function SyncNotice() {
 export function useFilters(): [Filters, (next: Partial<Filters>) => void, string] {
   const [params, set] = useSearchParams();
   const filters = { teamId: params.get('team') || null, categoryId: params.get('category') || null };
-  return [filters, next => { const copy = new URLSearchParams(params); for (const [k, v] of Object.entries(next)) { const key = k === 'teamId' ? 'team' : 'category'; copy.set(key, v ?? ''); } set(copy); }, params.toString()];
+  return [filters, next => { const copy = new URLSearchParams(params); copy.delete('rankPage'); for (const [k, v] of Object.entries(next)) { const key = k === 'teamId' ? 'team' : 'category'; copy.set(key, v ?? ''); } set(copy); }, params.toString()];
 }
 export function FiltersForm({ catalog, filters, onChange, teams = true }: { catalog: Catalog; filters: Filters; onChange: (filters: Partial<Filters>) => void; teams?: boolean }) {
   return <div className="filters">{teams ? <label>팀<select aria-label="팀 필터" value={filters.teamId ?? ''} onChange={e => onChange({ teamId: e.target.value || null })}><option value="">전체 팀</option>{catalog.allTeams.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}</select></label> : null}<label>카테고리<select aria-label="카테고리 필터" value={filters.categoryId ?? ''} onChange={e => onChange({ categoryId: e.target.value || null })}><option value="">전체 카테고리</option>{catalog.allCategories.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}</select></label></div>;

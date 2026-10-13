@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-14",
+  "tests": 24,
+  "typecheck": "passed",
+  "build": "passed",
+  "browser": {
+    "mobile": [
+      390,
+      844
+    ],
+    "desktop": [
+      1440,
+      900
+    ],
+    "booth": [
+      1920,
+      1080
+    ],
+    "pageOverflow": false,
+    "sharedMapDOM": true,
+    "sheetDrag": true,
+    "selectedPinOutsideOverlays": true,
+    "localFlows": [
+      "search6pins",
+      "create201_detail200",
+      "edit",
+      "nickname",
+      "deleteOwn",
+      "courseCreate",
+      "courseDeleteOwn"
+    ]
+  },
+  "teams": {
+    "projects": [
+      "local",
+      "yxgmpbjcvjeacnrgtcbq",
+      "gpsbnmgwowsbgclcottl"
+    ],
+    "names": [
+      "백엔드개발팀",
+      "프론트엔드개발팀"
+    ],
+    "selectable": true,
+    "productionFavorites": 0,
+    "productionRevision": "2",
+    "localReapply": "unchanged revision/favorites"
+  },
+  "limits": [
+    "실기기 키보드 미검증",
+    "기존 QA/성능 보류 유지"
+  ]
+}
