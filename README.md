@@ -7,5 +7,6 @@
 - [사용자 스토리·화면 흐름·QA](docs/2-user-story.md)
 - [무료 운영 아키텍처·세부 설계](docs/3-architecture/README.md)
 - [도메인 용어](GLOSSARY.md)
+- [개인 Vercel 자동 배포](docs/deployment.md)
 
 현재는 설계 문서 작성 단계입니다. 서비스 구현·배포·실제 성능 검증은 아직 수행하지 않았습니다.
