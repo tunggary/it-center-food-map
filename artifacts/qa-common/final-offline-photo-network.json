@@ -1,0 +1,80 @@
+[
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "method": "POST",
+    "fault": true,
+    "at": 1791897064686
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "method": "POST",
+    "status": 200,
+    "at": 1791897064714
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "method": "POST",
+    "status": 200,
+    "at": 1791897081386
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/favorites",
+    "method": "POST",
+    "fault": true,
+    "at": 1791897081838
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "method": "POST",
+    "fault": true,
+    "at": 1791897088787
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "method": "POST",
+    "status": 200,
+    "at": 1791897088810
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/favorites",
+    "method": "POST",
+    "status": 201,
+    "at": 1791897088909
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_target",
+    "method": "POST",
+    "status": 200,
+    "at": 1791897088925
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/me",
+    "method": "GET",
+    "status": 200,
+    "at": 1791897088929
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+    "method": "POST",
+    "status": 200,
+    "at": 1791897088947
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/me",
+    "method": "GET",
+    "status": 200,
+    "at": 1791897088952
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_target",
+    "method": "POST",
+    "status": 200,
+    "at": 1791897089063
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/me/favorites",
+    "method": "GET",
+    "status": 200,
+    "at": 1791897089080
+  }
+]

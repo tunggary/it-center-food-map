@@ -1,0 +1,135 @@
+{
+  "environment": "local API + actual PostgreSQL",
+  "prefix": "QAT107b1ec8",
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/admin/teams",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/teams",
+      "status": 200,
+      "code": null,
+      "replayed": true
+    },
+    {
+      "method": "POST",
+      "path": "/admin/teams",
+      "status": 400,
+      "code": "VALIDATION_ERROR",
+      "replayed": null
+    },
+    {
+      "method": "POST",
+      "path": "/admin/teams",
+      "status": 400,
+      "code": "VALIDATION_ERROR",
+      "replayed": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/admin/teams/24d76b16-02e3-497a-a62b-42cf28a5d765",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/teams",
+      "status": 400,
+      "code": "VALIDATION_ERROR",
+      "replayed": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/admin/teams/24d76b16-02e3-497a-a62b-42cf28a5d765",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/categories",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/categories",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/categories",
+      "status": 400,
+      "code": "VALIDATION_ERROR",
+      "replayed": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/admin/categories/b4084223-12cb-4811-9bc3-22ebc0fd5c4e",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "PATCH",
+      "path": "/admin/categories/b4084223-12cb-4811-9bc3-22ebc0fd5c4e",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "PATCH",
+      "path": "/admin/categories/b4084223-12cb-4811-9bc3-22ebc0fd5c4e",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "PATCH",
+      "path": "/admin/categories/426553bc-a499-4678-856a-34b8f6ddfde0",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "PATCH",
+      "path": "/admin/categories/426553bc-a499-4678-856a-34b8f6ddfde0",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "PATCH",
+      "path": "/admin/categories/426553bc-a499-4678-856a-34b8f6ddfde0",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    },
+    {
+      "method": "PATCH",
+      "path": "/admin/teams/24d76b16-02e3-497a-a62b-42cf28a5d765",
+      "status": 200,
+      "code": null,
+      "replayed": false
+    }
+  ],
+  "checks": [
+    "team create/replay",
+    "trim/case/NFC duplicate rejection",
+    "server-derived field forgery rejected",
+    "team edit/stop/resume",
+    "same category name across PLACE/COURSE allowed",
+    "category same-kind duplicates rejected",
+    "category edit/stop/resume",
+    "selectable projection verified"
+  ]
+}

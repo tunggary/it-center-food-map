@@ -1,0 +1,15 @@
+- title: "IT센터 최애 지도" [url=http://localhost:5173/me/profile]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e34]: "← 지도"
+      - heading "내 참여 정보" [level=1]
+    - form:
+      - label:
+        - text: "닉네임"
+        - textbox "닉네임" [ref=e35]: "QA변경😀"
+      - text: "기존 모든 등록에도 현재 닉네임이 표시돼요.팀: C팀 팀이 잘못 입력됐다면 운영자에게 정정을 요청해 주세요."
+      - button "닉네임 저장" [ref=e36]
+      - status: "닉네임을 저장했어요."
+    - text: "운영자 확인용 참여자 코드: f6757d8f-377b-4d98-a264-df32692d72f8 이 브라우저의 참여 정보를 삭제하거나 다른 기기를 쓰면 이전 등록의 수정 권한을 자동으로 복구할 수 없어요."

@@ -1,0 +1,87 @@
+{
+  "project": "gpsbnmgwowsbgclcottl",
+  "readOnly": true,
+  "timeUTC": "2026-10-13T13:53:51.326857+00:00",
+  "authSettings": {
+    "http": 200,
+    "disableSignup": false,
+    "anonymousProviderEnabled": null
+  },
+  "domainCounts": {
+    "targets": 0,
+    "favorites": 0,
+    "teams": 0,
+    "categories": 0,
+    "revision": "0"
+  },
+  "photoBucket": [
+    {
+      "id": "photos",
+      "public": false,
+      "fileSizeLimit": 524288,
+      "allowedMimeTypes": [
+        "image/jpeg"
+      ]
+    }
+  ],
+  "cronJobs": [
+    {
+      "name": "food-map-daily-reconcile",
+      "schedule": "15 2 * * *",
+      "active": true
+    },
+    {
+      "name": "food-map-hourly-cleanup",
+      "schedule": "0 * * * *",
+      "active": true
+    }
+  ],
+  "unsafeFunctionOwnerOrSearchPath": 0,
+  "anonOrAuthGatewayExecute": 0,
+  "publicExecute": 0,
+  "unsafePrivateTables": 0,
+  "gatewayRole": {
+    "canLogin": false,
+    "superuser": false,
+    "createRole": false,
+    "createDB": false,
+    "bypassRLS": false
+  },
+  "gatewayProviderInheritance": 0,
+  "newSubmitInstalled": false,
+  "anonDirectWriteAttempt": {
+    "http": 401,
+    "code": "42501"
+  },
+  "publicExplore": {
+    "http": 200,
+    "pins": 0,
+    "rankings": 0
+  },
+  "cronExecutionHistory": [
+    {
+      "job": "food-map-hourly-cleanup",
+      "sqlStatus": "succeeded",
+      "start": "2026-10-13 13:00:00.180094+00:00",
+      "end": "2026-10-13 13:00:00.241695+00:00"
+    },
+    {
+      "job": "food-map-hourly-cleanup",
+      "sqlStatus": "succeeded",
+      "start": "2026-10-13 12:00:00.091958+00:00",
+      "end": "2026-10-13 12:00:00.117710+00:00"
+    }
+  ],
+  "pgNetRecentHTTPResponses": [
+    {
+      "http": 200,
+      "timedOut": false,
+      "created": "2026-10-13 13:00:00.250453+00:00"
+    },
+    {
+      "http": 200,
+      "timedOut": false,
+      "created": "2026-10-13 12:00:00.123533+00:00"
+    }
+  ]
+}

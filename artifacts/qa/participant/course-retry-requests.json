@@ -1,0 +1,24 @@
+[
+  {
+    "requestKey": "8720c2f5-0cba-40ae-8f2f-cfc4d582d1f9",
+    "pointCount": 200,
+    "stage": "aborted before sending"
+  },
+  {
+    "requestKey": "8720c2f5-0cba-40ae-8f2f-cfc4d582d1f9",
+    "pointCount": 200,
+    "stage": "sent"
+  },
+  {
+    "status": 201,
+    "response": {
+      "requestId": "d3bb497e-3530-4dee-ac79-3644c67ce2ed",
+      "data": {
+        "replayed": false,
+        "revision": "147",
+        "targetId": "f1d5bb11-1d57-4dd2-b052-49e1a8939121",
+        "resourceId": "41fe2735-039a-495d-95f5-b18ac6d4dc1a"
+      }
+    }
+  }
+]

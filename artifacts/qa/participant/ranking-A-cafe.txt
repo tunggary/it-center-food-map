@@ -1,0 +1,36 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/rankings?team=10000000-0000-4000-8000-000000000001&category=20000000-0000-4000-8000-000000000002]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "IT센터 최애 지도" [ref=e190]
+      - navigation "개인 메뉴" [ref=e191]:
+        - link "내 최애" [ref=e192]
+        - link "내 정보" [ref=e193]
+      - heading "최애 랭킹" [level=1]
+      - label:
+        - text: "팀"
+        - combobox "팀 필터" [ref=e194]:
+          - option "전체 팀"
+          - option "A팀" (selected) value="10000000-0000-4000-8000-000000000001"
+          - option "B팀" value="10000000-0000-4000-8000-000000000002"
+          - option "C팀" value="10000000-0000-4000-8000-000000000003"
+      - label:
+        - text: "카테고리"
+        - combobox "카테고리 필터" [ref=e195]:
+          - option "전체 카테고리"
+          - option "QA부스버스트" value="a595a037-5e31-405d-b60b-17c274f5670f"
+          - option "QA부스버스트R2" value="c1b56711-08ac-4265-ac14-7536b2e112b1"
+          - option "QA페이지" value="d2310e83-261c-457a-ba5b-151d582ff011"
+          - option "맛집" value="20000000-0000-4000-8000-000000000001"
+          - option "산책" value="20000000-0000-4000-8000-000000000003"
+          - option "카페" (selected) value="20000000-0000-4000-8000-000000000002"
+    - list:
+      - listitem:
+        - link "1 L1 테스트 장소 장소 2 건" [ref=e198]
+      - listitem:
+        - link "2 L2 테스트 장소 장소 1 건" [ref=e199]
+    - contentinfo:
+      - link "최애 등록하기" [ref=e197]
+- iframe:
+  - button "Open selection tools" [ref=f1e1]

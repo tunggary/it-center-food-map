@@ -1,0 +1,16 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/register?favorite=4105f12a-cde7-4aab-8dff-af39c048265b]
+- link "본문으로 이동" [ref=e1]
+- status:
+  - text: "갱신이 잠시 중단됐어요. 마지막 확인 오후 8:53:07"
+  - button "다시 연결" [ref=e5]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e2]: "← 지도"
+      - heading "최애 등록하기" [level=1]
+    - text: "지금 화면에서 실패한 입력은 유지해요. 화면을 떠나거나 새로고침하면 초안은 복구되지 않아요."
+    - alert: "수정할 내 등록을 찾지 못했어요. 내 최애에서 다시 선택해 주세요."
+    - label:
+      - text: "장소 검색"
+      - textbox "장소 검색" [ref=e3] [placeholder="장소 이름을 입력해 주세요"]
+    - button "새 산책코스 만들기" [ref=e4]

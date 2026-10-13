@@ -1,0 +1,13 @@
+{
+  "project": "yxgmpbjcvjeacnrgtcbq",
+  "sameKeyConcurrent": 20,
+  "created": 1,
+  "replays": 19,
+  "events": 1,
+  "rateCount": 20,
+  "lockFailureCode": "DEPENDENCY_UNAVAILABLE",
+  "lockFailureRateCount": 1,
+  "partialProfiles": 0,
+  "elapsedMs": 1278,
+  "cleanup": "only generated fixtures, public favorite deletion used normal gateway"
+}

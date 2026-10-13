@@ -1,0 +1,55 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/targets/df5beda1-5040-4a92-bd34-01960092067d]
+- link "본문으로 이동" [ref=e1]
+- status:
+  - text: "갱신이 잠시 중단됐어요. 마지막 확인 오후 9:56:27"
+  - button "다시 연결" [ref=e43]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e35]: "← 지도"
+      - heading "스타벅스 수원매산점" [level=1]
+    - status: "최애 등록 결과를 확인했어요."
+    - text: "경기 수원시 팔달구 매산로 11 이 조건  1 건 · 전체  1 건"
+    - button "전체 등록 보기" [ref=e36]
+    - label:
+      - text: "팀"
+      - combobox "팀 필터" [ref=e37]:
+        - option "전체 팀" (selected)
+        - option "A팀" value="10000000-0000-4000-8000-000000000001"
+        - option "B팀" value="10000000-0000-4000-8000-000000000002"
+        - option "C팀" value="10000000-0000-4000-8000-000000000003"
+        - option "QA Admin T121459bR" value="a8278102-0deb-4ebb-87f8-69ec73c9ead1"
+        - option "QA Admin T121459dup" value="89329ea1-261d-4ef3-bf02-1b9b79800ff8"
+        - option "QAT107b1ec8Edited" value="24d76b16-02e3-497a-a62b-42cf28a5d765"
+        - option "QA만료a213610f78c" value="5817d72d-767d-45cc-b002-e92c3382ef7b"
+        - option "QA만료b213610f78c" value="ec2ac23a-a4d0-4ba6-9cf0-79c006fb1a1a"
+        - option "QA인증213610f78c" value="1242f4ae-1f65-4cda-a002-34a9afb8bb8a"
+        - option "QA중단팀" value="3bc122a0-7713-4951-966c-0bea2578df3d"
+        - option "독립기술1fcef6ab검증완료" value="15d36542-94bb-40f9-9fa4-9e43c4f6e71c"
+        - option "독립기술907183c6" value="af0b4927-5afb-40da-a274-b3e7661219a5"
+    - label:
+      - text: "카테고리"
+      - combobox "카테고리 필터" [ref=e38]:
+        - option "전체 카테고리" (selected)
+        - option "QA Admin 러닝121459R" value="798b7c9b-541b-495c-a669-b3de095b6301"
+        - option "qa admin 명소121459r" value="5491e0c2-86bb-4b02-b5cb-524a97637283"
+        - option "QA Admin 명소121459R" value="5d734696-3ebf-472b-ae2a-10f26cbbc2a1"
+        - option "QAT107b1ec8장소É 수정" value="b4084223-12cb-4811-9bc3-22ebc0fd5c4e"
+        - option "QAT107b1ec8장소É 수정" value="426553bc-a499-4678-856a-34b8f6ddfde0"
+        - option "QA부스버스트" value="a595a037-5e31-405d-b60b-17c274f5670f"
+        - option "QA부스버스트R2" value="c1b56711-08ac-4265-ac14-7536b2e112b1"
+        - option "QA중단검증" value="1f91da24-a6ee-4399-a8dd-d1d266f43630"
+        - option "QA페이지" value="d2310e83-261c-457a-ba5b-151d582ff011"
+        - option "독립기술1fcef6ab검증완료" value="974cd35e-9c0b-47a5-858c-89fa4afeee53"
+        - option "독립기술907183c6" value="9d0a674c-4793-4fe3-be65-31a984e73122"
+        - option "맛집" value="20000000-0000-4000-8000-000000000001"
+        - option "산책" value="20000000-0000-4000-8000-000000000003"
+        - option "카페" value="20000000-0000-4000-8000-000000000002"
+    - article:
+      - banner: "QA공통연결 C팀 · 카페"
+      - text: "공통 QA 오프라인 문구 보존"
+      - link "QA공통연결의 최애 사진 1" [ref=e39]:
+        - image "QA공통연결의 최애 사진 1"
+      - link "내 등록 수정하기" [ref=e40]
+    - link "내 등록 관리" [ref=e41]
+    - link "랭킹으로 돌아가기" [ref=e42]

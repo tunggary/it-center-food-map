@@ -1,0 +1,42 @@
+[
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "fault": true,
+    "at": 1791896799148
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "fault": true,
+    "at": 1791896799183
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791896799235
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+    "status": 200,
+    "at": 1791896799255
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_booth",
+    "status": 200,
+    "at": 1791896799257
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_events",
+    "status": 200,
+    "at": 1791896799446
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_announcement",
+    "status": 200,
+    "at": 1791896799460
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791896801299
+  }
+]

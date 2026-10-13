@@ -1,0 +1,16 @@
+{
+  "scope": "Earlier same-source dependency isolation replay comparison, preserved summary; detailed samples were superseded by a second comparison and are not asserted",
+  "beforeBundleMB": 11,
+  "afterBundleMB": 1.1,
+  "warmSamplesPerVariant": 6,
+  "warmSummary": {
+    "api": {
+      "meanMs": 448.5,
+      "maxMs": 808.1
+    },
+    "api-shadow": {
+      "meanMs": 259.0,
+      "maxMs": 464.4
+    }
+  }
+}

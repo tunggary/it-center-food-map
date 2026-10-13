@@ -1,0 +1,26 @@
+{
+  "category": {
+    "id": "1f91da24-a6ee-4399-a8dd-d1d266f43630",
+    "name": "QA중단검증",
+    "kind": "PLACE",
+    "version": 1,
+    "selectable": true
+  },
+  "team": {
+    "id": "3bc122a0-7713-4951-966c-0bea2578df3d",
+    "name": "QA중단팀",
+    "version": 1,
+    "selectable": true
+  },
+  "participantId": "af9c220a-46de-48d6-a4a6-87b93ab9295a",
+  "initialFavorite": {
+    "replayed": false,
+    "revision": "152",
+    "targetId": "65edff05-e343-4c96-b40c-f227a10b80ed",
+    "resourceId": "4ee2f375-457e-4873-98d5-3b339a434696"
+  },
+  "tokenFile": ".env.qa.race.local",
+  "deleteTargetPrepared": "a65cdbe9-5074-41f6-8a1c-100daac82d5b",
+  "status": "ready; nothing disabled/deleted yet",
+  "catalogCreation": "Direct DB QA fixture because TECH10 blocks actual operator catalog creation; not operator API pass"
+}

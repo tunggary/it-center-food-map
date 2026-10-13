@@ -1,0 +1,32 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/register?target=a65cdbe9-5074-41f6-8a1c-100daac82d5b]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e2]: "← 지도"
+      - heading "최애 등록하기" [level=1]
+    - text: "지금 화면에서 실패한 입력은 유지해요. 화면을 떠나거나 새로고침하면 초안은 복구되지 않아요."
+    - alert: "이 장소나 코스가 삭제됐어요. 다른 대상을 선택해 주세요."
+    - form:
+      - heading "선택한 최애" [level=2]
+      - button "대상 다시 선택" [ref=e3]
+      - label:
+        - text: "카테고리"
+        - combobox "카테고리" [ref=e4]:
+          - option "카테고리를 선택해 주세요"
+          - option "QA페이지" value="d2310e83-261c-457a-ba5b-151d582ff011"
+          - option "독립기술907183c6" value="9d0a674c-4793-4fe3-be65-31a984e73122"
+          - option "맛집" value="20000000-0000-4000-8000-000000000001"
+          - option "카페" (selected) value="20000000-0000-4000-8000-000000000002"
+      - label:
+        - text: "최애를 소개하는 한마디"
+        - textbox "최애를 소개하는 한마디12/100자" [ref=e9] [placeholder="이 장소나 코스를 좋아하는 이유를 알려 주세요"]: "삭제후대상재선택최종QA"
+        - text: "12/100자"
+      - text: "QA사진정정 · C팀 으로 등록해요.사진  선택 · 최대 3장 JPEG·PNG·WebP, 원본 10MiB·40MP까지. 작은 JPEG로 저장하며 원본은 보관하지 않아요."
+      - button "최애 사진 선택" [ref=e6]
+      - article:
+        - image "photo.png"
+        - status: "준비 완료"
+        - button "사진 제거" [ref=e10]
+      - button "최애 등록하기" [ref=e7]
+      - link "작성 취소" [ref=e8]

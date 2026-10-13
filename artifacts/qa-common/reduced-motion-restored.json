@@ -1,0 +1,29 @@
+{
+  "reduced": false,
+  "styles": [
+    {
+      "animation": "appear",
+      "duration": "0.2s"
+    },
+    {
+      "animation": "appear",
+      "duration": "0.2s"
+    },
+    {
+      "animation": "appear",
+      "duration": "0.2s"
+    },
+    {
+      "animation": "appear",
+      "duration": "0.2s"
+    },
+    {
+      "animation": "appear",
+      "duration": "0.2s"
+    },
+    {
+      "animation": "appear",
+      "duration": "0.2s"
+    }
+  ]
+}

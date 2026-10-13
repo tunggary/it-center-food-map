@@ -1,0 +1,88 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/rankings?category=d2310e83-261c-457a-ba5b-151d582ff011]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "IT센터 최애 지도" [ref=e214]
+      - navigation "개인 메뉴" [ref=e215]:
+        - link "내 최애" [ref=e216]
+        - link "내 정보" [ref=e217]
+      - heading "최애 랭킹" [level=1]
+      - label:
+        - text: "팀"
+        - combobox "팀 필터" [ref=e218]:
+          - option "전체 팀" (selected)
+          - option "A팀" value="10000000-0000-4000-8000-000000000001"
+          - option "B팀" value="10000000-0000-4000-8000-000000000002"
+          - option "C팀" value="10000000-0000-4000-8000-000000000003"
+          - option "QA Admin T121459bR" value="a8278102-0deb-4ebb-87f8-69ec73c9ead1"
+          - option "QA Admin T121459dup" value="89329ea1-261d-4ef3-bf02-1b9b79800ff8"
+          - option "QAT107b1ec8Edited" value="24d76b16-02e3-497a-a62b-42cf28a5d765"
+          - option "QA만료a213610f78c" value="5817d72d-767d-45cc-b002-e92c3382ef7b"
+          - option "QA만료b213610f78c" value="ec2ac23a-a4d0-4ba6-9cf0-79c006fb1a1a"
+          - option "QA인증213610f78c" value="1242f4ae-1f65-4cda-a002-34a9afb8bb8a"
+          - option "QA중단팀" value="3bc122a0-7713-4951-966c-0bea2578df3d"
+          - option "독립기술1fcef6ab검증완료" value="15d36542-94bb-40f9-9fa4-9e43c4f6e71c"
+          - option "독립기술907183c6" value="af0b4927-5afb-40da-a274-b3e7661219a5"
+      - label:
+        - text: "카테고리"
+        - combobox "카테고리 필터" [ref=e219]:
+          - option "전체 카테고리"
+          - option "QA Admin 러닝121459R" value="798b7c9b-541b-495c-a669-b3de095b6301"
+          - option "qa admin 명소121459r" value="5491e0c2-86bb-4b02-b5cb-524a97637283"
+          - option "QA Admin 명소121459R" value="5d734696-3ebf-472b-ae2a-10f26cbbc2a1"
+          - option "QAT107b1ec8장소É 수정" value="b4084223-12cb-4811-9bc3-22ebc0fd5c4e"
+          - option "QAT107b1ec8장소É 수정" value="426553bc-a499-4678-856a-34b8f6ddfde0"
+          - option "QA부스버스트" value="a595a037-5e31-405d-b60b-17c274f5670f"
+          - option "QA부스버스트R2" value="c1b56711-08ac-4265-ac14-7536b2e112b1"
+          - option "QA중단검증" value="1f91da24-a6ee-4399-a8dd-d1d266f43630"
+          - option "QA페이지" (selected) value="d2310e83-261c-457a-ba5b-151d582ff011"
+          - option "독립기술1fcef6ab검증완료" value="974cd35e-9c0b-47a5-858c-89fa4afeee53"
+          - option "독립기술907183c6" value="9d0a674c-4793-4fe3-be65-31a984e73122"
+          - option "맛집" value="20000000-0000-4000-8000-000000000001"
+          - option "산책" value="20000000-0000-4000-8000-000000000003"
+          - option "카페" value="20000000-0000-4000-8000-000000000002"
+    - list:
+      - listitem:
+        - link "1 QA페이지 장소 01 장소 21 건" [ref=e220]
+      - listitem:
+        - link "2 QA페이지 장소 05 장소 1 건" [ref=e221]
+      - listitem:
+        - link "2 QA페이지 장소 15 장소 1 건" [ref=e222]
+      - listitem:
+        - link "2 QA페이지 장소 02 장소 1 건" [ref=e223]
+      - listitem:
+        - link "2 QA페이지 장소 20 장소 1 건" [ref=e224]
+      - listitem:
+        - link "2 QA페이지 장소 12 장소 1 건" [ref=e225]
+      - listitem:
+        - link "2 QA페이지 장소 10 장소 1 건" [ref=e226]
+      - listitem:
+        - link "2 QA페이지 장소 07 장소 1 건" [ref=e227]
+      - listitem:
+        - link "2 QA페이지 장소 08 장소 1 건" [ref=e228]
+      - listitem:
+        - link "2 QA페이지 장소 18 장소 1 건" [ref=e229]
+      - listitem:
+        - link "2 QA페이지 장소 21 장소 1 건" [ref=e230]
+      - listitem:
+        - link "2 QA페이지 장소 17 장소 1 건" [ref=e231]
+      - listitem:
+        - link "2 QA페이지 장소 13 장소 1 건" [ref=e232]
+      - listitem:
+        - link "2 QA페이지 장소 14 장소 1 건" [ref=e233]
+      - listitem:
+        - link "2 QA페이지 장소 06 장소 1 건" [ref=e234]
+      - listitem:
+        - link "2 QA페이지 장소 04 장소 1 건" [ref=e235]
+      - listitem:
+        - link "2 QA페이지 장소 19 장소 1 건" [ref=e236]
+      - listitem:
+        - link "2 QA페이지 장소 11 장소 1 건" [ref=e237]
+      - listitem:
+        - link "2 QA페이지 장소 16 장소 1 건" [ref=e238]
+      - listitem:
+        - link "2 QA페이지 장소 09 장소 1 건" [ref=e239]
+    - button "다음 20건 보기" [ref=e240]
+    - contentinfo:
+      - link "최애 등록하기" [ref=e241]

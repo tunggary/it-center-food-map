@@ -1,0 +1,127 @@
+{
+  "scope": "Optimized 1-RPC API versus old 3-RPC replay shadow; both use isolated per-function dependencies",
+  "samples": [
+    {
+      "variant": "api",
+      "sample": 0,
+      "httpMs": 2758.6,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api-shadow",
+      "sample": 0,
+      "httpMs": 581.8,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api",
+      "sample": 1,
+      "httpMs": 2071.6,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api-shadow",
+      "sample": 1,
+      "httpMs": 446.5,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api",
+      "sample": 2,
+      "httpMs": 363.1,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api-shadow",
+      "sample": 2,
+      "httpMs": 169.8,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api",
+      "sample": 3,
+      "httpMs": 94.3,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api-shadow",
+      "sample": 3,
+      "httpMs": 162.1,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api",
+      "sample": 4,
+      "httpMs": 98.4,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api-shadow",
+      "sample": 4,
+      "httpMs": 216.8,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api",
+      "sample": 5,
+      "httpMs": 107.9,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api-shadow",
+      "sample": 5,
+      "httpMs": 472.7,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api",
+      "sample": 6,
+      "httpMs": 318.6,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api-shadow",
+      "sample": 6,
+      "httpMs": 456.9,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api",
+      "sample": 7,
+      "httpMs": 325.7,
+      "status": 200,
+      "region": "ap-northeast-2"
+    },
+    {
+      "variant": "api-shadow",
+      "sample": 7,
+      "httpMs": 207.0,
+      "status": 200,
+      "region": "ap-northeast-2"
+    }
+  ],
+  "warmSummary": {
+    "api": {
+      "meanMs": 218.0,
+      "maxMs": 363.1
+    },
+    "api-shadow": {
+      "meanMs": 280.9,
+      "maxMs": 472.7
+    }
+  }
+}

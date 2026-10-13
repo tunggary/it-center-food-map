@@ -1,0 +1,23 @@
+{
+  "purpose": "독립관리QA 고유fixture. 장소식별자는합성자료; 카카오검색통과를대체하지않음. 등록6건은실제API",
+  "course": {
+    "targetId": "44a8641f-1ef7-4fe9-8e1c-5821727b597b",
+    "name": "QA관리독립코스",
+    "favorites": [
+      "1abeb01f-cba9-4c14-a74a-879ad94c40ce",
+      "16ef21ab-731e-442a-97c0-ea980526c14c"
+    ],
+    "expectedCount": 2
+  },
+  "place": {
+    "targetId": "1a1cc898-8e16-4733-9bc7-dfc387f6f5de",
+    "name": "QA관리독립장소",
+    "favorites": [
+      "17febdfe-ca67-44f6-bd33-c93da5458d38",
+      "924ac277-3774-4c62-bb05-f3354ae27071",
+      "7088021d-e2b9-4dd3-8d2a-2266127b93ae",
+      "76b90cfb-bf3f-4b1d-8778-460691e29527"
+    ],
+    "expectedCount": 4
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "observed": 1791896916905,
+  "visible": "visible",
+  "pins": [
+    {
+      "text": "1",
+      "aria": "장소 1건 상세"
+    }
+  ],
+  "net": [
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "fault": true,
+      "at": 1791896699388
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "fault": true,
+      "at": 1791896798049
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "fault": true,
+      "at": 1791896798068
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896798089
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+      "status": 200,
+      "at": 1791896798108
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_explore",
+      "status": 200,
+      "at": 1791896798108
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896800164
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896830442
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896914769
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+      "status": 200,
+      "at": 1791896914805
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_explore",
+      "status": 200,
+      "at": 1791896914805
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896916880
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+      "status": 200,
+      "at": 1791896916893
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_explore",
+      "status": 200,
+      "at": 1791896916894
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896918909
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896920994
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896922998
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896924989
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/register]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e162]: "← 지도"
+      - heading "최애 등록하기" [level=1]
+    - text: "지금 화면에서 실패한 입력은 유지해요. 화면을 떠나거나 새로고침하면 초안은 복구되지 않아요."
+    - alert: "QA request failed before sending"
+    - text: "이전 제출의 결과가 아직 확정되지 않았어요. 같은 내용으로 결과를 확인해 주세요."
+    - form:
+      - heading "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" [level=2]
+      - button "대상 다시 선택" [ref=e172] [disabled]
+      - label:
+        - text: "카테고리"
+        - combobox "카테고리" [ref=e173] [disabled]:
+          - option "카테고리를 선택해 주세요"
+          - option "QA부스버스트" value="a595a037-5e31-405d-b60b-17c274f5670f"
+          - option "QA부스버스트R2" value="c1b56711-08ac-4265-ac14-7536b2e112b1"
+          - option "산책" (selected) value="20000000-0000-4000-8000-000000000003"
+      - label:
+        - text: "최애를 소개하는 한마디"
+        - textbox "최애를 소개하는 한마디6/100자" [ref=e178] [disabled] [placeholder="이 장소나 코스를 좋아하는 이유를 알려 주세요"]: "새코스재시도"
+        - text: "6/100자"
+      - text: "QA사진신규 · C팀 으로 등록해요.사진  선택 · 최대 3장 JPEG·PNG·WebP, 원본 10MiB·40MP까지. 작은 JPEG로 저장하며 원본은 보관하지 않아요."
+      - button "최애 사진 선택" [ref=e175] [disabled]
+      - button "같은 요청으로 결과 확인" [ref=e179]
+      - link "작성 취소" [ref=e177]
+- iframe:
+  - button "Open selection tools" [ref=f1e1]
