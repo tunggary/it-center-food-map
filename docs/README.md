@@ -34,7 +34,7 @@
 
 ## 최근 작업 컨텍스트
 
-- 배포 파이프라인 작업 (2026-10-13): 개인 계정 `tunggary2@naver.com`의 Hobby scope `tunggary2-navercoms-projects`에 `it-center-food-map` 프로젝트를 생성하고 GitHub 저장소를 연결했다. API로 개인 소유·Hobby·저장소 연결·Production 브랜치 `main`을 확인했다. 정적 준비 페이지와 `public/` 출력 설정, [배포 절차](deployment.md)를 추가하고 최초 Git 자동 배포 `48f0a16`의 READY·보호된 배포 HTML·[Production](https://it-center-food-map.vercel.app)의 HTTP 200을 확인했다. 제품 구현·QA·피드백 창구는 미완료이므로 단계 체크는 유지한다. 다음 작업은 Preview와 main 머지 후 Production 자동 배포 확인이다. 기존 폴더의 미커밋 Vercel 설계 변경은 별도 작업으로 보존한다.
+- 배포 파이프라인 작업 (2026-10-13): 개인 계정 `tunggary2@naver.com`의 Hobby scope `tunggary2-navercoms-projects`에 `it-center-food-map` 프로젝트를 생성하고 GitHub 저장소를 연결했다. API로 개인 소유·Hobby·저장소 연결·Production 브랜치 `main`을 확인했다. 정적 준비 페이지와 `public/` 출력 설정, [배포 절차](deployment.md)를 추가하고 최초 Git 자동 배포 `48f0a16`의 READY·보호된 배포 HTML·[Production](https://it-center-food-map.vercel.app)의 HTTP 200을 확인했다. 제품 구현·QA·피드백 창구는 미완료이므로 단계 체크는 유지한다. 후속 feature·develop·release Preview READY와 PR #4 머지 후 main `d68541b`의 Production READY·운영 페이지 응답도 확인했다. 관리 콘솔은 https://vercel.com/tunggary2-navercoms-projects/it-center-food-map 이다. 다음 작업은 React/Vite 앱과 Supabase·카카오 연동 구현이다. 기존 폴더의 미커밋 Vercel 설계 변경은 별도 작업으로 보존한다.
 
 - 저장소 공개 작업 (2026-10-13): [tunggary/it-center-food-map](https://github.com/tunggary/it-center-food-map) 공개 저장소를 생성했다. 기존 설계 문서 35개와 프로젝트 지침을 `feature/design-docs` 브랜치에 업로드하고, 루트 README에 주요 문서 링크를 추가했다. GitHub의 공개 설정과 원격 파일 목록, 로컬 문서 링크의 대상 파일 존재를 확인했다. `develop`·`main`에는 PR을 거쳐 반영한다. 저장소 공개는 제품 배포가 아니므로 단계별 체크 상태는 유지한다. 제품 관련 남은 사항과 다음 작업은 아래와 같다.
 
