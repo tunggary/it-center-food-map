@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- 세션 공통 지침 작업 (2026-10-13): `AGENTS.md`에 공개 GitHub 저장소·origin·Git Flow·PR 담당자와 개인 Vercel 계정·scope·팀/프로젝트 ID·관리 콘솔·운영 주소·자동 배포 규칙을 추가했다. CLI/API로 실제 계정·연결·Production 브랜치를 재확인했다. 다른 세션에서도 개인 scope를 명시하고 대상을 검증하도록 기록했으며 기존 미커밋 설계 변경을 보존했다. 제품 단계 체크와 후속 구현 과제는 유지한다.
+
 - 배포 파이프라인 작업 (2026-10-13): 개인 계정 `tunggary2@naver.com`의 Hobby scope `tunggary2-navercoms-projects`에 `it-center-food-map` 프로젝트를 생성하고 GitHub 저장소를 연결했다. API로 개인 소유·Hobby·저장소 연결·Production 브랜치 `main`을 확인했다. 정적 준비 페이지와 `public/` 출력 설정, [배포 절차](deployment.md)를 추가하고 최초 Git 자동 배포 `48f0a16`의 READY·보호된 배포 HTML·[Production](https://it-center-food-map.vercel.app)의 HTTP 200을 확인했다. 제품 구현·QA·피드백 창구는 미완료이므로 단계 체크는 유지한다. 후속 feature·develop·release Preview READY와 PR #4 머지 후 main `d68541b`의 Production READY·운영 페이지 응답도 확인했다. 관리 콘솔은 https://vercel.com/tunggary2-navercoms-projects/it-center-food-map 이다. 다음 작업은 React/Vite 앱과 Supabase·카카오 연동 구현이다. 기존 폴더의 미커밋 Vercel 설계 변경은 별도 작업으로 보존한다.
 
 - 배포처 변경 작업 (2026-10-13): 사용자 지정에 따라 개인 프로젝트의 정적 웹 배포를 Vercel Hobby로 변경했다. React/Vite·Supabase·카카오 구성은 유지하고 `vercel.app`, SPA rewrite, CORS/지도 허용 도메인, Vercel CDN 요청/전송 한도를 관련 설계·ADR·PRD에 반영했다. `feature/vercel-hobby-docs` 브랜치에서 문서만 수정했으며 서비스 생성·배포는 수행하지 않았다. 로컬 링크·앵커426개와 `git diff --check`를 확인해 통과했다. Cloudflare 표기는 이전 결정/대안 이력에만 남았고 QA 미실행44·판정 보류21 상태를 유지했다.
