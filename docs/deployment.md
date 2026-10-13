@@ -6,6 +6,7 @@
 - Vercel 로그인 계정: `tunggary2@naver.com` (`tunggary2-4010`)
 - 개인 Hobby scope: `tunggary2-navercoms-projects`
 - Vercel 프로젝트: `it-center-food-map`
+- Production URL: https://it-center-food-map.vercel.app
 - 프로젝트 ID: `prj_lbTToFgSxF9rMuyDBPWhmLOO6shf`
 - 팀 ID: `team_nK4BZEkKZZbkPROxHvkQcJTV`
 
@@ -20,6 +21,8 @@ Vercel GitHub 연동으로 빌드·배포한다. GitHub Actions 배포 작업이
 - `develop`에서 `release/*` 분기 → `main` PR: 머지하면 Production에 자동 배포한다. 릴리스 변경이 있으면 `develop`에도 PR로 반영한다.
 - Production 브랜치: `main`.
 - Preview의 Vercel 인증 보호는 유지한다. 보호된 배포는 `vercel curl`로 확인한다.
+
+프로젝트 최초 연결에서는 첫 feature 브랜치 배포가 Production으로 생성됐다. 준비 페이지의 `READY`와 Production URL의 HTTP 200을 확인했다. 이후 Preview·main 자동 배포를 별도로 검증한다.
 
 현재는 의존성·빌드 명령 없는 정적 준비 페이지다. `vercel.json`에서 `public/`만 배포 출력으로 지정하므로 설계 문서·로컬 설정 파일은 사이트 출력에 포함하지 않는다. React/Vite 구현 시 framework·build command·output directory를 Vite와 `dist`에 맞게 변경한다. SPA rewrite와 Supabase·카카오 설정은 앱 구현 시 추가한다.
 
