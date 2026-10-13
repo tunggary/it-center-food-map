@@ -18,6 +18,8 @@
 | [이미지 WASM 예시](https://supabase.com/docs/guides/functions/examples/image-manipulation) | magick-wasm 방식; 우리 최대 파일의 CPU 충족은 별도 시험 |
 | [Cron](https://supabase.com/docs/guides/cron), [함수 예약](https://supabase.com/docs/guides/functions/schedule-functions) | DB scheduler/pg_net 호출, secret 보관 |
 | [Storage buckets](https://supabase.com/docs/guides/storage/buckets/fundamentals) | private 저장과 업로드 제한 |
+| [서명 업로드](https://supabase.com/docs/reference/javascript/storage-from-createsigneduploadurl) | signed 권한 수명과 앱 자산TTL을 구분하고 원본 삭제 전에 확인 |
+| [pg_dump snapshot](https://www.postgresql.org/docs/current/app-pgdump.html) | DB dump와 사진 manifest에 같은 snapshot 사용 |
 | [DB 백업](https://supabase.com/docs/guides/platform/backups) | Storage 파일은 DB 백업과 별개 |
 | [카카오 Local](https://developers.kakao.com/docs/ko/local/dev-guide) | 장소 ID·좌표·검색 결과 |
 | [카카오 Web](https://apis.map.kakao.com/web/documentation/), [선 길이](https://apis.map.kakao.com/web/sample/calculatePolylineDistance/) | 직접 그린 경로·선 길이; 공식 보행 길찾기 시간은 아님 |

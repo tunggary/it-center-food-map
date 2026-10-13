@@ -31,6 +31,8 @@
 - 부스·연결 상태: [동기화](synchronization.md)
 - 사진 업로드·삭제·용량: [사진](media.md)
 - 사용량·휴면·백업: [운영](operations.md)
-- 추가 결정 DEC-01~12: [제품 기본안](policies.md)
+- 추가 결정 DEC-01~12: [확정 정책](policies.md)
 
 QA 범위는 설계의 추적 관계이며 실행 증거가 아니다. 추가 기술 게이트는 [검증](verification.md)에 별도로 둔다.
+
+추가 운영 계약은 [용량](storage-accounting.md)과 [백업](backup.md)에 있다. 기존 QA65개는 정책 확정 후 모두 미실행이며, 새 기술 검증은 verification의 추가 상세 설계 검증으로 추적한다.

@@ -24,8 +24,10 @@ registration_events N ─ 0..1 favorites (삭제 후 tombstone)
 | `participants` | id, identity_id, nickname, team_id, version | identity_id UNIQUE FK, team_id FK RESTRICT; 닉네임 중복 가능 |
 | `targets` | id, kind, name, provider, place_id, address, lng, lat, route_json, approximate_length_m, version | UNIQUE(provider,place_id), UNIQUE(id,kind); PLACE/COURSE 필드 조합 CHECK |
 | `favorites` | id, participant_id, target_id, category_id, kind, message, version, created_at, updated_at | UNIQUE(participant_id,target_id), FK(target_id,kind), FK(category_id,kind), participant FK |
-| `photo_assets` | id, owner_identity_id, favorite_id, slot, state, expires_at, lease_token, lease_until | slot 1~3 CHECK, UNIQUE(favorite_id,slot), owner FK; favorite는 삭제 전에 연결 해제 |
-| `media_objects` | object_key, asset_id, variant, bytes, state, created_at | key PK; raw/final/thumb, processing 시도별 키; 객체보다 먼저 행 예약 |
+| `photo_assets` | id, owner_identity_id, favorite_id, slot, state, expires_at, lease_token, lease_until, final_object_key, thumb_object_key | slot 1~3 CHECK, UNIQUE(favorite_id,slot), owner FK; favorite는 삭제 전에 연결 해제 |
+| `media_objects` | object_key, asset_id, variant, attempt_id, reserved_bytes, actual_bytes, state, upload_expires_at, writer_lease_until, sha256, created_at, released_at | key PK; raw/final/thumb, processing 시도별 키; 객체보다 먼저 행 예약 |
+| `storage_budget` | id=1, limit_bytes=734003200, updated_at | 용량 예약 직렬화; 누적 카운터 대신 미해제 예약 합계 |
+| `backup_runs` | id, actor_auth_user_id, request_key, status, snapshot 메타데이터, manifest/archive 해시, lease, 오류코드 | 실행1개 제한·종료 상태 불변; [필드·제약](backup.md) |
 | `commands` | actor_kind, actor_id, request_key, payload_hash, resource_id, outcome, revision, created_at | UNIQUE(actor_kind,actor_id,request_key); payload 원문 미보관 |
 | `app_state` | id=1, revision, data_epoch UUID, updated_at | 한 행; 도메인 쓰기 직렬화·최신 snapshot 식별 |
 | `registration_events` | revision, favorite_id nullable, created_at | revision PK; favorite ON DELETE SET NULL; 이름/문구 스냅샷 없음 |
@@ -33,7 +35,7 @@ registration_events N ─ 0..1 favorites (삭제 후 tombstone)
 | `cleanup_jobs` | object_key, attempts, next_attempt_at, lease_token, lease_until | object_key UNIQUE; 객체 삭제 후 완료 |
 | `rate_counters` | scope, key_hash, window_start, count, expires_at | UNIQUE(scope,key_hash,window_start); TTL 청소 |
 
-사진 최종/썸네일 경로를 `media_objects`로 분리해 WASM 변환 후 DB 실패가 나도 파일을 추적한다. byte는 예약 상한과 실제 저장량을 구분한다. 사진 연결 변경과 용량 예약은 asset 행/별도 용량 상태 행 잠금으로 처리하며 전역 app_state 잠금을 기다리지 않는다.
+사진 객체의 예약량·실제량·해제 조건은 [용량 회계](storage-accounting.md)에, 백업의 타입·유일 제약·상태 전이는 [백업 기록](backup.md)에 정의한다. 용량 변경은 storage_budget → asset → object 순으로 잠그고 app_state를 나중에 요청하지 않는다. 이미 예약한 사진의 favorite 연결은 app_state → asset만 사용하며 용량을 다시 예약하지 않는다.
 
 ### 필드·검증
 
@@ -87,7 +89,7 @@ SELECT * FROM ranked ORDER BY favorite_count DESC, target_id;
 
 Edge는 정규화한 업무 DTO를 canonical JSON으로 직렬화해 SHA-256을 계산한다. 장소 선택 토큰의 서명/기한은 검증하지만 payload_hash는 서명 문자열이 아닌 검증된 provider/place_id 등으로 만든다. 토큰 재발급만으로 다른 명령이 되지 않는다.
 
-예상 가능한 업무 오류는 변경 전에 검사한다. 변경 후의 예외를 삼켜 부분 commit하지 않는다. deadlock/timeout은 전체 rollback, 같은 키로 수동 재시도한다. lock_timeout 초기 1초·statement_timeout 초기 1.5초를 제안하고 100건 burst에서 2초 완료 목표를 평가한다. timeout은 PostgREST 역할/요청 설정으로 해당 SQL 문 시작 전에 적용하고 실제 취소 동작을 시험한다. 실행 중인 함수 안에서 statement_timeout을 바꾸는 것만으로 현재 문이 취소된다고 가정하지 않는다.
+예상 가능한 업무 오류는 변경 전에 검사한다. 변경 후의 예외를 삼켜 부분 commit하지 않는다. deadlock/timeout은 전체 rollback, 같은 키로 수동 재시도한다. lock_timeout 초기 1초·statement_timeout 초기 1.5초로 시작하고 100건 burst에서 2초 완료 목표를 평가한다. timeout은 PostgREST 역할/요청 설정으로 해당 SQL 문 시작 전에 적용하고 실제 취소 동작을 시험한다. 실행 중인 함수 안에서 statement_timeout을 바꾸는 것만으로 현재 문이 취소된다고 가정하지 않는다.
 
 ### 첫 등록
 
@@ -105,7 +107,7 @@ favorite.expectedVersion을 비교한다. message/category/photos를 수정해�
 
 preview는 target ID/name/version/전체 등록 수를 같은 snapshot으로 반환한다. 등록 추가/삭제/편집 등 대상에 연결된 내용 변경은 target version을 증가시킨다. 실행 때 같은 전역 잠금 아래 version/건수를 비교하고 달라졌으면 409와 재확인 내용을 반환한다.
 
-일치하면 모든 asset 공개 연결 해제·cleanup 예약·모든 favorite 삭제·target 삭제를 commit한다. 삭제된 원 target ID의 재전송으로 복구하지 않는다. 새 검색/새 course 작성을 명시한 재등록은 새 명령으로 허용하는 기본안이다. 영구 차단 목록은 만들지 않는다.
+일치하면 모든 asset 공개 연결 해제·cleanup 예약·모든 favorite 삭제·target 삭제를 commit한다. 삭제된 원 target ID의 재전송으로 복구하지 않는다. 새 검색/새 course 작성을 명시한 재등록은 새 명령으로 허용한다. 영구 차단 목록은 만들지 않는다.
 
 성공 응답 유실 뒤 결과 자원이 다른 작업으로 삭제돼 있으면 등록/수정은 `RESULT_GONE`. 이미 성공한 삭제의 동일 키는 성공을 반환한다. commands에 삭제한 문구·사진을 남기지 않는다. 참여자 명령은 identity 유효 기간 동안 보존하고, 만료 identity의 과거 명령은 재실행할 수 없다. 관리자 명령은 Auth UID에 귀속시켜 로그인 갱신 후에도 같은 키를 사용하며 첫 버전에서 자동 삭제하지 않는다.
 
