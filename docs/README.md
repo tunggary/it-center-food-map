@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- 지도 UI 기능 PR·릴리스 준비 (2026-10-14): feature PR #17을 develop(d56d726)에 merge했다. 기능d2d7f87의 Preview READY와 인증보호 유지 상태의 HTML/CSS/JS 정상응답·map-scene/map-panel 스타일을 확인했다. release/map-first-ui에서 main PR #18을 준비했다. 팀은 개인 QA/운영에 반영 완료, 코드/테스트는24개 통과. 다음은 main 머지→최종 Production READY/운영 지도·팀필터 확인→릴리스 develop 역반영이다. 운영 배포 완료는 아직 기록하지 않는다.
+
 - 지도 UI·팀 추가 개발검증 완료 (2026-10-14): Vitest24개/타입/build·diff검사 통과. 실제 로컬 브라우저로 모바일390×844/PC1440×900/부스1920×1080 지도 전체 크기·overflow없음·지도DOM유지/복귀·시트버튼/드래그·선택핀 비가림을 확인했다. 장소 검색결과핀6개→등록201/최신상세200→수정/닉네임저장/본인삭제, 코스점/선→등록/본인삭제를 수행했다. QA자료는 로컬에서만 생성했고 새등록2건을 본인삭제했으며 기존자료는 유지했다. 팀migration은 local/QA/prod 각각dry-run→적용, 운영팀2개 selectable=true·등록0·revision2, local재적용 시 revision/기존등록 무변경을 확인했다. 6·7단계는 완료, 8단계는 Preview/운영 배포 확인 전으로 유지한다. 원본QA보류/실기기/성능은 통과로 바꾸지 않는다. 다음은 feature→develop/릴리스→main PR 및 최종 READY/운영 응답 확인이다.
 
 - 지도 중심 UI 구현·기존 회귀검증 (2026-10-13): 메인/랭킹/상세가 공통 지도 인스턴스와 URL 필터를 공유하고 반응형 패널·드래그 시트, 전체지도 등록/코스/수정, 부스 플로팅 랭킹/알림, 개인 카드 스타일을 구현했다. 기존 Vitest20개 및 타입/build 통과. 팀 추가 migration의 local dry-run→적용 후 두 팀 selectable=true를 확인했다. 다음은 실제 브라우저 데이터흐름/배치·신규 회귀, QA/운영 팀migration 검증과 feature/release PR·최종 운영 확인이다. 개편 전체 검증·배포 완료로 기록하지 않는다.
