@@ -1,0 +1,82 @@
+{
+  "context": {
+    "project": "yxgmpbjcvjeacnrgtcbq",
+    "durationRequestedSeconds": 1800,
+    "clients": 102,
+    "scope": "HTTP API polling/read/write only; not browser/SDK/E2E",
+    "network": "No artificial impairment; RTT/bandwidth not independently controlled",
+    "startUTC": "2026-10-13T12:29:59.090019+00:00",
+    "interrupted": true,
+    "interruptionReason": "Restart under independent process session to preserve continuous execution across agent slot rotation"
+  },
+  "elapsedSeconds": 391.5,
+  "requests": 28071,
+  "errors": [
+    {
+      "label": "registration",
+      "status": 500,
+      "code": "INTERNAL_ERROR"
+    }
+  ],
+  "errorCount": 1,
+  "metrics": {
+    "catalog": {
+      "count": 1,
+      "p95Ms": 457.2,
+      "maxMs": 457.2,
+      "meanMs": 457.2,
+      "bodyBytes": 9074
+    },
+    "snapshot": {
+      "count": 8834,
+      "p95Ms": 1434.6,
+      "maxMs": 6165.8,
+      "meanMs": 654.4,
+      "bodyBytes": 1051295429
+    },
+    "session": {
+      "count": 100,
+      "p95Ms": 3815.3,
+      "maxMs": 3979.7,
+      "meanMs": 1027.6,
+      "bodyBytes": 17884
+    },
+    "revision": {
+      "count": 18735,
+      "p95Ms": 903.5,
+      "maxMs": 5570.8,
+      "meanMs": 272.5,
+      "bodyBytes": 2269908
+    },
+    "admin-equivalent-revision": {
+      "count": 165,
+      "p95Ms": 967.0,
+      "maxMs": 3612.2,
+      "meanMs": 314.6,
+      "bodyBytes": 20006
+    },
+    "booth": {
+      "count": 136,
+      "p95Ms": 1828.3,
+      "maxMs": 4010.5,
+      "meanMs": 805.8,
+      "bodyBytes": 16818006
+    },
+    "registration": {
+      "count": 100,
+      "p95Ms": 3326.6,
+      "maxMs": 6783.1,
+      "meanMs": 2294.2,
+      "bodyBytes": 19568
+    }
+  },
+  "counts": {
+    "catalog": 1,
+    "snapshot": 8834,
+    "session": 100,
+    "revision": 18735,
+    "admin-equivalent-revision": 165,
+    "booth": 136,
+    "registration": 100
+  }
+}

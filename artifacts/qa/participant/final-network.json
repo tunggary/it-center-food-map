@@ -1,0 +1,15 @@
+[
+  {
+    "status": 404,
+    "errorCode": "TARGET_GONE"
+  },
+  {
+    "status": 201,
+    "data": {
+      "replayed": false,
+      "revision": "269",
+      "targetId": "b892b7f1-1748-413c-b861-07d4ef7b879b",
+      "resourceId": "c574930f-47e1-40bb-b607-30aa207d860c"
+    }
+  }
+]

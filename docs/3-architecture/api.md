@@ -117,3 +117,7 @@ public schema에 있는 `gateway_create_favorite`, `gateway_edit_favorite`, `gat
 | 503 CAPACITY_REACHED / DEPENDENCY_UNAVAILABLE | 부분 성공 없음; 사진 용량이면 사진 제거 후 명시적 재제출 가능 |
 
 응답 유실은 실패 확정이 아니다. 같은 requestKey로 결과를 확인한다. GET/공개 읽기는 최대 2회 지수 재시도, 쓰기는 사용자가 재시도할 때 같은 키로 전송한다. 5xx 이후 새 명령 키를 자동 생성하지 않는다.
+
+## 등록 RPC 왕복 최적화 구현
+
+`POST /favorites`는 Edge strict 입력/HMAC 검증과 canonical hash를 유지하고 `gateway_submit_favorite(p_token_hash,p_payload,p_selection_identity,p_selection_expires_at,p_validation_error)`를 한 번 호출한다. 내부에서 기존 자격·30회/분 rate·replay와 기존 create gateway를 재사용한다. 업무 쓰기는 subtransaction에 두고 오류를 제한된 envelope로 반환하여 실패해도 바깥 rate 증가가 유지된다. expired selection은 신규 등록만 거절하며 성공 replay는 허용하고, identity 만료/selection 소유자 불일치는 replay에도 거절한다. 기존 원장·revision·이벤트·사진 연결의 단일 트랜잭션 결정은 유지한다. 함수는 service_role 전용·전용 NOLOGIN owner·닫힌 search_path이며 공개 read는 변경하지 않는다.

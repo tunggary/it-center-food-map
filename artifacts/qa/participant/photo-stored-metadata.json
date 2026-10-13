@@ -1,0 +1,29 @@
+[
+  {
+    "id": "b46c1f1e-346f-4239-984c-6ecbc184f6e0",
+    "status": 200,
+    "type": "image/jpeg",
+    "bytes": 293,
+    "width": 32,
+    "height": 32,
+    "format": "JPEG"
+  },
+  {
+    "id": "6a4f8328-0fb0-4980-8d40-c561bafb9916",
+    "status": 200,
+    "type": "image/jpeg",
+    "bytes": 6286,
+    "width": 800,
+    "height": 1280,
+    "format": "JPEG"
+  },
+  {
+    "id": "71140369-65e7-4c8f-9038-570c3e9bf7b7",
+    "status": 200,
+    "type": "image/jpeg",
+    "bytes": 293,
+    "width": 32,
+    "height": 32,
+    "format": "JPEG"
+  }
+]

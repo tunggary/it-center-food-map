@@ -1,0 +1,145 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/booth?category=5d734696-3ebf-472b-ae2a-10f26cbbc2a1]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "IT센터 최애 지도" [ref=e3]
+      - heading "우리의 최애가 모이고 있어요" [level=1]
+      - text: "전체 팀 · 카테고리별 랭킹"
+    - status: "QA공통연결 · C팀 스타벅스 수원인계점 을 최애로 등록했어요!"
+    - label:
+      - text: "카테고리"
+      - combobox "카테고리 필터" [ref=e4]:
+        - option "전체 카테고리"
+        - option "QA Admin 러닝121459R" value="798b7c9b-541b-495c-a669-b3de095b6301"
+        - option "qa admin 명소121459r" value="5491e0c2-86bb-4b02-b5cb-524a97637283"
+        - option "QA Admin 명소121459R" (selected) value="5d734696-3ebf-472b-ae2a-10f26cbbc2a1"
+        - option "QAT107b1ec8장소É 수정" value="b4084223-12cb-4811-9bc3-22ebc0fd5c4e"
+        - option "QAT107b1ec8장소É 수정" value="426553bc-a499-4678-856a-34b8f6ddfde0"
+        - option "QA부스버스트" value="a595a037-5e31-405d-b60b-17c274f5670f"
+        - option "QA부스버스트R2" value="c1b56711-08ac-4265-ac14-7536b2e112b1"
+        - option "QA중단검증" value="1f91da24-a6ee-4399-a8dd-d1d266f43630"
+        - option "QA페이지" value="d2310e83-261c-457a-ba5b-151d582ff011"
+        - option "독립기술1fcef6ab검증완료" value="974cd35e-9c0b-47a5-858c-89fa4afeee53"
+        - option "독립기술907183c6" value="9d0a674c-4793-4fe3-be65-31a984e73122"
+        - option "맛집" value="20000000-0000-4000-8000-000000000001"
+        - option "산책" value="20000000-0000-4000-8000-000000000003"
+        - option "카페" value="20000000-0000-4000-8000-000000000002"
+    - region "최애 장소와 코스 지도" [ref=e5]:
+      - text: "250m"
+      - link "Kakao 맵으로 이동(새창열림)" [ref=e6]:
+        - image "Kakao 맵으로 이동(새창열림)"
+    - complementary [ref=e7] [scrollable]:
+      - region:
+        - heading "QA Admin 러닝121459R" [level=2]
+        - list:
+          - listitem:
+            - link "1 QA관리경계코스121459 산책코스 2 건" [ref=e8]
+        - link "전체 보기" [ref=e9]
+      - region:
+        - heading "qa admin 명소121459r" [level=2]
+        - list
+        - text: "첫 최애를 기다려요."
+        - link "전체 보기" [ref=e10]
+      - region:
+        - heading "QA Admin 명소121459R" [level=2]
+        - list:
+          - listitem:
+            - link "1 스타벅스 수원인계점 장소 1 건" [ref=e47]
+        - link "전체 보기" [ref=e11]
+      - region:
+        - heading "QAT107b1ec8장소É 수정" [level=2]
+        - list
+        - text: "첫 최애를 기다려요."
+        - link "전체 보기" [ref=e12]
+      - region:
+        - heading "QAT107b1ec8장소É 수정" [level=2]
+        - list
+        - text: "첫 최애를 기다려요."
+        - link "전체 보기" [ref=e13]
+      - region:
+        - heading "QA부스버스트" [level=2]
+        - list:
+          - listitem:
+            - link "1 QA버스트코스002 산책코스 1 건" [ref=e14]
+          - listitem:
+            - link "1 QA버스트코스001 산책코스 1 건" [ref=e15]
+          - listitem:
+            - link "1 QA버스트코스003 산책코스 1 건" [ref=e16]
+        - link "전체 보기" [ref=e17]
+      - region:
+        - heading "QA부스버스트R2" [level=2]
+        - list:
+          - listitem:
+            - link "1 QA버스트R2코스060 산책코스 1 건" [ref=e18]
+          - listitem:
+            - link "1 QA버스트R2코스083 산책코스 1 건" [ref=e19]
+          - listitem:
+            - link "1 QA버스트R2코스071 산책코스 1 건" [ref=e20]
+          - listitem:
+            - link "1 QA버스트R2코스025 산책코스 1 건" [ref=e21]
+          - listitem:
+            - link "1 QA버스트R2코스081 산책코스 1 건" [ref=e22]
+        - link "전체 보기" [ref=e23]
+      - region:
+        - heading "QA중단검증" [level=2]
+        - list
+        - text: "첫 최애를 기다려요."
+        - link "전체 보기" [ref=e24]
+      - region:
+        - heading "QA페이지" [level=2]
+        - list:
+          - listitem:
+            - link "1 QA페이지 장소 01 장소 21 건" [ref=e25]
+          - listitem:
+            - link "2 QA페이지 장소 05 장소 1 건" [ref=e26]
+          - listitem:
+            - link "2 QA페이지 장소 15 장소 1 건" [ref=e27]
+          - listitem:
+            - link "2 QA페이지 장소 02 장소 1 건" [ref=e28]
+          - listitem:
+            - link "2 QA페이지 장소 20 장소 1 건" [ref=e29]
+        - link "전체 보기" [ref=e30]
+      - region:
+        - heading "독립기술1fcef6ab검증완료" [level=2]
+        - list
+        - text: "첫 최애를 기다려요."
+        - link "전체 보기" [ref=e31]
+      - region:
+        - heading "독립기술907183c6" [level=2]
+        - list
+        - text: "첫 최애를 기다려요."
+        - link "전체 보기" [ref=e32]
+      - region:
+        - heading "맛집" [level=2]
+        - list:
+          - listitem:
+            - link "1 L1 테스트 장소 장소 1 건" [ref=e33]
+        - link "전체 보기" [ref=e34]
+      - region:
+        - heading "산책" [level=2]
+        - list:
+          - listitem:
+            - link "1 QA코스R1 산책코스 2 건" [ref=e35]
+          - listitem:
+            - link "2 QA중단팀프로필준비 산책코스 1 건" [ref=e36]
+          - listitem:
+            - link "2 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 산책코스 1 건" [ref=e37]
+          - listitem:
+            - link "2 독립 백업 검증 코스 산책코스 1 건" [ref=e38]
+        - link "전체 보기" [ref=e39]
+      - region:
+        - heading "카페" [level=2]
+        - list:
+          - listitem:
+            - link "1 L1 테스트 장소 장소 3 건" [ref=e40]
+          - listitem:
+            - link "1 L2 테스트 장소 장소 3 건" [ref=e41]
+          - listitem:
+            - link "1 삼성역 2호선 장소 3 건" [ref=e42]
+          - listitem:
+            - link "4 L3 테스트 장소 장소 2 건" [ref=e43]
+          - listitem:
+            - link "5 삼성중앙역 9호선 장소 1 건" [ref=e44]
+        - link "전체 보기" [ref=e45]
+    - text: "부스 화면을 전경에 유지하고 PC 절전을 꺼 주세요."

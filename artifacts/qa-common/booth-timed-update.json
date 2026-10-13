@@ -1,0 +1,127 @@
+{
+  "observed": 1791896916918,
+  "visible": "visible",
+  "pins": [
+    {
+      "text": "1",
+      "aria": "장소 1건 상세"
+    }
+  ],
+  "net": [
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "fault": true,
+      "at": 1791896799148
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "fault": true,
+      "at": 1791896799183
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896799235
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+      "status": 200,
+      "at": 1791896799255
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_booth",
+      "status": 200,
+      "at": 1791896799257
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_events",
+      "status": 200,
+      "at": 1791896799446
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_announcement",
+      "status": 200,
+      "at": 1791896799460
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896801299
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896914769
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+      "status": 200,
+      "at": 1791896914809
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_booth",
+      "status": 200,
+      "at": 1791896914809
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_events",
+      "status": 200,
+      "at": 1791896915019
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_announcement",
+      "status": 200,
+      "at": 1791896915038
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896916881
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+      "status": 200,
+      "at": 1791896916895
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_booth",
+      "status": 200,
+      "at": 1791896916899
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_announcement",
+      "status": 200,
+      "at": 1791896916900
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896918877
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_announcement",
+      "status": 200,
+      "at": 1791896919148
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896920996
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896923095
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_announcement",
+      "status": 200,
+      "at": 1791896923273
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+      "status": 200,
+      "at": 1791896925199
+    }
+  ]
+}

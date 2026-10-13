@@ -1,0 +1,12 @@
+[
+  {
+    "method": "panTo",
+    "reduced": false,
+    "at": 1791897275262
+  },
+  {
+    "method": "setCenter",
+    "reduced": true,
+    "at": 1791897304616
+  }
+]

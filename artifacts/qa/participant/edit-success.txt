@@ -1,0 +1,33 @@
+- title: "IT센터 최애 지도" [url=http://localhost:5173/targets/86ae3bae-88fb-4b14-989d-89ab8260ef7e]
+- link "본문으로 이동" [ref=e1]
+- status:
+  - text: "갱신이 잠시 중단됐어요. 마지막 확인 오후 8:44:41"
+  - button "다시 연결" [ref=e23]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e16]: "← 지도"
+      - heading "서울역" [level=1]
+    - status: "최애 등록 결과를 확인했어요."
+    - text: "서울 중구 한강대로 405 이 조건  1 건 · 전체  1 건"
+    - button "전체 등록 보기" [ref=e17]
+    - label:
+      - text: "팀"
+      - combobox "팀 필터" [ref=e18]:
+        - option "전체 팀" (selected)
+        - option "A팀" value="10000000-0000-4000-8000-000000000001"
+        - option "B팀" value="10000000-0000-4000-8000-000000000002"
+        - option "C팀" value="10000000-0000-4000-8000-000000000003"
+    - label:
+      - text: "카테고리"
+      - combobox "카테고리 필터" [ref=e19]:
+        - option "전체 카테고리" (selected)
+        - option "맛집" value="20000000-0000-4000-8000-000000000001"
+        - option "산책" value="20000000-0000-4000-8000-000000000003"
+        - option "카페" value="20000000-0000-4000-8000-000000000002"
+    - article:
+      - banner: "QA참여 C팀 · 카페"
+      - text: "서울역수정😀"
+      - link "내 등록 수정하기" [ref=e20]
+    - link "내 등록 관리" [ref=e21]
+    - link "랭킹으로 돌아가기" [ref=e22]

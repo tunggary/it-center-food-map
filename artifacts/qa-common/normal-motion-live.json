@@ -1,0 +1,44 @@
+[
+  {
+    "at": 1791896968387,
+    "animations": [
+      {
+        "name": "appear",
+        "state": "running",
+        "currentTime": 0,
+        "duration": 200
+      },
+      {
+        "name": "appear",
+        "state": "running",
+        "currentTime": 0,
+        "duration": 200
+      },
+      {
+        "name": "appear",
+        "state": "running",
+        "currentTime": 0,
+        "duration": 200
+      },
+      {
+        "name": "appear",
+        "state": "running",
+        "currentTime": 0,
+        "duration": 200
+      },
+      {
+        "name": "appear",
+        "state": "running",
+        "currentTime": 0,
+        "duration": 200
+      },
+      {
+        "name": "appear",
+        "state": "running",
+        "currentTime": 0,
+        "duration": 200
+      }
+    ],
+    "gradients": 0
+  }
+]

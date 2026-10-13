@@ -25,7 +25,11 @@ Vercel GitHub 연동으로 빌드·배포한다. GitHub Actions 배포 작업이
 
 프로젝트 최초 연결에서는 첫 feature 브랜치 배포가 Production으로 생성됐다. 준비 페이지의 `READY`와 Production URL의 HTTP 200을 확인했다. 후속 feature 커밋 `80035e6`, develop·release 브랜치가 Preview로 배포됐고, PR #4 머지 후 main 커밋 `d68541b`가 Production READY로 자동 배포됐다. 보호된 Preview HTML과 운영 URL의 준비 페이지 응답을 확인했다.
 
-현재는 의존성·빌드 명령 없는 정적 준비 페이지다. `vercel.json`에서 `public/`만 배포 출력으로 지정하므로 설계 문서·로컬 설정 파일은 사이트 출력에 포함하지 않는다. React/Vite 구현 시 framework·build command·output directory를 Vite와 `dist`에 맞게 변경한다. SPA rewrite와 Supabase·카카오 설정은 앱 구현 시 추가한다.
+제품은 React/Vite 앱이며 Node.js 24와 고정된 pnpm 버전으로 빌드한다. `vercel.json`의 framework `vite`, build command `pnpm build`, output directory `dist`를 적용해 설계 문서·로컬 설정 파일을 사이트 출력에서 제외한다. 명시된 제품 경로만 SPA로 rewrite하고 존재하지 않는 자산은 404를 유지한다.
+
+Production에는 운영 Supabase `gpsbnmgwowsbgclcottl`, Preview에는 QA Supabase `yxgmpbjcvjeacnrgtcbq`를 연결한다. 각각 `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `VITE_KAKAO_JS_KEY` 세 공개 설정만 등록한다. 서비스 역할 키·DB 비밀번호·Kakao REST key·참여자 자격을 Vite 설정에 넣지 않는다. 카카오 SDK 허용 도메인은 운영과 실제 검증할 Preview 주소를 구분해 확인한다. Preview 인증 보호는 그대로 유지한다.
+
+2026-10-13 릴리스 준비에서 개인 계정·프로젝트·GitHub 연결과 Production 브랜치 main을 다시 조회했다. 두 환경의 세 공개 설정을 등록하고 환경별 URL/publishable key가 맞는지 값 출력 없이 대조했다. 원격 Supabase 공개 signup을 운영·QA 모두 비활성화했고 실제 Auth settings와 독립 운영 감사로 확인했다. 배포 READY와 운영 응답은 해당 커밋이 실제 배포된 뒤 아래 실행 기록에 남긴다.
 
 ## 로컬 연결과 확인
 

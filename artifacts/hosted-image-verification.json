@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-13",
+  "project": "yxgmpbjcvjeacnrgtcbq",
+  "inputBytes": 136543,
+  "pixels": 1999396,
+  "results": [
+    {
+      "step": "session",
+      "http": 200,
+      "elapsedMs": 4792.1
+    },
+    {
+      "step": "reserve",
+      "http": 200,
+      "elapsedMs": 3660.7
+    },
+    {
+      "step": "finalize",
+      "http": 200,
+      "elapsedMs": 4912.0,
+      "state": "ready",
+      "error": null
+    },
+    {
+      "step": "idempotent-finalize",
+      "http": 200,
+      "elapsedMs": 3634.4,
+      "state": "ready",
+      "error": null
+    }
+  ],
+  "limitations": "HTTP wall latency only; no CPU/total memory metrics. Not G2 acceptance."
+}

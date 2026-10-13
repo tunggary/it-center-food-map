@@ -1,0 +1,110 @@
+{
+  "scope": "PostgreSQL pg_stat_statements aggregated SQL execution; not individual Edge tracing; lifetime includes prior setup/restore",
+  "measurements": [
+    {
+      "label": "read_explore",
+      "calls": 5057,
+      "totalExecMs": "1116083.39",
+      "meanExecMs": "220.70",
+      "maxExecMs": 1800.132064
+    },
+    {
+      "label": "read_booth",
+      "calls": 62,
+      "totalExecMs": "36930.57",
+      "meanExecMs": "595.65",
+      "maxExecMs": 1122.960569
+    },
+    {
+      "label": "read_revision",
+      "calls": 7981,
+      "totalExecMs": "11297.77",
+      "meanExecMs": "1.42",
+      "maxExecMs": 1549.550303
+    },
+    {
+      "label": "gateway_create_favorite",
+      "calls": 67,
+      "totalExecMs": "5275.52",
+      "meanExecMs": "78.74",
+      "maxExecMs": 219.139357
+    },
+    {
+      "label": "gateway_rate",
+      "calls": 173,
+      "totalExecMs": "1848.71",
+      "meanExecMs": "10.69",
+      "maxExecMs": 128.627055
+    },
+    {
+      "label": "gateway_identity",
+      "calls": 76,
+      "totalExecMs": "1371.18",
+      "meanExecMs": "18.04",
+      "maxExecMs": 230.927884
+    },
+    {
+      "label": "gateway_replay",
+      "calls": 70,
+      "totalExecMs": "824.77",
+      "meanExecMs": "11.78",
+      "maxExecMs": 90.398333
+    },
+    {
+      "label": "gateway_session",
+      "calls": 110,
+      "totalExecMs": "65.90",
+      "meanExecMs": "0.60",
+      "maxExecMs": 8.671609
+    },
+    {
+      "label": "read_catalog",
+      "calls": 15,
+      "totalExecMs": "15.03",
+      "meanExecMs": "1.00",
+      "maxExecMs": 6.566858
+    },
+    {
+      "label": "gateway_admin_command",
+      "calls": 10,
+      "totalExecMs": "10.47",
+      "meanExecMs": "1.05",
+      "maxExecMs": 6.115684
+    },
+    {
+      "label": "gateway_reserve_media",
+      "calls": 10,
+      "totalExecMs": "9.16",
+      "meanExecMs": "0.92",
+      "maxExecMs": 6.819138
+    },
+    {
+      "label": "gateway_claim_media",
+      "calls": 11,
+      "totalExecMs": "8.91",
+      "meanExecMs": "0.81",
+      "maxExecMs": 2.941269
+    },
+    {
+      "label": "gateway_admin_read",
+      "calls": 10,
+      "totalExecMs": "8.77",
+      "meanExecMs": "0.88",
+      "maxExecMs": 6.058761
+    },
+    {
+      "label": "gateway_complete_media",
+      "calls": 10,
+      "totalExecMs": "6.30",
+      "meanExecMs": "0.63",
+      "maxExecMs": 3.924861
+    },
+    {
+      "label": "read_target",
+      "calls": 14,
+      "totalExecMs": "5.99",
+      "meanExecMs": "0.43",
+      "maxExecMs": 2.87692
+    }
+  ]
+}

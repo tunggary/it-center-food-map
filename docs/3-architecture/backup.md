@@ -30,9 +30,9 @@ running 행은 프로젝트당 최대1개인 partial unique index로 제한한�
 | --- | --- |
 | `POST /admin/backups` | requestKey. 관리자 검증 후 run/청소 보류 lease 생성. 같은 키는 같은 run, 다른 실행이 진행 중이면409 BACKUP_IN_PROGRESS |
 | `PATCH /admin/backups/:id` action=heartbeat | leaseToken. 현재 소유자만 연장; 만료된 lease를 되살리지 않음 |
-| 같은 경로 action=snapshot | leaseToken, snapshotAt, dataEpoch, migrationVersion. 실행 도구가 확보한 snapshot 식별 메타데이터 기록 |
+| 같은 경로 action=snapshot | leaseToken, snapshotAt(UTC `Z` 표기), dataEpoch, migrationVersion. 실행 도구가 확보한 snapshot 식별 메타데이터 기록 |
 | 같은 경로 action=complete | leaseToken, snapshot 메타데이터, objectCount/totalBytes, manifestSha256/archiveSha256. 형식·일관성 검사 후 성공 |
-| 같은 경로 action=fail | leaseToken, 제한된 errorCode. 실패로 종료 |
+| 같은 경로 action=fail | leaseToken, errorCode는 `LEASE_EXPIRED` / `HASH_MISMATCH` / `OBJECT_MISSING` / `DUMP_FAILED` / `ENCRYPTION_FAILED` / `OPERATOR_CANCELLED` / `DEPENDENCY_UNAVAILABLE`. 실패로 종료 |
 | `GET /admin/operations.backups` | activeRun, lastSucceeded, lastFailed. 로컬 파일이 서버에서 독립 검증된 결과라고 표시하지 않음 |
 
 완료의 중복 호출은 같은 결과·같은 hash면 기존 결과를 반환하고 다르면409다. 원실행 관리자 외의 관리자는 조회할 수 있지만 실행 중인 lease를 이어받지 않는다. 중단된 실행은 만료→실패 후 새 요청 키로 재시작한다. 서비스 전용 gateway_start_backup/gateway_update_backup가 DB 상태 전이를 보장한다.

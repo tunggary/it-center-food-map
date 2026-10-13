@@ -1,0 +1,32 @@
+[
+  {
+    "index": 50,
+    "action": "edit",
+    "eventRevision": "77",
+    "resourceId": "d7b10cc6-3715-4ab0-9f6b-9a832ea81663",
+    "targetId": "c95f7693-7277-4151-ab0a-0bdbd8198faa",
+    "nickname": "QA버스트R2050정정",
+    "targetName": "QA버스트R2코스050정정",
+    "teamId": "10000000-0000-4000-8000-000000000002",
+    "teamCorrectionSource": "Direct test fixture update; TECH09 operator API not passed",
+    "committedAtUTC": "2026-10-13T11:59:05.672591+00:00"
+  },
+  {
+    "index": 51,
+    "action": "delete",
+    "eventRevision": "74",
+    "resourceId": "fab7466a-5e42-469c-bb23-71e6d997994d",
+    "targetId": "832889c3-b812-4316-8910-ba69899cd872",
+    "deleted": true,
+    "committedAtUTC": "2026-10-13T11:59:05.899975+00:00"
+  },
+  {
+    "index": 70,
+    "action": "delete",
+    "eventRevision": "95",
+    "resourceId": "57c3bd85-4137-4a26-9738-aab5947394f0",
+    "targetId": "99b800c8-5607-455c-878a-81f8b2544c16",
+    "deleted": true,
+    "committedAtUTC": "2026-10-13T12:03:01.734261+00:00"
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "project": "gpsbnmgwowsbgclcottl",
+  "scope": "Final read-only deploy audit; no production fixture writes",
+  "publicReads": {
+    "read_revision": {
+      "status": 200,
+      "revision": "0",
+      "teams": 0,
+      "categories": 0
+    },
+    "read_catalog": {
+      "status": 200,
+      "revision": "0",
+      "teams": 0,
+      "categories": 0
+    }
+  },
+  "newGatewayAnonymousDenied": true,
+  "disableSignup": true,
+  "photosBucketPrivate": true,
+  "submitAuthority": {
+    "owner": "foodmap_gateway",
+    "anon": false,
+    "authenticated": false,
+    "service": true,
+    "closedSearchPath": true
+  },
+  "cron": [
+    [
+      "food-map-daily-reconcile",
+      "15 2 * * *",
+      true
+    ],
+    [
+      "food-map-hourly-cleanup",
+      "0 * * * *",
+      true
+    ]
+  ],
+  "productionDataCounts": {
+    "teams": 0,
+    "categories": 0,
+    "favorites": 0
+  },
+  "functions": [
+    {
+      "name": "api",
+      "version": 7,
+      "bundleSha256": "04daa10ebb819e139779c8c91c0154e379a8d12e7862aebf486f9915e233d0e1"
+    },
+    {
+      "name": "maintenance",
+      "version": 4,
+      "bundleSha256": "1141f738e8ec61d88beb1a1770db802b862ff10646b4a270abe21d624bf8607e"
+    },
+    {
+      "name": "media-finalize",
+      "version": 3,
+      "bundleSha256": "4702c19c9bb91fcc3a8477a57d0f43f1db1f74a548ec537d4ec4dfa1443497b9"
+    }
+  ],
+  "sourceSha256": {
+    "supabase/functions/api/index.ts": "2edf79971b788565880640d5914c86e5dd9dca1da0f8a0779059bd60528d2e3a",
+    "supabase/migrations/20261013132251_submit_favorite_transaction.sql": "9c0b7425a365f85ae789c5a9dac862e0490eba230e1d68c4e5a4b958ba04213b",
+    "supabase/functions/api/deno.json": "4ff227f8163689f15626c4e6e79d1ba56ef04e3eafa3e5cd3c7453b60fca3026"
+  }
+}

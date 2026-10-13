@@ -1,0 +1,31 @@
+- title: "IT센터 최애 지도" [url=http://localhost:5173/targets/30000000-0000-4000-8000-000000000001?team=10000000-0000-4000-8000-000000000001&category=20000000-0…]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e21]: "← 지도"
+      - heading "L1 테스트 장소" [level=1]
+    - text: "테스트 주소 이 조건  2 건 · 전체  4 건"
+    - button "전체 등록 보기" [ref=e22]
+    - label:
+      - text: "팀"
+      - combobox "팀 필터" [ref=e23]:
+        - option "전체 팀"
+        - option "A팀" (selected) value="10000000-0000-4000-8000-000000000001"
+        - option "B팀" value="10000000-0000-4000-8000-000000000002"
+        - option "C팀" value="10000000-0000-4000-8000-000000000003"
+    - label:
+      - text: "카테고리"
+      - combobox "카테고리 필터" [ref=e24]:
+        - option "전체 카테고리"
+        - option "맛집" value="20000000-0000-4000-8000-000000000001"
+        - option "산책" value="20000000-0000-4000-8000-000000000003"
+        - option "카페" (selected) value="20000000-0000-4000-8000-000000000002"
+    - article:
+      - banner: "U2 A팀 · 카페"
+      - text: "U2 추천해요"
+    - article:
+      - banner: "U1 A팀 · 카페"
+      - text: "U1 추천해요"
+    - link "나도 최애로 등록" [ref=e25]
+    - link "랭킹으로 돌아가기" [ref=e26]

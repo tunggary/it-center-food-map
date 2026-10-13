@@ -1,0 +1,102 @@
+[
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+    "fault": true,
+    "at": 1791897472607
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_explore",
+    "fault": true,
+    "at": 1791897472607
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+    "fault": true,
+    "at": 1791897473174
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_explore",
+    "fault": true,
+    "at": 1791897473176
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+    "fault": true,
+    "at": 1791897474184
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_explore",
+    "fault": true,
+    "at": 1791897474184
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "fault": true,
+    "at": 1791897474648
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897492605
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897494495
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897496494
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897498496
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897500498
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897502506
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897504523
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897506499
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897508507
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897510546
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "at": 1791897522767
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_explore",
+    "status": 200,
+    "at": 1791897522883
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+    "status": 200,
+    "at": 1791897523289
+  }
+]

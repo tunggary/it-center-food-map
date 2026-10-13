@@ -1,0 +1,66 @@
+[
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/favorites",
+    "fault": true,
+    "at": 1791896180306
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "fault": true,
+    "at": 1791896187348
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "duration": 20.900000002235174,
+    "at": 1791896187386
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/favorites",
+    "status": 201,
+    "duration": 85,
+    "at": 1791896187498
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_target",
+    "status": 200,
+    "duration": 14.899999998509884,
+    "at": 1791896187516
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/me",
+    "status": 200,
+    "duration": 26.900000002235174,
+    "at": 1791896187529
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+    "status": 200,
+    "duration": 13.100000001490116,
+    "at": 1791896187547
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/me",
+    "status": 200,
+    "duration": 14.199999999254942,
+    "at": 1791896187548
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_target",
+    "status": 200,
+    "duration": 13.699999999254942,
+    "at": 1791896187620
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/me/favorites",
+    "status": 200,
+    "duration": 24,
+    "at": 1791896187631
+  },
+  {
+    "url": "http://127.0.0.1:54321/rest/v1/rpc/read_revision",
+    "status": 200,
+    "duration": 13,
+    "at": 1791896196900
+  }
+]

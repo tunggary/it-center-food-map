@@ -1,0 +1,18 @@
+{
+  "targetId": "009299a5-2c94-4baa-9642-752979cf0e11",
+  "favoriteId": "5bb0b354-7133-407e-b066-0fe8f929a239",
+  "originalEventRevision": "96",
+  "sourceTargetSha256": "92060fac9e6643126569da503f2c8ad67c17e43a5679c36afb6972e008a6208a",
+  "favoriteExactRowRestored": true,
+  "eventReferenceAndTimestampPreserved": true,
+  "photoCount": 0,
+  "otherDomainRowsFingerprintUnchanged": true,
+  "favoriteCountBefore": 171,
+  "favoriteCountAfter": 172,
+  "publicPinCount": 1,
+  "publicTargetTotalCount": 1,
+  "categoryRankingCount": 1,
+  "epochChanged": false,
+  "newEventCreated": false,
+  "targetExactCopyRowRestored": true
+}

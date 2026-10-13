@@ -34,3 +34,24 @@
 - GitHub 연동이 `main` 변경을 Production, 나머지 브랜치 변경을 Preview로 자동 배포한다. 별도 GitHub Actions 배포나 `VERCEL_TOKEN` secret은 추가하지 않는다.
 - `.vercel/`·`.env*`·인증 토큰은 커밋하지 않는다. Preview 인증 보호를 유지하고 보호된 배포는 `vercel curl`로 확인한다.
 - 배포·검증·복구 작업 시 [docs/deployment.md](docs/deployment.md)를 읽는다. 배포 완료는 대상 커밋의 `READY`와 실제 응답을 확인한 뒤 기록한다.
+
+## Supabase — 개인 계정 전용
+
+| 항목 | 값 |
+| --- | --- |
+| 로그인 계정 | `gsy1656@gmail.com` (`tunggary`) |
+| 개인 조직 | `tunggary's Org` |
+| 조직 ID / slug | `tiyzwalofmbdlhlybape` |
+| 요금제 / 유형 | Free / Personal |
+| 관리 콘솔 | https://supabase.com/dashboard/org/tiyzwalofmbdlhlybape |
+| 운영 프로젝트 / project ref | `it-center-food-map` / `gpsbnmgwowsbgclcottl` |
+| 검증 프로젝트 / project ref | `it-center-food-map-qa` / `yxgmpbjcvjeacnrgtcbq` |
+| 리전 | 두 프로젝트 모두 서울 `ap-northeast-2` |
+| 운영 프로젝트 콘솔 / API | https://supabase.com/dashboard/project/gpsbnmgwowsbgclcottl / https://gpsbnmgwowsbgclcottl.supabase.co |
+| Codex MCP | `supabase` — `https://mcp.supabase.com/mcp` (OAuth 인증 완료) |
+
+- Supabase 작업 시 `supabase` 스킬을 읽고 CLI 또는 MCP를 사용한다. CLI 명령·옵션은 설치된 버전의 `--help`로 확인한다.
+- 이 프로젝트의 Supabase 리소스는 위 개인 조직의 Free 요금제에서 운영한다. 변경 전 `supabase orgs list --output-format json`과 `supabase projects list --output-format json`으로 조직 ID와 대상 프로젝트의 소속을 확인한다. 대상이 다르면 변경을 중단하고 원인을 확인한다.
+- QA 자료·사진 처리·부하·복원 시험은 로컬 또는 위 검증 프로젝트에서 진행한다. 운영 프로젝트는 검증 fixture로 변경하지 않는다. 새 작업 폴더는 확인한 project ref로 `supabase link --project-ref <project-ref>`를 실행하고 연결 대상을 확인한다.
+- CLI 로그인과 MCP OAuth 인증은 별개다. MCP 도구가 표시되지 않으면 등록·인증 상태와 세션 재연결을 확인한다. 프로젝트 생성 후 MCP URL의 `project_ref`를 제품용 프로젝트로 지정해 범위를 제한한다.
+- 인증 토큰·DB 비밀번호·secret/service-role 키·`.env*`·`supabase/.temp/`는 커밋하지 않는다. 스키마 변경은 마이그레이션으로 관리하고 실제 쿼리로 검증한 뒤 완료를 기록한다.

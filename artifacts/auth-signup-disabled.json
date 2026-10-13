@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-13T13:59:41.446Z",
+  "organizationId": "tiyzwalofmbdlhlybape",
+  "asideSession": "nvuExMOKx6e6x2hY",
+  "change": "Only Allow new users to sign up ON to OFF in both projects",
+  "before": {
+    "disable_signup": false,
+    "emailEnabled": true,
+    "phoneEnabled": false,
+    "anonymousEnabled": false
+  },
+  "after": [
+    {
+      "ref": "gpsbnmgwowsbgclcottl",
+      "status": 200,
+      "disable_signup": true,
+      "emailEnabled": true,
+      "phoneEnabled": false,
+      "anonymousEnabled": false
+    },
+    {
+      "ref": "yxgmpbjcvjeacnrgtcbq",
+      "status": 200,
+      "disable_signup": true,
+      "emailEnabled": true,
+      "phoneEnabled": false,
+      "anonymousEnabled": false
+    }
+  ],
+  "method": "Aside u0 dashboard save; publishable-key-authenticated GET /auth/v1/settings",
+  "otherSettingsChanged": false
+}

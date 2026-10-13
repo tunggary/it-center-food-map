@@ -1,0 +1,32 @@
+- title: "IT센터 최애 지도" [url=http://localhost:5173/register?favorite=4105f12a-cde7-4aab-8dff-af39c048265b]
+- link "본문으로 이동" [ref=e1]
+- status:
+  - text: "갱신이 잠시 중단됐어요. 마지막 확인 오후 8:39:42"
+  - button "다시 연결" [ref=e34]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e23]: "← 지도"
+      - heading "내 최애 수정" [level=1]
+    - text: "지금 화면에서 실패한 입력은 유지해요. 화면을 떠나거나 새로고침하면 초안은 복구되지 않아요.이전 제출의 결과가 아직 확정되지 않았어요. 같은 내용으로 결과를 확인해 주세요."
+    - form:
+      - heading "L1 테스트 장소" [level=2]
+      - label:
+        - text: "카테고리"
+        - combobox "카테고리" [ref=e24] [disabled]:
+          - option "카테고리를 선택해 주세요"
+          - option "맛집" value="20000000-0000-4000-8000-000000000001"
+          - option "카페" (selected) value="20000000-0000-4000-8000-000000000002"
+      - label:
+        - text: "최애를 소개하는 한마디"
+        - textbox "최애를 소개하는 한마디100/100자" [ref=e30] [disabled] [placeholder="이 장소나 코스를 좋아하는 이유를 알려 주세요"]: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        - text: "100/100자"
+      - text: "QA참여 · C팀 으로 등록해요.사진  선택 · 최대 3장 JPEG·PNG·WebP, 원본 10MiB·40MP까지. 작은 JPEG로 저장하며 원본은 보관하지 않아요."
+      - button "최애 사진 선택" [ref=e26] [disabled]
+      - button "같은 요청으로 결과 확인" [ref=e31]
+      - button "내 등록 삭제" [ref=e28] [disabled]
+      - link "작성 취소" [ref=e29]
+    - heading "작성 내용을 버릴까요?" [level=2]
+    - text: "문구·사진·참여 정보는 저장되지 않아요."
+    - button "취소" [ref=e32] [focused]
+    - button "초안 버리기" [ref=e33]
