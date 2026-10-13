@@ -47,3 +47,7 @@ vercel curl / --deployment <deployment-url> --scope tunggary2-navercoms-projects
 ## 복구
 
 문제 변경을 되돌리는 PR을 `main`에 머지하면 Production이 다시 배포된다. 긴급한 경우 위 scope와 프로젝트를 확인한 뒤 `vercel rollback <previous-production-url>`을 사용할 수 있다. rollback 이후에는 자동 도메인 할당이 중단되므로 검증된 배포를 `vercel promote <deployment-url>`로 승격해 복구한다.
+
+## 첫 제품 릴리스 실행 기록
+
+2026-10-13 기능 PR #9 → develop, 릴리스 PR #10·#11 → main을 거쳤다. main `ccdd483705134e7c521a1913fd032b964fe65fe7`은 Production READY(`dpl_BujwNnjcZzkSdBxT1psmR8naP4FK`)이며 framework Vite/output dist와 운영 주소 HTTP200을 확인했다. 주요 직접 경로200·없는asset404·CSP, 운영 Supabase 공개읽기4개200·기본분류3/팀0/revision1도 확인했다. 초기 지도 SDK CSP 누락을 실제 CDN t1.kakaocdn.net 허용으로 수정했고, 지도 타일 최종 DOM/네트워크 검증은 메인 담당에 인계했다. 원본 QA56통과·9보류와 정식 성능 미통과를 유지하며 실제 팀·관리자 계정 입력이 남아 있다.
