@@ -1,0 +1,16 @@
+{
+  "qaId": "QA-B-02-02",
+  "source": "participant independent Aside actualPOST201 observation",
+  "targetId": "7b91d993-9619-41c5-94fe-03e9c26155ba",
+  "revision": "146",
+  "responseReceivedUTC": "2026-10-13T12:09:34.204Z",
+  "responseReceivedMs": 1791893374204,
+  "boothMapAndRankDOM": {
+    "time": 1791893374656,
+    "pins": 5,
+    "central": true
+  },
+  "latencyMs": 452,
+  "queuedAnnouncementAtMeasurementEnd": "QA버스트R2081 · A팀 · QA버스트R2코스081",
+  "backlogSetup": "u2 site completed cursor100 set for controlled reconnect replay of actual recorded registrations; prior 105 burst drained to144. Observer snapshot500ms ensures foreground polling."
+}

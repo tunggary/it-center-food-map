@@ -1,0 +1,41 @@
+{
+  "checkedAtUTC": "2026-10-13T14:17:29.000551+00:00",
+  "scope": "Critical staging verification plus user-authorized rough HTTP smoke; not formal30min/E2E acceptance",
+  "apiUnchangedSinceRun": true,
+  "migrationUnchangedSinceRun": true,
+  "sourceSHA256": {
+    "supabase/functions/api/index.ts": "2edf79971b788565880640d5914c86e5dd9dca1da0f8a0779059bd60528d2e3a",
+    "supabase/functions/_shared/runtime.ts": "0320ec3bcbfb667b4081b39bea5e22d88e012bf807affbf6e51d42b659cf4357",
+    "supabase/functions/_shared/selection.ts": "9c36f6bf12fcabe80c77615b22678adf4f11006bcdd83f9fb065fd14142df859",
+    "shared/contracts.ts": "81dfeafe2b22cb48e3b7d8e9fc2e8b85e3dbd68dc1023598722b829226b81fe1",
+    "shared/validation.ts": "3aef6a287b0a80a2109a095800623c7050bbf6ac72115dfae252eebab785bcbe",
+    "supabase/functions/api/deno.json": "4ff227f8163689f15626c4e6e79d1ba56ef04e3eafa3e5cd3c7453b60fca3026",
+    "supabase/migrations/20261013132251_submit_favorite_transaction.sql": "9c0b7425a365f85ae789c5a9dac862e0490eba230e1d68c4e5a4b958ba04213b"
+  },
+  "stagingFunctionVersion": 6,
+  "stagingEzbrSHA256": "04daa10ebb819e139779c8c91c0154e379a8d12e7862aebf486f9915e233d0e1",
+  "criticalCases": 36,
+  "extraAuthorityChecks": 5,
+  "roughSeconds": 226.9,
+  "roughHTTPErrorCount": 0,
+  "cohorts": {
+    "cold-client": {
+      "count": 100,
+      "successful": 100,
+      "within2000ms": 84,
+      "p95Ms": 2632.3,
+      "maxMs": 3908.7,
+      "apiThresholdSatisfied": false
+    },
+    "warm-client": {
+      "count": 43,
+      "successful": 43,
+      "within2000ms": 39,
+      "p95Ms": 2046.7,
+      "maxMs": 2612.1,
+      "apiThresholdSatisfied": false
+    }
+  },
+  "processCommandAfterStop": "",
+  "productState": "Production old code readonly audit remained empty/private/least privileged/signup disabled; optimized production change owner Edge agent"
+}

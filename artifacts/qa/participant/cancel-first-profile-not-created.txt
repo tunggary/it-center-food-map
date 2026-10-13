@@ -1,0 +1,9 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/me/profile]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e26]: "← 지도"
+      - heading "내 참여 정보" [level=1]
+    - text: "아직 첫 참여 전이에요. 최애를 등록할 때 닉네임과 팀을 함께 입력해 주세요."
+    - link "첫 최애 등록하기" [ref=e27]

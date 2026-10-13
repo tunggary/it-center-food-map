@@ -1,0 +1,46 @@
+{
+  "project": "yxgmpbjcvjeacnrgtcbq",
+  "initialCounts": {
+    "targets": 1000,
+    "favorites": 10000,
+    "teams": 30,
+    "categories": 10
+  },
+  "quotaBasis": "Actual remaining approx4.399GB versus conservative decoded body budget; actual gzip wire body measured per response, excludes TLS/header billing.",
+  "previousImages": "Retained immutable test objects; storage_budget.has_untracked_objects=true prevents unsafe new photo reservations",
+  "baseline": {
+    "read_revision": {
+      "bodyBytes": 120,
+      "gzipBytes": 125
+    },
+    "read_explore": {
+      "bodyBytes": 119005,
+      "gzipBytes": 27334
+    },
+    "read_booth": {
+      "bodyBytes": 123657,
+      "gzipBytes": 27250
+    }
+  },
+  "requestBudget": {
+    "revision100Participants": 90000,
+    "booth": 900,
+    "adminEquivalentRevision": 900,
+    "sessions": 100,
+    "registrations": 200,
+    "snapshotWorstCase": 20100
+  },
+  "bodyEgressUpperBoundBytes": 2514199800,
+  "scope": "New optimized run: 100 cold-client +100 warm-client registration requests; POST timers exclude session preparation/latest detail/SDK/DOM",
+  "observedOrgQuota": {
+    "checkedKST": "2026-10-13 22:59",
+    "displayedEgressGB": 0.601,
+    "includedGB": 5,
+    "displayedRemainingGB": 4.399,
+    "limits": "Rounded/delayed metrics; see supabase-usage-after-first-load.md"
+  },
+  "runtimeGuards": {
+    "encodedResponseBodyBytes": 1000000000,
+    "decodedResponseBodyBytes": 2800000000
+  }
+}

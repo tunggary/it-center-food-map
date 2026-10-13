@@ -1,0 +1,38 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/targets/30000000-0000-4000-8000-000000000001?category=20000000-0000-4000-8000-000000000001]
+- link "본문으로 이동" [ref=e1]
+- status:
+  - text: "갱신이 잠시 중단됐어요. 마지막 확인 오후 9:00:28"
+  - button "다시 연결" [ref=e51]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e33]: "← 지도"
+      - heading "L1 테스트 장소" [level=1]
+    - text: "테스트 주소 이 조건  2 건 · 전체  4 건"
+    - button "전체 등록 보기" [ref=e45]
+    - label:
+      - text: "팀"
+      - combobox "팀 필터" [ref=e46]:
+        - option "전체 팀" (selected)
+        - option "A팀" value="10000000-0000-4000-8000-000000000001"
+        - option "B팀" value="10000000-0000-4000-8000-000000000002"
+        - option "C팀" value="10000000-0000-4000-8000-000000000003"
+    - label:
+      - text: "카테고리"
+      - combobox "카테고리 필터" [ref=e47]:
+        - option "전체 카테고리"
+        - option "QA부스버스트" value="a595a037-5e31-405d-b60b-17c274f5670f"
+        - option "QA부스버스트R2" value="c1b56711-08ac-4265-ac14-7536b2e112b1"
+        - option "QA페이지" value="d2310e83-261c-457a-ba5b-151d582ff011"
+        - option "맛집" (selected) value="20000000-0000-4000-8000-000000000001"
+        - option "산책" value="20000000-0000-4000-8000-000000000003"
+        - option "카페" value="20000000-0000-4000-8000-000000000002"
+    - article:
+      - banner: "U4 A팀 · 맛집"
+      - text: "U4 추천해요"
+    - article:
+      - banner: "U1 A팀 · 맛집"
+      - text: "U1 추천해요"
+      - link "내 등록 수정하기" [ref=e48]
+    - link "내 등록 관리" [ref=e49]
+    - link "랭킹으로 돌아가기" [ref=e50]

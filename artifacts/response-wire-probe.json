@@ -1,0 +1,29 @@
+{
+  "scope": "Actual current individual HTTP response body lengths, not retroactive previous30min wire totals",
+  "measurements": [
+    {
+      "rpc": "read_revision",
+      "status": 200,
+      "encoding": "gzip",
+      "encodedBodyBytes": 134,
+      "decodedBodyBytes": 122,
+      "elapsedMs": 1045.7
+    },
+    {
+      "rpc": "read_explore",
+      "status": 200,
+      "encoding": "gzip",
+      "encodedBodyBytes": 27911,
+      "decodedBodyBytes": 119004,
+      "elapsedMs": 350.9
+    },
+    {
+      "rpc": "read_booth",
+      "status": 200,
+      "encoding": "gzip",
+      "encodedBodyBytes": 28973,
+      "decodedBodyBytes": 123661,
+      "elapsedMs": 191.0
+    }
+  ]
+}

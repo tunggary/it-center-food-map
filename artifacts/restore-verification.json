@@ -1,0 +1,37 @@
+{
+  "epochChanged": true,
+  "storedReservedBytes": 156881,
+  "manifestBytes": 156881,
+  "leaseCounts": {
+    "photos": 0,
+    "cleanup": 0,
+    "backup": 0
+  },
+  "adminsInitiallyZero": true,
+  "unsafeOwners": 0,
+  "gatewayExposure": 0,
+  "privateUnsafeTables": 0,
+  "publicExecute": 0,
+  "fixtureCafeRanks": [
+    [
+      4,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "attachedPhotoReferencesValid": true,
+  "identityRelations": 11,
+  "publicPhotoHashesMatch": true,
+  "restoredParticipantIdentity": true,
+  "recreatedAdministratorAccess": true,
+  "revokedAllowlistDenied": true,
+  "operatorTeamCorrectionActualHTTP": true,
+  "scope": "Actual restored staging DB/Storage/API; original script unchanged, Docker wrappers transport-only; app snapshot quota excludes preexisting destination orphan objects pending reconciliation."
+}

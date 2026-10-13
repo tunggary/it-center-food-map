@@ -10,7 +10,7 @@
 | UI | Tailwind CSS 4, Radix Dialog/Select 등 필요한 primitive만 | 모바일 패널·키보드 접근성; 별도 디자인 시스템 선도입 없음 |
 | 상태 | TanStack Query 5 + React 폼 상태 | 필터별 캐시·요청 취소·실패 시 마지막 결과 유지 |
 | 검증 | Zod 4, Intl.Segmenter | 입력 공유·grapheme 기준 문자 수 |
-| 정적 배포 | Cloudflare Pages Free, 제공되는 pages.dev 도메인 | 앱 서버 없이 정적 파일 배포; 도메인 구매 없음 |
+| 정적 배포 | Vercel Hobby, 제공되는 vercel.app 도메인 | 개인 프로젝트의 정적 파일 배포; 도메인 구매 없음 |
 | 서버 | Supabase Edge Functions의 Deno/TypeScript, supabase-js 2 | 서버 비밀·인증·검색·파일 처리를 한 공급자에서 관리 |
 | DB | Supabase PostgreSQL, SQL migration + SQL/PLpgSQL RPC | 하나의 RPC에서 원자적 변경, Data API는 연결 풀 관리 불필요 |
 | 참여자 | Web Crypto 무작위 bearer 자격 + DB 해시 | 공유 IP에서 100명 참여, Auth 익명 가입 제한과 분리 |
@@ -26,7 +26,7 @@
 ## 배포 경계
 
 ```text
-브라우저 ── 정적 JS/CSS ── Cloudflare Pages
+브라우저 ── 정적 JS/CSS ── Vercel Hobby
   ├─ 지도 SDK ── Kakao
   ├─ 공개 읽기 RPC ── Supabase Data API ── PostgreSQL
   ├─ 본인/관리 명령 ── Edge Functions ── 서비스 전용 DB RPC
@@ -58,11 +58,13 @@ supabase/
 
 FE에 server-only 기능을 넣지 않는다. `VITE_`로 공개할 것은 Supabase URL/publishable key, Kakao JS key뿐이다. 개발자 권한 키·REST 지도 키·DB 연결 URL·선택 토큰 서명 키는 함수 비밀 저장소에만 둔다. 유지보수용 로컬 DB 연결은 배포 앱 의존성이 아니다.
 
+개인 프로젝트의 배포처는 사용자 선택에 따라 Vercel Hobby로 확정했다. Vercel에는 정적 파일만 올리며 API·사진 응답·2초 변경 조회는 Supabase로 직접 연결한다. 배포처 변경 때문에 Next.js나 Vercel Functions를 도입하지 않는다.
+
 ## 이전 설계에서 바뀐 것
 
 | 이전 | 이번 기준 |
 | --- | --- |
-| Next.js + Vercel Pro | React/Vite + Cloudflare Pages 정적 배포 |
+| Next.js + Vercel Pro / 무료안의 Cloudflare Pages | React/Vite + Vercel Hobby 정적 배포 |
 | Route Handlers + Drizzle/pg | Edge Functions + DB RPC, SQL migration |
 | 같은 출처 HttpOnly 참여자 cookie | 별도 출처 API이므로 브라우저 bearer 자격; 인증 정보 URL 전달 금지 |
 | Edge/앱을 경유하는 2초 poll | 공개 Data API 직접 읽기 |

@@ -1,0 +1,56 @@
+{
+  "start": 1791896775242,
+  "done": 1791896775656,
+  "elapsed": 414,
+  "net": [
+    {
+      "url": "http://127.0.0.1:54321/functions/v1/api/favorites",
+      "method": "POST",
+      "status": 201,
+      "duration": 69.70000000298023,
+      "at": 1791896775478
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_target",
+      "method": "POST",
+      "status": 200,
+      "duration": 12.800000000745058,
+      "at": 1791896775494
+    },
+    {
+      "url": "http://127.0.0.1:54321/functions/v1/api/me",
+      "method": "GET",
+      "status": 200,
+      "duration": 21.200000002980232,
+      "at": 1791896775503
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_catalog",
+      "method": "POST",
+      "status": 200,
+      "duration": 12.199999999254942,
+      "at": 1791896775519
+    },
+    {
+      "url": "http://127.0.0.1:54321/functions/v1/api/me",
+      "method": "GET",
+      "status": 200,
+      "duration": 19.600000001490116,
+      "at": 1791896775528
+    },
+    {
+      "url": "http://127.0.0.1:54321/rest/v1/rpc/read_target",
+      "method": "POST",
+      "status": 200,
+      "duration": 23.300000000745058,
+      "at": 1791896775651
+    },
+    {
+      "url": "http://127.0.0.1:54321/functions/v1/api/me/favorites",
+      "method": "GET",
+      "status": 200,
+      "duration": 41.5,
+      "at": 1791896775669
+    }
+  ]
+}

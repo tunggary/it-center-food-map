@@ -1,0 +1,160 @@
+{
+  "context": {
+    "project": "yxgmpbjcvjeacnrgtcbq",
+    "timestamp": "2026-10-13T13:10:41.456667+00:00",
+    "baselineCompleteBeforeProbe": true,
+    "scope": "Secret-gated stage-only replay diagnostic; HTTP RPC wall timings, not SQL CPU or full user completion"
+  },
+  "samples": [
+    {
+      "mode": "identity",
+      "sample": 0,
+      "httpMs": 2531.9,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 443.37066300000004
+      },
+      "totalMs": 444.515914,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "me",
+      "sample": 0,
+      "httpMs": 1803.7,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 136.584782,
+        "gateway_me": 64.07763500000001
+      },
+      "totalMs": 202.28137199999998,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "replay3",
+      "sample": 0,
+      "httpMs": 1869.5,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 103.904288,
+        "gateway_rate": 98.65597400000001,
+        "gateway_replay": 66.062569
+      },
+      "totalMs": 271.080459,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "replay4",
+      "sample": 0,
+      "httpMs": 456.8,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 130.986177,
+        "gateway_rate": 53.795664000000016,
+        "gateway_replay": 54.229434,
+        "gateway_create_favorite": 62.67881299999999
+      },
+      "totalMs": 303.339921,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "identity",
+      "sample": 1,
+      "httpMs": 295.5,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 76.693298
+      },
+      "totalMs": 78.355422,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "me",
+      "sample": 1,
+      "httpMs": 341.7,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 93.795575,
+        "gateway_me": 61.45015700000002
+      },
+      "totalMs": 156.99954100000002,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "replay3",
+      "sample": 1,
+      "httpMs": 178.8,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 41.27926700000012,
+        "gateway_rate": 39.8120200000003,
+        "gateway_replay": 42.20564599999989
+      },
+      "totalMs": 124.798859,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "replay4",
+      "sample": 1,
+      "httpMs": 244.7,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 53.071526000000176,
+        "gateway_rate": 46.71193200000016,
+        "gateway_replay": 36.753472999999985,
+        "gateway_create_favorite": 50.27370399999995
+      },
+      "totalMs": 188.44091000000003,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "identity",
+      "sample": 2,
+      "httpMs": 280.0,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 81.667738
+      },
+      "totalMs": 83.14301400000001,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "me",
+      "sample": 2,
+      "httpMs": 125.3,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 45.64380099999971,
+        "gateway_me": 40.884927999999945
+      },
+      "totalMs": 87.24127399999998,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "replay3",
+      "sample": 2,
+      "httpMs": 161.9,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 39.575922999999875,
+        "gateway_rate": 39.10191399999985,
+        "gateway_replay": 41.68865500000038
+      },
+      "totalMs": 121.34878600000002,
+      "region": "ap-northeast-2"
+    },
+    {
+      "mode": "replay4",
+      "sample": 2,
+      "httpMs": 245.7,
+      "status": 200,
+      "timings": {
+        "gateway_identity": 39.10374300000012,
+        "gateway_rate": 36.69705699999986,
+        "gateway_replay": 39.96231799999987,
+        "gateway_create_favorite": 40.93225200000006
+      },
+      "totalMs": 157.84823400000005,
+      "region": "ap-northeast-2"
+    }
+  ]
+}

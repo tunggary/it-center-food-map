@@ -1,0 +1,113 @@
+[
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/favorites",
+    "method": "POST",
+    "status": 201,
+    "ms": 462.40000000037253,
+    "response": {
+      "requestId": "9cc14764-413c-4989-a3ea-69d5086e404d",
+      "data": {
+        "replayed": false,
+        "revision": "18",
+        "targetId": "3be20574-1d26-4894-a235-b340eeecbca8",
+        "resourceId": "441cefdc-b412-43c9-b3bd-0353488de376"
+      }
+    }
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/me/favorites",
+    "method": "GET",
+    "status": 200,
+    "ms": 106.80000000074506,
+    "response": {
+      "requestId": "78689bdf-3ac1-46a7-8353-e6a1818adab4",
+      "data": {
+        "favorites": [
+          {
+            "id": "441cefdc-b412-43c9-b3bd-0353488de376",
+            "photos": [],
+            "target": {
+              "id": "3be20574-1d26-4894-a235-b340eeecbca8",
+              "lat": 37.5087938247111,
+              "lng": 127.063179269125,
+              "kind": "COURSE",
+              "name": "QA코스R1",
+              "points": [
+                [
+                  127.0631792691246,
+                  37.508793824711134
+                ],
+                [
+                  127.06023946461814,
+                  37.50987656599228
+                ]
+              ],
+              "address": null,
+              "version": 3,
+              "approximateLengthM": 285.894442380395
+            },
+            "teamId": "10000000-0000-4000-8000-000000000003",
+            "message": "동명이인코스",
+            "version": 1,
+            "nickname": "QA변경😀",
+            "targetId": "3be20574-1d26-4894-a235-b340eeecbca8",
+            "teamName": "C팀",
+            "createdAt": "2026-10-13T11:52:31.092107+00:00",
+            "categoryId": "20000000-0000-4000-8000-000000000003",
+            "categoryName": "산책",
+            "participantId": "66b8b145-3883-4f1e-b8d9-f6f368535a6e"
+          }
+        ],
+        "nextCursor": null
+      }
+    }
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/me/favorites",
+    "method": "GET",
+    "status": 200,
+    "ms": 47,
+    "response": {
+      "requestId": "19321272-c7a8-41b5-8d69-3ebe721af83c",
+      "data": {
+        "favorites": [
+          {
+            "id": "441cefdc-b412-43c9-b3bd-0353488de376",
+            "photos": [],
+            "target": {
+              "id": "3be20574-1d26-4894-a235-b340eeecbca8",
+              "lat": 37.5087938247111,
+              "lng": 127.063179269125,
+              "kind": "COURSE",
+              "name": "QA코스R1",
+              "points": [
+                [
+                  127.0631792691246,
+                  37.508793824711134
+                ],
+                [
+                  127.06023946461814,
+                  37.50987656599228
+                ]
+              ],
+              "address": null,
+              "version": 3,
+              "approximateLengthM": 285.894442380395
+            },
+            "teamId": "10000000-0000-4000-8000-000000000003",
+            "message": "동명이인코스",
+            "version": 1,
+            "nickname": "QA변경😀",
+            "targetId": "3be20574-1d26-4894-a235-b340eeecbca8",
+            "teamName": "C팀",
+            "createdAt": "2026-10-13T11:52:31.092107+00:00",
+            "categoryId": "20000000-0000-4000-8000-000000000003",
+            "categoryName": "산책",
+            "participantId": "66b8b145-3883-4f1e-b8d9-f6f368535a6e"
+          }
+        ],
+        "nextCursor": null
+      }
+    }
+  }
+]

@@ -1,0 +1,29 @@
+- title: "IT센터 최애 지도" [url=http://localhost:5173/register?target=fbe4ae3e-266d-4e2d-bd48-b0831cef3c09]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e2]: "← 지도"
+      - heading "최애 등록하기" [level=1]
+    - text: "지금 화면에서 실패한 입력은 유지해요. 화면을 떠나거나 새로고침하면 초안은 복구되지 않아요."
+    - alert: "이미 등록한 최애예요. 내 최애에서 수정할 수 있어요."
+    - form:
+      - heading "삼성역 2호선" [level=2]
+      - button "대상 다시 선택" [ref=e3]
+      - label:
+        - text: "카테고리"
+        - combobox "카테고리" [ref=e4]:
+          - option "카테고리를 선택해 주세요"
+          - option "QA Admin 명소121459" value="5d734696-3ebf-472b-ae2a-10f26cbbc2a1"
+          - option "QA중단검증" value="1f91da24-a6ee-4399-a8dd-d1d266f43630"
+          - option "QA페이지" value="d2310e83-261c-457a-ba5b-151d582ff011"
+          - option "맛집" value="20000000-0000-4000-8000-000000000001"
+          - option "카페" (selected) value="20000000-0000-4000-8000-000000000002"
+      - label:
+        - text: "최애를 소개하는 한마디"
+        - textbox "최애를 소개하는 한마디6/100자" [ref=e9] [placeholder="이 장소나 코스를 좋아하는 이유를 알려 주세요"]: "u0중복거절"
+        - text: "6/100자"
+      - text: "QA사진정정 · C팀 으로 등록해요.사진  선택 · 최대 3장 JPEG·PNG·WebP, 원본 10MiB·40MP까지. 작은 JPEG로 저장하며 원본은 보관하지 않아요."
+      - button "최애 사진 선택" [ref=e6]
+      - button "최애 등록하기" [ref=e7]
+      - link "작성 취소" [ref=e8]

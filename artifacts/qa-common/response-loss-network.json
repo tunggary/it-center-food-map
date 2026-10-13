@@ -1,0 +1,16 @@
+[
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/favorites",
+    "status": 201,
+    "key": "3822b9a3-1957-43de-9402-38c6083fb409",
+    "at": 1791897157676,
+    "lost": true
+  },
+  {
+    "url": "http://127.0.0.1:54321/functions/v1/api/favorites",
+    "status": 200,
+    "key": "3822b9a3-1957-43de-9402-38c6083fb409",
+    "at": 1791897170294,
+    "lost": false
+  }
+]

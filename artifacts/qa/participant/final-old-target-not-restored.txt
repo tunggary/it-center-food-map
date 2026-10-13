@@ -1,0 +1,10 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/targets/a65cdbe9-5074-41f6-8a1c-100daac82d5b]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e2]: "← 지도"
+      - heading "최애 상세" [level=1]
+    - alert:
+      - text: "이 장소나 코스가 삭제됐어요. 다른 대상을 선택해 주세요."
+      - button "다시 시도" [ref=e3]

@@ -1,14 +1,14 @@
 # 프로젝트 구축 및 개선 절차
 
 완성차 IT 센터 CA 활동의 한 부스에서 함께 참여할 웹 서비스를 아래 순서로 구축한다.
-현재는 PRD·사용자 스토리 전체를 바탕으로 **[무료 운영 세부 설계](3-architecture/README.md)**를 작성했다. 스택·인증·DB·API·화면·동기화·사진·운영·검증을 주제별로 나눠 `docs/3-architecture/`에 모았다. 월0원·기존 자원 없음·행사 집중 사용은 확정이고, 휴면/제품 정책의 일부 기본값은 가정이다. 문서 작성 완료와 구현·단계 전체 완료는 구분한다.
+현재는 PRD·사용자 스토리 전체를 바탕으로 **[무료 운영 세부 설계](3-architecture/README.md)**를 작성했다. 스택·인증·DB·API·화면·동기화·사진·운영·검증을 주제별로 나눠 `docs/3-architecture/`에 모았다. 월0원·개인 Vercel·직접 경로·초안·재등록·부스 알림·사진·수동 재개/백업·성능 판정까지 사용자 협의로 확정했다. 사진 용량 예약과 백업 기록의 물리 스키마/API도 보완했다. 문서 작성 완료와 구현·단계 전체 완료는 구분한다.
 
 ## 작성 문서
 
-- [x] [PRD](1-prd.md): 합의한 요구사항과 보류 항목 기록
-- [x] [사용자 스토리·화면 흐름·QA](2-user-story.md): 역할별 문서·흐름도·QA·미정 분기 연결
-- [x] [무료 운영 아키텍처·세부 설계](3-architecture/README.md): 주제별 구현 계약과 검증·운영 절차 작성
-- [x] [아키텍처 드라이버](3-architecture/drivers.md): 무료 제약 추가·대안 재검토·ADR 6개 개정
+- [x] [PRD](1-prd.md): 확정 요구·세부 정책과 출시 운영 입력 기록
+- [x] [사용자 스토리·화면 흐름·QA](2-user-story.md): 역할별 문서·흐름도·확정 분기·QA65개 실행 대기
+- [x] [무료 운영 아키텍처·세부 설계](3-architecture/README.md): 주제별 구현 계약·사진 용량/백업 스키마·검증·운영 절차 확정
+- [x] [아키텍처 드라이버](3-architecture/drivers.md): 확정 기준·출시 입력 구분·ADR6개 승인
 - [x] [도메인 용어](../GLOSSARY.md): 대상과 등록, 참여자와 닉네임 등 구분
 
 위 체크는 문서 작성 완료를 나타낸다. 제품 구현·QA 실행·단계 전체 완료와 구분한다.
@@ -34,13 +34,59 @@
 
 ## 최근 작업 컨텍스트
 
+- 사용자 간략 QA 요청·운영 백엔드 반영/소스 동결 (2026-10-13): 사용자가 긴 성능 재시험 대신 러프하게 확인하고 커밋·main·Production 마무리를 요청해 새30분 부하를 중단하고 부분 관측을 별도 기록했다. 독립 최적화 계약36개+권한5개는 모두 통과했지만 정식 G4/E2E 성능 합격을 선언하지 않는다. 개인 조직/ref를 다시 확인하고 운영에 submit migration만 seed 없이 적용한 뒤 API1.1MB·media-finalize16MB·maintenance11MB 세 함수를 현재 소스로 배포했다. 최종 읽기검증은 공개 revision/catalog200·revision0·팀0/분류0/등록0, 새gateway anon/auth실행거절·foodmap_gateway owner/닫힌searchpath·service전용권한, signup차단·photosprivate·Cron2개active를 확인했다. API bundle SHA는 독립 검증된 stage와 동일하다. artifacts/production-final-backend-audit.json에 근거를 고정하고 release담당에 소스/락/마이그레이션 동결을 인계한다. 실제 운영 팀·카테고리 명단은 입력 전이며 새 성능/실기기/사용성 보류를 통과로 바꾸지 않는다. 다음 작업은 허가된 Git main 반영과 Vercel 대상커밋 READY/실응답 확인이며 배포완료는 release실결과 후 기록한다.
+
+- 등록 성능 수정 개발·독립 재QA 인계 (2026-10-13): 원본 stage100명 HTTP30분 baseline은99,748요청/오류0이지만 등록100표본P95 2,757.3ms로2초필요조건을 실패했다. 실제Edge지역은서울이므로regionpin은적용하지 않았다. secret-gated stage프로브로콜드외부대기와직렬RPC비용을분리했고 함수별deno 의존성격리로API번들11→1.1MB를 확인했다. 승인된단일도메인쓰기결정내에서 service-only submit gateway로등록4HTTP RPC를1개로결합하고 업무subtransaction 오류envelope로실패rate를보존했다. localSQL/HTTPfirst·replay·만료·선택소유·30+1rate·첫사진실패전체rollback/grants, stage20동시1등록/1알림/19재생/rate20·lock실패503에도rate1/partial0 검증을 통과했다. stage 새migration/API만배포하고prod성능변경은독립재QA전보류한다. 동등deps warm6표본1RPC218ms/max363ms는개발smoke이며100명/실제UI완료판정이아니다. stage임시프로브는삭제하고 독립기술담당에새run 재검증을인계한다.
+
+- 지도 중심 UI 정적 시안 (2026-10-13): 사용자 피드백을 바탕으로 바탕화면 `~/Desktop/최애지도_UI_시안/`에 독립 HTML 8개(메인·상세·랭킹·장소 검색·등록·산책코스·수정·부스)와 PC/모바일 전환 미리보기 `index.html`을 작성했다. 전체 화면 예시 지도·초록색 플로팅 UI·PC 왼쪽 패널·모바일 드래그 시트를 적용했다. 브라우저에서 1440×900/390×844 화면 overflow 없음, 검색→선택→입력→예시 완료, 시트 높이 전환/드래그, 코스 입력 전환을 확인했고 HTML 스크립트 문법·내부 링크를 검사했다. 실제 지도/API/제품 UI 구현·배포·제품 QA 통과로 처리하지 않으며 기존 단계 체크는 유지한다. 남은 사항과 다음 작업은 사용자가 시안을 보며 주는 디자인 피드백 반영이다.
+
+- 독립 역할 QA 집계·로컬 시험 자료 복구 (2026-10-13): 메인 오케스트레이터가 취합한 현재 QA65개는 참여자33통과/QR실사용1보류, 관리자12통과, 부스7통과, 공통4통과/8보류로 총56통과·9보류다. 보류는 실제 기기·사용자·조건별 성능 등 실행 조건을 충족한 증거가 필요하며 전체 완료로 체크하지 않는다. 관리자 QA의 추가 인접 시험용 임시 helper가 생성400에서 중단하지 못해 undefined 대상 검색 후 부스 임시 코스 한 건을 오선택·물리 삭제한 사고를 별도로 기록한다. 대상 `009299a5-2c94-4baa-9642-752979cf0e11`, 등록 `5bb0b354-7133-407e-b066-0fe8f929a239`를 전체0 시험 직전의 로컬 checkpoint에서 정확히 회복했다. 원target COPY행의 float 정밀도 포함 hash, favorite 원필드, event96 참조/원시각이 일치했고 사진0·공개핀1·상세1·분류랭킹1을 확인했다. 다른 대상·등록·참여자·자격·사진·객체·청소·백업·이벤트의 전체행 hash는 변하지 않았으며 현재171→172등록으로 최근 QA 자료도 보존했다. 전체 DB 복원·epoch 변경·새 이벤트·운영 변경은 하지 않았고 증거는 `artifacts/local-single-fixture-recovery.json`이다. 임시 helper의 생성 실패 즉시 중단/확정ID assert는 해당 QA 담당에게 인계했다. staging API 성능 예비 판정은 실패 상태를 유지한다. 다음 작업은 독립 재QA·미완료 조건 기록과 사용자 요청의 feature→develop→release→main PR/Production 배포 검증이며, 제품 단계 전체 체크는 실제 완료 기준에 따라 갱신한다.
+
+- 독립 참여자 QA 최종 재검증 (2026-10-13): Aside u0 실제 UI와 u2 관리자 협업으로 참여자 QA34개를 실행해 최신 결과 33통과·1판정 보류를 기록했다. 성공 저장 이탈 차단, 닉네임 raw Zod JSON, 삭제된 대상에서 새 장소로 이동한 뒤 옛 삭제 안내가 남는 결함은 개발 담당 수정 후 동일 독립 QA가 재검증했다. 최종 고정 빌드 `index-bhhxbMyc.js`에서 옛 R2 제출404/TARGET_GONE→새 실제 장소 선택 시 안내0·문구/사진 유지→명시 제출201·신규 상세1건→옛 대상 미복구를 확인했다. 전체0 시험은 관리자·DB 쓰기락/청소 보류 아래 수행하고 167등록·사진·이벤트 참조를 전후 fingerprint 일치로 정확히 원복했다. [참여자 실행 기록](2-user-story/qa/participant.md)과 `artifacts/qa/participant/summary.md`에 실패 이력을 보존했다. QR 실기기 스캔은 미실행이라 QA-P-01-01 보류를 유지하며, 실제 모바일·현장5명·hosted100명·전체 제품 단계 완료로 확대하지 않는다. 다음 작업은 다른 역할/공통 QA 및 외부 운영 조건 검증과 전체 결과 통합이다.
+
+- 독립 QA 결함 수정·성능 진단 (2026-10-13): ADM-W1-02의 원인은 FIX-01 seed가 B/C팀 normalized_name에 대문자 원문을 넣어 소문자 중복을 허용한 것이었다. 실제 DB rollback 회귀 검사에서 b팀 추가 허용을 재현한 뒤 seed에 trim·NFC·lower 정규화를 적용했다. 참여자 QA의 전체0 검증 종료/167등록·사진·event fingerprint 완전복원 확인 후 원 B/C의 정규화 필드만 수정하고 revision을 갱신했다. 원ID·이름·선택상태·version과 등록/사진/event 전체 내용은 보존했으며 b팀/c팀 중복 거절 회귀검사를 통과해 관리자 독립 UI 재QA에 넘겼다. 기본 seed와 부하 seed의 현재 한글 이름 정규화도 감사했다. 진행 중 staging102클라이언트 부하에 읽기 전용으로 pg_stat_statements/EXPLAIN을 수집했다. registration 표본은 session 준비와 최신 상세/DOM을 제외한 단일 POSTfavorites HTTP 시간이며 현재 run 중간 P95 2.757초/최대2.956초로 2초 요구를 만족했다고 판정하지 않는다. 누적 DB 통계에서 explore 평균205.61ms·최대1800.13ms, booth 평균362.66ms·최대1122.96ms, create 평균40.47ms·최대219.14ms를 확인했다. 읽기 fanout과 Edge4개 직렬RPC 경로가 후속 조사 대상이며, 등록 완료 후의 순간 wait 표본만으로 초기 경합 부재를 주장하지 않는다. schema/행/Edge 변경과 부하 중단은 하지 않았다. 다음 작업은 독립 재QA 결과 반영과 부하 종료 후 request별 안전한 RPC 구간 계측으로 지연을 분리하는 것이다.
+
+- 관리자 목록 정규화 QA 수정 인계 (2026-10-13): TECH-10의 팀/카테고리 생성·수정 normalizedName 누락을 strict 사용자입력 검증 뒤 공유 normalizeName으로 서버계산하고 NFC 이름과 함께 canonical command hash에 포함하도록 수정했다. 클라이언트 파생필드 입력은 계속 거절한다. 실제 localHTTP/DB17요청으로 생성·동일키재생·trim/case/NFC중복·수정·선택중단/재개·종류별카테고리중복범위·selectable투영을 확인해 artifacts/qa/tech10-development.json에 남겼다. 고유개발자료만 추가해선택중단했고FIX-01무변경. Deno타입및stage/prodAPI재배포를 완료하고 일시중단한 독립역할QA를 재개했다. 전체원본QA/hosted성능은 별도판정한다. G2추가로그조사는 공식신logs endpoint/ClickHouse필드기준을 기술담당에 전달했고 CPU/총메모리 실측을 확보했다고 선기록하지 않는다.
+
+- 독립 복원·관리 API QA 수정 인계 (2026-10-13): TECH-06(pg_restore 대상모드), TECH-07(공급자 DEFAULT ACL), TECH-08(전용 함수 소유자), TECH-09(관리자 팀 정정 route capture)를 수정했다. PG 연결 비밀은 환경변수로 분리하고 비밀 없는 dbname을 지정한다. provider DEFAULT ACL만 restorelist에서 제외하고 앱 ACL 유지/전용NOLOGIN owner·RLS·읽기7개·gateway서비스권한·searchpath/default privilege 재적용과 SQL사후조건을 추가했다. 동일한 기존사진은 hash확인후재사용, 불일치는덮어쓰기거절, 첨부사진manifest누락은실패한다. 자동검증7개·Python/Deno·local팀정정HTTProute입력통과/DB응답을 확인했다. API업데이트시간을역할QA에알려재개했고전체실제복원·권한재QA는독립기술담당에반환했다. 검증전완료체크는유지한다.
+
+- 복원 경로·고정 QA 빌드 인계 (2026-10-13): 독립 TECH-05의 macOS 임시경로 symlink/실경로 비교 불일치를 restore 루트 resolve로 수정하고 정상archive추출 및 경로탈출·절대경로·심볼릭/하드링크 거절 회귀3개를 통과했다. 보존된 실제archive복원 재QA는 독립기술담당에 반환한다. Node24.21.0 pnpm build를 통과하고 HMR 없는 detached Preview를 localhost4173에 시작해 HTML/compiledJS200을 확인했다. 참여자·부스QA에 주소변경/포트별자격차이/빌드동결·교체사전조율을 인계했다. 역할QA·hosted성능·실제복원 전체완료는 아직 기록하지 않는다.
+
+- 독립 백업 QA 수정 인계 (2026-10-13): TECH-02(snapshotAt offset/UTC Z 불일치)와 TECH-03(Edge/CLI/SQL 실패 코드 불일치)을 수정했다. snapshot은 UTC Z, 실패 코드는 기존 SQL7개를 shared tuple로 유지하고 중단/다운로드/heartbeat 오류를 각각 OPERATOR_CANCELLED/DEPENDENCY_UNAVAILABLE/LEASE_EXPIRED로 맞췄다. heartbeat/snapshot/complete/fail 모든 PATCH 경로를 재확인하고 Deno 타입·Python 문법·암호화/변조 검증·코드집합/UTC 직렬화 검사를 통과했다. prod/staging API 재배포 성공. 참여자 QA 쓰기를 잠시 중단한 뒤 detached Edge를 재시작하고 실제 OPERATOR_CANCELLED PATCH의 입력 통과/DB 도달을 확인해 재개했다. 실제 백업복원 재QA는 독립 기술담당에 반환했으며 성공으로 선기록하지 않는다.
+
+- Edge·사진·개인 외부 환경 인계 (2026-10-13): 역할별 agent 개발로 참여/검색 서명/관리/업로드/private 사진 API, WASM full·thumb 재인코딩/lease, 청소·원장 대조, 암호화 수동 백업·비운영 복원 CLI를 구현했다. 개인 조직 Free 서울의 운영 `gpsbnmgwowsbgclcottl`과 검증 `yxgmpbjcvjeacnrgtcbq`를 만들고 원래 운영 연결을 유지한 채 각 함수3개/secret을 배포했다. Kakao 개인 전용앱1606843은 Aside에서 지도ON·무료쿼터표식/안내·월렛미연결/유료사용안함·localhost2개와운영도메인 저장을 확인했고 키는 ignored 권한600환경파일에만 저장했다. Deno 타입/이미지2개/암호화변조검증과 로컬 실제 session→사진예약→업로드→ready200(1,167ms), 실제카카오검색15개200, 운영빈catalog/revision0·gateway익명거절을 확인했다. 운영 Vault/Cron 구성 성공과 실제 실행 검증은 구분한다. 독립 TECH-01이 발견한 백업업데이트POST/PATCH오류를 수정하고 재QA담당에 반환했다. FE키반영후dev재시작/HTTP200확인, 브라우저는 localhost5173로 고정해 독립QA에 인계했다. 남은 것은 원본QA65개 독립실행/수정/재QA, hostedCPU/총메모리·100명성능·실제백업복원·실기기/5명사용성·제품배포이며 단계전체 체크는 유지한다.
+
+- FE 개발 담당 인계 (2026-10-13): 별도 FE agent가 React/Vite·Router7.18.4·Tailwind4·Query5와 참여자/상세/사진/부스/관리자 화면을 구현하고 Node24 환경의 strict 타입 검사·production build 및 Vitest10개(2files)를 통과했다고 보고했다. 로컬 revision/catalog/explore/booth RPC200과 직접상세 SPA200, localhost5173 dev 서버를 확인했다. 이 결과는 개발 담당 기술 검증이며 독립 Aside 역할QA·실기기·성능 합격으로 바꾸지 않는다.
+
+- DB 구현·환경 통합 인계 (2026-10-13): 초기 스키마·관리/미디어/백업·보안 보강·기존 자격 조회의 4개 migration을 clean 로컬 reset에서 재현하고 SQL/실제20동시 테스트를 통과했다. 개인 조직/소속을 CLI로 재확인한 뒤 운영 `gpsbnmgwowsbgclcottl`과 테스트 `yxgmpbjcvjeacnrgtcbq`에 dry-run→seed 없는 migration 적용을 완료했다. 운영 실제 SQL/HTTP 읽기는 revision0·빈 catalog·등록0, 익명/일반Auth gateway실행권한0을 확인했다. 보안 advisor ERROR0이며 공개읽기7개에 대한 anon/authenticated SECURITY DEFINER 경고는 승인된 읽기 경계를 별도로 기록했다. 로컬 관리자/FIX-01의 비밀은 ignored 권한600파일, 공개ID는 `artifacts/qa-fixture.json`으로 분리하고 `docs/qa-handoff.md`에 독립 QA 실행·자료초기화·부하자료절차를 남겼다. 카카오 전용 개인앱 지도ON/무료쿼터 확인은 별도 환경 담당의 실제 조사 결과다. 남은 사항은 FE/Edge 독립 통합QA→수정/재QA, hosted사진/100명성능·백업복원·실기기/5명사용성의 실제 판정이며 제품 단계·QA65개를 전체 통과로 처리하지 않는다.
+
+- 제품 개발 기반·DB 구현 (2026-10-13, 진행 중): 기존 AGENTS/README 변경을 보존하고 `feature/product-implementation`에서 착수했다. shared DTO·strict Zod·오류/정규화 계약을 먼저 확정해 FE/Edge 담당에게 전달했다. 로컬 Supabase Docker에 정규화 원장·공개 snapshot RPC·참여/관리 gateway·사진 용량/lease/cleanup·백업 run과 최소 권한 함수 소유자를 구현했다. 실제 PostgreSQL에서 권한·멱등성·팀 정정·1·1·3 집계·삭제 영향 재확인·미디어 소유/예약/청소 보류/중복 반환/지연 객체 재계상을 검증했고, 20동시 동일 명령은 1코스/1등록/1이벤트와 19재생, 다른20키 동일대상은 모두 중복 거절했다. 현재 clean reset 재현·외부 migration·Edge/FE 통합이 남아 있으며 QA65개와 G2~G4·실기기·5명 사용성 판정은 아직 통과 처리하지 않는다. 패키지 후보의 React Router8은 registry 실제 가용7.18.4로 FE 담당이 호환 빌드 확인 후 고정한다.
+
+- Supabase 공통 지침 기록 (2026-10-13): `AGENTS.md`에 개인 계정·Free 조직 ID/관리 콘솔·프로젝트 미생성 상태·CLI/MCP 사용 및 대상 확인·프로젝트 생성 후 기록/연결·비밀정보/마이그레이션 규칙을 추가했다. CLI로 조직 ID와 빈 프로젝트 목록을 재확인하고 `git diff --check`를 통과했다. 기존 미커밋 작업을 보존했으며 제품 단계 체크와 QA 상태는 유지한다. 남은 사항은 MCP 실제 도구 조회와 제품용 프로젝트 준비·기술 게이트 검증이다.
+
+- Supabase 도구 설치·인증 (2026-10-13): 공식 `supabase/agent-skills`의 `supabase` 스킬을 사용자 Codex 스킬 폴더에 설치하고, Homebrew로 CLI 2.120.0을 설치했다. `gsy1656@gmail.com` 계정으로 CLI 로그인과 조직/프로젝트 목록 조회를 확인했다. 사용자 승인으로 Personal·Free 조직 `tunggary's Org` (`tiyzwalofmbdlhlybape`)를 생성하고 Codex 전역 설정에 `https://mcp.supabase.com/mcp`를 등록해 OAuth 로그인 성공을 확인했다. 현재 프로젝트 목록은 비어 있으며 프로젝트 생성·연결·DB 변경은 수행하지 않았다. 제품 단계 체크와 QA 미실행 상태는 유지한다. 다음 작업은 새 턴에서 MCP 도구 로딩·조회 확인과 제품용 Supabase 프로젝트 준비 및 G1~G3 기술 검증이다.
+
+- 설계 전체 재파악 (2026-10-13): 현재 작업 폴더의 PRD·역할별 스토리/QA·DEC12개·아키텍처 상세/ADR6개·배포 문서와 GLOSSARY를 읽었다. 공개 읽기/Edge 검증/DB 트랜잭션 경계, 자격·집계·멱등성·삭제 경합, snapshot/부스 완료 cursor, 사진 처리·용량 예약/실제 삭제 후 반환, 백업 lease/동일 snapshot/복원 epoch 계약을 확인했다. 로컬 제품 파일은 정적 준비 페이지와 배포 설정뿐이며 React/Vite·Supabase 제품 코드는 아직 없다. 드라이버 D1 표의 통계·부하 지속 '미확정' 표현은 최신 PRD §11·DEC-12·verification의 확정 기준보다 오래된 표현으로 구분했다. 외부 요금/버전·실제 배포 상태 재조회와 제품 테스트는 수행하지 않았다. QA65개 미실행과 단계 체크를 유지하고 기존 미커밋 설계 변경을 보존했다. 남은 사항은 실제 행사/계정 입력과 G1~G4·제품 구현/검증이며, 다음 구현 착수 기준은 verification의 G1~G3 기술 검증이다.
+
+- 설계 확정·누락 보완 (2026-10-13): 사용자 항목별 답변과 실행 계획을 반영했다. 휴면 수동 재개·직접 경로·현재 화면 초안·삭제 후 새 등록·부스4초/완료cursor·모바일 사진·배포 즉시 사전 참여·수동 백업·나머지 기본값·성능 판정을 확정해 PRD→스토리/분기→QA→설계를 일치시켰다. `storage-accounting.md`와 `backup.md`에 용량 행/객체별 예약·실제량·해제, 백업run/관리API·청소 보류·동일snapshot·복원 재계산을 작성했다. ADR6개는 승인됨, QA65개는 모두 미실행이며 테스트 통과로 바꾸지 않았다. 기존 Vercel 준비 페이지 배포를 현재 상태에 반영했다. 문서39개의 로컬 링크/앵커446개, DEC12개·ADR6개·스토리16개·QA65개·드라이버18개 연결을 검증해 통과했다. Mermaid8개의 노드/연결 구조 유지, 용량 계산, `git diff --check`도 확인했다. 기존 미커밋 문서 파악 기록을 보존했으며 제품 코드/서비스 설정은 변경하지 않았다. 남은 것은 실제 행사·명단·계정 권한의 출시 입력과 G1~G4/제품 구현·검증이다. 단계1~3 전체 체크는 현장 운영 입력 등 각 단계 전체 조건까지 확인한 뒤 갱신하며, 설계 산출물의 확정 여부와 구분한다.
+
+## 이전 작업 기록
+
+아래 기록은 당시 상태를 보존한 이력이다. 현재 결정·QA 상태는 위의 설계 확정 기록을 기준으로 한다.
+
+- 설계 문서 파악 (2026-10-13): `docs/`의 문서 34개와 `GLOSSARY.md`를 읽고 PRD·스토리16개·QA65개·DEC12개에서 아키텍처 문서20개/ADR6개로 이어지는 구현 계약을 확인했다. 공개 읽기 RPC/Edge 검증/단일 DB 트랜잭션, 브라우저 자격, revision snapshot/부스 완료 cursor, 사진 lease/청소/공개 철회, 무료 운영·복원·기술 게이트를 파악했다. 일부 설계 문서의 배포·프로젝트 생성 전 표현은 최근 준비 페이지 배포 기록보다 오래된 상태로 구분한다. 제품 구현·성능 시험·외부 한도 재조회는 수행하지 않았으며 단계 체크와 QA 미실행44·판정 보류21은 유지한다. 남은 사항은 제품/운영 가정과 실제 행사 조건 확인, 구현 시 용량 상태·운영 기록 등 물리 스키마 구체화다. 다음 작업은 G1~G3 기술 검증 및 DB 정합성 구현이다.
+
+- 세션 공통 지침 작업 (2026-10-13): `AGENTS.md`에 공개 GitHub 저장소·origin·Git Flow·PR 담당자와 개인 Vercel 계정·scope·팀/프로젝트 ID·관리 콘솔·운영 주소·자동 배포 규칙을 추가했다. CLI/API로 실제 계정·연결·Production 브랜치를 재확인했다. 다른 세션에서도 개인 scope를 명시하고 대상을 검증하도록 기록했으며 기존 미커밋 설계 변경을 보존했다. 제품 단계 체크와 후속 구현 과제는 유지한다.
+
 - 배포 파이프라인 작업 (2026-10-13): 개인 계정 `tunggary2@naver.com`의 Hobby scope `tunggary2-navercoms-projects`에 `it-center-food-map` 프로젝트를 생성하고 GitHub 저장소를 연결했다. API로 개인 소유·Hobby·저장소 연결·Production 브랜치 `main`을 확인했다. 정적 준비 페이지와 `public/` 출력 설정, [배포 절차](deployment.md)를 추가하고 최초 Git 자동 배포 `48f0a16`의 READY·보호된 배포 HTML·[Production](https://it-center-food-map.vercel.app)의 HTTP 200을 확인했다. 제품 구현·QA·피드백 창구는 미완료이므로 단계 체크는 유지한다. 후속 feature·develop·release Preview READY와 PR #4 머지 후 main `d68541b`의 Production READY·운영 페이지 응답도 확인했다. 관리 콘솔은 https://vercel.com/tunggary2-navercoms-projects/it-center-food-map 이다. 다음 작업은 React/Vite 앱과 Supabase·카카오 연동 구현이다. 기존 폴더의 미커밋 Vercel 설계 변경은 별도 작업으로 보존한다.
+
+- 배포처 변경 작업 (2026-10-13): 사용자 지정에 따라 개인 프로젝트의 정적 웹 배포를 Vercel Hobby로 변경했다. React/Vite·Supabase·카카오 구성은 유지하고 `vercel.app`, SPA rewrite, CORS/지도 허용 도메인, Vercel CDN 요청/전송 한도를 관련 설계·ADR·PRD에 반영했다. `feature/vercel-hobby-docs` 브랜치에서 문서만 수정했으며 서비스 생성·배포는 수행하지 않았다. 로컬 링크·앵커426개와 `git diff --check`를 확인해 통과했다. Cloudflare 표기는 이전 결정/대안 이력에만 남았고 QA 미실행44·판정 보류21 상태를 유지했다.
 
 - 저장소 공개 작업 (2026-10-13): [tunggary/it-center-food-map](https://github.com/tunggary/it-center-food-map) 공개 저장소를 생성했다. 기존 설계 문서 35개와 프로젝트 지침을 `feature/design-docs` 브랜치에 업로드하고, 루트 README에 주요 문서 링크를 추가했다. GitHub의 공개 설정과 원격 파일 목록, 로컬 문서 링크의 대상 파일 존재를 확인했다. `develop`·`main`에는 PR을 거쳐 반영한다. 저장소 공개는 제품 배포가 아니므로 단계별 체크 상태는 유지한다. 제품 관련 남은 사항과 다음 작업은 아래와 같다.
 
 - 작업일: 2026-10-13
 - 이전 작업: PRD·스토리16개·QA65개와 최초 유료 기반 설계를 작성했다. 이후 사용자에게 월0원·기존 자원 없음·행사 집중 후 가끔 사용이라는 답변을 받았다.
-- 진행 내용·주요 결정: 무료 세부 설계안을 `docs/3-architecture/`에 모았다. React/Vite·Cloudflare Pages Free·Supabase Free·카카오 지도를 선택하고, 공개 읽기 RPC와 Edge 쓰기 검증/단일 DB 트랜잭션을 분리했다. 기존 제안 ADR6개를 같은 번호로 개정하고 PRD §10에는 합의된 비용 조건만 반영했다.
+- 이전 무료안의 진행 내용·주요 결정: 무료 세부 설계안을 `docs/3-architecture/`에 모았다. React/Vite·Cloudflare Pages Free·Supabase Free·카카오 지도를 선택하고, 공개 읽기 RPC와 Edge 쓰기 검증/단일 DB 트랜잭션을 분리했다. 기존 제안 ADR6개를 같은 번호로 개정하고 PRD §10에는 합의된 비용 조건만 반영했다.
 - 재검토: 무료 Realtime의 초당100메시지 제한을 확인해 대화 중 잠정 추천을 철회했다. 변경 감지는 Data API 직접2초조회, 부스 알림은 DB 기록으로 분리한다. 서로 다른 출처의 참여자 자격은 bearer+해시, 사진은 작은 JPEG+Edge WASM으로 바꿨다. 유료 자동 백업 대신 수동 복원 절차와 실제 한계를 기록했다.
 - 검증: 공식 문서·요금/한도·패키지 후보를 확인했다. 문서35개·설계폴더20개를 대상으로 로컬 링크/앵커421개, 스토리16개·QA65개·DEC12개·드라이버18개 연결, ADR6개의 필수 절을 점검해 통과했다. 이전 스택은 대안/변경 이력으로만 남도록 확인했다. 제품 코드·서비스 개설·배포·실제 성능 시험은 수행하지 않았다. 기존 QA 미실행44·판정 보류21 유지.
 - 남은 사항: 질문한 휴면 수동 재개 허용 여부, 실제 행사 조건/팀 목록/지도 권한, 제품 정책 기본안 검토. 세부 설계안은 작성 완료이며 ADR 상태는 미검증 가정을 구분하기 위해 제안됨으로 유지한다. 첫 버전 범위/시각 디자인/제품 검증이 모두 완료된 것은 아니므로 단계1~3 전체 체크는 유지한다.

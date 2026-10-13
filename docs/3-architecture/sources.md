@@ -6,8 +6,7 @@
 
 | 자료 | 이번 설계에 적용한 사실 |
 | --- | --- |
-| [Cloudflare Pages 가격](https://developers.cloudflare.com/pages/functions/pricing/) | 정적 자산 요청은 무료·무제한; Functions는 별도 제한. 정적 SPA만 사용 |
-| [Cloudflare React 배포](https://developers.cloudflare.com/pages/framework-guides/deploy-a-react-site/) | React 정적 앱 배포 경로 |
+| [Vercel Vite 배포](https://vercel.com/docs/frameworks/frontend/vite) | 정적 Vite 배포·SPA 직접 링크 rewrite |
 | [Supabase 가격](https://supabase.com/pricing) | Free API 횟수 무제한, DB500MB/Storage1GB/전송 한도/함수50만/휴면/자동백업 제외 |
 | [DB 함수](https://supabase.com/docs/guides/database/functions) | SQL 함수 호출과 권한, SECURITY DEFINER 주의 |
 | [API 보안](https://supabase.com/docs/guides/api/securing-your-api) | 노출 schema/권한·Data API 경계 |
@@ -19,11 +18,13 @@
 | [이미지 WASM 예시](https://supabase.com/docs/guides/functions/examples/image-manipulation) | magick-wasm 방식; 우리 최대 파일의 CPU 충족은 별도 시험 |
 | [Cron](https://supabase.com/docs/guides/cron), [함수 예약](https://supabase.com/docs/guides/functions/schedule-functions) | DB scheduler/pg_net 호출, secret 보관 |
 | [Storage buckets](https://supabase.com/docs/guides/storage/buckets/fundamentals) | private 저장과 업로드 제한 |
+| [서명 업로드](https://supabase.com/docs/reference/javascript/storage-from-createsigneduploadurl) | signed 권한 수명과 앱 자산TTL을 구분하고 원본 삭제 전에 확인 |
+| [pg_dump snapshot](https://www.postgresql.org/docs/current/app-pgdump.html) | DB dump와 사진 manifest에 같은 snapshot 사용 |
 | [DB 백업](https://supabase.com/docs/guides/platform/backups) | Storage 파일은 DB 백업과 별개 |
 | [카카오 Local](https://developers.kakao.com/docs/ko/local/dev-guide) | 장소 ID·좌표·검색 결과 |
 | [카카오 Web](https://apis.map.kakao.com/web/documentation/), [선 길이](https://apis.map.kakao.com/web/sample/calculatePolylineDistance/) | 직접 그린 경로·선 길이; 공식 보행 길찾기 시간은 아님 |
 | [카카오 쿼터](https://developers.kakao.com/docs/ko/getting-started/quota) | 실제 앱의 권한/사용량·유료 설정 점검 필요 |
 | [네이버 Directions15](https://api.ncloud-docs.com/docs/ai-naver-mapsdirections15-driving) | 자동차 경로 API, 자동 보행 기능 근거로 사용하지 않음 |
-| [Vercel Hobby](https://vercel.com/docs/plans/hobby) | 개인·비상업 사용 한정. 이번 무료 배포 선택에서는 제외 |
+| [Vercel Hobby](https://vercel.com/docs/plans/hobby) | 개인·비상업 사용 조건과 CDN 월100만 요청·정적 전송100GB. 사용자 개인 프로젝트 선택에 따라 정적 배포처로 채택 |
 
 패키지 패치는 npm registry의 각 패키지 `/latest`를 조회했다. 이는 패키지 설치·빌드·의존성 호환을 확인한 결과가 아니며, 최종 설치 버전은 G1/G2 검증 후 lockfile로 고정한다.

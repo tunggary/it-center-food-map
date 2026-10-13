@@ -1,0 +1,957 @@
+{
+  "purpose": "QA-B 실제API고유105등록/105이벤트,각사진없음",
+  "beforeRevision": "26",
+  "afterRevision": "132",
+  "categoryId": "c1b56711-08ac-4265-ac14-7536b2e112b1",
+  "events": [
+    {
+      "replayed": false,
+      "revision": "28",
+      "targetId": "cc4b1255-2882-44ed-abda-c20e2ed8314a",
+      "resourceId": "37d5b3b6-ea64-45ad-9879-ee66c2eb6a63",
+      "index": 2,
+      "nickname": "QA버스트R2002",
+      "targetName": "QA버스트R2코스002"
+    },
+    {
+      "replayed": false,
+      "revision": "29",
+      "targetId": "83e0d8e8-9b15-4ec6-aba8-322ad71d7c62",
+      "resourceId": "edfa20f8-f57f-4aff-af62-7ac7e8af81e3",
+      "index": 3,
+      "nickname": "QA버스트R2003",
+      "targetName": "QA버스트R2코스003"
+    },
+    {
+      "replayed": false,
+      "revision": "30",
+      "targetId": "dd756b93-19b8-497a-b7a5-032c8a4d7b29",
+      "resourceId": "71d9bd5f-6004-4bc3-bb5b-a6ac02842cb5",
+      "index": 13,
+      "nickname": "QA버스트R2013",
+      "targetName": "QA버스트R2코스013"
+    },
+    {
+      "replayed": false,
+      "revision": "31",
+      "targetId": "8ae5aac3-2db9-460b-9950-c0323e051627",
+      "resourceId": "f6b0e1a9-2b2e-4428-b72b-801ee3f3780a",
+      "index": 12,
+      "nickname": "QA버스트R2012",
+      "targetName": "QA버스트R2코스012"
+    },
+    {
+      "replayed": false,
+      "revision": "32",
+      "targetId": "37a8fba3-a516-4ea5-ba84-754bff872cbf",
+      "resourceId": "cda8d97a-36ac-4bc5-871c-c8ebb70819eb",
+      "index": 7,
+      "nickname": "QA버스트R2007",
+      "targetName": "QA버스트R2코스007"
+    },
+    {
+      "replayed": false,
+      "revision": "33",
+      "targetId": "672e4551-1474-40b0-9cc8-6502e51a9801",
+      "resourceId": "07f30354-7ecd-4a6a-8aa4-628f122f18ef",
+      "index": 1,
+      "nickname": "QA버스트R2001",
+      "targetName": "QA버스트R2코스001"
+    },
+    {
+      "replayed": false,
+      "revision": "34",
+      "targetId": "90a5effb-f95a-4d77-8e01-70bc73f1cabb",
+      "resourceId": "0a7dae32-1cdb-4702-bc79-c1107c898d7a",
+      "index": 18,
+      "nickname": "QA버스트R2018",
+      "targetName": "QA버스트R2코스018"
+    },
+    {
+      "replayed": false,
+      "revision": "35",
+      "targetId": "f09ef5bb-bd0a-4d73-a3cb-77d466264f12",
+      "resourceId": "923d5d5c-b12a-4bfa-a000-d25d97f066e0",
+      "index": 5,
+      "nickname": "QA버스트R2005",
+      "targetName": "QA버스트R2코스005"
+    },
+    {
+      "replayed": false,
+      "revision": "36",
+      "targetId": "6ab57715-a4e9-402c-9949-89f581fe7a90",
+      "resourceId": "c2d471db-8e2d-4c45-bcf5-efa700a4cd27",
+      "index": 9,
+      "nickname": "QA버스트R2009",
+      "targetName": "QA버스트R2코스009"
+    },
+    {
+      "replayed": false,
+      "revision": "37",
+      "targetId": "a5b1304b-5fcf-42c0-aaa3-a9458d7c73d6",
+      "resourceId": "0a42c9aa-ab77-4939-b81d-11c63c3ea064",
+      "index": 11,
+      "nickname": "QA버스트R2011",
+      "targetName": "QA버스트R2코스011"
+    },
+    {
+      "replayed": false,
+      "revision": "38",
+      "targetId": "b1a58f1c-ae6f-4758-bf43-a3144eab4227",
+      "resourceId": "1ddbcc53-da17-4339-8e79-0fd8fef5de98",
+      "index": 8,
+      "nickname": "QA버스트R2008",
+      "targetName": "QA버스트R2코스008"
+    },
+    {
+      "replayed": false,
+      "revision": "39",
+      "targetId": "c2c0e542-da30-4e82-bdf4-0d5f27eee75f",
+      "resourceId": "5403d1f1-0a01-4866-a61a-d7b9c3822e91",
+      "index": 4,
+      "nickname": "QA버스트R2004",
+      "targetName": "QA버스트R2코스004"
+    },
+    {
+      "replayed": false,
+      "revision": "40",
+      "targetId": "aafa27e6-9308-4dfd-8763-47a15c85dafa",
+      "resourceId": "bfc62f82-9299-441d-803e-ba1fbc3f6b3b",
+      "index": 19,
+      "nickname": "QA버스트R2019",
+      "targetName": "QA버스트R2코스019"
+    },
+    {
+      "replayed": false,
+      "revision": "41",
+      "targetId": "2def00fd-0e00-47a8-adb7-071e37e76194",
+      "resourceId": "db2f67ce-e22a-4635-8525-b9c06171abee",
+      "index": 17,
+      "nickname": "QA버스트R2017",
+      "targetName": "QA버스트R2코스017"
+    },
+    {
+      "replayed": false,
+      "revision": "42",
+      "targetId": "6a269587-d9ec-427b-9ba8-95b13826ec25",
+      "resourceId": "5449040d-7bf7-4cbf-a35e-b7e131257c4b",
+      "index": 10,
+      "nickname": "QA버스트R2010",
+      "targetName": "QA버스트R2코스010"
+    },
+    {
+      "replayed": false,
+      "revision": "43",
+      "targetId": "a4ffa635-300c-4630-942d-3052abced3a3",
+      "resourceId": "1246c93e-b41c-4ff0-998b-f6d4eb7063fe",
+      "index": 15,
+      "nickname": "QA버스트R2015",
+      "targetName": "QA버스트R2코스015"
+    },
+    {
+      "replayed": false,
+      "revision": "44",
+      "targetId": "ff8aac99-179e-4a94-8dce-0a1a0df45b31",
+      "resourceId": "e93fac47-54ef-4241-83b4-a10a04b92a44",
+      "index": 22,
+      "nickname": "QA버스트R2022",
+      "targetName": "QA버스트R2코스022"
+    },
+    {
+      "replayed": false,
+      "revision": "45",
+      "targetId": "223ca798-9f2b-493d-b4d4-9af5d687e79e",
+      "resourceId": "f2402386-46c0-45ba-b2c0-a3cdf84e254c",
+      "index": 26,
+      "nickname": "QA버스트R2026",
+      "targetName": "QA버스트R2코스026"
+    },
+    {
+      "replayed": false,
+      "revision": "46",
+      "targetId": "17ab8c57-51c1-40fd-997b-d910fe52de1c",
+      "resourceId": "bcf02975-52c4-4b3a-8e46-fc76072139fb",
+      "index": 24,
+      "nickname": "QA버스트R2024",
+      "targetName": "QA버스트R2코스024"
+    },
+    {
+      "replayed": false,
+      "revision": "47",
+      "targetId": "a4b7c3cb-57ca-4342-b3a9-f7300b90a97d",
+      "resourceId": "babde0d8-5982-4ed0-b187-bb1e7aed95d1",
+      "index": 21,
+      "nickname": "QA버스트R2021",
+      "targetName": "QA버스트R2코스021"
+    },
+    {
+      "replayed": false,
+      "revision": "48",
+      "targetId": "8efc8725-7ff6-473c-b9de-24200636a8df",
+      "resourceId": "534459ba-b109-41fc-834d-adc374f8abf9",
+      "index": 6,
+      "nickname": "QA버스트R2006",
+      "targetName": "QA버스트R2코스006"
+    },
+    {
+      "replayed": false,
+      "revision": "49",
+      "targetId": "68883839-8919-4876-b6de-1d9ed8a864dc",
+      "resourceId": "a923d62b-0c24-4af4-af87-071d1cc53e14",
+      "index": 14,
+      "nickname": "QA버스트R2014",
+      "targetName": "QA버스트R2코스014"
+    },
+    {
+      "replayed": false,
+      "revision": "50",
+      "targetId": "947beba0-8932-4018-bdb9-f2eb3e095876",
+      "resourceId": "4b3e2f74-b4fc-4a46-be7f-1fec2836d8d8",
+      "index": 29,
+      "nickname": "QA버스트R2029",
+      "targetName": "QA버스트R2코스029"
+    },
+    {
+      "replayed": false,
+      "revision": "51",
+      "targetId": "8014e20d-8fdb-4c26-9def-10052d5eec04",
+      "resourceId": "96de45d2-d6b4-423b-aec3-4999e2bbe605",
+      "index": 30,
+      "nickname": "QA버스트R2030",
+      "targetName": "QA버스트R2코스030"
+    },
+    {
+      "replayed": false,
+      "revision": "52",
+      "targetId": "b267bd42-b419-489e-b405-392bbf221451",
+      "resourceId": "044a9a0c-818f-4aa3-b8b2-3822a550d337",
+      "index": 16,
+      "nickname": "QA버스트R2016",
+      "targetName": "QA버스트R2코스016"
+    },
+    {
+      "replayed": false,
+      "revision": "53",
+      "targetId": "26d60590-c4ad-4b9a-837a-61522f2b0c6f",
+      "resourceId": "7418fff0-a0ae-494f-a6d7-c652fa8deef2",
+      "index": 20,
+      "nickname": "QA버스트R2020",
+      "targetName": "QA버스트R2코스020"
+    },
+    {
+      "replayed": false,
+      "revision": "54",
+      "targetId": "08b2062b-aae6-4765-a161-76313e0bbc96",
+      "resourceId": "7fe3754d-a7da-4c7f-b032-09b7afbaa2c1",
+      "index": 25,
+      "nickname": "QA버스트R2025",
+      "targetName": "QA버스트R2코스025"
+    },
+    {
+      "replayed": false,
+      "revision": "55",
+      "targetId": "bd745b1f-1178-4bd7-b457-499c10827e91",
+      "resourceId": "7eddfbc5-c404-4396-a6ee-438bbc78c48a",
+      "index": 34,
+      "nickname": "QA버스트R2034",
+      "targetName": "QA버스트R2코스034"
+    },
+    {
+      "replayed": false,
+      "revision": "56",
+      "targetId": "656a3abe-dc68-49f9-ae90-a1871ee1a88b",
+      "resourceId": "ad012d62-a179-4bc2-8705-8a480d69bef7",
+      "index": 23,
+      "nickname": "QA버스트R2023",
+      "targetName": "QA버스트R2코스023"
+    },
+    {
+      "replayed": false,
+      "revision": "57",
+      "targetId": "1beec7f9-1c08-4295-89dc-733d13321d8a",
+      "resourceId": "55071075-0f4c-42e8-9c39-038d7dfae300",
+      "index": 28,
+      "nickname": "QA버스트R2028",
+      "targetName": "QA버스트R2코스028"
+    },
+    {
+      "replayed": false,
+      "revision": "58",
+      "targetId": "6e6eeab9-d396-4217-b3d6-fa746ef4c119",
+      "resourceId": "b7b2e18e-5f46-47e0-b868-37d7eb51fbec",
+      "index": 36,
+      "nickname": "QA버스트R2036",
+      "targetName": "QA버스트R2코스036"
+    },
+    {
+      "replayed": false,
+      "revision": "59",
+      "targetId": "4aaec9f5-3ca8-43c0-9038-561e0aaef54a",
+      "resourceId": "d588df1c-a98c-4716-a322-fedd7e6e9bb1",
+      "index": 40,
+      "nickname": "QA버스트R2040",
+      "targetName": "QA버스트R2코스040"
+    },
+    {
+      "replayed": false,
+      "revision": "60",
+      "targetId": "46cb1410-4275-4c71-8ec3-de466712b128",
+      "resourceId": "4175c1b3-9010-4d21-b3d9-46c699730bd2",
+      "index": 32,
+      "nickname": "QA버스트R2032",
+      "targetName": "QA버스트R2코스032"
+    },
+    {
+      "replayed": false,
+      "revision": "61",
+      "targetId": "a5c12348-203a-4c7c-a176-c399374eacc3",
+      "resourceId": "ed3499be-3e0e-446b-98bf-56148a2320a2",
+      "index": 35,
+      "nickname": "QA버스트R2035",
+      "targetName": "QA버스트R2코스035"
+    },
+    {
+      "replayed": false,
+      "revision": "62",
+      "targetId": "98208efd-e9b8-490a-80bd-bf0a1d48a3c9",
+      "resourceId": "1ec52438-38e6-492a-8d53-7052aad79a5d",
+      "index": 37,
+      "nickname": "QA버스트R2037",
+      "targetName": "QA버스트R2코스037"
+    },
+    {
+      "replayed": false,
+      "revision": "63",
+      "targetId": "e31836e9-4a10-4a64-967f-16957494db36",
+      "resourceId": "a8a577e0-295d-424d-819b-b1d31fd03c59",
+      "index": 33,
+      "nickname": "QA버스트R2033",
+      "targetName": "QA버스트R2코스033"
+    },
+    {
+      "replayed": false,
+      "revision": "64",
+      "targetId": "52d5d017-1814-49d0-ac41-70de66eeae1e",
+      "resourceId": "e4bc287e-7345-416c-b03f-bf438ef204d8",
+      "index": 39,
+      "nickname": "QA버스트R2039",
+      "targetName": "QA버스트R2코스039"
+    },
+    {
+      "replayed": false,
+      "revision": "65",
+      "targetId": "42f48e10-9153-498d-a20d-48fd609c88bf",
+      "resourceId": "3e704ceb-5ebf-44da-8571-18e33b1688a7",
+      "index": 44,
+      "nickname": "QA버스트R2044",
+      "targetName": "QA버스트R2코스044"
+    },
+    {
+      "replayed": false,
+      "revision": "66",
+      "targetId": "c904090a-6ec2-4c6a-b0f5-65799a9c1e1b",
+      "resourceId": "0856b34d-8b90-48e5-81f6-1dc2c9ee880f",
+      "index": 31,
+      "nickname": "QA버스트R2031",
+      "targetName": "QA버스트R2코스031"
+    },
+    {
+      "replayed": false,
+      "revision": "67",
+      "targetId": "19908f8c-dea4-4a05-a2a5-6ac56a53c0f0",
+      "resourceId": "8c668a9f-5a6b-46bf-bbd5-22bcafd6d8b9",
+      "index": 42,
+      "nickname": "QA버스트R2042",
+      "targetName": "QA버스트R2코스042"
+    },
+    {
+      "replayed": false,
+      "revision": "68",
+      "targetId": "28e03401-9c33-468d-a540-934015645120",
+      "resourceId": "472ab83e-ff89-454c-8d7f-aff996a8cb16",
+      "index": 47,
+      "nickname": "QA버스트R2047",
+      "targetName": "QA버스트R2코스047"
+    },
+    {
+      "replayed": false,
+      "revision": "69",
+      "targetId": "8f17679e-f2dd-47c4-8709-65a5ab2f3330",
+      "resourceId": "baa8a3ec-cb64-4a5e-8e84-7580cd50adfe",
+      "index": 46,
+      "nickname": "QA버스트R2046",
+      "targetName": "QA버스트R2코스046"
+    },
+    {
+      "replayed": false,
+      "revision": "70",
+      "targetId": "231bf94f-17d3-47e0-9a8d-919eb9b791e9",
+      "resourceId": "8725e4db-9e41-4646-93c4-9112a64fdb42",
+      "index": 27,
+      "nickname": "QA버스트R2027",
+      "targetName": "QA버스트R2코스027"
+    },
+    {
+      "replayed": false,
+      "revision": "71",
+      "targetId": "3e26654c-d59f-43dd-87aa-ad6352d3612e",
+      "resourceId": "edd429db-d645-46a9-bf67-a814051c606d",
+      "index": 41,
+      "nickname": "QA버스트R2041",
+      "targetName": "QA버스트R2코스041"
+    },
+    {
+      "replayed": false,
+      "revision": "72",
+      "targetId": "6af95415-ef84-45f6-b600-3ed44c1bcf53",
+      "resourceId": "27af1f41-b17d-4524-974d-193c86297774",
+      "index": 45,
+      "nickname": "QA버스트R2045",
+      "targetName": "QA버스트R2코스045"
+    },
+    {
+      "replayed": false,
+      "revision": "73",
+      "targetId": "d9fb18e0-b688-4d4a-941b-b4032e3025ee",
+      "resourceId": "e6102472-a1de-4707-a065-f46b5d398b3c",
+      "index": 38,
+      "nickname": "QA버스트R2038",
+      "targetName": "QA버스트R2코스038"
+    },
+    {
+      "replayed": false,
+      "revision": "74",
+      "targetId": "832889c3-b812-4316-8910-ba69899cd872",
+      "resourceId": "fab7466a-5e42-469c-bb23-71e6d997994d",
+      "index": 51,
+      "nickname": "QA버스트R2051",
+      "targetName": "QA버스트R2코스051"
+    },
+    {
+      "replayed": false,
+      "revision": "75",
+      "targetId": "e1b6ce88-4c4b-4d27-8632-9bfdd73ae7ae",
+      "resourceId": "64ab550e-db3a-4ae3-9a9c-b7641230b33b",
+      "index": 49,
+      "nickname": "QA버스트R2049",
+      "targetName": "QA버스트R2코스049"
+    },
+    {
+      "replayed": false,
+      "revision": "76",
+      "targetId": "1d916791-220b-455d-bfd1-96f17c16a264",
+      "resourceId": "98357928-30eb-4dce-ae73-718b186d3ba9",
+      "index": 52,
+      "nickname": "QA버스트R2052",
+      "targetName": "QA버스트R2코스052"
+    },
+    {
+      "replayed": false,
+      "revision": "77",
+      "targetId": "c95f7693-7277-4151-ab0a-0bdbd8198faa",
+      "resourceId": "d7b10cc6-3715-4ab0-9f6b-9a832ea81663",
+      "index": 50,
+      "nickname": "QA버스트R2050",
+      "targetName": "QA버스트R2코스050"
+    },
+    {
+      "replayed": false,
+      "revision": "78",
+      "targetId": "7d104069-2984-4303-822b-03022935c124",
+      "resourceId": "d5ae68d2-0837-444f-92be-cc48b528249b",
+      "index": 56,
+      "nickname": "QA버스트R2056",
+      "targetName": "QA버스트R2코스056"
+    },
+    {
+      "replayed": false,
+      "revision": "79",
+      "targetId": "37f3ae29-7af1-43b1-bab8-2e5f8e137d51",
+      "resourceId": "adf87b28-2d43-4ae6-90d8-9f4354a78261",
+      "index": 55,
+      "nickname": "QA버스트R2055",
+      "targetName": "QA버스트R2코스055"
+    },
+    {
+      "replayed": false,
+      "revision": "80",
+      "targetId": "4de9873d-4c96-48ee-9518-384a02b1000b",
+      "resourceId": "e3af0462-8f1e-4d95-942f-5d4fc1644379",
+      "index": 48,
+      "nickname": "QA버스트R2048",
+      "targetName": "QA버스트R2코스048"
+    },
+    {
+      "replayed": false,
+      "revision": "81",
+      "targetId": "cdfcf3c9-ac85-4359-935d-f9185678844d",
+      "resourceId": "8250de68-f6b2-4b11-ba57-a17260476026",
+      "index": 43,
+      "nickname": "QA버스트R2043",
+      "targetName": "QA버스트R2코스043"
+    },
+    {
+      "replayed": false,
+      "revision": "82",
+      "targetId": "11759469-3142-48d2-b7fa-a56ac934f35d",
+      "resourceId": "ae2e5298-ea46-43bf-a669-ce4d89f8d239",
+      "index": 57,
+      "nickname": "QA버스트R2057",
+      "targetName": "QA버스트R2코스057"
+    },
+    {
+      "replayed": false,
+      "revision": "83",
+      "targetId": "e91af44f-21cc-4948-9bd9-bf862df980ef",
+      "resourceId": "e117951a-82b4-4400-afe2-a0dff3a33ff8",
+      "index": 53,
+      "nickname": "QA버스트R2053",
+      "targetName": "QA버스트R2코스053"
+    },
+    {
+      "replayed": false,
+      "revision": "84",
+      "targetId": "ec9be9ed-22ba-459d-9a30-dd9afc6bab8b",
+      "resourceId": "2e5618e1-1fbd-4d58-a0bd-eed41759d71c",
+      "index": 64,
+      "nickname": "QA버스트R2064",
+      "targetName": "QA버스트R2코스064"
+    },
+    {
+      "replayed": false,
+      "revision": "85",
+      "targetId": "bc2e5b23-9a1a-4e89-8fdd-8a3fc4b4340a",
+      "resourceId": "fe74c33c-ec86-471b-bf84-ece31e7bfc44",
+      "index": 61,
+      "nickname": "QA버스트R2061",
+      "targetName": "QA버스트R2코스061"
+    },
+    {
+      "replayed": false,
+      "revision": "86",
+      "targetId": "5d50e0bf-4555-45ed-a182-ffae2f1604cb",
+      "resourceId": "f18d29dc-12f8-4857-95de-d762e939c606",
+      "index": 65,
+      "nickname": "QA버스트R2065",
+      "targetName": "QA버스트R2코스065"
+    },
+    {
+      "replayed": false,
+      "revision": "87",
+      "targetId": "67cf711a-b451-456b-be15-34134e5db163",
+      "resourceId": "359c288b-d501-48a2-8bf6-6a0018b34c2c",
+      "index": 58,
+      "nickname": "QA버스트R2058",
+      "targetName": "QA버스트R2코스058"
+    },
+    {
+      "replayed": false,
+      "revision": "88",
+      "targetId": "2be5b6c6-6560-4247-9c58-bb9077bee6d7",
+      "resourceId": "b6a46703-80e8-4a29-8fad-49cecc9d9833",
+      "index": 66,
+      "nickname": "QA버스트R2066",
+      "targetName": "QA버스트R2코스066"
+    },
+    {
+      "replayed": false,
+      "revision": "89",
+      "targetId": "b9b0baa6-80eb-43e6-ae2d-cee7d09fd3ae",
+      "resourceId": "c83753f5-e823-4b46-bf9d-360804aa567a",
+      "index": 63,
+      "nickname": "QA버스트R2063",
+      "targetName": "QA버스트R2코스063"
+    },
+    {
+      "replayed": false,
+      "revision": "90",
+      "targetId": "0fbf81a8-ed0e-4b8f-807a-246be43eceb3",
+      "resourceId": "f3b826be-4814-40cd-9b86-c0a4719dafaf",
+      "index": 67,
+      "nickname": "QA버스트R2067",
+      "targetName": "QA버스트R2코스067"
+    },
+    {
+      "replayed": false,
+      "revision": "91",
+      "targetId": "05341f0a-5bcb-4a39-a6dd-9752ad08dcf6",
+      "resourceId": "9a0fdf62-b873-4e3f-8b10-4c854a43accd",
+      "index": 71,
+      "nickname": "QA버스트R2071",
+      "targetName": "QA버스트R2코스071"
+    },
+    {
+      "replayed": false,
+      "revision": "92",
+      "targetId": "1c551455-726a-4534-b328-31c6158db44f",
+      "resourceId": "9cd1a668-f5f8-4a9b-997a-bf8fafd7fb70",
+      "index": 59,
+      "nickname": "QA버스트R2059",
+      "targetName": "QA버스트R2코스059"
+    },
+    {
+      "replayed": false,
+      "revision": "93",
+      "targetId": "10f25cc2-6fc1-4540-9706-fc3d032f80b8",
+      "resourceId": "df579a4d-84f8-49c4-bea6-0baa44af111d",
+      "index": 69,
+      "nickname": "QA버스트R2069",
+      "targetName": "QA버스트R2코스069"
+    },
+    {
+      "replayed": false,
+      "revision": "94",
+      "targetId": "e8f440ec-bed9-4343-92e2-6eb0f5f38da6",
+      "resourceId": "a780edbb-9cfd-4540-b831-d959a4ba64dd",
+      "index": 68,
+      "nickname": "QA버스트R2068",
+      "targetName": "QA버스트R2코스068"
+    },
+    {
+      "replayed": false,
+      "revision": "95",
+      "targetId": "99b800c8-5607-455c-878a-81f8b2544c16",
+      "resourceId": "57c3bd85-4137-4a26-9738-aab5947394f0",
+      "index": 70,
+      "nickname": "QA버스트R2070",
+      "targetName": "QA버스트R2코스070"
+    },
+    {
+      "replayed": false,
+      "revision": "96",
+      "targetId": "009299a5-2c94-4baa-9642-752979cf0e11",
+      "resourceId": "5bb0b354-7133-407e-b066-0fe8f929a239",
+      "index": 60,
+      "nickname": "QA버스트R2060",
+      "targetName": "QA버스트R2코스060"
+    },
+    {
+      "replayed": false,
+      "revision": "97",
+      "targetId": "d8b13a38-967a-4037-938d-3f1e19513cd4",
+      "resourceId": "59954735-fd94-45db-86d3-92cbd4892e30",
+      "index": 72,
+      "nickname": "QA버스트R2072",
+      "targetName": "QA버스트R2코스072"
+    },
+    {
+      "replayed": false,
+      "revision": "98",
+      "targetId": "542abb69-5f36-4084-bb90-130df96d3eb8",
+      "resourceId": "9da66c73-e6ea-42e9-899f-0e85ac93004f",
+      "index": 73,
+      "nickname": "QA버스트R2073",
+      "targetName": "QA버스트R2코스073"
+    },
+    {
+      "replayed": false,
+      "revision": "99",
+      "targetId": "a1e057e4-54a4-499b-93d1-bd4c5bb828d7",
+      "resourceId": "6ced9a4a-a17e-41a3-add2-c557511861f8",
+      "index": 62,
+      "nickname": "QA버스트R2062",
+      "targetName": "QA버스트R2코스062"
+    },
+    {
+      "replayed": false,
+      "revision": "100",
+      "targetId": "e9abd07e-9853-4c55-a943-5a03d881b1b8",
+      "resourceId": "73712ea1-a342-4293-aa9d-143900538e4b",
+      "index": 76,
+      "nickname": "QA버스트R2076",
+      "targetName": "QA버스트R2코스076"
+    },
+    {
+      "replayed": false,
+      "revision": "101",
+      "targetId": "a5ca462d-41d2-4313-818a-823f08754209",
+      "resourceId": "00c7238a-ee5f-443f-b544-9e45a91cd1a8",
+      "index": 77,
+      "nickname": "QA버스트R2077",
+      "targetName": "QA버스트R2코스077"
+    },
+    {
+      "replayed": false,
+      "revision": "102",
+      "targetId": "c3e31708-f643-4867-acfd-91585c791ef3",
+      "resourceId": "abbc4f7c-3351-4088-ae3e-cd40c8b51ebd",
+      "index": 74,
+      "nickname": "QA버스트R2074",
+      "targetName": "QA버스트R2코스074"
+    },
+    {
+      "replayed": false,
+      "revision": "103",
+      "targetId": "00b101b5-b04b-43d6-925c-da0238b0ee24",
+      "resourceId": "83445a57-4f2e-4bab-87c7-650337551157",
+      "index": 83,
+      "nickname": "QA버스트R2083",
+      "targetName": "QA버스트R2코스083"
+    },
+    {
+      "replayed": false,
+      "revision": "104",
+      "targetId": "556acac9-da08-4e5d-a787-94fb07ca867d",
+      "resourceId": "1191fe28-d29b-4c3b-88f6-aa3dc74ac17d",
+      "index": 80,
+      "nickname": "QA버스트R2080",
+      "targetName": "QA버스트R2코스080"
+    },
+    {
+      "replayed": false,
+      "revision": "105",
+      "targetId": "f5894a43-ca63-41e8-8692-4ab4470e78bd",
+      "resourceId": "0570d6f2-93ac-4f4a-9966-89caf3b693a7",
+      "index": 85,
+      "nickname": "QA버스트R2085",
+      "targetName": "QA버스트R2코스085"
+    },
+    {
+      "replayed": false,
+      "revision": "106",
+      "targetId": "51e4b7af-a7b4-435c-84be-ff723ab091a2",
+      "resourceId": "6be01c36-b7ae-4aed-a945-12b444e3b46d",
+      "index": 82,
+      "nickname": "QA버스트R2082",
+      "targetName": "QA버스트R2코스082"
+    },
+    {
+      "replayed": false,
+      "revision": "107",
+      "targetId": "6b929583-13f3-4262-b36b-b26db866854c",
+      "resourceId": "728cfe48-53d6-4540-889d-a24a7619eadb",
+      "index": 54,
+      "nickname": "QA버스트R2054",
+      "targetName": "QA버스트R2코스054"
+    },
+    {
+      "replayed": false,
+      "revision": "108",
+      "targetId": "91fe4f7a-27de-4408-b7ad-40a51354f9e3",
+      "resourceId": "747d1848-32ff-4652-a22c-b60e601bf9dc",
+      "index": 78,
+      "nickname": "QA버스트R2078",
+      "targetName": "QA버스트R2코스078"
+    },
+    {
+      "replayed": false,
+      "revision": "109",
+      "targetId": "5c4d98a4-faf4-49f2-acc3-97c10e6cd8be",
+      "resourceId": "fab308ab-fe73-4f35-900c-3ef3a899babf",
+      "index": 87,
+      "nickname": "QA버스트R2087",
+      "targetName": "QA버스트R2코스087"
+    },
+    {
+      "replayed": false,
+      "revision": "110",
+      "targetId": "0bc92e9b-e491-4d65-bcde-8b0d14f389ad",
+      "resourceId": "e8887833-29f0-4064-a825-f1bd0f90afb3",
+      "index": 81,
+      "nickname": "QA버스트R2081",
+      "targetName": "QA버스트R2코스081"
+    },
+    {
+      "replayed": false,
+      "revision": "111",
+      "targetId": "b2ef8919-1b8e-4dee-8b4c-11e154efbede",
+      "resourceId": "45547fa9-d102-4a05-a70c-12c9e9130d9c",
+      "index": 89,
+      "nickname": "QA버스트R2089",
+      "targetName": "QA버스트R2코스089"
+    },
+    {
+      "replayed": false,
+      "revision": "112",
+      "targetId": "92c13b3c-63bb-4281-89ac-04d7369bfa48",
+      "resourceId": "8feda3bf-199e-4c4f-b2ba-19be45d3e1aa",
+      "index": 75,
+      "nickname": "QA버스트R2075",
+      "targetName": "QA버스트R2코스075"
+    },
+    {
+      "replayed": false,
+      "revision": "113",
+      "targetId": "32091af9-824d-4f3e-97d1-92675cb9347a",
+      "resourceId": "ec00be79-4450-4ee8-8d86-05960759f1f0",
+      "index": 88,
+      "nickname": "QA버스트R2088",
+      "targetName": "QA버스트R2코스088"
+    },
+    {
+      "replayed": false,
+      "revision": "114",
+      "targetId": "f814b762-a791-437f-95ad-3f727e8df054",
+      "resourceId": "630304f2-a9fc-484d-b40a-65e8c2b21a70",
+      "index": 79,
+      "nickname": "QA버스트R2079",
+      "targetName": "QA버스트R2코스079"
+    },
+    {
+      "replayed": false,
+      "revision": "115",
+      "targetId": "ebe44e4e-5fa6-4b48-8a84-f9ae7d7f5beb",
+      "resourceId": "9b5e37ea-f6fb-4603-9caa-2f12a6d39d0b",
+      "index": 96,
+      "nickname": "QA버스트R2096",
+      "targetName": "QA버스트R2코스096"
+    },
+    {
+      "replayed": false,
+      "revision": "116",
+      "targetId": "3962e555-f1e3-47c7-a10e-886be9cdd396",
+      "resourceId": "f033b37c-6e91-41b2-84af-f90bb06d6ea4",
+      "index": 93,
+      "nickname": "QA버스트R2093",
+      "targetName": "QA버스트R2코스093"
+    },
+    {
+      "replayed": false,
+      "revision": "117",
+      "targetId": "64e36c72-51c0-4f39-a40f-3fe51d4ae94c",
+      "resourceId": "370495ad-13e4-4221-b26b-41c6bcc45328",
+      "index": 90,
+      "nickname": "QA버스트R2090",
+      "targetName": "QA버스트R2코스090"
+    },
+    {
+      "replayed": false,
+      "revision": "118",
+      "targetId": "c757e203-c8e5-47f8-9788-18f642f40fe7",
+      "resourceId": "7ccbdd32-8e29-4f9e-8712-82c783f20acb",
+      "index": 95,
+      "nickname": "QA버스트R2095",
+      "targetName": "QA버스트R2코스095"
+    },
+    {
+      "replayed": false,
+      "revision": "119",
+      "targetId": "d7a8a094-c28e-4cdb-b0c3-aaa5491f5e2d",
+      "resourceId": "b7efae14-a009-4127-878a-d4abd2c3b105",
+      "index": 99,
+      "nickname": "QA버스트R2099",
+      "targetName": "QA버스트R2코스099"
+    },
+    {
+      "replayed": false,
+      "revision": "120",
+      "targetId": "d5aa03c5-63cd-45d5-8144-42d94002728b",
+      "resourceId": "f71e76e7-fba3-43c3-995c-89eefb3ee303",
+      "index": 100,
+      "nickname": "QA버스트R2100",
+      "targetName": "QA버스트R2코스100"
+    },
+    {
+      "replayed": false,
+      "revision": "121",
+      "targetId": "fe48dd97-191e-4f7a-a6d6-ed7fa0cbbfbb",
+      "resourceId": "a4ba7d8e-4ae9-468e-87b6-e77d9d3b9383",
+      "index": 92,
+      "nickname": "QA버스트R2092",
+      "targetName": "QA버스트R2코스092"
+    },
+    {
+      "replayed": false,
+      "revision": "122",
+      "targetId": "d2eb8a2e-faea-45e0-9e0f-4ecd1080186a",
+      "resourceId": "d865b673-fa34-468e-9f9b-9e1e9e2f7d30",
+      "index": 97,
+      "nickname": "QA버스트R2097",
+      "targetName": "QA버스트R2코스097"
+    },
+    {
+      "replayed": false,
+      "revision": "123",
+      "targetId": "56d32a51-385f-4d4e-a565-9c2858901393",
+      "resourceId": "fca15227-b8be-4898-8e50-87e4082ac44b",
+      "index": 84,
+      "nickname": "QA버스트R2084",
+      "targetName": "QA버스트R2코스084"
+    },
+    {
+      "replayed": false,
+      "revision": "124",
+      "targetId": "3d783e01-bb5d-4edc-ac03-0b56b8bfb940",
+      "resourceId": "628f26c5-9f7c-4670-a17c-539ed27d3b48",
+      "index": 86,
+      "nickname": "QA버스트R2086",
+      "targetName": "QA버스트R2코스086"
+    },
+    {
+      "replayed": false,
+      "revision": "125",
+      "targetId": "7b644445-6069-4dcc-9aaa-8da56c8d2179",
+      "resourceId": "c1da77f0-67b5-404e-9635-270360a747fb",
+      "index": 98,
+      "nickname": "QA버스트R2098",
+      "targetName": "QA버스트R2코스098"
+    },
+    {
+      "replayed": false,
+      "revision": "126",
+      "targetId": "340f6fcb-67a3-4d6c-bfe5-01eae215ed90",
+      "resourceId": "19ef595f-e35e-4a01-a820-f1535e5260c1",
+      "index": 101,
+      "nickname": "QA버스트R2101",
+      "targetName": "QA버스트R2코스101"
+    },
+    {
+      "replayed": false,
+      "revision": "127",
+      "targetId": "2fb543df-6675-4755-b105-93d609d62ff7",
+      "resourceId": "4e907cbf-1128-4d8c-bb8d-5e5b2b629173",
+      "index": 102,
+      "nickname": "QA버스트R2102",
+      "targetName": "QA버스트R2코스102"
+    },
+    {
+      "replayed": false,
+      "revision": "128",
+      "targetId": "a8f4f733-7368-4c0f-8bec-6646feba712e",
+      "resourceId": "ad238340-934e-4683-a739-dc43b1ff6115",
+      "index": 103,
+      "nickname": "QA버스트R2103",
+      "targetName": "QA버스트R2코스103"
+    },
+    {
+      "replayed": false,
+      "revision": "129",
+      "targetId": "6923fe8f-4c11-48af-b8b6-fc028a4be1f6",
+      "resourceId": "f5a40b6e-3e39-480f-86b2-51d235dc32d5",
+      "index": 91,
+      "nickname": "QA버스트R2091",
+      "targetName": "QA버스트R2코스091"
+    },
+    {
+      "replayed": false,
+      "revision": "130",
+      "targetId": "ad314523-7d51-4a46-9821-2055abc02cac",
+      "resourceId": "52a23b80-c9f5-4916-be8b-0e65a5dcc20a",
+      "index": 94,
+      "nickname": "QA버스트R2094",
+      "targetName": "QA버스트R2코스094"
+    },
+    {
+      "replayed": false,
+      "revision": "131",
+      "targetId": "ec027728-18fe-4c92-85f8-30d85146bc22",
+      "resourceId": "04027435-65a9-4909-a9ea-beefb165d05e",
+      "index": 105,
+      "nickname": "QA버스트R2105",
+      "targetName": "QA버스트R2코스105"
+    },
+    {
+      "replayed": false,
+      "revision": "132",
+      "targetId": "dfebf558-0e7d-423e-bdae-c976d49d57ac",
+      "resourceId": "500f1863-9f31-4e24-8344-078c1aa65b3b",
+      "index": 104,
+      "nickname": "QA버스트R2104",
+      "targetName": "QA버스트R2코스104"
+    }
+  ],
+  "expectedLiveRegistrations": 105,
+  "plannedEditIndex": 50,
+  "plannedDeleteIndex": 51,
+  "dateUTC": "2026-10-13T11:58:03.834850+00:00"
+}

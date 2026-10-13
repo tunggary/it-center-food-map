@@ -1,0 +1,17 @@
+{
+  "favoriteId": "cd0b3a8f-66df-4a36-b903-65ee643c2fea",
+  "requests": [
+    {
+      "method": "PATCH",
+      "http": 403,
+      "code": "FORBIDDEN"
+    },
+    {
+      "method": "DELETE",
+      "http": 403,
+      "code": "FORBIDDEN"
+    }
+  ],
+  "rowUnchanged": true,
+  "scope": "Actual HTTP hostile other-owner requests; technical support for UI QA-P07-06"
+}

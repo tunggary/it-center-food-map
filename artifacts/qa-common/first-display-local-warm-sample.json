@@ -1,0 +1,116 @@
+{
+  "scope": "local desktop one warm observational sample; not DEC-12",
+  "readyMs": 0,
+  "atCheckMs": 1386.1000000014901,
+  "visible": "visible",
+  "mapPins": 0,
+  "mapImages": [
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 512
+    },
+    {
+      "loaded": true,
+      "width": 58
+    },
+    {
+      "loaded": true,
+      "width": 1
+    },
+    {
+      "loaded": true,
+      "width": 64
+    }
+  ],
+  "rankingCount": 1,
+  "networkNavigation": [
+    {
+      "type": "navigate",
+      "start": 0,
+      "duration": 492.9000000022352,
+      "transferSize": 300
+    }
+  ],
+  "reduced": false,
+  "interpretation": "Exact first operable time was not captured: the helper incorrectly required an in-viewport pin, while this valid food category has no visible pin. At 1386.1ms map images and ranking were present. This single local warm observation is not a DEC-12 measurement or pass."
+}

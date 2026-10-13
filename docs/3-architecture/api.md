@@ -28,7 +28,7 @@ type CreateFavorite = Command & {
 };
 ```
 
-UUID·배열 크기·필수값·알 수 없는 필드는 Zod strict로 검사한다. 일반 JSON 본문 상한 64KiB, 사진 바이트는 signed upload에만 보낸다. POST/수정/삭제의 command는 requestKey 필수다. profile은 첫 등록에서만 필수이며 기존 참여자에서 보내면 무시하지 않고 검증 오류로 알려 폼을 동기화한다.
+UUID·배열 크기·필수값·알 수 없는 필드는 Zod strict로 검사한다. 일반 JSON 본문 상한 64KiB, 사진 바이트는 signed upload에만 보낸다. POST/수정/삭제의 command는 requestKey 필수다. profile은 첫 등록에서만 필수다. 같은 명령 키의 성공 결과 재생을 먼저 처리한 뒤, 새로운 명령에서 기존 참여자가 profile을 보내면 검증 오류로 폼을 동기화한다. 첫 성공 응답 유실 후 profile을 포함한 원래 요청의 재시도를 차단하지 않는다.
 
 명령 응답: `{requestId, data:{resourceId, targetId?, revision, replayed}}`. 공개 read 응답은 각 DTO와 revision/dataEpoch를 반환한다. Edge 오류는 `{requestId,error:{code,message,details?,retryAfterSeconds?}}`; raw SQL·서버 스택을 노출하지 않는다. Data API 오류는 FE adapter에서 같은 오류 분류로 정규화한다. DB의 예상 업무 오류는 SQLSTATE P0001과 허용된 message code, 제한된 JSON detail로 발생시키고 Edge/FE adapter가 아래 상태로 변환한다. 알 수 없는 DB 오류는 500으로 처리하고 원문 detail을 사용자에게 노출하지 않는다.
 
@@ -86,7 +86,9 @@ Kakao 결과의 selection token은 검증된 ID·이름·주소·좌표·identit
 | `DELETE /admin/favorites/:id` | requestKey/expectedVersion |
 | `GET /admin/targets/:id/deletion-preview` | target/version/count |
 | `DELETE /admin/targets/:id` | requestKey/expectedVersion/expectedCount |
-| `GET /admin/operations` | 용량 예약/사용량·cleanup 지연·최근 백업 수동 기록; 공급자 계량과 구분 |
+| `GET /admin/operations` | storage의 limitBytes/heldBytes/storedBytes/pendingCleanupBytes와 backup의 activeRun/lastSucceeded/lastFailed; 공급자 계량과 구분 |
+| `POST /admin/backups` | requestKey로 백업 실행·청소 보류 lease 생성, 같은 키는 같은 run |
+| `PATCH /admin/backups/:id` | leaseToken과 action=heartbeat/snapshot/complete/fail; [백업 DTO·상태](backup.md#관리자-api) |
 
 모든 관리자 요청은 Auth 검증, 쓰기는 RPC 내부 allowlist 재검사. 목록 선택 중단·재개도 version/명령 키를 사용한다. 실제 공급자 비용·사용량의 최종 기준은 대시보드다.
 
@@ -94,7 +96,9 @@ Kakao 결과의 selection token은 검증된 ID·이름·주소·좌표·identit
 
 public schema에 있는 `gateway_create_favorite`, `gateway_edit_favorite`, `gateway_delete_favorite`, `gateway_admin_command`, identity/media/cleanup gateway는 service_role만 실행한다. 파라미터로 받는 actor 식별자는 Edge 검증 결과이며 사용자 body에서 복사하지 않는다. 임의 SQL·테이블 이름을 받는 범용 CRUD gateway는 만들지 않는다.
 
-`maintenance` 함수는 매시간 Cron으로 호출하며 별도 secret을 검증한다. 한 호출에 최대 100개 cleanup claim, lease 5분, 객체 제거는 RPC 밖에서 수행한다. 실패는 지수 backoff(1분→2분→최대1시간)와 attempts 증가, 24시간 이상 밀리면 관리자 상태에서 표시한다. 검증 전 유료 scheduler를 추가하지 않는다.
+용량 예약/반환은 [storage gateway](storage-accounting.md#api-계약), 백업 시작/갱신은 [backup gateway](backup.md#관리자-api)를 사용한다. 모두 service_role 전용이며 현재 관리자 권한·소유·lease를 내부에서 재검사한다.
+
+`maintenance` 함수는 매시간 Cron으로 호출하며 별도 secret을 검증한다. 한 호출에 최대 100개 cleanup claim, lease 5분, 객체 제거는 RPC 밖에서 수행한다. 실패는 지수 backoff(1분→2분→최대1시간)와 attempts 증가, 24시간 이상 밀리면 관리자 상태에서 표시한다. 활성 백업 lease가 있으면 물리 청소 claim을 보류한다. 매일 버킷 원장 대조를 추가하고 상세 잠금·해제는 용량 회계를 따른다. 유료 scheduler는 사용하지 않는다.
 
 ## 오류와 재시도
 
@@ -106,9 +110,14 @@ public schema에 있는 `gateway_create_favorite`, `gateway_edit_favorite`, `gat
 | 404 TARGET_GONE / PHOTO_GONE | 삭제 안내, 공개 내용 제거 |
 | 409 ALREADY_REGISTERED | 본인 기존 등록 관리로 이동 |
 | 409 VERSION_CONFLICT / SNAPSHOT_CHANGED | 최신 상태 재조회, 미저장 내용 유지·재확인 |
+| 409 BACKUP_IN_PROGRESS / BACKUP_LEASE_EXPIRED | 진행 중 백업 또는 만료 안내; 만료 실행을 성공 처리하지 않음 |
 | 410 RESULT_GONE | 이전 성공 자원 삭제됨 안내, 같은 명령으로 재생성 금지 |
 | 413 MEDIA_TOO_LARGE | 브라우저 압축 재시도/사진 제거 |
 | 429 RATE_LIMITED | Retry-After 안내, 무한 자동 재시도 금지 |
 | 503 CAPACITY_REACHED / DEPENDENCY_UNAVAILABLE | 부분 성공 없음; 사진 용량이면 사진 제거 후 명시적 재제출 가능 |
 
 응답 유실은 실패 확정이 아니다. 같은 requestKey로 결과를 확인한다. GET/공개 읽기는 최대 2회 지수 재시도, 쓰기는 사용자가 재시도할 때 같은 키로 전송한다. 5xx 이후 새 명령 키를 자동 생성하지 않는다.
+
+## 등록 RPC 왕복 최적화 구현
+
+`POST /favorites`는 Edge strict 입력/HMAC 검증과 canonical hash를 유지하고 `gateway_submit_favorite(p_token_hash,p_payload,p_selection_identity,p_selection_expires_at,p_validation_error)`를 한 번 호출한다. 내부에서 기존 자격·30회/분 rate·replay와 기존 create gateway를 재사용한다. 업무 쓰기는 subtransaction에 두고 오류를 제한된 envelope로 반환하여 실패해도 바깥 rate 증가가 유지된다. expired selection은 신규 등록만 거절하며 성공 replay는 허용하고, identity 만료/selection 소유자 불일치는 replay에도 거절한다. 기존 원장·revision·이벤트·사진 연결의 단일 트랜잭션 결정은 유지한다. 함수는 service_role 전용·전용 NOLOGIN owner·닫힌 search_path이며 공개 read는 변경하지 않는다.

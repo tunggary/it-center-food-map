@@ -1,0 +1,362 @@
+{
+  "project": "yxgmpbjcvjeacnrgtcbq",
+  "timeUTC": "2026-10-13T14:06:38.204872+00:00",
+  "scope": "Actual staging HTTP+SQL; ready photo is DB fixture, not Storage/finalize verification",
+  "cases": [
+    {
+      "name": "new gateway exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all gateway anon/auth denied",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "owner search path safe",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no PUBLIC EXEC",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "missing credential rejected",
+      "pass": true,
+      "detail": {
+        "status": 401,
+        "error": "IDENTITY_REQUIRED",
+        "requestId": "0de37f05-8472-460b-af60-63784749bf2e",
+        "retryAfter": null,
+        "elapsedMs": 869.6
+      }
+    },
+    {
+      "name": "malformed credential rejected",
+      "pass": true,
+      "detail": {
+        "status": 401,
+        "error": "IDENTITY_REQUIRED",
+        "requestId": "8e5f4ebc-a9a7-4349-974b-a6ef23a5bf80",
+        "retryAfter": null,
+        "elapsedMs": 259.6
+      }
+    },
+    {
+      "name": "unknown credential rejected",
+      "pass": true,
+      "detail": {
+        "status": 401,
+        "error": "IDENTITY_REQUIRED",
+        "requestId": "33bdfff8-a465-49c5-8bd9-2e1e6680eca0",
+        "retryAfter": null,
+        "elapsedMs": 1048.4
+      }
+    },
+    {
+      "name": "prepare identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "unknown derived field strict400",
+      "pass": true,
+      "detail": {
+        "status": 400,
+        "error": "VALIDATION_ERROR",
+        "requestId": "584c4c1d-facd-449c-8058-48936f62f133",
+        "retryAfter": null,
+        "elapsedMs": 124.5
+      }
+    },
+    {
+      "name": "validation failure rate preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "failed command no partial profile",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "first profile registration201",
+      "pass": true,
+      "detail": {
+        "status": 201,
+        "error": null,
+        "requestId": "53e2ec41-f8d9-4461-b1c4-95508da0bb96",
+        "retryAfter": null,
+        "elapsedMs": 207.5
+      }
+    },
+    {
+      "name": "canonical reordered replay200",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "error": null,
+        "requestId": "e538405a-e738-467b-8b45-6222835dcf1d",
+        "retryAfter": null,
+        "elapsedMs": 349.4
+      }
+    },
+    {
+      "name": "same key changed payload409",
+      "pass": true,
+      "detail": {
+        "status": 409,
+        "error": "REQUEST_KEY_CONFLICT",
+        "requestId": "a391be02-6736-4cfa-ac84-d129eb49993d",
+        "retryAfter": null,
+        "elapsedMs": 324.6
+      }
+    },
+    {
+      "name": "prepare identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "valid signed place accepted",
+      "pass": true,
+      "detail": {
+        "status": 201,
+        "error": null,
+        "requestId": "ea23a2b1-926a-419e-b437-847854686669",
+        "retryAfter": null,
+        "elapsedMs": 135.4
+      }
+    },
+    {
+      "name": "expired reissued proof same business replay",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "error": null,
+        "requestId": "e61a96ad-ac55-4940-9a41-d100926de558",
+        "retryAfter": null,
+        "elapsedMs": 109.4
+      }
+    },
+    {
+      "name": "new expired proof rejected",
+      "pass": true,
+      "detail": {
+        "status": 400,
+        "error": "VALIDATION_ERROR",
+        "requestId": "2e102b26-018c-4d66-8975-c6fe731423d5",
+        "retryAfter": null,
+        "elapsedMs": 102.7
+      }
+    },
+    {
+      "name": "foreign proof owner rejected before replay",
+      "pass": true,
+      "detail": {
+        "status": 400,
+        "error": "VALIDATION_ERROR",
+        "requestId": "4403e31c-1c29-4158-8a64-108ec630b762",
+        "retryAfter": null,
+        "elapsedMs": 332.5
+      }
+    },
+    {
+      "name": "expired identity rejects replay",
+      "pass": true,
+      "detail": {
+        "status": 401,
+        "error": "IDENTITY_EXPIRED",
+        "requestId": "5a2a231f-c663-4335-b6cf-cb484748ae0b",
+        "retryAfter": null,
+        "elapsedMs": 315.2
+      }
+    },
+    {
+      "name": "prepare identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "20 same commands one result",
+      "pass": true,
+      "detail": {
+        "statuses": [
+          200,
+          200,
+          200,
+          200,
+          201,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      }
+    },
+    {
+      "name": "one course favorite event",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "prepare identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "duplicate actor initial insert",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "20 new keys all duplicate409",
+      "pass": true,
+      "detail": {
+        "statuses": [
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409,
+          409
+        ]
+      }
+    },
+    {
+      "name": "prepare identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "prepare identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "foreign asset denied and no partial profile",
+      "pass": true,
+      "detail": {
+        "status": 404,
+        "error": "PHOTO_GONE",
+        "requestId": "b7e91017-65eb-46d3-ac9b-80973905b07f",
+        "retryAfter": null,
+        "elapsedMs": 383.2
+      }
+    },
+    {
+      "name": "unready own asset rejected",
+      "pass": true,
+      "detail": {
+        "status": 404,
+        "error": "PHOTO_GONE",
+        "requestId": "1519170c-aa19-419c-9c49-cd53e9a9d6c7",
+        "retryAfter": null,
+        "elapsedMs": 191.9
+      }
+    },
+    {
+      "name": "ready own asset attaches",
+      "pass": true,
+      "detail": {
+        "status": 201,
+        "error": null,
+        "requestId": "d10acd2f-938f-48d8-9a32-ca65a666313b",
+        "retryAfter": null,
+        "elapsedMs": 340.1
+      }
+    },
+    {
+      "name": "prepare identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "rate cap429 retry envelope",
+      "pass": true,
+      "detail": {
+        "status": 429,
+        "error": "RATE_LIMITED",
+        "requestId": "1a749be7-2622-47f6-9040-bc8b40f99679",
+        "retryAfter": "60",
+        "elapsedMs": 105.1
+      }
+    },
+    {
+      "name": "prepare identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "lock timeout503 explicit dependency",
+      "pass": true,
+      "detail": {
+        "status": 503,
+        "error": "DEPENDENCY_UNAVAILABLE",
+        "requestId": "89246b52-e8e9-48fb-b645-73b244a25afc",
+        "retryAfter": null,
+        "elapsedMs": 1325.2
+      }
+    },
+    {
+      "name": "timeout rate retained",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "pass": true,
+  "extraAuthorityChecks": [
+    {
+      "role": "anonymous",
+      "http": 401,
+      "code": "42501",
+      "pass": true
+    },
+    {
+      "role": "authenticated",
+      "http": 403,
+      "code": "42501",
+      "pass": true
+    },
+    {
+      "case": "private tables least access",
+      "pass": true
+    },
+    {
+      "case": "gateway has no schema create",
+      "pass": true
+    },
+    {
+      "case": "postgres domain defaultPUBLIC execute disabled",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+- title: "IT센터 최애 지도" [url=http://localhost:4173/me/favorites]
+- link "본문으로 이동" [ref=e1]
+- main:
+  - region:
+    - banner:
+      - link "지도로 돌아가기" [ref=e13]: "← 지도"
+      - heading "내 최애" [level=1]
+    - text: "등록한 최애가 아직 없어요."
+    - link "최애 등록하기" [ref=e14]

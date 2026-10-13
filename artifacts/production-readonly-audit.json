@@ -1,0 +1,61 @@
+{
+  "project": "gpsbnmgwowsbgclcottl",
+  "readOnly": true,
+  "timeUTC": "2026-10-13T14:00:18.050640+00:00",
+  "authSettings": {
+    "http": 200,
+    "disableSignup": true,
+    "anonymousProviderEnabled": null
+  },
+  "domainCounts": {
+    "targets": 0,
+    "favorites": 0,
+    "teams": 0,
+    "categories": 0,
+    "revision": "0"
+  },
+  "photoBucket": [
+    {
+      "id": "photos",
+      "public": false,
+      "fileSizeLimit": 524288,
+      "allowedMimeTypes": [
+        "image/jpeg"
+      ]
+    }
+  ],
+  "cronJobs": [
+    {
+      "name": "food-map-daily-reconcile",
+      "schedule": "15 2 * * *",
+      "active": true
+    },
+    {
+      "name": "food-map-hourly-cleanup",
+      "schedule": "0 * * * *",
+      "active": true
+    }
+  ],
+  "unsafeFunctionOwnerOrSearchPath": 0,
+  "anonOrAuthGatewayExecute": 0,
+  "publicExecute": 0,
+  "unsafePrivateTables": 0,
+  "gatewayRole": {
+    "canLogin": false,
+    "superuser": false,
+    "createRole": false,
+    "createDB": false,
+    "bypassRLS": false
+  },
+  "gatewayProviderInheritance": 0,
+  "newSubmitInstalled": false,
+  "anonDirectWriteAttempt": {
+    "http": 401,
+    "code": "42501"
+  },
+  "publicExplore": {
+    "http": 200,
+    "pins": 0,
+    "rankings": 0
+  }
+}

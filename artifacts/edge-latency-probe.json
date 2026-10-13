@@ -1,0 +1,321 @@
+{
+  "context": {
+    "project": "yxgmpbjcvjeacnrgtcbq",
+    "timestamp": "2026-10-13T13:01:57.566434+00:00",
+    "baselineStillRunning": true,
+    "scope": "Small sequential HTTP probe; replay only, no new revision; not G4/E2E pass",
+    "samplesPerCondition": 5
+  },
+  "samples": [
+    {
+      "label": "read_revision",
+      "elapsedMs": 75.5,
+      "status": 200,
+      "forcedRegion": false,
+      "region": null,
+      "requestId": null,
+      "replayed": null
+    },
+    {
+      "label": "me_default",
+      "elapsedMs": 1333.3,
+      "status": 200,
+      "forcedRegion": false,
+      "region": "ap-northeast-2",
+      "requestId": "f7dd8747-c145-4a73-94e4-724ff69c9f15",
+      "replayed": null
+    },
+    {
+      "label": "favorite_replay_default",
+      "elapsedMs": 1008.8,
+      "status": 200,
+      "forcedRegion": false,
+      "region": "ap-northeast-2",
+      "requestId": "85fdf44c-bd9c-418b-ab50-46ec0aa0188f",
+      "replayed": true
+    },
+    {
+      "label": "me_seoul",
+      "elapsedMs": 304.8,
+      "status": 200,
+      "forcedRegion": true,
+      "region": "ap-northeast-2",
+      "requestId": "ecd73699-3294-46c1-ba93-688c216cb613",
+      "replayed": null
+    },
+    {
+      "label": "favorite_replay_seoul",
+      "elapsedMs": 836.7,
+      "status": 200,
+      "forcedRegion": true,
+      "region": "ap-northeast-2",
+      "requestId": "fc83eaeb-500a-4aeb-9172-53cf7ba2bca1",
+      "replayed": true
+    },
+    {
+      "label": "identity_direct",
+      "elapsedMs": 28.2,
+      "status": 200,
+      "forcedRegion": false,
+      "region": null,
+      "requestId": null,
+      "replayed": null
+    },
+    {
+      "label": "read_revision",
+      "elapsedMs": 22.0,
+      "status": 200,
+      "forcedRegion": false,
+      "region": null,
+      "requestId": null,
+      "replayed": null
+    },
+    {
+      "label": "me_default",
+      "elapsedMs": 182.5,
+      "status": 200,
+      "forcedRegion": false,
+      "region": "ap-northeast-2",
+      "requestId": "cb2e65f7-2a33-4164-b27c-cb0986426184",
+      "replayed": null
+    },
+    {
+      "label": "favorite_replay_default",
+      "elapsedMs": 804.2,
+      "status": 200,
+      "forcedRegion": false,
+      "region": "ap-northeast-2",
+      "requestId": "00a93b1d-77c0-455d-abf9-3502ae5eb35e",
+      "replayed": true
+    },
+    {
+      "label": "me_seoul",
+      "elapsedMs": 658.4,
+      "status": 200,
+      "forcedRegion": true,
+      "region": "ap-northeast-2",
+      "requestId": "690925c6-6be5-4fba-a7f2-2567a9bdc4ba",
+      "replayed": null
+    },
+    {
+      "label": "favorite_replay_seoul",
+      "elapsedMs": 1141.5,
+      "status": 200,
+      "forcedRegion": true,
+      "region": "ap-northeast-2",
+      "requestId": "e381b192-d03d-4b8f-a29f-39568ac1821c",
+      "replayed": true
+    },
+    {
+      "label": "identity_direct",
+      "elapsedMs": 23.4,
+      "status": 200,
+      "forcedRegion": false,
+      "region": null,
+      "requestId": null,
+      "replayed": null
+    },
+    {
+      "label": "read_revision",
+      "elapsedMs": 21.0,
+      "status": 200,
+      "forcedRegion": false,
+      "region": null,
+      "requestId": null,
+      "replayed": null
+    },
+    {
+      "label": "me_default",
+      "elapsedMs": 687.7,
+      "status": 200,
+      "forcedRegion": false,
+      "region": "ap-northeast-2",
+      "requestId": "3ec32789-f1d3-44cd-b3ba-584d2dd1e5ec",
+      "replayed": null
+    },
+    {
+      "label": "favorite_replay_default",
+      "elapsedMs": 671.3,
+      "status": 200,
+      "forcedRegion": false,
+      "region": "ap-northeast-2",
+      "requestId": "2286d7ec-36bc-4264-806e-615ccca7e7b9",
+      "replayed": true
+    },
+    {
+      "label": "me_seoul",
+      "elapsedMs": 631.5,
+      "status": 200,
+      "forcedRegion": true,
+      "region": "ap-northeast-2",
+      "requestId": "e1174230-8390-45b0-b32b-046cb087101f",
+      "replayed": null
+    },
+    {
+      "label": "favorite_replay_seoul",
+      "elapsedMs": 629.2,
+      "status": 200,
+      "forcedRegion": true,
+      "region": "ap-northeast-2",
+      "requestId": "2f6721b0-466c-42cf-8f89-acd505040846",
+      "replayed": true
+    },
+    {
+      "label": "identity_direct",
+      "elapsedMs": 32.4,
+      "status": 200,
+      "forcedRegion": false,
+      "region": null,
+      "requestId": null,
+      "replayed": null
+    },
+    {
+      "label": "read_revision",
+      "elapsedMs": 28.6,
+      "status": 200,
+      "forcedRegion": false,
+      "region": null,
+      "requestId": null,
+      "replayed": null
+    },
+    {
+      "label": "me_default",
+      "elapsedMs": 625.5,
+      "status": 200,
+      "forcedRegion": false,
+      "region": "ap-northeast-2",
+      "requestId": "2ebe3368-a2d5-44fa-9b92-5a437184e5c7",
+      "replayed": null
+    },
+    {
+      "label": "favorite_replay_default",
+      "elapsedMs": 786.3,
+      "status": 200,
+      "forcedRegion": false,
+      "region": "ap-northeast-2",
+      "requestId": "ea40440a-d072-4450-a6a3-292d4bcaba86",
+      "replayed": true
+    },
+    {
+      "label": "me_seoul",
+      "elapsedMs": 143.2,
+      "status": 200,
+      "forcedRegion": true,
+      "region": "ap-northeast-2",
+      "requestId": "5f436751-92be-4d73-9f22-ec8770a59ff1",
+      "replayed": null
+    },
+    {
+      "label": "favorite_replay_seoul",
+      "elapsedMs": 721.9,
+      "status": 200,
+      "forcedRegion": true,
+      "region": "ap-northeast-2",
+      "requestId": "759c24df-8e12-410f-a771-0764c6013e6e",
+      "replayed": true
+    },
+    {
+      "label": "identity_direct",
+      "elapsedMs": 39.9,
+      "status": 200,
+      "forcedRegion": false,
+      "region": null,
+      "requestId": null,
+      "replayed": null
+    },
+    {
+      "label": "read_revision",
+      "elapsedMs": 47.8,
+      "status": 200,
+      "forcedRegion": false,
+      "region": null,
+      "requestId": null,
+      "replayed": null
+    },
+    {
+      "label": "me_default",
+      "elapsedMs": 633.0,
+      "status": 200,
+      "forcedRegion": false,
+      "region": "ap-northeast-2",
+      "requestId": "c066ad6c-283c-4dbf-a077-3af3235a9084",
+      "replayed": null
+    },
+    {
+      "label": "favorite_replay_default",
+      "elapsedMs": 765.7,
+      "status": 200,
+      "forcedRegion": false,
+      "region": "ap-northeast-2",
+      "requestId": "060633da-8913-4884-b41d-959ce84f59ad",
+      "replayed": true
+    },
+    {
+      "label": "me_seoul",
+      "elapsedMs": 210.7,
+      "status": 200,
+      "forcedRegion": true,
+      "region": "ap-northeast-2",
+      "requestId": "b9b614c5-0a62-42e8-8e23-f0ebdb4fd356",
+      "replayed": null
+    },
+    {
+      "label": "favorite_replay_seoul",
+      "elapsedMs": 673.9,
+      "status": 200,
+      "forcedRegion": true,
+      "region": "ap-northeast-2",
+      "requestId": "48164ed0-517b-4be2-b3b5-7b9ecc1a14d4",
+      "replayed": true
+    },
+    {
+      "label": "identity_direct",
+      "elapsedMs": 24.3,
+      "status": 200,
+      "forcedRegion": false,
+      "region": null,
+      "requestId": null,
+      "replayed": null
+    }
+  ],
+  "summary": {
+    "favorite_replay_default": {
+      "meanMs": 807.3,
+      "maxMs": 1008.8,
+      "regions": [
+        "ap-northeast-2"
+      ]
+    },
+    "favorite_replay_seoul": {
+      "meanMs": 800.6,
+      "maxMs": 1141.5,
+      "regions": [
+        "ap-northeast-2"
+      ]
+    },
+    "identity_direct": {
+      "meanMs": 29.6,
+      "maxMs": 39.9,
+      "regions": []
+    },
+    "me_default": {
+      "meanMs": 692.4,
+      "maxMs": 1333.3,
+      "regions": [
+        "ap-northeast-2"
+      ]
+    },
+    "me_seoul": {
+      "meanMs": 389.7,
+      "maxMs": 658.4,
+      "regions": [
+        "ap-northeast-2"
+      ]
+    },
+    "read_revision": {
+      "meanMs": 39.0,
+      "maxMs": 75.5,
+      "regions": []
+    }
+  }
+}
