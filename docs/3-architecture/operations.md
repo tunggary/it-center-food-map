@@ -4,7 +4,7 @@
 
 ## 합의한 비용 경계
 
-사용자 답변: **유료 서비스 제외·월 0원·기존 자원 없음·행사 집중 후 가끔 사용**. 사용자가 개인 프로젝트로 운영하기로 정했으며 Vercel Hobby와 Supabase Free를 사용한다. 유료 체험 종료 후 자동 전환, 유료 애드온, 도메인 구매, 한도 회피용 계정 증설은 하지 않는다. 프로젝트 생성/결제 설정은 아직 수행하지 않았다.
+사용자 답변: **유료 서비스 제외·월 0원·기존 자원 없음·행사 집중 후 가끔 사용**. 사용자가 개인 프로젝트로 운영하기로 정했으며 Vercel Hobby와 Supabase Free를 사용한다. 유료 체험 종료 후 자동 전환, 유료 애드온, 도메인 구매, 한도 회피용 계정 증설은 하지 않는다. Vercel 프로젝트와 정적 준비 페이지는 이미 생성·배포돼 있다. 실제 연결/준비 페이지 상태는 [배포 기록](../deployment.md)이 기준이며 Supabase 제품 기능 구현·배포 완료를 뜻하지 않는다.
 
 무료로 가능한 범위는 유한한 사용량 안이다. 한도 도달 시 유료 전환 대신 오류/운영 점검으로 처리하며 PRD의 무제한 대상 등록 정책을 임의의 사람별 누적 제한으로 바꾸지 않는다.
 
@@ -23,7 +23,7 @@
 | Edge Functions | 월 500,000회 | 앱 예산 100,000회; preflight/오류/재시도 실계량 포함 |
 | Edge CPU/메모리 | 요청당 CPU 2초, 256MB | 작은 JPEG 한 장만, 목표 CPU≤1.5초/메모리≤192MB |
 | Realtime | 동시200·초당100메시지·월200만 메시지 | 사용하지 않음 |
-| 휴면·백업 | 비활성1주 후 pause, 무료 자동 DB 백업 없음 | 수동 재개·수동 DB/사진 백업 가정 |
+| 휴면·백업 | 비활성1주 후 pause, 무료 자동 DB 백업 없음 | 수동 재개·수동 DB/사진 백업 채택 |
 
 출처: [Supabase 가격](https://supabase.com/pricing), [Edge 한도](https://supabase.com/docs/guides/functions/limits), [Realtime 한도](https://supabase.com/docs/guides/realtime/limits), [Vercel Hobby](https://vercel.com/docs/plans/hobby).
 
@@ -56,24 +56,26 @@
 
 ## 휴면과 행사 후 운영
 
-기본안은 **휴면 시 운영자가 대시보드에서 수동 재개**다. 사용자에게 질문한 상태이며 답변 전 합의로 기록하지 않는다. Vercel의 정적 앱은 열려도 DB가 중지되면 조회/등록이 안 될 수 있다. API 오류를 휴면으로 단정하지 않고 ‘잠시 연결할 수 없어요’와 재시도·현장 운영자 안내를 보여준다.
+사용자는 **휴면 시 운영자가 대시보드에서 수동 재개**하는 방식을 확정했다. Vercel의 정적 앱은 열려도 DB가 중지되면 조회/등록이 안 될 수 있다. API 오류를 휴면으로 단정하지 않고 ‘잠시 연결할 수 없어요’와 재시도·현장 운영자 안내를 보여준다.
 
 인위적인 keep-alive 요청으로 무료 휴면 정책을 우회하지 않는다. 행사 전날과 당일 준비 때 프로젝트 상태 확인·재개·전체 흐름 점검을 수행한다. 행사 후에도 날짜로 등록을 닫지 않는다. 언제나 즉시 참여 가능해야 한다는 조건이 추가되면 공급자를 재검토하며 무료 Supabase가 이를 보장한다고 쓰지 않는다.
 
 ## 백업·복원
 
-무료 자동 백업에 의존하지 않는다. 운영자는 **행사 직전·종료 직후·DB migration 전**, 이후 변경이 있었던 주의 마지막 운영 점검 때 수동 백업한다. 무료 자원만으로 RPO24h/RTO2h를 보장한다던 이전 가정은 철회한다. 복구 기준은 마지막 성공 백업 시점이며, 점검 사이의 데이터 손실 위험은 남는다.
+무료 자동 백업에 의존하지 않는다. 운영자는 **행사 직전·종료 직후·DB migration 전**, 이후 변경이 있었던 주의 마지막 운영 점검 때 수동 백업한다. 사용자가 이 수동 백업 주기와 마지막 백업 이후 손실 가능성을 수용했다. RPO24h/RTO2h를 보장하지 않는다. 복구 기준은 마지막 성공 백업 시점이며, 점검 사이의 데이터 손실 위험은 남는다.
 
-백업 내용: schema/migrations·도메인 SQL dump·Storage의 final/thumb 객체와 manifest·앱의 data epoch/config·bootstrap 절차. raw 임시 객체는 복원 대상이 아니다. 키/자격은 코드 저장소와 분리하고 운영자의 암호화된 로컬 저장소에 백업을 보관한다. 실제 보관 디렉터리는 구현/운영 준비 때 제공한다. 새 유료 백업 서비스를 만들지 않는다.
+백업 내용: schema/migrations·도메인 SQL dump·Storage의 final/thumb 객체와 manifest·앱의 data epoch/config·bootstrap 절차. raw 임시 객체는 복원 대상이 아니다. 키/자격은 코드 저장소와 분리하고 운영자의 암호화된 로컬 저장소에 백업을 보관한다. 보관 루트는 저장소 밖의 로컬 FOOD_MAP_BACKUP_DIR로 지정하며 미지정이면 백업 시작 전 중단한다. 새 유료 백업 서비스를 만들지 않는다.
 
-복원은 로컬 Supabase에서 먼저 연습한다: 동일 migration → 도메인 데이터 복원 → 객체 업로드/manifest 검증 → 관리자 Auth 재생성 및 allowlist 재연결 → data epoch 새 UUID 발급 → 앱 설정 갱신 → FIX-01/권한/사진 샘플 확인. Auth 시스템 schema를 임의 SQL로 덮어쓰지 않는다. 브라우저 identity hash와 도메인 관계가 복원돼야 기존 자격을 계속 쓸 수 있다. 유출 사고면 복원 대신 identity를 폐기한다.
+복원은 로컬 Supabase에서 먼저 연습한다: 동일 migration → 도메인 데이터 복원 → 객체 업로드/manifest 검증 → 관리자 Auth 재생성 및 allowlist 재연결 → data epoch 새 UUID 발급 → 브라우저 동기화 확인 → FIX-01/권한/사진 샘플 확인. Auth 시스템 schema를 임의 SQL로 덮어쓰지 않는다. 브라우저 identity hash와 도메인 관계가 복원돼야 기존 자격을 계속 쓸 수 있다. 유출 사고면 복원 대신 identity를 폐기한다.
 
 DB dump에는 실제 Storage 파일이 포함되지 않는다. 다른 프로젝트로 복원할 때 Storage URL/key 설정과 관리자 UID가 바뀔 수 있다. 이전 삭제 내용이 백업에서 복원될 수 있으므로 공개 재개 전 삭제 기록/최신 백업 범위를 대조한다. 백업은 제품의 숨김/복구 기능이 아니다.
+
+같은 snapshot의 DB/사진 목록과 청소 보류 lease, 실행 기록 API, 복원 후 용량 재계산은 [백업 상세](backup.md)에 따른다. 용량 필드와 예약/해제는 [용량 상세](storage-accounting.md)가 기준이다.
 
 ## 배포·롤백·관측
 
 - 운영 Supabase1개, 로컬 Docker로 개발/통합 테스트. 무료 두 번째 프로젝트는 출시 직전 통합 검증용으로 사용할 수 있으나 한도/프로젝트 상태를 확인한다. Preview는 운영 DB를 쓰지 않는다. 별도 테스트 백엔드가 없으면 mock/local만 사용한다.
-- Vercel 프로젝트는 개인 Hobby 계정에 연결하고 Framework Preset은 Vite, Install은 `pnpm install --frozen-lockfile`, Build는 `pnpm build`, Output은 `dist`로 설정한다. 기본 운영 주소는 `프로젝트명.vercel.app`이며 실제 할당 주소를 QR/CORS/카카오 도메인 설정에 함께 반영한다. 구현 전이므로 현재 설정을 적용한 것은 아니다.
+- Vercel 프로젝트는 개인 Hobby 계정에 연결하고 Framework Preset은 Vite, Install은 `pnpm install --frozen-lockfile`, Build는 `pnpm build`, Output은 `dist`로 설정한다. 기본 운영 주소는 `프로젝트명.vercel.app`이며 실제 할당 주소를 QR/CORS/카카오 도메인 설정에 함께 반영한다. 현재 준비 페이지는 framework=null·public 출력으로 배포돼 있다. 위 Vite/dist 설정과 앱 경로 rewrite는 제품 구현 때 전환한다.
 - Vercel의 Production Branch는 `main`으로 두고 `develop`/기능 브랜치는 Preview로 구분한다. 브랜치 머지는 기존 PR 규칙을 따른다. 운영 URL을 로그아웃/새 브라우저에서 열어 QR 이용자에게 Vercel 로그인을 요구하지 않는지 확인한다.
 - [Vercel Vite 가이드](https://vercel.com/docs/frameworks/frontend/vite)에 따라 `vercel.json`의 명시적 앱 경로 rewrite를 구현한다. 상세 직접 링크·새로고침·존재하지 않는 자산404를 검증하고 TypeScript/Vitest/Deno/SQL 권한 검사가 통과한 빌드만 배포한다.
 - SQL은 검토된 migration을 단일 실행자가 적용한다. 호환 필드/함수 추가 → Edge 배포 → 정적 앱 배포 순서, 제거는 후속 변경에서 한다. 과거 탭이 새 API를 호출할 수 있으므로 최소 직전 앱 버전과 호환을 유지한다.
