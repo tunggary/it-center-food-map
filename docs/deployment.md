@@ -59,3 +59,11 @@ vercel curl / --deployment <deployment-url> --scope tunggary2-navercoms-projects
 기능 PR #17→develop `d56d726` 반영. 기능 `d2d7f87` Preview `it-center-food-bu86xw6xj-tunggary2-navercoms-projects.vercel.app` READY 및 vercel curl로 보호된 HTML/CSS/JS를 확인했다. 타입/build·Vitest24개와 로컬 실제 UI 검증을 통과했다. main PR #18 이후 Production 상태/커밋/운영 응답을 확인한다. 운영 팀2개 selectable=true·등록0·revision2이며 실기기/기존 성능 보류는 유지한다.
 
 실행 결과 (2026-10-14): PR #18 main `e210e683ad1c2b688c0ad2e4f5cfc273e606bc10`의 Production `dpl_4Zn8ktEknRZCHBNh9kC7iJKLq9Jy` READY와 canonical 운영HTTP200을 확인했다. 운영 브라우저에서 PC1440×900/모바일390×844 지도전체 크기·overflow없음, Kakao 타일35개, 팀2개 필터, 전체랭킹패널을 실제 확인했다. 공개조회만 수행해 운영fixture등록을 만들지 않았다. PR #19로 릴리스 문서를 develop에 역반영했다. 이후 이 실행 기록을 반영하는 문서 전용 릴리스는 코드 변경 없이 최종 READY/HTTP 응답을 다시 확인한다.
+
+## 2차 UI 피드백 릴리스 (2026-10-14)
+
+- 문서 `35480cb`·UI `8ffae7b`, 기능 PR #22→develop `a5119a1`, release PR #23→main `494b584dce8e253f51b502e35557e44f16f47840`.
+- 기능 Preview READY·인증보호 HTML/JS/CSS 확인, Vitest32개·타입/build 통과.
+- Production `dpl_AFCKCc7zcDFBw9B3mevr8gqJXyxS` READY와 canonical HTTP200·지도타일30개·PC top24/height44/width380/ranktop84, 모바일티커/오른쪽메뉴/메인복귀를 실제 브라우저로 확인했다.
+- 운영 검증은 공개조회/탐색만 수행했다. 브라우저연결/로그인/DB변경은 없고 실기기GPS/권한/키보드·기존QA/성능 보류를 유지한다.
+- 이 실행 기록은 코드 변경 없는 문서 릴리스로 main/develop에 반영하고 최종 main 커밋의 READY·HTTP 응답을 다시 확인한다.
