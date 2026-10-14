@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-14",
+  "url": "http://localhost:5173/",
+  "desktop": {
+    "viewport": {
+      "width": 1728,
+      "height": 865
+    },
+    "appearance": "none",
+    "paddingRight": "44px",
+    "backgroundPosition": "calc(100% - 16px) 50%",
+    "backgroundSize": "16px 16px",
+    "hasArrow": true,
+    "horizontalOverflow": false
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "appearance": "none",
+    "paddingRight": "44px",
+    "backgroundPosition": "calc(100% - 16px) 50%",
+    "backgroundSize": "16px 16px",
+    "hasArrow": true,
+    "horizontalOverflow": false
+  },
+  "selection": {
+    "selectedLabel": "백엔드개발팀"
+  }
+}
