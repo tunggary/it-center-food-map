@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import type { Catalog, Filters } from '../../shared/contracts';
 import { errorMessage } from '../lib/api';
@@ -17,12 +17,13 @@ export function useFilters(): [Filters, (next: Partial<Filters>) => void, string
   return [filters, next => { const copy = new URLSearchParams(params); copy.delete('rankPage'); for (const [k, v] of Object.entries(next)) { const key = k === 'teamId' ? 'team' : 'category'; copy.set(key, v ?? ''); } set(copy); }, params.toString()];
 }
 export function FiltersForm({ catalog, filters, onChange, teams = true }: { catalog: Catalog; filters: Filters; onChange: (filters: Partial<Filters>) => void; teams?: boolean }) {
-  return <div className="filters">{teams ? <label>팀<select aria-label="팀 필터" value={filters.teamId ?? ''} onChange={e => onChange({ teamId: e.target.value || null })}><option value="">전체 팀</option>{catalog.allTeams.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}</select></label> : null}<label>카테고리<select aria-label="카테고리 필터" value={filters.categoryId ?? ''} onChange={e => onChange({ categoryId: e.target.value || null })}><option value="">전체 카테고리</option>{catalog.allCategories.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}</select></label></div>;
+  return <div className="filters">{teams ? <label><span className="filter-caption">팀</span><select aria-label="팀 필터" value={filters.teamId ?? ''} onChange={e => onChange({ teamId: e.target.value || null })}><option value="">전체 팀</option>{catalog.allTeams.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}</select></label> : null}<label><span className="filter-caption">카테고리</span><select aria-label="카테고리 필터" value={filters.categoryId ?? ''} onChange={e => onChange({ categoryId: e.target.value || null })}><option value="">전체 카테고리</option>{catalog.allCategories.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}</select></label></div>;
 }
 export function ConfirmDialog({ title, children, open, onClose, onConfirm, action = '삭제', busy = false }: { title: string; children: ReactNode; open: boolean; onClose: () => void; onConfirm: () => void; action?: string; busy?: boolean }) {
   const ref = useRef<HTMLDialogElement>(null);
+  const titleId = useId();
   useEffect(() => { const dialog = ref.current; if (!dialog) return; if (open && !dialog.open) dialog.showModal(); else if (!open && dialog.open) dialog.close(); }, [open]);
-  return <dialog ref={ref} onCancel={e => { e.preventDefault(); if (!busy) onClose(); }} aria-labelledby="confirmation-title"><h2 id="confirmation-title">{title}</h2>{children}<div className="actions"><button type="button" onClick={onClose} disabled={busy} autoFocus>취소</button><button type="button" className="danger" onClick={onConfirm} disabled={busy}>{busy ? '처리 중…' : action}</button></div></dialog>;
+  return <dialog ref={ref} onCancel={e => { e.preventDefault(); if (!busy) onClose(); }} aria-labelledby={titleId}><h2 id={titleId}>{title}</h2>{children}<div className="actions"><button type="button" onClick={onClose} disabled={busy} autoFocus>취소</button><button type="button" className="danger" onClick={onConfirm} disabled={busy}>{busy ? '처리 중…' : action}</button></div></dialog>;
 }
 export function useCommandKey() {
   const key = useRef(crypto.randomUUID());

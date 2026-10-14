@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Pin, Point } from '../../shared/contracts';
 import { kakao, loadMap, type KakaoObject } from '../lib/maps';
 import { ErrorNotice } from './ui';
+import { showToast } from './Toast';
 import { Icon } from './Icon';
 export type MapPin = Pin & { name?: string };
 const EMPTY_PINS: MapPin[] = [], EMPTY_POINTS: Point[] = [];
@@ -9,13 +10,16 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
   const element = useRef<HTMLDivElement>(null), shell = useRef<HTMLDivElement>(null);
   const instance = useRef<KakaoObject | null>(null);
   const markers = useRef(new Map<string, { marker: KakaoObject; label: KakaoObject; button: HTMLButtonElement; click: () => void }>());
+  const userLocation = useRef<KakaoObject | null>(null), alive = useRef(true);
+  const [locating, setLocating] = useState(false);
+  useEffect(() => { alive.current = true; return () => { alive.current = false; }; }, []);
   const polyline = useRef<KakaoObject | null>(null);
   const editingRef = useRef(editing); editingRef.current = editing;
   const callbacks = useRef({ onSelect, onCenter }); callbacks.current = { onSelect, onCenter };
   const crosshair = useRef<HTMLSpanElement>(null);
   const selectedPin = pins.find(p => p.targetId === selectedId);
   const selectedLng = focusPoint?.[0] ?? selectedPin?.lng, selectedLat = focusPoint?.[1] ?? selectedPin?.lat;
-  const anchor = useRef<Point | undefined>(undefined); anchor.current = selectedLng !== undefined && selectedLat !== undefined ? [selectedLng, selectedLat] : undefined;
+  const anchor = useRef<Point | undefined>(undefined);
   const reposition = useRef<() => void>(() => {});
   const [ready, setReady] = useState(false), [error, setError] = useState<unknown>(), [retry, setRetry] = useState(0);
   useEffect(() => {
@@ -67,10 +71,11 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
       observePanel(); setReady(true); setError(undefined);
       cleanup = () => { observer.disconnect(); mutation.disconnect(); sdk.event.removeListener(map, 'center_changed', emitCenter); sdk.event.removeListener(map, 'zoom_changed', emitCenter); };
     }).catch(e => { if (active) setError(e); });
-    return () => { active = false; cleanup(); if (instance.current) { for (const { marker, label, button, click } of markers.current.values()) { kakao().event.removeListener(marker, 'click', click); button.removeEventListener('click', click); marker.setMap(null); label.setMap(null); } polyline.current?.setMap(null); } markers.current.clear(); polyline.current = null; instance.current = null; reposition.current = () => {}; };
+    return () => { active = false; cleanup(); if (instance.current) { for (const { marker, label, button, click } of markers.current.values()) { kakao().event.removeListener(marker, 'click', click); button.removeEventListener('click', click); marker.setMap(null); label.setMap(null); } polyline.current?.setMap(null); userLocation.current?.setMap(null); userLocation.current = null; } markers.current.clear(); polyline.current = null; instance.current = null; reposition.current = () => {}; };
   }, [retry, fullscreen]);
   // Switching between browsing and course input must preserve the existing map.
-  useEffect(() => { reposition.current(); }, [editing, ready, selectedLng, selectedLat]);
+  useEffect(() => { anchor.current = selectedLng !== undefined && selectedLat !== undefined ? [selectedLng, selectedLat] : undefined; reposition.current(); }, [selectedLng, selectedLat]);
+  useEffect(() => { reposition.current(); }, [editing, ready]);
   const pinBoundsKey = pins.map(p => `${p.lng},${p.lat}`).join(';');
   useEffect(() => {
     if (!fitPins || !ready || !instance.current || !pins.length) return;
@@ -114,6 +119,28 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
     polyline.current?.setPath(points.map(([lng, lat]) => new sdk.LatLng(lat, lng)));
     if (!fullscreen && !editing && points.length) instance.current.setCenter(new sdk.LatLng(points[0][1], points[0][0]));
   }, [points, ready, editing, fullscreen]);
+  const locate = () => {
+    if (!navigator.geolocation) { showToast('이 브라우저에서는 위치를 확인할 수 없어요.'); return; }
+    if (!instance.current || locating) return;
+    setLocating(true);
+    navigator.geolocation.getCurrentPosition(position => {
+      if (!alive.current || !instance.current) return;
+      setLocating(false);
+      const sdk = kakao(), point = new sdk.LatLng(position.coords.latitude, position.coords.longitude);
+      if (!userLocation.current) {
+        const dot = document.createElement('span'); dot.className = 'user-location-dot'; dot.setAttribute('role', 'img'); dot.setAttribute('aria-label', '내 현재 위치');
+        userLocation.current = new sdk.CustomOverlay({ map: instance.current, position: point, content: dot, xAnchor: .5, yAnchor: .5, zIndex: 10 });
+      } else userLocation.current.setPosition(point);
+      instance.current.setCenter(point);
+      anchor.current = [position.coords.longitude, position.coords.latitude];
+      reposition.current();
+      showToast('내 위치로 이동했어요.', 'success');
+    }, failure => {
+      if (!alive.current) return;
+      setLocating(false);
+      showToast(failure.code === 1 ? '위치 권한을 허용해 주세요. 브라우저 설정에서 위치 접근을 변경할 수 있어요.' : failure.code === 3 ? '위치를 확인하는 데 시간이 걸려요. 다시 시도해 주세요.' : '현재 위치를 확인하지 못했어요. 위치 서비스를 켜고 다시 시도해 주세요.');
+    }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 });
+  };
   const zoom = (delta: number) => { if (instance.current) instance.current.setLevel(Math.min(12, Math.max(1, instance.current.getLevel() + delta))); };
-  return <div ref={shell} className={`map-shell ${fullscreen ? 'full-map' : ''} ${editing ? 'editing' : ''}`}><div ref={element} className="map" role="region" aria-label={editing ? '중심점을 움직여 산책 경로를 만드는 지도' : '최애 장소와 코스 지도'}/>{editing ? <span ref={crosshair} className="crosshair" aria-hidden="true">＋</span> : null}{fullscreen ? <div className="map-tools"><div className="map-tool-group"><button className="icon-button" type="button" aria-label="지도 확대" onClick={() => zoom(-1)}><Icon name="plus"/></button><button className="icon-button" type="button" aria-label="지도 축소" onClick={() => zoom(1)}><Icon name="minus"/></button></div><button className="icon-button map-tool-group" type="button" aria-label="삼성역 중심으로" onClick={() => { instance.current?.setCenter(new (kakao().LatLng)(37.5088, 127.0632)); }}><Icon name="locate"/></button></div> : null}{error ? <div className="map-error"><ErrorNotice error={error} retry={() => setRetry(v => v + 1)}/></div> : null}</div>;
+  return <div ref={shell} className={`map-shell ${fullscreen ? 'full-map' : ''} ${editing ? 'editing' : ''}`}><div ref={element} className="map" role="region" aria-label={editing ? '중심점을 움직여 산책 경로를 만드는 지도' : '최애 장소와 코스 지도'}/>{editing ? <span ref={crosshair} className="crosshair" aria-hidden="true">＋</span> : null}{fullscreen ? <div className="map-tools"><div className="map-tool-group"><button className="icon-button" type="button" aria-label="지도 확대" onClick={() => zoom(-1)}><Icon name="plus"/></button><button className="icon-button" type="button" aria-label="지도 축소" onClick={() => zoom(1)}><Icon name="minus"/></button></div><button className="icon-button map-tool-group" type="button" aria-label="내 위치" disabled={!ready || locating} aria-busy={locating} onClick={locate}><Icon name="locate"/></button></div> : null}{error ? <div className="map-error"><ErrorNotice error={error} retry={() => setRetry(v => v + 1)}/></div> : null}</div>;
 }

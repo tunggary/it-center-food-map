@@ -13,7 +13,7 @@ beforeAll(() => {
   HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); };
 });
 afterEach(() => { cleanup(); vi.clearAllMocks(); });
-it('clears a deleted target failure on new place selection while retaining text and ready photos', async () => {
+it('keeps failed input and photos while removing the general target reselection action', async () => {
   const id = 'b3a184e2-56fc-4e6e-bd7f-09454680579a';
   const courseId = '11111111-1111-4111-8111-111111111111', placeId = '22222222-2222-4222-8222-222222222222';
   const categories = [{ id: courseId, name: '산책', kind: 'COURSE', selectable: true, version: 1 }, { id: placeId, name: '맛집', kind: 'PLACE', selectable: true, version: 1 }];
@@ -35,14 +35,10 @@ it('clears a deleted target failure on new place selection while retaining text 
   fireEvent.click(await screen.findByRole('button', { name: '준비된 사진 추가' }));
   fireEvent.click(screen.getByRole('button', { name: '최애 등록하기' }));
   await waitFor(() => expect(vi.mocked(edge).mock.calls.some(([path]) => path === '/favorites')).toBe(true));
-  await waitFor(() => expect(screen.getByRole('button', { name: '대상 다시 선택' }).hasAttribute('disabled')).toBe(false));
-  fireEvent.click(screen.getByRole('button', { name: '대상 다시 선택' }));
-  fireEvent.change(screen.getByLabelText('장소 검색'), { target: { value: '새 장소' } });
-  fireEvent.click((await screen.findByText('새 장소', { selector: 'strong' })).closest('button')!);
-  expect(screen.queryByRole('alert')).toBeNull();
+  await waitFor(() => expect(screen.getByRole('button', { name: '최애 등록하기' }).hasAttribute('disabled')).toBe(false));
+  expect(screen.queryByRole('button', { name: '대상 다시 선택' })).toBeNull();
   expect((screen.getByLabelText(/최애를 소개하는 한마디/) as HTMLTextAreaElement).value).toBe('문구는 유지해요');
   expect(await screen.findByText('ready-photo')).toBeTruthy();
-  expect(screen.getByRole('option', { name: '맛집' })).toBeTruthy();
-  expect(screen.queryByRole('option', { name: '산책' })).toBeNull();
+  expect(screen.getByRole('link', { name: '작성 취소' })).toBeTruthy();
   router.dispose(); client.clear();
 });
