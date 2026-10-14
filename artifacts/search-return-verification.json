@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-14",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "browserBack": {
+    "query": "카페",
+    "names": [
+      "펜947",
+      "젠틀스트릿커피 삼성점",
+      "주식회사 데이롱카페",
+      "랄프스커피 파르나스몰점",
+      "스타벅스 삼성교점",
+      "카페테라스 강남점",
+      "올어라운드커피",
+      "스타벅스 삼성역점",
+      "애니팝 보드게임&만화카페",
+      "슈퍼보바 삼성본점",
+      "폴바셋 파르나스몰점",
+      "아메리칸트레일러 파르나스몰점",
+      "그랜드인터컨티넨탈 서울파르나스 그랜드키친",
+      "포스톤즈 삼성파르나스몰점",
+      "스타벅스 삼성동점"
+    ],
+    "scroll": 200,
+    "pinCount": 15,
+    "dialogCount": 0,
+    "searchTop": 16,
+    "toolsTop": 74,
+    "url": "/register/places?return=team%3Dtest"
+  },
+  "panelBack": true,
+  "favoriteSubmitted": false
+}

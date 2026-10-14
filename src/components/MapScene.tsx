@@ -19,8 +19,9 @@ export function MapScene({ children, className = '', ...map }: ComponentProps<ty
   const pins = target ? [...(map.pins ?? []).filter(p => p.targetId !== target.id), { targetId: target.id, kind: target.kind, lng: target.lng, lat: target.lat, count: map.pins?.find(p => p.targetId === target.id)?.count ?? 0, name: target.name }] : map.pins;
   return <GeometryContext.Provider value={setTarget}><section ref={root} className={`map-scene ${className}`}><MapView fullscreen {...map} pins={pins} focusPoint={target ? [target.lng, target.lat] : map.focusPoint} points={target?.kind === 'COURSE' ? target.points ?? [] : map.points} selectedId={target?.id ?? map.selectedId}/>{children}</section></GeometryContext.Provider>;
 }
-export function MapToolbar({ booth = false }: { booth?: boolean }) {
+export function MapToolbar({ booth = false, hideMobileMenu = false }: { booth?: boolean; hideMobileMenu?: boolean }) {
   const mobile = useMobileScreen();
+  if (mobile && hideMobileMenu && !booth) return null;
   return <header className="map-toolbar">{booth ? <span className="live-badge"><i/>실시간으로 모이는 중</span> : mobile ? <SideMenu/> : <nav className="personal-menu notranslate" translate="no" aria-label="개인 메뉴"><Link to="/me/favorites"><Icon name="heart"/><span>내 장소/코스</span></Link><Link to="/me/profile"><Icon name="user"/><span>내 정보</span></Link></nav>}</header>;
 }
 export function usePanelClose(fallback: string) {
