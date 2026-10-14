@@ -131,3 +131,20 @@ it.each(['close', 'delete'])('keeps the personal-list return when edit starts ou
   expect(router.state.location.pathname).toBe('/me/favorites');
   router.dispose(); client.clear();
 });
+
+it('preserves ranking tab, saved custom filters and page through registration and refresh', async () => {
+  const query = 'rankingTab=cafe&team=test&category=food&rankPage=2';
+  const { router, client } = setup({ initial: `/targets/${targetId}?${query}` });
+  fireEvent.click(await screen.findByRole('link', { name: '나도 최애로 등록' }));
+  expect(new URLSearchParams(router.state.location.search).get('return')).toBe(query);
+  await screen.findByRole('heading', { name: '이곳을 최애로 등록' });
+  const registrationUrl = router.state.location.pathname + router.state.location.search;
+  router.dispose(); client.clear(); cleanup();
+  const refreshed = setup({ initial: registrationUrl });
+  await screen.findByRole('heading', { name: '이곳을 최애로 등록' });
+  fireEvent.click(screen.getByRole('button', { name: '패널 닫기' }));
+  await screen.findByRole('heading', { name: '복귀할 대상' });
+  expect(refreshed.router.state.location.pathname + refreshed.router.state.location.search).toBe(`/targets/${targetId}?${query}`);
+  expect(screen.getByRole('link', { name: '전체 랭킹 보기' }).getAttribute('href')).toBe(`/rankings?${query}`);
+  refreshed.router.dispose(); refreshed.client.clear();
+});
