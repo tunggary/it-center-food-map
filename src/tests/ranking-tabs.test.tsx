@@ -19,7 +19,7 @@ function setup(url = '/rankings') {
       const empty = body?.p_team_id === 'b' && body?.p_category_id === 'food';
       return { pins: empty ? [] : [{ targetId: id }], rankingPage: empty ? [] : [{ targetId: id, name: id, kind: 'PLACE', count: 3, rank: 1 }], hasMore: body?.p_rank_page === 1, revision: '1', dataEpoch: 'e' };
     }
-    if (name === 'read_target') return { target: { id: body?.p_target_id, name: '상세 장소', kind: 'PLACE', lng: 127, lat: 37 }, favorites: [], totalCount: 3, revision: '1', dataEpoch: 'e' };
+    if (name === 'read_target') return { target: { id: body?.p_target_id, name: '상세 장소', kind: 'PLACE', lng: 127, lat: 37 }, favorites: [], totalCount: 3, overallRank: 3, overallRankTied: false, revision: '1', dataEpoch: 'e' };
     throw new Error(name);
   });
   const client = new QueryClient({ defaultOptions: { queries: { retry: false, staleTime: Infinity } } });
