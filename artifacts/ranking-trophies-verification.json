@@ -1,0 +1,1149 @@
+{
+  "date": "2026-10-14",
+  "checks": [
+    {
+      "width": 1280,
+      "height": 800,
+      "url": "http://localhost:5173/rankings?rankingTab=all",
+      "overflow": false,
+      "badges": [
+        {
+          "label": "1위 · 금색 트로피",
+          "tied": false,
+          "rankLabel": "1위",
+          "icon": {
+            "class": "rank-trophy trophy-1",
+            "width": 32,
+            "height": 36,
+            "position": "0% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 2위 · 은색 트로피",
+          "tied": true,
+          "rankLabel": "2위",
+          "icon": {
+            "class": "rank-trophy trophy-2",
+            "width": 32,
+            "height": 36,
+            "position": "50% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 2위 · 은색 트로피",
+          "tied": true,
+          "rankLabel": "2위",
+          "icon": {
+            "class": "rank-trophy trophy-2",
+            "width": 32,
+            "height": 36,
+            "position": "50% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "4위",
+          "tied": false,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 5위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 5위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 5위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 5위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000001&category=",
+      "overflow": false,
+      "badges": [
+        {
+          "label": "1위 · 금색 트로피",
+          "tied": false,
+          "rankLabel": "1위",
+          "icon": {
+            "class": "rank-trophy trophy-1",
+            "width": 32,
+            "height": 36,
+            "position": "0% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "2위 · 은색 트로피",
+          "tied": false,
+          "rankLabel": "2위",
+          "icon": {
+            "class": "rank-trophy trophy-2",
+            "width": 32,
+            "height": 36,
+            "position": "50% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 32,
+            "height": 36,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "url": "http://localhost:5173/rankings?rankingTab=all&rankPage=2",
+      "overflow": false,
+      "badges": [
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "url": "http://localhost:5173/rankings?rankingTab=all",
+      "overflow": false,
+      "badges": [
+        {
+          "label": "1위 · 금색 트로피",
+          "tied": false,
+          "rankLabel": "1위",
+          "icon": {
+            "class": "rank-trophy trophy-1",
+            "width": 30,
+            "height": 34,
+            "position": "0% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 2위 · 은색 트로피",
+          "tied": true,
+          "rankLabel": "2위",
+          "icon": {
+            "class": "rank-trophy trophy-2",
+            "width": 30,
+            "height": 34,
+            "position": "50% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 2위 · 은색 트로피",
+          "tied": true,
+          "rankLabel": "2위",
+          "icon": {
+            "class": "rank-trophy trophy-2",
+            "width": 30,
+            "height": 34,
+            "position": "50% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "4위",
+          "tied": false,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 5위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 5위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 5위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 5위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000001&category=",
+      "overflow": false,
+      "badges": [
+        {
+          "label": "1위 · 금색 트로피",
+          "tied": false,
+          "rankLabel": "1위",
+          "icon": {
+            "class": "rank-trophy trophy-1",
+            "width": 30,
+            "height": 34,
+            "position": "0% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "2위 · 은색 트로피",
+          "tied": false,
+          "rankLabel": "2위",
+          "icon": {
+            "class": "rank-trophy trophy-2",
+            "width": 30,
+            "height": 34,
+            "position": "50% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 3위 · 코랄 트로피",
+          "tied": true,
+          "rankLabel": "3위",
+          "icon": {
+            "class": "rank-trophy trophy-3",
+            "width": 30,
+            "height": 34,
+            "position": "100% 0px",
+            "size": "300% 100%",
+            "image": "url(\"http://localhost:5173/src/assets/ranking/trophies.webp\")"
+          },
+          "rowHeight": 80
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "url": "http://localhost:5173/rankings?rankingTab=all&rankPage=2",
+      "overflow": false,
+      "badges": [
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        },
+        {
+          "label": "공동 9위",
+          "tied": true,
+          "icon": null,
+          "rowHeight": 80
+        }
+      ]
+    }
+  ],
+  "asset": {
+    "status": 200,
+    "type": "image/webp",
+    "width": 384,
+    "height": 128,
+    "bytes": 12880,
+    "sha256": "95dd78e563e58b05948e15f6f5ff404cf43ef0c4c9070686bd0f62d667f0c301"
+  }
+}

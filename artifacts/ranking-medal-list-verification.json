@@ -1,0 +1,1306 @@
+{
+  "date": "2026-10-14",
+  "checks": [
+    {
+      "width": 1280,
+      "height": 800,
+      "url": "http://localhost:5173/rankings?rankingTab=all",
+      "overflow": false,
+      "badges": [
+        {
+          "rank": 1,
+          "tied": false,
+          "expectedTied": false,
+          "label": "1위 · 금메달",
+          "image": {
+            "path": "/src/assets/ranking/gold.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 2위 · 은메달",
+          "image": {
+            "path": "/src/assets/ranking/silver.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 2위 · 은메달",
+          "image": {
+            "path": "/src/assets/ranking/silver.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 4,
+          "tied": false,
+          "expectedTied": false,
+          "label": "4위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 5위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 5위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 5위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 5위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000001&category=",
+      "overflow": false,
+      "badges": [
+        {
+          "rank": 1,
+          "tied": false,
+          "expectedTied": false,
+          "label": "1위 · 금메달",
+          "image": {
+            "path": "/src/assets/ranking/gold.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 2,
+          "tied": false,
+          "expectedTied": false,
+          "label": "2위 · 은메달",
+          "image": {
+            "path": "/src/assets/ranking/silver.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 58,
+            "height": 72,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "url": "http://localhost:5173/rankings?rankingTab=all&rankPage=2",
+      "overflow": false,
+      "badges": [
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "url": "http://localhost:5173/rankings?rankingTab=all",
+      "overflow": false,
+      "badges": [
+        {
+          "rank": 1,
+          "tied": false,
+          "expectedTied": false,
+          "label": "1위 · 금메달",
+          "image": {
+            "path": "/src/assets/ranking/gold.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 2위 · 은메달",
+          "image": {
+            "path": "/src/assets/ranking/silver.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 2위 · 은메달",
+          "image": {
+            "path": "/src/assets/ranking/silver.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 4,
+          "tied": false,
+          "expectedTied": false,
+          "label": "4위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 5위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 5위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 5위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 5위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000001&category=",
+      "overflow": false,
+      "badges": [
+        {
+          "rank": 1,
+          "tied": false,
+          "expectedTied": false,
+          "label": "1위 · 금메달",
+          "image": {
+            "path": "/src/assets/ranking/gold.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 2,
+          "tied": false,
+          "expectedTied": false,
+          "label": "2위 · 은메달",
+          "image": {
+            "path": "/src/assets/ranking/silver.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        },
+        {
+          "rank": 3,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 3위 · 동메달",
+          "image": {
+            "path": "/src/assets/ranking/bronze.webp",
+            "width": 54,
+            "height": 67,
+            "natural": 192,
+            "objectFit": "contain"
+          },
+          "rowHeight": 96
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "url": "http://localhost:5173/rankings?rankingTab=all&rankPage=2",
+      "overflow": false,
+      "badges": [
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        },
+        {
+          "rank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "label": "공동 9위",
+          "image": null,
+          "rowHeight": 96
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "name": "gold",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "name": "silver",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "name": "bronze",
+      "status": 200,
+      "type": "image/webp"
+    }
+  ]
+}

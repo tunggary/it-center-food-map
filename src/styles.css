@@ -61,3 +61,23 @@ dialog.side-menu{position:fixed;top:0;right:0;bottom:0;left:auto;margin:0;border
 
 @media(min-width:761px){.explore-scene .map-toolbar,.explore-scene .floating-filters{top:var(--map-top-inset)}.explore-scene .map-panel{top:calc(var(--map-top-inset) + var(--map-control-height) + var(--map-overlay-gap))}}
 .registration-choices{display:grid;gap:1rem;margin:1.25rem 0}.registration-choices .button{min-height:56px}
+
+/* Ranking tabs own their filters; map and list share the same snapshot. */
+.ranking-tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:18px;overflow-x:auto;scrollbar-width:thin}
+.ranking-tabs button{flex:1;flex-shrink:0;border:0;border-bottom:3px solid transparent;border-radius:0;padding:12px 7px;min-height:48px;white-space:nowrap;font-size:13px;color:var(--muted);background:white}
+.ranking-tabs button[aria-selected=true]{color:var(--green);border-bottom-color:var(--green);font-weight:800}
+.ranking-custom-filters{margin-bottom:16px}.ranking-custom-filters .filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.ranking-custom-filters label{min-width:0}.ranking-custom-filters select{min-width:0;max-width:100%;font-size:12px;text-overflow:ellipsis}
+.tabbed-ranking .rank-name strong{font-size:15px;overflow-wrap:anywhere}.tabbed-ranking .rank{color:#263d33;font-size:20px}.tabbed-ranking .rank-count{font-size:18px;white-space:nowrap}.tabbed-ranking .ranking-item{padding:20px 2px;gap:12px}.tabbed-ranking .ranking-item>svg{display:none}
+@media(min-width:761px){.explore-scene.ranking-scene .map-panel{top:var(--map-top-inset)}}
+@media(max-width:760px){.ranking-tabs button{padding:12px 6px;font-size:13px}.tabbed-ranking .rank-name strong{font-size:14px}.tabbed-ranking .rank-count{font-size:17px}}
+
+/* Small illustrated trophies follow server rank, including ties. */
+.tabbed-ranking .ranking-item{min-height:80px;gap:12px;padding:2px 2px;background:white}
+.tabbed-ranking .rank-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;width:36px;min-width:36px;flex-shrink:0;color:#9aa79e}
+.rank-symbol{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:30px;font-weight:650;font-size:18px;font-variant-numeric:tabular-nums;line-height:1}
+.rank-trophy{display:block;width:32px;height:36px;background-repeat:no-repeat;background-size:300% 100%}
+.trophy-1{background-position:0% 0}.trophy-2{background-position:50% 0}.trophy-3{background-position:100% 0}
+.tabbed-ranking .rank-badge .rank-tie{font-size:9px;line-height:1.1;margin:0;color:#66806c;background:#f2f5ef;border-radius:4px;padding:3px 6px;font-weight:550;white-space:nowrap}
+.tabbed-ranking .rank-name strong{font-size:14px;line-height:1.55}.tabbed-ranking .rank-count{font-size:17px}
+.tabbed-ranking .ranking-item:hover{background:#f5f8f2}
+@media(max-width:760px){.tabbed-ranking .rank-badge{width:32px;min-width:32px}.rank-trophy{width:30px;height:34px}}

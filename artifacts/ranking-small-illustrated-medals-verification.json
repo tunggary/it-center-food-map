@@ -1,0 +1,520 @@
+{
+  "date": "2026-10-14",
+  "checks": [
+    {
+      "width": 1280,
+      "height": 800,
+      "url": "http://localhost:5173/rankings?rankingTab=all",
+      "overflow": false,
+      "medals": [
+        {
+          "asset": "gold.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 118,
+          "width": 42,
+          "height": 48,
+          "label": "1위 · 금메달",
+          "tied": false,
+          "rowHeight": 80
+        },
+        {
+          "asset": "silver.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 117,
+          "width": 42,
+          "height": 48,
+          "label": "공동 2위 · 은메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "silver.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 117,
+          "width": 42,
+          "height": 48,
+          "label": "공동 2위 · 은메달",
+          "tied": true,
+          "rowHeight": 80
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000001&category=",
+      "overflow": false,
+      "medals": [
+        {
+          "asset": "gold.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 118,
+          "width": 42,
+          "height": 48,
+          "label": "1위 · 금메달",
+          "tied": false,
+          "rowHeight": 80
+        },
+        {
+          "asset": "silver.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 117,
+          "width": 42,
+          "height": 48,
+          "label": "2위 · 은메달",
+          "tied": false,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 42,
+          "height": 48,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "url": "http://localhost:5173/rankings?rankingTab=all",
+      "overflow": false,
+      "medals": [
+        {
+          "asset": "gold.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 118,
+          "width": 38,
+          "height": 44,
+          "label": "1위 · 금메달",
+          "tied": false,
+          "rowHeight": 80
+        },
+        {
+          "asset": "silver.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 117,
+          "width": 38,
+          "height": 44,
+          "label": "공동 2위 · 은메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "silver.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 117,
+          "width": 38,
+          "height": 44,
+          "label": "공동 2위 · 은메달",
+          "tied": true,
+          "rowHeight": 80
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000001&category=",
+      "overflow": false,
+      "medals": [
+        {
+          "asset": "gold.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 118,
+          "width": 38,
+          "height": 44,
+          "label": "1위 · 금메달",
+          "tied": false,
+          "rowHeight": 80
+        },
+        {
+          "asset": "silver.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 117,
+          "width": 38,
+          "height": 44,
+          "label": "2위 · 은메달",
+          "tied": false,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        },
+        {
+          "asset": "bronze.webp",
+          "naturalWidth": 128,
+          "naturalHeight": 116,
+          "width": 38,
+          "height": 44,
+          "label": "공동 3위 · 동메달",
+          "tied": true,
+          "rowHeight": 80
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "name": "gold",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 6468,
+      "sha256": "e8c4f2fc1b16ee81c31a6dcebf9c4c82797a4d7122ddc2cb7fdb7243a6d2293c"
+    },
+    {
+      "name": "silver",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 6936,
+      "sha256": "d58a4dd2570bec8112d6adaeee871d82ed79b32fd41c860a300d4badbc0dfa2f"
+    },
+    {
+      "name": "bronze",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 6782,
+      "sha256": "522e7bc5442618c7652e0409bdfc9b8d7a255c33abe1306b1cfa75f5f60cd5d2"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "reference": "월계수/빨간 가로리본 메달에서 실물감을 제거하고 크기를 줄이라는 사용자 요청 (2026-10-14)",
+  "style": "간결한 2D 그림·둥근 윤곽선·밝은 색상·큰 숫자·짧은 빨간 리본",
+  "prompts": {
+    "gold": "REDRAW the attached medal as a SMALL, totally FLAT 2D cartoon/vector illustration for an app icon. Preserve only the concept: scalloped circular badge, numeral \"1\", two simple laurel sprigs, a short RED horizontal ribbon across the lower front. Do not preserve any realistic rendering. Use large simple shapes, smooth rounded outlines, a friendly stationery/sticker drawing style. ZERO gradients, ZERO texture, ZERO reflections, ZERO lighting, ZERO bevels, ZERO shadows, ZERO metallic highlights, ZERO 3D volume: each filled region must be one uniform solid color like an SVG icon. Limited palette: disk #F4C95D, dark rounded outline and bold numeral #876428, cream simple laurel leaves #FFF7E2, ribbon flat muted red #DF6C67 with dark red outline #9D4850. Five oval leaves on each laurel sprig only. Thin outline about 3% of badge width, fewer than 12 round lobes on outside. Bold simple numeral must stay legible at 38px display width. Ribbon has two short folded pointed ends and a blank front, no thin gold decorative lines. Compact symmetrical centered composition: disk 72% width, ribbon 88% width, whole illustration about 82% height with small transparent margins. Genuine transparent alpha background, no checkerboard pattern. No text other than \"1\", no watermark or logos. The output must look like a hand-drawn flat web sticker, NOT a medal photograph and NOT a rendered metal object.",
+    "silver": "REDRAW the attached medal as a SMALL, totally FLAT 2D cartoon/vector illustration for an app icon. Preserve only the concept: scalloped circular badge, numeral \"2\", two simple laurel sprigs, a short RED horizontal ribbon across the lower front. Do not preserve any realistic rendering. Use large simple shapes, smooth rounded outlines, a friendly stationery/sticker drawing style. ZERO gradients, ZERO texture, ZERO reflections, ZERO lighting, ZERO bevels, ZERO shadows, ZERO metallic highlights, ZERO 3D volume: each filled region must be one uniform solid color like an SVG icon. Limited palette: disk #D9DEE4, dark rounded outline and bold numeral #566674, cream simple laurel leaves #FFF7E2, ribbon flat muted red #DF6C67 with dark red outline #9D4850. Five oval leaves on each laurel sprig only. Thin outline about 3% of badge width, fewer than 12 round lobes on outside. Bold simple numeral must stay legible at 38px display width. Ribbon has two short folded pointed ends and a blank front, no thin gold decorative lines. Compact symmetrical centered composition: disk 72% width, ribbon 88% width, whole illustration about 82% height with small transparent margins. Genuine transparent alpha background, no checkerboard pattern. No text other than \"2\", no watermark or logos. The output must look like a hand-drawn flat web sticker, NOT a medal photograph and NOT a rendered metal object.",
+    "bronze": "REDRAW the attached medal as a SMALL, totally FLAT 2D cartoon/vector illustration for an app icon. Preserve only the concept: scalloped circular badge, numeral \"3\", two simple laurel sprigs, a short RED horizontal ribbon across the lower front. Do not preserve any realistic rendering. Use large simple shapes, smooth rounded outlines, a friendly stationery/sticker drawing style. ZERO gradients, ZERO texture, ZERO reflections, ZERO lighting, ZERO bevels, ZERO shadows, ZERO metallic highlights, ZERO 3D volume: each filled region must be one uniform solid color like an SVG icon. Limited palette: disk #DDA580, dark rounded outline and bold numeral #815338, cream simple laurel leaves #FFF7E2, ribbon flat muted red #DF6C67 with dark red outline #9D4850. Five oval leaves on each laurel sprig only. Thin outline about 3% of badge width, fewer than 12 round lobes on outside. Bold simple numeral must stay legible at 38px display width. Ribbon has two short folded pointed ends and a blank front, no thin gold decorative lines. Compact symmetrical centered composition: disk 72% width, ribbon 88% width, whole illustration about 82% height with small transparent margins. Genuine transparent alpha background, no checkerboard pattern. No text other than \"3\", no watermark or logos. The output must look like a hand-drawn flat web sticker, NOT a medal photograph and NOT a rendered metal object."
+  },
+  "selection": {
+    "date": "2026-10-14",
+    "variant": "A 메달 리스트 유지, 소형 그림 메달로 교체"
+  },
+  "web_export": {
+    "format": "WebP",
+    "preserve_aspect_ratio": true,
+    "max_width": 128,
+    "quality": 95,
+    "alpha_quality": 100,
+    "command": "cwebp -resize 128 0 -q 95 -alpha_q 100 <original.png> -o <asset.webp>",
+    "assets": [
+      {
+        "path": "src/assets/ranking/gold.webp",
+        "bytes": 6468,
+        "size": [
+          128,
+          118
+        ],
+        "has_alpha": true,
+        "sha256": "e8c4f2fc1b16ee81c31a6dcebf9c4c82797a4d7122ddc2cb7fdb7243a6d2293c"
+      },
+      {
+        "path": "src/assets/ranking/silver.webp",
+        "bytes": 6936,
+        "size": [
+          128,
+          117
+        ],
+        "has_alpha": true,
+        "sha256": "d58a4dd2570bec8112d6adaeee871d82ed79b32fd41c860a300d4badbc0dfa2f"
+      },
+      {
+        "path": "src/assets/ranking/bronze.webp",
+        "bytes": 6782,
+        "size": [
+          128,
+          116
+        ],
+        "has_alpha": true,
+        "sha256": "522e7bc5442618c7652e0409bdfc9b8d7a255c33abe1306b1cfa75f5f60cd5d2"
+      }
+    ]
+  },
+  "original_archive": "바탕화면/랭킹 그림 메달 원본"
+}
