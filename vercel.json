@@ -21,6 +21,10 @@
       "destination": "/index.html"
     },
     {
+      "source": "/register/places",
+      "destination": "/index.html"
+    },
+    {
       "source": "/courses/new",
       "destination": "/index.html"
     },
