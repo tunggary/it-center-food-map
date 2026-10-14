@@ -1,0 +1,1004 @@
+{
+  "date": "2026-10-14",
+  "scope": "tunggary2-navercoms-projects",
+  "projectId": "prj_lbTToFgSxF9rMuyDBPWhmLOO6shf",
+  "teamId": "team_nK4BZEkKZZbkPROxHvkQcJTV",
+  "pullRequests": {
+    "feature": 30,
+    "release": 31
+  },
+  "commits": {
+    "feature": "270d8d2d13ed8b64ac6860c159c09c80ccd8d813",
+    "featureDocs": "c0770187d82961ed90bebf9b4a42622074dda726",
+    "develop": "b36ea1b9715a5e925094365d5abcffe8b11e1ff0",
+    "main": "a22a72ad99fdab0ac8d96ab25b4f497f35166734"
+  },
+  "preview": {
+    "commit": "c0770187d82961ed90bebf9b4a42622074dda726",
+    "url": "it-center-food-9kcj6028x-tunggary2-navercoms-projects.vercel.app",
+    "id": "dpl_AY4bWrkf4HzdTqp211CqAktpCL78",
+    "state": "READY",
+    "checks": [
+      {
+        "path": "/assets/index-nkGqGpLt.js",
+        "status": 200
+      },
+      {
+        "path": "/assets/trophies-DjWZ7aRm.webp",
+        "status": 200,
+        "sha256": "95dd78e563e58b05948e15f6f5ff404cf43ef0c4c9070686bd0f62d667f0c301"
+      },
+      {
+        "path": "/assets/api-BAIaQLq2.js",
+        "status": 200
+      },
+      {
+        "path": "/assets/ui-isEP3tF2.js",
+        "status": 200
+      },
+      {
+        "path": "/assets/Icon-UHQaBXG-.js",
+        "status": 200
+      },
+      {
+        "path": "/assets/index-Dee8kVRv.css",
+        "status": 200
+      }
+    ]
+  },
+  "production": {
+    "id": "dpl_2BunoTAWGmhoyQzyDeQ4K4m8potC",
+    "url": "it-center-food-mzp1guhrj-tunggary2-navercoms-projects.vercel.app",
+    "state": "READY",
+    "target": "production",
+    "aliases": [
+      "it-center-food-map.vercel.app",
+      "it-center-food-map-tunggary2-navercoms-projects.vercel.app",
+      "it-center-food-map-git-main-tunggary2-navercoms-projects.vercel.app"
+    ]
+  },
+  "http": {
+    "date": "2026-10-14",
+    "origin": "https://it-center-food-map.vercel.app",
+    "mainCommit": "a22a72ad99fdab0ac8d96ab25b4f497f35166734",
+    "checks": [
+      {
+        "path": "/",
+        "status": 200
+      },
+      {
+        "path": "/rankings",
+        "status": 200
+      },
+      {
+        "path": "/rankings?rankingTab=custom",
+        "status": 200
+      },
+      {
+        "path": "/register",
+        "status": 200
+      },
+      {
+        "path": "/register/places",
+        "status": 200
+      },
+      {
+        "path": "/courses/new",
+        "status": 200
+      },
+      {
+        "path": "/assets/ranking-missing.js",
+        "status": 404
+      },
+      {
+        "path": "/assets/index-CcYt7JRO.js",
+        "status": 200
+      },
+      {
+        "path": "/assets/trophies-DjWZ7aRm.webp",
+        "status": 200,
+        "bytes": 12880,
+        "sha256": "95dd78e563e58b05948e15f6f5ff404cf43ef0c4c9070686bd0f62d667f0c301"
+      },
+      {
+        "path": "/assets/api-BrViL7px.js",
+        "status": 200
+      },
+      {
+        "path": "/assets/ui-DnWkQDm5.js",
+        "status": 200
+      },
+      {
+        "path": "/assets/Icon-BTDqm6yV.js",
+        "status": 200
+      },
+      {
+        "path": "/assets/index-Dee8kVRv.css",
+        "status": 200
+      }
+    ],
+    "cspPresent": true
+  },
+  "browser": {
+    "date": "2026-10-14",
+    "origin": "https://it-center-food-map.vercel.app",
+    "checks": [
+      {
+        "id": "all",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=all",
+        "width": 1280,
+        "overflow": false,
+        "selected": "전체",
+        "filters": [],
+        "apiStatus": 200,
+        "apiPins": 10,
+        "apiRows": 10,
+        "rows": 10,
+        "trophies": [
+          {
+            "targetId": "3566c4ad-8733-402f-b741-04b9828a47fa",
+            "serverRank": 1,
+            "tied": false,
+            "expectedTied": false,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-1",
+              "width": 32,
+              "height": 36,
+              "position": "0px 0px"
+            }
+          },
+          {
+            "targetId": "495bc784-32b9-45e3-a3af-760b9740ecb7",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "d72c2510-2c47-46ff-996c-4883190ffb35",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "55b4e975-ae39-44c4-9627-0f2670a41303",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "5c154d52-f9bf-4ed3-ace7-8b36452b30ec",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "62ef2200-d30c-433f-a2d5-b843156ec821",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "9c105b50-b961-4089-9a46-bee53bd8153b",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "a327f809-1f38-4ead-93e1-0059fdf8d1d8",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "a7507bf1-afca-4b63-9174-1f7dd2531812",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "cd9ad4db-d1c3-42ab-b4fc-e1e27b31efa4",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          }
+        ],
+        "mapTiles": 21,
+        "errors": []
+      },
+      {
+        "id": "food",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=food",
+        "width": 1280,
+        "overflow": false,
+        "selected": "맛집",
+        "filters": [],
+        "apiStatus": 200,
+        "apiPins": 7,
+        "apiRows": 7,
+        "rows": 7,
+        "trophies": [
+          {
+            "targetId": "3566c4ad-8733-402f-b741-04b9828a47fa",
+            "serverRank": 1,
+            "tied": false,
+            "expectedTied": false,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-1",
+              "width": 32,
+              "height": 36,
+              "position": "0px 0px"
+            }
+          },
+          {
+            "targetId": "62ef2200-d30c-433f-a2d5-b843156ec821",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "9c105b50-b961-4089-9a46-bee53bd8153b",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "a327f809-1f38-4ead-93e1-0059fdf8d1d8",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "a7507bf1-afca-4b63-9174-1f7dd2531812",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "cd9ad4db-d1c3-42ab-b4fc-e1e27b31efa4",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "d72c2510-2c47-46ff-996c-4883190ffb35",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          }
+        ],
+        "mapTiles": 15,
+        "errors": []
+      },
+      {
+        "id": "cafe",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=cafe",
+        "width": 1280,
+        "overflow": false,
+        "selected": "카페",
+        "filters": [],
+        "apiStatus": 200,
+        "apiPins": 1,
+        "apiRows": 1,
+        "rows": 1,
+        "trophies": [
+          {
+            "targetId": "d72c2510-2c47-46ff-996c-4883190ffb35",
+            "serverRank": 1,
+            "tied": false,
+            "expectedTied": false,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-1",
+              "width": 32,
+              "height": 36,
+              "position": "0px 0px"
+            }
+          }
+        ],
+        "mapTiles": 3,
+        "errors": []
+      },
+      {
+        "id": "walk",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=walk",
+        "width": 1280,
+        "overflow": false,
+        "selected": "산책코스",
+        "filters": [],
+        "apiStatus": 200,
+        "apiPins": 3,
+        "apiRows": 3,
+        "rows": 3,
+        "trophies": [
+          {
+            "targetId": "495bc784-32b9-45e3-a3af-760b9740ecb7",
+            "serverRank": 1,
+            "tied": false,
+            "expectedTied": false,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-1",
+              "width": 32,
+              "height": 36,
+              "position": "0px 0px"
+            }
+          },
+          {
+            "targetId": "55b4e975-ae39-44c4-9627-0f2670a41303",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "5c154d52-f9bf-4ed3-ace7-8b36452b30ec",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          }
+        ],
+        "mapTiles": 7,
+        "errors": []
+      },
+      {
+        "id": "custom",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=custom&team=&category=",
+        "width": 1280,
+        "overflow": false,
+        "selected": "커스텀",
+        "filters": [
+          {
+            "name": "팀 필터",
+            "value": ""
+          },
+          {
+            "name": "카테고리 필터",
+            "value": ""
+          }
+        ],
+        "apiStatus": 200,
+        "apiPins": 10,
+        "apiRows": 10,
+        "rows": 10,
+        "trophies": [
+          {
+            "targetId": "3566c4ad-8733-402f-b741-04b9828a47fa",
+            "serverRank": 1,
+            "tied": false,
+            "expectedTied": false,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-1",
+              "width": 32,
+              "height": 36,
+              "position": "0px 0px"
+            }
+          },
+          {
+            "targetId": "495bc784-32b9-45e3-a3af-760b9740ecb7",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "d72c2510-2c47-46ff-996c-4883190ffb35",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 32,
+              "height": 36,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "55b4e975-ae39-44c4-9627-0f2670a41303",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "5c154d52-f9bf-4ed3-ace7-8b36452b30ec",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "62ef2200-d30c-433f-a2d5-b843156ec821",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "9c105b50-b961-4089-9a46-bee53bd8153b",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "a327f809-1f38-4ead-93e1-0059fdf8d1d8",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "a7507bf1-afca-4b63-9174-1f7dd2531812",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "cd9ad4db-d1c3-42ab-b4fc-e1e27b31efa4",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          }
+        ],
+        "mapTiles": 21,
+        "errors": []
+      },
+      {
+        "id": "custom-team-selection",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=custom&team=3440e04b-3f68-437a-b0a7-d4ba676b65f2&category=",
+        "selectedTeam": "3440e04b-3f68-437a-b0a7-d4ba676b65f2",
+        "rows": 9,
+        "overflow": false
+      },
+      {
+        "id": "detail-return-and-reload",
+        "width": 1280,
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=cafe&team=3440e04b-3f68-437a-b0a7-d4ba676b65f2&category=",
+        "selected": "카페"
+      },
+      {
+        "id": "all",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=all&team=3440e04b-3f68-437a-b0a7-d4ba676b65f2&category=",
+        "width": 390,
+        "overflow": false,
+        "selected": "전체",
+        "filters": [],
+        "apiStatus": 200,
+        "apiPins": 10,
+        "apiRows": 10,
+        "rows": 10,
+        "trophies": [
+          {
+            "targetId": "3566c4ad-8733-402f-b741-04b9828a47fa",
+            "serverRank": 1,
+            "tied": false,
+            "expectedTied": false,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-1",
+              "width": 30,
+              "height": 34,
+              "position": "0px 0px"
+            }
+          },
+          {
+            "targetId": "495bc784-32b9-45e3-a3af-760b9740ecb7",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "d72c2510-2c47-46ff-996c-4883190ffb35",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "55b4e975-ae39-44c4-9627-0f2670a41303",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "5c154d52-f9bf-4ed3-ace7-8b36452b30ec",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "62ef2200-d30c-433f-a2d5-b843156ec821",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "9c105b50-b961-4089-9a46-bee53bd8153b",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "a327f809-1f38-4ead-93e1-0059fdf8d1d8",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "a7507bf1-afca-4b63-9174-1f7dd2531812",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "cd9ad4db-d1c3-42ab-b4fc-e1e27b31efa4",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          }
+        ],
+        "mapTiles": 21,
+        "errors": []
+      },
+      {
+        "id": "food",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=food&team=3440e04b-3f68-437a-b0a7-d4ba676b65f2&category=",
+        "width": 390,
+        "overflow": false,
+        "selected": "맛집",
+        "filters": [],
+        "apiStatus": 200,
+        "apiPins": 7,
+        "apiRows": 7,
+        "rows": 7,
+        "trophies": [
+          {
+            "targetId": "3566c4ad-8733-402f-b741-04b9828a47fa",
+            "serverRank": 1,
+            "tied": false,
+            "expectedTied": false,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-1",
+              "width": 30,
+              "height": 34,
+              "position": "0px 0px"
+            }
+          },
+          {
+            "targetId": "62ef2200-d30c-433f-a2d5-b843156ec821",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "9c105b50-b961-4089-9a46-bee53bd8153b",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "a327f809-1f38-4ead-93e1-0059fdf8d1d8",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "a7507bf1-afca-4b63-9174-1f7dd2531812",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "cd9ad4db-d1c3-42ab-b4fc-e1e27b31efa4",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "d72c2510-2c47-46ff-996c-4883190ffb35",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          }
+        ],
+        "mapTiles": 15,
+        "errors": []
+      },
+      {
+        "id": "cafe",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=cafe&team=3440e04b-3f68-437a-b0a7-d4ba676b65f2&category=",
+        "width": 390,
+        "overflow": false,
+        "selected": "카페",
+        "filters": [],
+        "apiStatus": 200,
+        "apiPins": 1,
+        "apiRows": 1,
+        "rows": 1,
+        "trophies": [
+          {
+            "targetId": "d72c2510-2c47-46ff-996c-4883190ffb35",
+            "serverRank": 1,
+            "tied": false,
+            "expectedTied": false,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-1",
+              "width": 30,
+              "height": 34,
+              "position": "0px 0px"
+            }
+          }
+        ],
+        "mapTiles": 3,
+        "errors": []
+      },
+      {
+        "id": "walk",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=walk&team=3440e04b-3f68-437a-b0a7-d4ba676b65f2&category=",
+        "width": 390,
+        "overflow": false,
+        "selected": "산책코스",
+        "filters": [],
+        "apiStatus": 200,
+        "apiPins": 3,
+        "apiRows": 3,
+        "rows": 3,
+        "trophies": [
+          {
+            "targetId": "495bc784-32b9-45e3-a3af-760b9740ecb7",
+            "serverRank": 1,
+            "tied": false,
+            "expectedTied": false,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-1",
+              "width": 30,
+              "height": 34,
+              "position": "0px 0px"
+            }
+          },
+          {
+            "targetId": "55b4e975-ae39-44c4-9627-0f2670a41303",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "5c154d52-f9bf-4ed3-ace7-8b36452b30ec",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          }
+        ],
+        "mapTiles": 7,
+        "errors": []
+      },
+      {
+        "id": "custom",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=custom&team=3440e04b-3f68-437a-b0a7-d4ba676b65f2&category=",
+        "width": 390,
+        "overflow": false,
+        "selected": "커스텀",
+        "filters": [
+          {
+            "name": "팀 필터",
+            "value": "3440e04b-3f68-437a-b0a7-d4ba676b65f2"
+          },
+          {
+            "name": "카테고리 필터",
+            "value": ""
+          }
+        ],
+        "apiStatus": 200,
+        "apiPins": 9,
+        "apiRows": 9,
+        "rows": 9,
+        "trophies": [
+          {
+            "targetId": "3566c4ad-8733-402f-b741-04b9828a47fa",
+            "serverRank": 1,
+            "tied": false,
+            "expectedTied": false,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-1",
+              "width": 30,
+              "height": 34,
+              "position": "0px 0px"
+            }
+          },
+          {
+            "targetId": "495bc784-32b9-45e3-a3af-760b9740ecb7",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "d72c2510-2c47-46ff-996c-4883190ffb35",
+            "serverRank": 2,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "",
+            "trophy": {
+              "class": "rank-trophy trophy-2",
+              "width": 30,
+              "height": 34,
+              "position": "50% 0px"
+            }
+          },
+          {
+            "targetId": "55b4e975-ae39-44c4-9627-0f2670a41303",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "5c154d52-f9bf-4ed3-ace7-8b36452b30ec",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "62ef2200-d30c-433f-a2d5-b843156ec821",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "9c105b50-b961-4089-9a46-bee53bd8153b",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "a327f809-1f38-4ead-93e1-0059fdf8d1d8",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          },
+          {
+            "targetId": "cd9ad4db-d1c3-42ab-b4fc-e1e27b31efa4",
+            "serverRank": 4,
+            "tied": true,
+            "expectedTied": true,
+            "visibleRankText": "4",
+            "trophy": null
+          }
+        ],
+        "mapTiles": 19,
+        "errors": []
+      },
+      {
+        "id": "custom-team-selection",
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=custom&team=3440e04b-3f68-437a-b0a7-d4ba676b65f2&category=",
+        "selectedTeam": "3440e04b-3f68-437a-b0a7-d4ba676b65f2",
+        "rows": 9,
+        "overflow": false
+      },
+      {
+        "id": "detail-return-and-reload",
+        "width": 390,
+        "url": "https://it-center-food-map.vercel.app/rankings?rankingTab=cafe&team=3440e04b-3f68-437a-b0a7-d4ba676b65f2&category=",
+        "selected": "카페"
+      }
+    ],
+    "errors": []
+  },
+  "reviewers": {
+    "requested": [
+      "peter-lansik",
+      "paulkim-lansik"
+    ],
+    "applied": false,
+    "reason": "GitHub API422: 指定 계정이 저장소 협업자가 아님",
+    "assignee": "tunggary"
+  },
+  "notes": [
+    "운영에서는 공개 조회와 필터/상세 탐색만 수행했다. 등록/수정/삭제 fixture를 만들지 않았다.",
+    "실기기·기존 독립QA/성능 보류는 이번 소프트웨어 배포 검증과 구분해 유지한다."
+  ]
+}

@@ -27,12 +27,15 @@
 
 - [x] 6. **피드백 접수·검토**: 사용자가 경험한 문제를 파악하고, 중복 의견을 모아 우선순위와 처리 여부를 정한다.
 - [x] 7. **작은 개선 구현**: 선택한 피드백의 완료 기준과 최소 변경 범위를 정하고 구현한다.
-- [ ] 8. **검증·배포·해결 확인**: 개선 사항과 기존 핵심 흐름을 검증해 배포하고, 문제가 해결됐는지 확인한다.
+- [x] 8. **검증·배포·해결 확인**: 개선 사항과 기존 핵심 흐름을 검증해 배포하고, 문제가 해결됐는지 확인한다.
 
 첫 배포 이후에는 별도 v2 계획 없이 사용자 피드백을 기준으로 6~8단계를 반복한다.
 장애·보안 취약점·의존 서비스 종료 등 운영에 필요한 유지보수도 같은 처리 흐름을 따른다.
 
 ## 최근 작업 컨텍스트
+
+- 랭킹 탭·작은 트로피 운영 배포·확인 완료 (2026-10-14): 코드270d8d2/문서c077018을feature/ranking-tabs-trophies에push하고 PR #30→develop(b36ea1b), release PR #31→main(a22a72a)을merge했다. 개인Vercel scope·팀/프로젝트ID와 feature/release/develop Preview READY를확인했고 Production dpl_2BunoTAWGmhoyQzyDeQ4K4m8potC READY·대상mainSHA·canonicalalias·주요직접경로200/없는asset404·JS/CSS/트로피응답/이미지SHA256일치를확인했다. 실제운영 PC1280×800/모바일390×844의5탭·운영랭킹10항목·탭별API/공동순위·커스텀팀선택·상세왕복/새로고침·PC32×36/모바일30×34트로피·순위문구없음·지도타일·가로넘침없음을14항목으로확인했고 앱오류0건이다. Vitest65개·타입/build·문서링크246개·diff검사통과. 근거는 [운영 검증 JSON](../artifacts/ranking-production-verification.json)과docs/deployment.md다. 이번랭킹개선의소프트웨어검증/배포/반영확인을완료해8단계를체크하며 기존실기기·독립QA/성능보류는별도로유지한다. 운영DBfixture·API·환경변수·인증보호는변경하지않았다. 지정리뷰어2계정은개인저장소협업자가아니라API422로요청거절됐고 Assignee=tunggary이며저장소권한은변경하지않았다. 이확인기록을release PR로main/develop에반영하고 최종main커밋READY/운영응답을재확인한다.
+
 
 - 랭킹 탭·트로피 커밋 및 릴리스 착수 (2026-10-14): 사용자 요청으로 커밋·push·develop/main PR머지·배포확인을 진행한다. origin/develop과 같은560a906에서feature/ranking-tabs-trophies를 분기해 제품코드/테스트/트로피asset을270d8d2로커밋했다. 최종Vitest65개·타입/build·문서링크246개·diff검사를통과했고 검증JSON7개의credential패턴0을확인했다. 개인Vercel계정/tunggary2-navercoms-projects·team_nK4BZEkKZZbkPROxHvkQcJTV·prj_lbTToFgSxF9rMuyDBPWhmLOO6shf를CLI로확인했다. 문서/검증기록을별도커밋해기능Preview검증→developPR→release/mainPR→운영검증을진행한다.8단계는실제배포확인전이므로미완료다.
 
