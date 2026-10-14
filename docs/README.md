@@ -34,6 +34,10 @@
 
 ## 최근 작업 컨텍스트
 
+- 전체 개선 릴리스 착수 (2026-10-14): 사용자 요청으로 현재 feature/registration-profile-modal의후속폼/사진표시변경을커밋·push하고PR로develop→release→main에반영한다. 개인Supabase조직/QA/운영과Vercel계정/scope/프로젝트ID를확인했다. QA/운영DBdry-run에서프로필생성/상세전체순위2개migration만대기함을확인했고기존등록/참여자/대상은QA10146/200/1000·운영18/10/13이다. 전체Vitest88개·타입/build·Deno check통과. QA DB→Edge→보호된Preview검증후운영DB→Edge→main자동배포를진행하며8단계는실제운영확인전미완료다.
+
+- 등록/수정 폼 표시 개선 완료 (2026-10-14): 요청한 상시초안안내를제거하고 카테고리/소개/사진선택의배경·테두리·10px모서리·글자크기·여백을통일했다. 닉네임/팀안내는카테고리위로이동하고이름만700굵기로강조했다. 사진처리중에는dimmed/progressbar만표시하고spinner/진행문구/준비완료를숨겼으며실패/재시도는유지했다. 관련등록회귀28개·사진/피드백5개·타입검사/build통과. PC등록/수정·모바일수정에서DOM/computed style로안내미표시·폼토큰일치·사진외곽선/여백제거·참여정보위치/굵기·가로넘침없음·입력12/100자/이탈확인후상세복귀를확인했다. [브라우저근거](../artifacts/registration-form-style-verification.json)는페이지한정프로필/본인등록fixture이며실제프로필/등록/사진제출은없다. 사진로딩바유지/문구·spinner미표시/완료후로딩제거/실패재시도는컴포넌트테스트로확인했다. FE/QA문서갱신·diff검사통과. 기존개선7단계완료/8단계운영배포전상태다.
+
 - 기능 브랜치 커밋·push 완료 (2026-10-14): 사용자 요청으로 등록모달053e14e, 상세주소/전체순위f5307eb, 팀선택화살표여백2169340, 문서/검증206f81e를 origin/feature/registration-profile-modal에 push했고 원격HEAD가206f81e와일치함을확인했다. 전체Vitest88개·타입/build·분리등록모달78개·브라우저여백검증·문서링크551개·diff검사통과다. 이 push 확인 기록도 같은 기능 브랜치에 커밋/push하며 운영반영은 아직 미진행이다. PR 생성/머지·main/develop 직접push·운영DB변경은 수행하지 않았고8단계미완료·독립QA/실기기대기를유지한다.
 
 - 기능 커밋·push 준비 및 팀 선택 화살표 여백 반영 (2026-10-14): 사용자 요청으로 등록 진입 모달, 상세 주소 복사·전체 순위, 팀 선택 화살표 여백을 각각 기능/스타일 커밋으로 분리했다. 화살표는 오른쪽16px·16×16px SVG·문자영역 오른쪽44px이며 PC/모바일 computed style과 백엔드개발팀 실제 선택/가로넘침없음을 확인했다. [화살표 검증](../artifacts/team-select-arrow-verification.json). 분리된 등록모달 커밋을 임시 폴더에서 Vitest78개·타입/build로 확인했고 현재 전체88개·타입/build·diff검사를 통과했다. docs/PRD·스토리/QA·설계와 검증자료를 함께 커밋하고 feature/registration-profile-modal만 origin에 push한다. main/develop 직접push·PR머지·운영DB/배포는 수행하지 않으며8단계미완료와독립QA/실기기대기를유지한다.

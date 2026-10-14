@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-14",
+  "environment": "local public RPC; page-local session/profile/read-only favorites fixture; no writes",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "mode": "register",
+      "heading": "이곳을 최애로 등록",
+      "removedNotice": true,
+      "select": {
+        "font": "13px",
+        "weight": "400",
+        "border": "rgb(227, 234, 227)",
+        "background": "rgb(251, 252, 250)",
+        "radius": "10px"
+      },
+      "textarea": {
+        "font": "13px",
+        "weight": "400",
+        "border": "rgb(227, 234, 227)",
+        "background": "rgb(251, 252, 250)",
+        "radius": "10px"
+      },
+      "file": {
+        "font": "12px",
+        "weight": "400",
+        "border": "rgb(227, 234, 227)",
+        "background": "rgb(251, 252, 250)",
+        "radius": "10px"
+      },
+      "photoLabel": {
+        "font": "12px",
+        "weight": "650",
+        "border": "rgb(38, 61, 51)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px"
+      },
+      "photoBorder": "0px",
+      "photoPadding": "0px",
+      "fileAccept": "image/jpeg,image/png,image/webp",
+      "fileMultiple": true,
+      "noOverflow": true,
+      "authorAboveCategory": true,
+      "authorEmphasis": [
+        {
+          "text": "폼검증",
+          "weight": "700"
+        },
+        {
+          "text": "A팀",
+          "weight": "700"
+        }
+      ],
+      "hasCounter": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "mode": "edit",
+      "heading": "내 최애 수정",
+      "removedNotice": true,
+      "select": {
+        "font": "13px",
+        "weight": "400",
+        "border": "rgb(227, 234, 227)",
+        "background": "rgb(251, 252, 250)",
+        "radius": "10px"
+      },
+      "textarea": {
+        "font": "13px",
+        "weight": "400",
+        "border": "rgb(227, 234, 227)",
+        "background": "rgb(251, 252, 250)",
+        "radius": "10px"
+      },
+      "file": {
+        "font": "12px",
+        "weight": "400",
+        "border": "rgb(227, 234, 227)",
+        "background": "rgb(251, 252, 250)",
+        "radius": "10px"
+      },
+      "photoLabel": {
+        "font": "12px",
+        "weight": "650",
+        "border": "rgb(38, 61, 51)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px"
+      },
+      "photoBorder": "0px",
+      "photoPadding": "0px",
+      "fileAccept": "image/jpeg,image/png,image/webp",
+      "fileMultiple": true,
+      "noOverflow": true,
+      "authorAboveCategory": true,
+      "authorEmphasis": [
+        {
+          "text": "폼검증",
+          "weight": "700"
+        },
+        {
+          "text": "A팀",
+          "weight": "700"
+        }
+      ],
+      "hasCounter": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "mode": "edit",
+      "heading": "내 최애 수정",
+      "removedNotice": true,
+      "select": {
+        "font": "13px",
+        "weight": "400",
+        "border": "rgb(227, 234, 227)",
+        "background": "rgb(251, 252, 250)",
+        "radius": "10px"
+      },
+      "textarea": {
+        "font": "13px",
+        "weight": "400",
+        "border": "rgb(227, 234, 227)",
+        "background": "rgb(251, 252, 250)",
+        "radius": "10px"
+      },
+      "file": {
+        "font": "12px",
+        "weight": "400",
+        "border": "rgb(227, 234, 227)",
+        "background": "rgb(251, 252, 250)",
+        "radius": "10px"
+      },
+      "photoLabel": {
+        "font": "12px",
+        "weight": "650",
+        "border": "rgb(38, 61, 51)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px"
+      },
+      "photoBorder": "0px",
+      "photoPadding": "0px",
+      "fileAccept": "image/jpeg,image/png,image/webp",
+      "fileMultiple": true,
+      "noOverflow": true,
+      "authorAboveCategory": true,
+      "authorEmphasis": [
+        {
+          "text": "폼검증",
+          "weight": "700"
+        },
+        {
+          "text": "A팀",
+          "weight": "700"
+        }
+      ],
+      "hasCounter": true
+    },
+    {
+      "input": {
+        "value": "일관된 입력 UI 확인",
+        "count": "12/100자"
+      }
+    },
+    {
+      "discardReturn": "/targets/30000000-0000-4000-8000-000000000001"
+    }
+  ],
+  "note": "Measured PC register/edit and mobile edit. A reused mobile register fixture retained edit state and is excluded. Public catalog/target RPCs are real; profile/favorites and identity storage access are tab-local mocks. No profile/favorite/upload submissions were sent."
+}
