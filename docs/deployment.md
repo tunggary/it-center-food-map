@@ -86,3 +86,12 @@ vercel curl / --deployment <deployment-url> --scope tunggary2-navercoms-projects
 - Vitest65개·타입/build·문서링크246개·diff검사 통과. DB/API·환경변수·인증보호 설정은 변경하지 않았다. 운영 검증은 공개조회/필터/상세탐색만 수행했고 fixture등록/수정/삭제는 하지 않았다. 실기기·기존 독립QA/성능보류는 유지한다.
 - 지정 리뷰어 peter-lansik/paulkim-lansik은 이 개인저장소의 협업자가 아니라 GitHub API422로 리뷰요청이 거절됐다. 협업자 권한은 변경하지 않았으며 Assignee는tunggary다.
 - 근거: [운영 검증 JSON](../artifacts/ranking-production-verification.json). 이 결과 기록은 문서전용 release PR로 main/develop 양쪽에 반영하고 최종 main의READY/실제응답을 다시 확인한다.
+
+## 등록 모달·상세·폼 개선 릴리스 (2026-10-14)
+
+- 기능 PR #34 → develop `3cdb4baee33bd9457f1d348c317acce8b42e6628`, main 릴리스 PR #35 준비. 후속 코드3533a55·문서15fd204이며 전체Vitest88개·타입/build·Deno check·로컬DB/동시명령/실제Edge검증을통과했다.
+- 개인Supabase조직/QA/운영·개인Vercel계정/scope/팀/프로젝트ID를확인했다. QA/운영에프로필생성/상세전체순위migration2개를dry-run후적용했다. 기존데이터는운영18등록/10참여자/13대상/revision22로유지했다.
+- api는QA8/운영9 ACTIVE·verify_jwt=false이며두번들SHA256 `50cac0fc183eca032eca04e6111591036caddccf10ba49765861847e166300de`다. QA실제프로필API201/재생200/충돌409/무자격401/검증400·빈본인등록/상세순위를확인했고시험자료는정리했다. QA10146등록/200참여자/1000대상유지·프로필시험후revision150, 양쪽보안advisor ERROR0이다.
+- 기능Preview `dpl_CeTp14QTA5qDsFDe5pNrmLWpxJyB` READY·보호된HTML/JS/CSS200·QAendpoint와최종UI스타일을확인했다. Preview인증보호/환경변수/미디어·maintenance함수는변경하지않았다.
+- 사용자후속요청으로이번릴리스PR은리뷰어미지정이다. 이전지정시도는협업자제약으로422였고권한을변경하지않았다. Assignee는tunggary다. main머지후READY·대상SHA·canonical응답·운영UI를확인한다.
+- 복구는이전main상태로되돌리는PR과기존Vercelrollback절차를사용한다. 추가DB함수/응답필드는기존FE/API와호환되므로급히삭제하지않고, 필요시이전main의api코드로재배포한다. 운영fixture등록은만들지않는다.

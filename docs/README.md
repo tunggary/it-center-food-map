@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- QA/운영 DB·API 반영 및 develop 머지 완료 (2026-10-14): 후속코드3533a55/문서15fd204를기능브랜치에push하고PR#34→develop3cdb4ba를merge했다. 기능Preview dpl_CeTp14QTA5qDsFDe5pNrmLWpxJyB READY·보호HTML/JS/CSS200·QA연결/최종스타일을확인했다. QA/운영에20261014083119·20261014085635를CLI dry-run후적용하고api를QA8/운영9 ACTIVE·verify_jwt=false로배포했다. 두번들SHA256=50cac0fc183eca032eca04e6111591036caddccf10ba49765861847e166300de다. QA실제프로필201/재생200/충돌409/무자격401/검증400·빈목록/상세순위일치를확인하고생성한시험프로필을정리했다. QA등록/참여자/대상10146/200/1000(프로필시험revision150), 운영18/10/13/revision22유지·전체순위/권한정상·보안advisor ERROR0이다. release/registration-detail-ui의main PR#35를준비했다. 사용자후속요청에따라이번릴리스PR은리뷰어미지정이며현재reviewRequests=[]다. 운영FE배포/8단계완료는아직미확인이다.
+
 - 전체 개선 릴리스 착수 (2026-10-14): 사용자 요청으로 현재 feature/registration-profile-modal의후속폼/사진표시변경을커밋·push하고PR로develop→release→main에반영한다. 개인Supabase조직/QA/운영과Vercel계정/scope/프로젝트ID를확인했다. QA/운영DBdry-run에서프로필생성/상세전체순위2개migration만대기함을확인했고기존등록/참여자/대상은QA10146/200/1000·운영18/10/13이다. 전체Vitest88개·타입/build·Deno check통과. QA DB→Edge→보호된Preview검증후운영DB→Edge→main자동배포를진행하며8단계는실제운영확인전미완료다.
 
 - 등록/수정 폼 표시 개선 완료 (2026-10-14): 요청한 상시초안안내를제거하고 카테고리/소개/사진선택의배경·테두리·10px모서리·글자크기·여백을통일했다. 닉네임/팀안내는카테고리위로이동하고이름만700굵기로강조했다. 사진처리중에는dimmed/progressbar만표시하고spinner/진행문구/준비완료를숨겼으며실패/재시도는유지했다. 관련등록회귀28개·사진/피드백5개·타입검사/build통과. PC등록/수정·모바일수정에서DOM/computed style로안내미표시·폼토큰일치·사진외곽선/여백제거·참여정보위치/굵기·가로넘침없음·입력12/100자/이탈확인후상세복귀를확인했다. [브라우저근거](../artifacts/registration-form-style-verification.json)는페이지한정프로필/본인등록fixture이며실제프로필/등록/사진제출은없다. 사진로딩바유지/문구·spinner미표시/완료후로딩제거/실패재시도는컴포넌트테스트로확인했다. FE/QA문서갱신·diff검사통과. 기존개선7단계완료/8단계운영배포전상태다.
