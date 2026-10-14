@@ -84,7 +84,7 @@
     "기존 QA/성능 보류 유지"
   ],
   "reducedMotionAnimation": "none",
-  "delivery": "local-only; user requested no commit/merge/deploy",
+  "delivery": "Production verified; PR-based merges",
   "additionalLayoutFeedback": {
     "longCourseNameChars": 100,
     "beforeMobileDocumentWidth": 1170,
@@ -139,7 +139,7 @@
     "closeToMainInOneAction": true,
     "rankPageCleared": true,
     "filterPreserved": true,
-    "noCommitOrDeploy": true
+    "noCommitOrDeploy": false
   },
   "desktopTopAlignment": {
     "viewports": [
@@ -163,5 +163,29 @@
     "overflow": false,
     "mobileTickerTopUnchanged": 12,
     "mobileFilterTopUnchanged": 76
+  },
+  "production": {
+    "commit": "494b584dce8e253f51b502e35557e44f16f47840",
+    "deploymentId": "dpl_AFCKCc7zcDFBw9B3mevr8gqJXyxS",
+    "state": "READY",
+    "http": 200,
+    "tiles": 30,
+    "desktop": [
+      1280,
+      800
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "filterTop": 24,
+    "menuTop": 24,
+    "controlHeight": 44,
+    "filterRankingWidth": 380,
+    "rankingTop": 84,
+    "tickerTop": 12,
+    "drawerWidth": 300,
+    "closeToMain": true,
+    "fixtureWrites": false
   }
 }
