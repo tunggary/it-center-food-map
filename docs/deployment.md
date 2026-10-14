@@ -67,3 +67,12 @@ vercel curl / --deployment <deployment-url> --scope tunggary2-navercoms-projects
 - Production `dpl_AFCKCc7zcDFBw9B3mevr8gqJXyxS` READY와 canonical HTTP200·지도타일30개·PC top24/height44/width380/ranktop84, 모바일티커/오른쪽메뉴/메인복귀를 실제 브라우저로 확인했다.
 - 운영 검증은 공개조회/탐색만 수행했다. 브라우저연결/로그인/DB변경은 없고 실기기GPS/권한/키보드·기존QA/성능 보류를 유지한다.
 - 이 실행 기록은 코드 변경 없는 문서 릴리스로 main/develop에 반영하고 최종 main 커밋의 READY·HTTP 응답을 다시 확인한다.
+
+## 등록 UX 개선 릴리스 (2026-10-14)
+
+- 기능 PR #26→develop `ddb2e88a6f7881e434ffeae61c3f2ad350bb052e`, 릴리스 PR #27→main `9ac0cdf32c6f460e9c52f37e294e78991760249d`.
+- 개인 scope/팀/프로젝트 ID를 실제 CLI로 확인했다. 기능 Preview READY·보호된 HTML/CSS/JS, QA 카페 검색30건의 삼성역 거리순, Vitest52개·타입/build·Deno API check를 확인했다.
+- 검색 정렬은 Supabase api 함수에도 반영했다. 개인 QA `yxgmpbjcvjeacnrgtcbq` api7 / 운영 `gpsbnmgwowsbgclcottl` api8 ACTIVE, verify_jwt=false 유지, 두 번들 SHA256 `a4f897eabddaeb61ec3fd68a301c01b15860df8f2c14208fa5bc0a37400706a5`. DB 마이그레이션 없음.
+- Production `dpl_2m9aPvtRr3PqRUVPEV5N5gGW3Tjm` (`it-center-food-mbderv7tj-tunggary2-navercoms-projects.vercel.app`) READY·대상 main 커밋과 운영 `/`, `/register`, `/register/places`, `/courses/new` HTTP200·없는asset404를 확인했다.
+- 운영 모바일390×844에서 선택버튼56px·메뉴0·검색top16/버튼top74·장소선택level5→3·핀비가림·검색어/목록15/핀15복귀, 실제 장소상세→등록X복귀를 확인했다. PC1280×800에서 코스상세→등록X복귀·개인링크2개·overflow없음을 확인했다. 카페 검색1페이지89~190m/2페이지192~218m 거리순. 근거는 `artifacts/register-ux-production-verification.json`.
+- 운영 검증에서 후기를 신규 등록/수정/삭제하지 않았다. 수정/삭제/마지막후기 빈상세는 로컬 실제 검증과 회귀테스트로 확인했다. 실기기GPS/키보드·기존QA/성능 보류는 유지한다. 이 기록을 문서 전용 릴리스로 main/develop에 반영하고 최종 main READY·운영응답을 재확인한다.
