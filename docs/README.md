@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- 운영 접속 QR 제공 (2026-10-14): 운영 주소 `https://it-center-food-map.vercel.app`를 담은 QR PNG(370×370px, 흰 여백4모듈)를 `docs/assets/site-qr.png`로 생성하고 루트 README에 이미지·운영 링크·다운로드 링크를 추가했다. OpenCV로 PNG를 디코딩해 운영 주소와 정확히 일치함을 확인했다. 문서/이미지 제공만 완료했으며 기존 개선 체크리스트와 실기기 QR 스캔 QA 보류는 유지한다. 남은 사항은 실기기 카메라 스캔 확인이며 커밋·push는 수행하지 않았다.
+
 - 2차 UI 피드백 운영 반영·확인 (2026-10-14): 문서35480cb/UI8ffae7b를 커밋·push하고 기능 PR #22→develop(a5119a1), release PR #23→main(494b584)을 merge했다. 기능 Preview READY·보호된HTML/JS/CSS 검증 후 개인 Production dpl_AFCKCc7zcDFBw9B3mevr8gqJXyxS READY·운영HTTP200을 확인했다. 운영 PC1280×800에서 필터/개인메뉴top24px·height44px·필터/랭킹width380px·랭킹top84px·지도타일30개·overflow없음, 모바일390×844에서 ticker12px/filter76px·전체지도·오른쪽메뉴300px과 내 장소/코스/내 정보·X1회메인복귀를 확인했다. 운영검증은 공개조회/탐색만 수행하고 fixture등록은 만들지 않았다. 소프트웨어 검증/배포는 완료했으며 실기기GPS/권한/키보드와 기존QA/성능보류는 유지한다. 배포확인 기록을 release→main/develop PR로 반영하고 최종커밋 READY를 확인한다.
 
 - 2차 UI 피드백 커밋·배포 착수 (2026-10-14): 사용자가 로컬 확인 후 커밋/push·develop/main PR 머지·운영 배포 확인을 요청해 기존 커밋 보류를 해제했다. origin/develop과 기능브랜치 기준커밋이 같음을 확인했고 최종 Vitest32개·타입/build·diff검사를 재통과했다. 개인 Vercel 계정/팀/프로젝트를 확인했다. 문서/UI를 논리적 커밋으로 나누고 Preview→develop→release/main·develop 반영 및 최종 READY/실제 운영 확인을 진행한다. 브라우저연결/로그인/DB변경은 없고 실기기GPS·기존QA/성능 보류는 유지한다.
