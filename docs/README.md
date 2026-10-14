@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- 기능 브랜치 커밋·push 완료 (2026-10-14): 사용자 요청으로 등록모달053e14e, 상세주소/전체순위f5307eb, 팀선택화살표여백2169340, 문서/검증206f81e를 origin/feature/registration-profile-modal에 push했고 원격HEAD가206f81e와일치함을확인했다. 전체Vitest88개·타입/build·분리등록모달78개·브라우저여백검증·문서링크551개·diff검사통과다. 이 push 확인 기록도 같은 기능 브랜치에 커밋/push하며 운영반영은 아직 미진행이다. PR 생성/머지·main/develop 직접push·운영DB변경은 수행하지 않았고8단계미완료·독립QA/실기기대기를유지한다.
+
 - 기능 커밋·push 준비 및 팀 선택 화살표 여백 반영 (2026-10-14): 사용자 요청으로 등록 진입 모달, 상세 주소 복사·전체 순위, 팀 선택 화살표 여백을 각각 기능/스타일 커밋으로 분리했다. 화살표는 오른쪽16px·16×16px SVG·문자영역 오른쪽44px이며 PC/모바일 computed style과 백엔드개발팀 실제 선택/가로넘침없음을 확인했다. [화살표 검증](../artifacts/team-select-arrow-verification.json). 분리된 등록모달 커밋을 임시 폴더에서 Vitest78개·타입/build로 확인했고 현재 전체88개·타입/build·diff검사를 통과했다. docs/PRD·스토리/QA·설계와 검증자료를 함께 커밋하고 feature/registration-profile-modal만 origin에 push한다. main/develop 직접push·PR머지·운영DB/배포는 수행하지 않으며8단계미완료와독립QA/실기기대기를유지한다.
 
 - 상세 아이콘 축소 완료 (2026-10-14): 주소 복사는 글자와 같은12px/색상·배경/테두리없는아이콘으로, 상세트로피는20×22.5px로축소했다. PC1280×800/모바일390×844의DOM/computed style로크기·색상일치·투명배경·테두리0·가로넘침없음과실제복사성공을확인했다. 모바일랭킹트로피30×34px유지도확인했다. [검증근거](../artifacts/target-icons-size-verification.json). FE/QA문서갱신·diff검사통과.7단계완료/8단계운영배포전상태유지.
