@@ -1,0 +1,867 @@
+{
+  "date": "2026-10-14",
+  "origin": "http://localhost:5173",
+  "results": [
+    {
+      "width": 1280,
+      "height": 800,
+      "tab": "all",
+      "expected": {
+        "ids": [
+          "37ede2d1-72b2-4d32-a117-870c1b2ce16d",
+          "30000000-0000-4000-8000-000000000001",
+          "fbe4ae3e-266d-4e2d-bd48-b0831cef3c09",
+          "30000000-0000-4000-8000-000000000002",
+          "30000000-0000-4000-8000-000000000003",
+          "3be20574-1d26-4894-a235-b340eeecbca8",
+          "65edff05-e343-4c96-b40c-f227a10b80ed",
+          "7b91d993-9619-41c5-94fe-03e9c26155ba",
+          "009299a5-2c94-4baa-9642-752979cf0e11",
+          "00b101b5-b04b-43d6-925c-da0238b0ee24",
+          "012c6f2e-7508-4775-b0be-d8252772dd48",
+          "05341f0a-5bcb-4a39-a6dd-9752ad08dcf6",
+          "061888ca-f8b0-420d-9ff0-27538d7343cf",
+          "08b2062b-aae6-4765-a161-76313e0bbc96",
+          "0bc92e9b-e491-4d65-bcde-8b0d14f389ad",
+          "0fbf81a8-ed0e-4b8f-807a-246be43eceb3",
+          "10f25cc2-6fc1-4540-9706-fc3d032f80b8",
+          "11759469-3142-48d2-b7fa-a56ac934f35d",
+          "134756fd-a1d5-419d-bfdf-5b21aa5e8303",
+          "17ab8c57-51c1-40fd-997b-d910fe52de1c"
+        ],
+        "ranks": [
+          1,
+          2,
+          2,
+          4,
+          5,
+          5,
+          5,
+          5,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "counts": [
+          21,
+          5,
+          5,
+          3,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "pins": 141,
+        "responsePinsMatch": true
+      },
+      "actual": {
+        "url": "http://localhost:5173/rankings?rankingTab=all&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000001",
+        "selected": "전체",
+        "rows": 20,
+        "pins": 134,
+        "ranks": [
+          1,
+          2,
+          2,
+          4,
+          5,
+          5,
+          5,
+          5,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "counts": [
+          21,
+          5,
+          5,
+          3,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "filters": 0,
+        "overflow": false,
+        "underline": "3px",
+        "panelTop": 24,
+        "tabs": [
+          {
+            "name": "전체",
+            "width": 66
+          },
+          {
+            "name": "맛집",
+            "width": 66
+          },
+          {
+            "name": "카페",
+            "width": 66
+          },
+          {
+            "name": "산책코스",
+            "width": 66
+          },
+          {
+            "name": "커스텀",
+            "width": 66
+          }
+        ]
+      }
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "tab": "food",
+      "expected": {
+        "ids": [
+          "30000000-0000-4000-8000-000000000001",
+          "b892b7f1-1748-413c-b861-07d4ef7b879b"
+        ],
+        "ranks": [
+          1,
+          1
+        ],
+        "counts": [
+          1,
+          1
+        ],
+        "pins": 2,
+        "responsePinsMatch": true
+      },
+      "actual": {
+        "url": "http://localhost:5173/rankings?rankingTab=food&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000001",
+        "selected": "맛집",
+        "rows": 2,
+        "pins": 1,
+        "ranks": [
+          1,
+          1
+        ],
+        "counts": [
+          1,
+          1
+        ],
+        "filters": 0,
+        "overflow": false,
+        "underline": "3px",
+        "panelTop": 24,
+        "tabs": [
+          {
+            "name": "전체",
+            "width": 66
+          },
+          {
+            "name": "맛집",
+            "width": 66
+          },
+          {
+            "name": "카페",
+            "width": 66
+          },
+          {
+            "name": "산책코스",
+            "width": 66
+          },
+          {
+            "name": "커스텀",
+            "width": 66
+          }
+        ]
+      }
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "tab": "cafe",
+      "expected": {
+        "ids": [
+          "fbe4ae3e-266d-4e2d-bd48-b0831cef3c09",
+          "30000000-0000-4000-8000-000000000001",
+          "30000000-0000-4000-8000-000000000002",
+          "30000000-0000-4000-8000-000000000003",
+          "7b91d993-9619-41c5-94fe-03e9c26155ba",
+          "df5beda1-5040-4a92-bd34-01960092067d"
+        ],
+        "ranks": [
+          1,
+          2,
+          2,
+          4,
+          4,
+          6
+        ],
+        "counts": [
+          4,
+          3,
+          3,
+          2,
+          2,
+          1
+        ],
+        "pins": 6,
+        "responsePinsMatch": true
+      },
+      "actual": {
+        "url": "http://localhost:5173/rankings?rankingTab=cafe&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000001",
+        "selected": "카페",
+        "rows": 6,
+        "pins": 1,
+        "ranks": [
+          1,
+          2,
+          2,
+          4,
+          4,
+          6
+        ],
+        "counts": [
+          4,
+          3,
+          3,
+          2,
+          2,
+          1
+        ],
+        "filters": 0,
+        "overflow": false,
+        "underline": "3px",
+        "panelTop": 24,
+        "tabs": [
+          {
+            "name": "전체",
+            "width": 66
+          },
+          {
+            "name": "맛집",
+            "width": 66
+          },
+          {
+            "name": "카페",
+            "width": 66
+          },
+          {
+            "name": "산책코스",
+            "width": 66
+          },
+          {
+            "name": "커스텀",
+            "width": 66
+          }
+        ]
+      }
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "tab": "walk",
+      "expected": {
+        "ids": [
+          "3be20574-1d26-4894-a235-b340eeecbca8",
+          "65edff05-e343-4c96-b40c-f227a10b80ed",
+          "94584324-84d5-4ec3-89b8-156d931c1600",
+          "f1d5bb11-1d57-4dd2-b052-49e1a8939121",
+          "ffcb0572-71cf-4579-83ab-0289bf78f861"
+        ],
+        "ranks": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "counts": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "pins": 5,
+        "responsePinsMatch": true
+      },
+      "actual": {
+        "url": "http://localhost:5173/rankings?rankingTab=walk&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000001",
+        "selected": "산책코스",
+        "rows": 5,
+        "pins": 4,
+        "ranks": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "counts": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "filters": 0,
+        "overflow": false,
+        "underline": "3px",
+        "panelTop": 24,
+        "tabs": [
+          {
+            "name": "전체",
+            "width": 66
+          },
+          {
+            "name": "맛집",
+            "width": 66
+          },
+          {
+            "name": "카페",
+            "width": 66
+          },
+          {
+            "name": "산책코스",
+            "width": 66
+          },
+          {
+            "name": "커스텀",
+            "width": 66
+          }
+        ]
+      }
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "custom": {
+        "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000001&category=20000000-0000-4000-8000-000000000002",
+        "rows": [
+          "01L1 테스트 장소장소2최애",
+          "02L2 테스트 장소장소1최애"
+        ],
+        "pins": 0,
+        "filters": [
+          {
+            "name": "팀 필터",
+            "value": "10000000-0000-4000-8000-000000000001",
+            "width": 160
+          },
+          {
+            "name": "카테고리 필터",
+            "value": "20000000-0000-4000-8000-000000000002",
+            "width": 160
+          }
+        ],
+        "overflow": false
+      }
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "empty": {
+        "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000001",
+        "rows": 0,
+        "pins": 0
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "all",
+      "expected": {
+        "ids": [
+          "37ede2d1-72b2-4d32-a117-870c1b2ce16d",
+          "30000000-0000-4000-8000-000000000001",
+          "fbe4ae3e-266d-4e2d-bd48-b0831cef3c09",
+          "30000000-0000-4000-8000-000000000002",
+          "30000000-0000-4000-8000-000000000003",
+          "3be20574-1d26-4894-a235-b340eeecbca8",
+          "65edff05-e343-4c96-b40c-f227a10b80ed",
+          "7b91d993-9619-41c5-94fe-03e9c26155ba",
+          "009299a5-2c94-4baa-9642-752979cf0e11",
+          "00b101b5-b04b-43d6-925c-da0238b0ee24",
+          "012c6f2e-7508-4775-b0be-d8252772dd48",
+          "05341f0a-5bcb-4a39-a6dd-9752ad08dcf6",
+          "061888ca-f8b0-420d-9ff0-27538d7343cf",
+          "08b2062b-aae6-4765-a161-76313e0bbc96",
+          "0bc92e9b-e491-4d65-bcde-8b0d14f389ad",
+          "0fbf81a8-ed0e-4b8f-807a-246be43eceb3",
+          "10f25cc2-6fc1-4540-9706-fc3d032f80b8",
+          "11759469-3142-48d2-b7fa-a56ac934f35d",
+          "134756fd-a1d5-419d-bfdf-5b21aa5e8303",
+          "17ab8c57-51c1-40fd-997b-d910fe52de1c"
+        ],
+        "ranks": [
+          1,
+          2,
+          2,
+          4,
+          5,
+          5,
+          5,
+          5,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "counts": [
+          21,
+          5,
+          5,
+          3,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "pins": 141,
+        "responsePinsMatch": true
+      },
+      "actual": {
+        "url": "http://localhost:5173/rankings?rankingTab=all&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000001",
+        "selected": "전체",
+        "rows": 20,
+        "pins": 133,
+        "ranks": [
+          1,
+          2,
+          2,
+          4,
+          5,
+          5,
+          5,
+          5,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "counts": [
+          21,
+          5,
+          5,
+          3,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "filters": 0,
+        "overflow": false,
+        "underline": "3px",
+        "panelTop": 371.3671875,
+        "tabs": [
+          {
+            "name": "전체",
+            "width": 68.796875
+          },
+          {
+            "name": "맛집",
+            "width": 68.8046875
+          },
+          {
+            "name": "카페",
+            "width": 68.796875
+          },
+          {
+            "name": "산책코스",
+            "width": 68.8046875
+          },
+          {
+            "name": "커스텀",
+            "width": 68.796875
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "food",
+      "expected": {
+        "ids": [
+          "30000000-0000-4000-8000-000000000001",
+          "b892b7f1-1748-413c-b861-07d4ef7b879b"
+        ],
+        "ranks": [
+          1,
+          1
+        ],
+        "counts": [
+          1,
+          1
+        ],
+        "pins": 2,
+        "responsePinsMatch": true
+      },
+      "actual": {
+        "url": "http://localhost:5173/rankings?rankingTab=food&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000001",
+        "selected": "맛집",
+        "rows": 2,
+        "pins": 1,
+        "ranks": [
+          1,
+          1
+        ],
+        "counts": [
+          1,
+          1
+        ],
+        "filters": 0,
+        "overflow": false,
+        "underline": "3px",
+        "panelTop": 371.3671875,
+        "tabs": [
+          {
+            "name": "전체",
+            "width": 68.796875
+          },
+          {
+            "name": "맛집",
+            "width": 68.8046875
+          },
+          {
+            "name": "카페",
+            "width": 68.796875
+          },
+          {
+            "name": "산책코스",
+            "width": 68.8046875
+          },
+          {
+            "name": "커스텀",
+            "width": 68.796875
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "cafe",
+      "expected": {
+        "ids": [
+          "fbe4ae3e-266d-4e2d-bd48-b0831cef3c09",
+          "30000000-0000-4000-8000-000000000001",
+          "30000000-0000-4000-8000-000000000002",
+          "30000000-0000-4000-8000-000000000003",
+          "7b91d993-9619-41c5-94fe-03e9c26155ba",
+          "df5beda1-5040-4a92-bd34-01960092067d"
+        ],
+        "ranks": [
+          1,
+          2,
+          2,
+          4,
+          4,
+          6
+        ],
+        "counts": [
+          4,
+          3,
+          3,
+          2,
+          2,
+          1
+        ],
+        "pins": 6,
+        "responsePinsMatch": true
+      },
+      "actual": {
+        "url": "http://localhost:5173/rankings?rankingTab=cafe&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000001",
+        "selected": "카페",
+        "rows": 6,
+        "pins": 1,
+        "ranks": [
+          1,
+          2,
+          2,
+          4,
+          4,
+          6
+        ],
+        "counts": [
+          4,
+          3,
+          3,
+          2,
+          2,
+          1
+        ],
+        "filters": 0,
+        "overflow": false,
+        "underline": "3px",
+        "panelTop": 371.3671875,
+        "tabs": [
+          {
+            "name": "전체",
+            "width": 68.796875
+          },
+          {
+            "name": "맛집",
+            "width": 68.8046875
+          },
+          {
+            "name": "카페",
+            "width": 68.796875
+          },
+          {
+            "name": "산책코스",
+            "width": 68.8046875
+          },
+          {
+            "name": "커스텀",
+            "width": 68.796875
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "walk",
+      "expected": {
+        "ids": [
+          "3be20574-1d26-4894-a235-b340eeecbca8",
+          "65edff05-e343-4c96-b40c-f227a10b80ed",
+          "94584324-84d5-4ec3-89b8-156d931c1600",
+          "f1d5bb11-1d57-4dd2-b052-49e1a8939121",
+          "ffcb0572-71cf-4579-83ab-0289bf78f861"
+        ],
+        "ranks": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "counts": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "pins": 5,
+        "responsePinsMatch": true
+      },
+      "actual": {
+        "url": "http://localhost:5173/rankings?rankingTab=walk&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000001",
+        "selected": "산책코스",
+        "rows": 5,
+        "pins": 3,
+        "ranks": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "counts": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "filters": 0,
+        "overflow": false,
+        "underline": "3px",
+        "panelTop": 371.3671875,
+        "tabs": [
+          {
+            "name": "전체",
+            "width": 68.796875
+          },
+          {
+            "name": "맛집",
+            "width": 68.8046875
+          },
+          {
+            "name": "카페",
+            "width": 68.796875
+          },
+          {
+            "name": "산책코스",
+            "width": 68.8046875
+          },
+          {
+            "name": "커스텀",
+            "width": 68.796875
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "custom": {
+        "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000001&category=20000000-0000-4000-8000-000000000002",
+        "rows": [
+          "01L1 테스트 장소장소2최애",
+          "02L2 테스트 장소장소1최애"
+        ],
+        "pins": 0,
+        "filters": [
+          {
+            "name": "팀 필터",
+            "value": "10000000-0000-4000-8000-000000000001",
+            "width": 167
+          },
+          {
+            "name": "카테고리 필터",
+            "value": "20000000-0000-4000-8000-000000000002",
+            "width": 167
+          }
+        ],
+        "overflow": false
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "empty": {
+        "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000001",
+        "rows": 0,
+        "pins": 0
+      }
+    }
+  ],
+  "errors": [],
+  "flow": [
+    {
+      "step": "detail-page2",
+      "url": "http://localhost:5173/targets/18e336c9-dca5-499c-b813-3b2c714e109b?rankingTab=all&rankPage=2",
+      "title": "QA페이지 장소 02"
+    },
+    {
+      "step": "register-from-ranking",
+      "url": "http://localhost:5173/register?target=18e336c9-dca5-499c-b813-3b2c714e109b&from=detail&return=rankingTab%3Dall%26rankPage%3D2",
+      "returnQuery": "rankingTab=all&rankPage=2"
+    },
+    {
+      "step": "register-refresh-close",
+      "url": "http://localhost:5173/targets/18e336c9-dca5-499c-b813-3b2c714e109b?rankingTab=all&rankPage=2"
+    },
+    {
+      "step": "ranking-restored",
+      "url": "http://localhost:5173/rankings?rankingTab=all&rankPage=2",
+      "selected": "전체",
+      "page": "2페이지"
+    },
+    {
+      "step": "ranking-close-home",
+      "url": "http://localhost:5173/?team=&category=",
+      "tabs": 0
+    },
+    {
+      "step": "my-team-default",
+      "teamMatches": true,
+      "category": ""
+    },
+    {
+      "step": "B-team-cafe",
+      "url": "http://localhost:5173/rankings?rankingTab=custom&team=10000000-0000-4000-8000-000000000002&category=20000000-0000-4000-8000-000000000002",
+      "rows": [
+        "01L1 테스트 장소장소1최애"
+      ]
+    },
+    {
+      "step": "keyboard-left",
+      "active": "산책코스",
+      "selected": "산책코스"
+    },
+    {
+      "step": "keyboard-home-end",
+      "active": "커스텀",
+      "selected": "커스텀",
+      "team": "10000000-0000-4000-8000-000000000002",
+      "category": "20000000-0000-4000-8000-000000000002"
+    }
+  ],
+  "notes": [
+    "지도 SDK는 viewport 밖 CustomOverlay DOM을 생략한다. 전체 pins는 실제 UI read_explore 응답과 별도 조회 응답을 비교했다."
+  ]
+}

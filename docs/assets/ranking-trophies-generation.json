@@ -1,0 +1,31 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use the attached reference as stylistic guidance and create an ORIGINAL flat 2D trophy icon set for a friendly app ranking. One wide horizontal transparent sprite strip containing exactly THREE trophy cups in equal-width columns: gold yellow on the left, cool light silver gray in the middle, warm coral red on the right. Identical cup silhouette and scale for all three: rounded rectangular bowl, two slim rounded handles, short stem, small rectangular base, a simple five-point star centered on the cup. Cute clean 2D vector illustration with solid pastel colors; one simple flat darker side facet is allowed, but NO gradients, texture, reflections, realistic materials, 3D bevels, glossy lighting or drop shadows. Keep geometry simple and readable at 38px tall. No numeral or wording anywhere, no logos or watermarks. Genuine transparent alpha background; do not draw a checkerboard. Composition is a precise 3-column sprite sheet: each icon fully contained in its own third, centered horizontally at 1/6, 1/2 and 5/6 of the total width, all sharing the same top and baseline, each cup fills about 72% of its cell width and 78% of canvas height with clear margins. Wide landscape canvas, roughly 3:1. No other objects or decorative elements.",
+  "transparent_background": true,
+  "reference": "사용자 제공 별 장식 트로피 이미지 (2026-10-14)",
+  "selection": "트로피 예시 선택, PC32×36/모바일30×34로 축소",
+  "web_export": {
+    "format": "WebP",
+    "layout": "금색/은색/코랄색 3열 sprite",
+    "background_positions": [
+      "0% 0",
+      "50% 0",
+      "100% 0"
+    ],
+    "preserve_aspect_ratio": true,
+    "quality": 95,
+    "alpha_quality": 100,
+    "command": "cwebp -resize 384 0 -q 95 -alpha_q 100 <trophies.png> -o src/assets/ranking/trophies.webp",
+    "asset": {
+      "path": "src/assets/ranking/trophies.webp",
+      "bytes": 12880,
+      "size": [
+        384,
+        128
+      ],
+      "has_alpha": true,
+      "sha256": "95dd78e563e58b05948e15f6f5ff404cf43ef0c4c9070686bd0f62d667f0c301"
+    }
+  },
+  "original_archive": "바탕화면/트로피 디자인 예시 자료"
+}

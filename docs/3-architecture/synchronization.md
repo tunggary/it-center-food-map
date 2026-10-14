@@ -18,7 +18,7 @@
 
 목표 예산: poll 대기≤2초, revision 왕복≤0.5초, snapshot 왕복≤1.5초, 화면 적용≤0.5초, 합≤4.5초. 내부 목표이며 5초 요구 충족은 다른 브라우저 DOM 관측으로 확인한다. 타임아웃·정상 네트워크 기준은 [검증](verification.md)을 따른다.
 
-Query key는 화면 종류/targetId/teamId/categoryId/page를 포함한다. 필터 전환의 이전 결과는 로딩 표시 없이 새 조건 결과처럼 보여주지 않는다. 같은 조건 갱신 실패 때만 마지막 성공 결과를 유지한다. 지도 pins와 랭킹의 revision이 다른 상태로 동시에 교체되지 않게 하나의 DTO로 관리한다.
+Query key는 화면 종류/targetId/teamId/categoryId/page를 포함한다. 랭킹 탭은 먼저 유효 teamId/categoryId로 변환하고 해당 조건·페이지의 단일 explore query를 지도와 패널에서 공유한다. 커스텀의 저장 조건은 일반 탭 query key에 넣지 않는다. 필터 전환의 이전 결과는 로딩 표시 없이 새 조건 결과처럼 보여주지 않는다. 같은 조건 갱신 실패 때만 마지막 성공 결과를 유지한다. 지도 pins와 랭킹의 revision이 다른 상태로 동시에 교체되지 않게 하나의 DTO로 관리한다.
 
 ## 연결 중단·유휴
 
