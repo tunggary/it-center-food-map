@@ -1,0 +1,319 @@
+{
+  "date": "2026-10-14",
+  "environment": "local localhost:5173 / local Supabase",
+  "checks": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "id": "37ede2d1-72b2-4d32-a117-870c1b2ce16d",
+      "response": {
+        "status": 200,
+        "id": "37ede2d1-72b2-4d32-a117-870c1b2ce16d",
+        "rank": 1,
+        "tied": false,
+        "count": 21,
+        "address": null,
+        "kind": "PLACE"
+      },
+      "rankText": "전체 랭킹 1위",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "trophyMatches": true,
+      "trophySize": {
+        "width": "32px",
+        "height": "36px",
+        "position": "0% 0px"
+      },
+      "copyMatches": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "id": "30000000-0000-4000-8000-000000000001",
+      "response": {
+        "status": 200,
+        "id": "30000000-0000-4000-8000-000000000001",
+        "rank": 2,
+        "tied": true,
+        "count": 5,
+        "address": "테스트 주소",
+        "kind": "PLACE"
+      },
+      "rankText": "전체 랭킹 공동 2위",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "trophyMatches": true,
+      "trophySize": {
+        "width": "32px",
+        "height": "36px",
+        "position": "50% 0px"
+      },
+      "copyMatches": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "id": "30000000-0000-4000-8000-000000000002",
+      "response": {
+        "status": 200,
+        "id": "30000000-0000-4000-8000-000000000002",
+        "rank": 4,
+        "tied": false,
+        "count": 3,
+        "address": "테스트 주소",
+        "kind": "PLACE"
+      },
+      "rankText": "전체 랭킹 4위",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "trophyMatches": true,
+      "trophySize": null,
+      "copyMatches": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "id": "3be20574-1d26-4894-a235-b340eeecbca8",
+      "response": {
+        "status": 200,
+        "id": "3be20574-1d26-4894-a235-b340eeecbca8",
+        "rank": 5,
+        "tied": true,
+        "count": 2,
+        "address": null,
+        "kind": "COURSE"
+      },
+      "rankText": "전체 랭킹 공동 5위",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "trophyMatches": true,
+      "trophySize": null,
+      "copyMatches": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "id": "d1d3d2e8-34e7-45e1-8559-38ad5710c368",
+      "response": {
+        "status": 200,
+        "id": "d1d3d2e8-34e7-45e1-8559-38ad5710c368",
+        "rank": null,
+        "tied": false,
+        "count": 0,
+        "address": null,
+        "kind": "COURSE"
+      },
+      "rankText": "전체 랭킹 순위 없음",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "trophyMatches": true,
+      "trophySize": null,
+      "copyMatches": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "longText": {
+        "synthetic": true,
+        "noOverflow": true,
+        "titleAvoidsActions": true,
+        "titleWraps": true,
+        "addressWraps": true,
+        "addressBelowTitle": true
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "id": "37ede2d1-72b2-4d32-a117-870c1b2ce16d",
+      "response": {
+        "status": 200,
+        "id": "37ede2d1-72b2-4d32-a117-870c1b2ce16d",
+        "rank": 1,
+        "tied": false,
+        "count": 21,
+        "address": null,
+        "kind": "PLACE"
+      },
+      "rankText": "전체 랭킹 1위",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "trophyMatches": true,
+      "trophySize": {
+        "width": "30px",
+        "height": "34px",
+        "position": "0% 0px"
+      },
+      "copyMatches": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "id": "30000000-0000-4000-8000-000000000001",
+      "response": {
+        "status": 200,
+        "id": "30000000-0000-4000-8000-000000000001",
+        "rank": 2,
+        "tied": true,
+        "count": 5,
+        "address": "테스트 주소",
+        "kind": "PLACE"
+      },
+      "rankText": "전체 랭킹 공동 2위",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "trophyMatches": true,
+      "trophySize": {
+        "width": "30px",
+        "height": "34px",
+        "position": "50% 0px"
+      },
+      "copyMatches": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "id": "30000000-0000-4000-8000-000000000002",
+      "response": {
+        "status": 200,
+        "id": "30000000-0000-4000-8000-000000000002",
+        "rank": 4,
+        "tied": false,
+        "count": 3,
+        "address": "테스트 주소",
+        "kind": "PLACE"
+      },
+      "rankText": "전체 랭킹 4위",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "trophyMatches": true,
+      "trophySize": null,
+      "copyMatches": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "id": "3be20574-1d26-4894-a235-b340eeecbca8",
+      "response": {
+        "status": 200,
+        "id": "3be20574-1d26-4894-a235-b340eeecbca8",
+        "rank": 5,
+        "tied": true,
+        "count": 2,
+        "address": null,
+        "kind": "COURSE"
+      },
+      "rankText": "전체 랭킹 공동 5위",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "trophyMatches": true,
+      "trophySize": null,
+      "copyMatches": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "id": "d1d3d2e8-34e7-45e1-8559-38ad5710c368",
+      "response": {
+        "status": 200,
+        "id": "d1d3d2e8-34e7-45e1-8559-38ad5710c368",
+        "rank": null,
+        "tied": false,
+        "count": 0,
+        "address": null,
+        "kind": "COURSE"
+      },
+      "rankText": "전체 랭킹 순위 없음",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "trophyMatches": true,
+      "trophySize": null,
+      "copyMatches": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "longText": {
+        "synthetic": true,
+        "noOverflow": true,
+        "titleAvoidsActions": true,
+        "titleWraps": true,
+        "addressWraps": true,
+        "addressBelowTitle": true
+      }
+    },
+    {
+      "copy": {
+        "matches": true,
+        "status": true
+      }
+    },
+    {
+      "copyFailure": {
+        "alert": true,
+        "addressPreserved": true
+      }
+    },
+    {
+      "returnToRanking": {
+        "path": "/rankings",
+        "page": "2",
+        "tab": "all"
+      }
+    }
+  ]
+}

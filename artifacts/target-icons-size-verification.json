@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-14",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "font": "12px",
+      "iconWidth": "12px",
+      "iconHeight": "12px",
+      "sameColor": true,
+      "border": "0px",
+      "background": "rgba(0, 0, 0, 0)",
+      "buttonWidth": "12px",
+      "buttonHeight": "12px",
+      "trophyWidth": "20px",
+      "trophyHeight": "22.5px",
+      "noOverflow": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "font": "12px",
+      "iconWidth": "12px",
+      "iconHeight": "12px",
+      "sameColor": true,
+      "border": "0px",
+      "background": "rgba(0, 0, 0, 0)",
+      "buttonWidth": "12px",
+      "buttonHeight": "12px",
+      "trophyWidth": "20px",
+      "trophyHeight": "22.5px",
+      "noOverflow": true
+    },
+    {
+      "copySuccess": true
+    },
+    {
+      "rankingTrophy": {
+        "width": "30px",
+        "height": "34px"
+      }
+    }
+  ]
+}

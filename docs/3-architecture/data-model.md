@@ -21,7 +21,7 @@ registration_events N ─ 0..1 favorites (삭제 후 tombstone)
 | `teams` | id, name, normalized_name, selectable, version | 이름 trim 1~30 grapheme, normalized_name unique; 삭제 API 없음 |
 | `categories` | id, name, normalized_name, kind, selectable, version | kind PLACE/COURSE, 종류 내 이름 unique, UNIQUE(id,kind); kind 변경 불가 |
 | `browser_identities` | id, token_hash, expires_at, last_seen_at, revoked_at | hash unique; 원문 없음; 만료된 해시 재사용 거절 |
-| `participants` | id, identity_id, nickname, team_id, version | identity_id UNIQUE FK, team_id FK RESTRICT; 닉네임 중복 가능 |
+| `participants` | id, identity_id, nickname, team_id, version | identity_id UNIQUE FK, team_id FK RESTRICT; 닉네임 중복 가능; 최애 없는 프로필 허용 |
 | `targets` | id, kind, name, provider, place_id, address, lng, lat, route_json, approximate_length_m, version | UNIQUE(provider,place_id), UNIQUE(id,kind); PLACE/COURSE 필드 조합 CHECK |
 | `favorites` | id, participant_id, target_id, category_id, kind, message, version, created_at, updated_at | UNIQUE(participant_id,target_id), FK(target_id,kind), FK(category_id,kind), participant FK |
 | `photo_assets` | id, owner_identity_id, favorite_id, slot, state, expires_at, lease_token, lease_until, final_object_key, thumb_object_key | slot 1~3 CHECK, UNIQUE(favorite_id,slot), owner FK; favorite는 삭제 전에 연결 해제 |
