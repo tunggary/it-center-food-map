@@ -76,3 +76,13 @@ vercel curl / --deployment <deployment-url> --scope tunggary2-navercoms-projects
 - Production `dpl_2m9aPvtRr3PqRUVPEV5N5gGW3Tjm` (`it-center-food-mbderv7tj-tunggary2-navercoms-projects.vercel.app`) READY·대상 main 커밋과 운영 `/`, `/register`, `/register/places`, `/courses/new` HTTP200·없는asset404를 확인했다.
 - 운영 모바일390×844에서 선택버튼56px·메뉴0·검색top16/버튼top74·장소선택level5→3·핀비가림·검색어/목록15/핀15복귀, 실제 장소상세→등록X복귀를 확인했다. PC1280×800에서 코스상세→등록X복귀·개인링크2개·overflow없음을 확인했다. 카페 검색1페이지89~190m/2페이지192~218m 거리순. 근거는 `artifacts/register-ux-production-verification.json`.
 - 운영 검증에서 후기를 신규 등록/수정/삭제하지 않았다. 수정/삭제/마지막후기 빈상세는 로컬 실제 검증과 회귀테스트로 확인했다. 실기기GPS/키보드·기존QA/성능 보류는 유지한다. 이 기록을 문서 전용 릴리스로 main/develop에 반영하고 최종 main READY·운영응답을 재확인한다.
+
+## 랭킹 탭·작은 트로피 릴리스 (2026-10-14)
+
+- 기능코드270d8d2·문서c077018, 기능 PR #30→develop `b36ea1b9715a5e925094365d5abcffe8b11e1ff0`, release PR #31→main `a22a72ad99fdab0ac8d96ab25b4f497f35166734`.
+- 개인 계정·scope·팀/프로젝트 ID를 CLI로 재확인했다. feature Preview `dpl_AY4bWrkf4HzdTqp211CqAktpCL78` READY·보호된 HTML/JS/CSS/트로피200·이미지SHA256 일치를 확인했다. release/develop Preview도 READY·GitHub checks SUCCESS였다.
+- Production `dpl_2BunoTAWGmhoyQzyDeQ4K4m8potC` (`it-center-food-mzp1guhrj-tunggary2-navercoms-projects.vercel.app`) READY·대상 main SHA·canonical 운영alias를 확인했다. `/`, `/rankings`, 커스텀 직접URL, `/register`, `/register/places`, `/courses/new` HTTP200·없는asset404·CSP와 JS/CSS/트로피200·이미지SHA256 일치를 확인했다.
+- 실제 운영 PC1280×800/모바일390×844에서5개탭·탭별API/목록등록수/공동순위·지도타일·커스텀팀선택·상세→랭킹복귀/새로고침 상태유지·트로피PC32×36/모바일30×34·순위문구없음·가로넘침없음을14항목으로 확인했다. 전체 랭킹은10항목이며 앱window error/unhandled rejection은0건이다.
+- Vitest65개·타입/build·문서링크246개·diff검사 통과. DB/API·환경변수·인증보호 설정은 변경하지 않았다. 운영 검증은 공개조회/필터/상세탐색만 수행했고 fixture등록/수정/삭제는 하지 않았다. 실기기·기존 독립QA/성능보류는 유지한다.
+- 지정 리뷰어 peter-lansik/paulkim-lansik은 이 개인저장소의 협업자가 아니라 GitHub API422로 리뷰요청이 거절됐다. 협업자 권한은 변경하지 않았으며 Assignee는tunggary다.
+- 근거: [운영 검증 JSON](../artifacts/ranking-production-verification.json). 이 결과 기록은 문서전용 release PR로 main/develop 양쪽에 반영하고 최종 main의READY/실제응답을 다시 확인한다.
