@@ -1,0 +1,605 @@
+{
+  "date": "2026-10-14",
+  "checks": [
+    {
+      "width": 1280,
+      "height": 800,
+      "tab": "all",
+      "badges": [
+        {
+          "rank": 1,
+          "serverRank": 1,
+          "tied": false,
+          "expectedTied": false,
+          "medal": "rank rank-badge medal-gold",
+          "ink": "rgb(149, 100, 8)",
+          "fill": "rgb(255, 240, 189)",
+          "label": "1위 · 금메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        },
+        {
+          "rank": 4,
+          "serverRank": 4,
+          "tied": false,
+          "expectedTied": false,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "4위",
+          "width": 44
+        },
+        {
+          "rank": 5,
+          "serverRank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 5위",
+          "width": 44
+        },
+        {
+          "rank": 5,
+          "serverRank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 5위",
+          "width": 44
+        },
+        {
+          "rank": 5,
+          "serverRank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 5위",
+          "width": 44
+        },
+        {
+          "rank": 5,
+          "serverRank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 5위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "tab": "walk",
+      "badges": [
+        {
+          "rank": 1,
+          "serverRank": 1,
+          "tied": false,
+          "expectedTied": false,
+          "medal": "rank rank-badge medal-gold",
+          "ink": "rgb(149, 100, 8)",
+          "fill": "rgb(255, 240, 189)",
+          "label": "1위 · 금메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "page2": {
+        "rank": "9",
+        "tie": "공동",
+        "overflow": false
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "all",
+      "badges": [
+        {
+          "rank": 1,
+          "serverRank": 1,
+          "tied": false,
+          "expectedTied": false,
+          "medal": "rank rank-badge medal-gold",
+          "ink": "rgb(149, 100, 8)",
+          "fill": "rgb(255, 240, 189)",
+          "label": "1위 · 금메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        },
+        {
+          "rank": 4,
+          "serverRank": 4,
+          "tied": false,
+          "expectedTied": false,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "4위",
+          "width": 44
+        },
+        {
+          "rank": 5,
+          "serverRank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 5위",
+          "width": 44
+        },
+        {
+          "rank": 5,
+          "serverRank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 5위",
+          "width": 44
+        },
+        {
+          "rank": 5,
+          "serverRank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 5위",
+          "width": 44
+        },
+        {
+          "rank": 5,
+          "serverRank": 5,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 5위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        },
+        {
+          "rank": 9,
+          "serverRank": 9,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge ",
+          "ink": "rgb(38, 61, 51)",
+          "fill": "rgba(0, 0, 0, 0)",
+          "label": "공동 9위",
+          "width": 44
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "tab": "walk",
+      "badges": [
+        {
+          "rank": 1,
+          "serverRank": 1,
+          "tied": false,
+          "expectedTied": false,
+          "medal": "rank rank-badge medal-gold",
+          "ink": "rgb(149, 100, 8)",
+          "fill": "rgb(255, 240, 189)",
+          "label": "1위 · 금메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        },
+        {
+          "rank": 2,
+          "serverRank": 2,
+          "tied": true,
+          "expectedTied": true,
+          "medal": "rank rank-badge medal-silver",
+          "ink": "rgb(83, 97, 112)",
+          "fill": "rgb(237, 241, 245)",
+          "label": "공동 2위 · 은메달",
+          "width": 44
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "page2": {
+        "rank": "9",
+        "tie": "공동",
+        "overflow": false
+      }
+    }
+  ]
+}
