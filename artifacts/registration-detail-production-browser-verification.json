@@ -1,0 +1,214 @@
+{
+  "date": "2026-10-14",
+  "environment": "production; public detail exploration and registration entry/cancel only; no profile/favorite/photo submissions",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "rank": 1,
+      "kind": "PLACE",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "copyTextAbsent": true,
+      "copyFontMatch": true,
+      "copyColorMatch": true,
+      "copyBorder": "0px",
+      "copyBackground": "rgba(0, 0, 0, 0)",
+      "copyMatches": true,
+      "trophyMatches": true,
+      "trophySize": {
+        "width": "20px",
+        "height": "22.5px"
+      },
+      "noOverflow": true,
+      "mapTiles": 62
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "rank": 2,
+      "kind": "PLACE",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "copyTextAbsent": true,
+      "copyFontMatch": true,
+      "copyColorMatch": true,
+      "copyBorder": "0px",
+      "copyBackground": "rgba(0, 0, 0, 0)",
+      "copyMatches": true,
+      "trophyMatches": true,
+      "trophySize": {
+        "width": "20px",
+        "height": "22.5px"
+      },
+      "noOverflow": true,
+      "mapTiles": 57
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "rank": 2,
+      "kind": "COURSE",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "copyTextAbsent": true,
+      "copyFontMatch": true,
+      "copyColorMatch": true,
+      "copyBorder": null,
+      "copyBackground": null,
+      "copyMatches": true,
+      "trophyMatches": true,
+      "trophySize": {
+        "width": "20px",
+        "height": "22.5px"
+      },
+      "noOverflow": true,
+      "mapTiles": 57
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "rank": 5,
+      "kind": "PLACE",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "copyTextAbsent": true,
+      "copyFontMatch": true,
+      "copyColorMatch": true,
+      "copyBorder": "0px",
+      "copyBackground": "rgba(0, 0, 0, 0)",
+      "copyMatches": true,
+      "trophyMatches": true,
+      "trophySize": null,
+      "noOverflow": true,
+      "mapTiles": 57
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rank": 1,
+      "kind": "PLACE",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "copyTextAbsent": true,
+      "copyFontMatch": true,
+      "copyColorMatch": true,
+      "copyBorder": "0px",
+      "copyBackground": "rgba(0, 0, 0, 0)",
+      "copyMatches": true,
+      "trophyMatches": true,
+      "trophySize": {
+        "width": "20px",
+        "height": "22.5px"
+      },
+      "noOverflow": true,
+      "mapTiles": 42
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rank": 2,
+      "kind": "PLACE",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "copyTextAbsent": true,
+      "copyFontMatch": true,
+      "copyColorMatch": true,
+      "copyBorder": "0px",
+      "copyBackground": "rgba(0, 0, 0, 0)",
+      "copyMatches": true,
+      "trophyMatches": true,
+      "trophySize": {
+        "width": "20px",
+        "height": "22.5px"
+      },
+      "noOverflow": true,
+      "mapTiles": 42
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rank": 2,
+      "kind": "COURSE",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "copyTextAbsent": true,
+      "copyFontMatch": true,
+      "copyColorMatch": true,
+      "copyBorder": null,
+      "copyBackground": null,
+      "copyMatches": true,
+      "trophyMatches": true,
+      "trophySize": {
+        "width": "20px",
+        "height": "22.5px"
+      },
+      "noOverflow": true,
+      "mapTiles": 42
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rank": 5,
+      "kind": "PLACE",
+      "rankMatches": true,
+      "countMatches": true,
+      "addressBelowTitle": true,
+      "copyTextAbsent": true,
+      "copyFontMatch": true,
+      "copyColorMatch": true,
+      "copyBorder": "0px",
+      "copyBackground": "rgba(0, 0, 0, 0)",
+      "copyMatches": true,
+      "trophyMatches": true,
+      "trophySize": null,
+      "noOverflow": true,
+      "mapTiles": 42
+    },
+    {
+      "copy": {
+        "matches": true,
+        "success": true
+      }
+    },
+    {
+      "intake": {
+        "modal": false,
+        "form": true,
+        "nickname": true,
+        "team": true,
+        "canCancel": true
+      }
+    },
+    {
+      "form": {
+        "removedNotice": true,
+        "authorAboveCategory": true,
+        "strongCount": 2
+      }
+    }
+  ]
+}

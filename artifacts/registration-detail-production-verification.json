@@ -1,0 +1,242 @@
+{
+  "date": "2026-10-14",
+  "mainCommit": "31c472609f1bcfd9d88cf7a1b063b99be990cf0e",
+  "deployment": {
+    "id": "dpl_FGXxRzMwwi4fsJLEeo7UF3K5xAg6",
+    "url": "it-center-food-23lbm25g0-tunggary2-navercoms-projects.vercel.app",
+    "readyState": "READY",
+    "target": "production",
+    "aliases": [
+      "it-center-food-map.vercel.app",
+      "it-center-food-map-tunggary2-navercoms-projects.vercel.app",
+      "it-center-food-map-git-main-tunggary2-navercoms-projects.vercel.app"
+    ]
+  },
+  "http": {
+    "environment": "production",
+    "checks": [
+      {
+        "path": "/",
+        "status": 200
+      },
+      {
+        "path": "/rankings",
+        "status": 200
+      },
+      {
+        "path": "/targets/3566c4ad-8733-402f-b741-04b9828a47fa",
+        "status": 200
+      },
+      {
+        "path": "/register",
+        "status": 200
+      },
+      {
+        "path": "/register/places",
+        "status": 200
+      },
+      {
+        "path": "/courses/new",
+        "status": 200
+      },
+      {
+        "path": "/me/favorites",
+        "status": 200
+      },
+      {
+        "path": "/booth",
+        "status": 200
+      },
+      {
+        "path": "/assets/nonexistent-release-check.js",
+        "status": 404
+      },
+      {
+        "path": "/assets/index-DOnFBrT_.js",
+        "status": 200,
+        "sha256": "f9d24d295633b32e552841f04a636a2a83cc8e91bd8e39e7ceeb64ea497cc909"
+      },
+      {
+        "path": "/assets/api-BzLtG-Em.js",
+        "status": 200,
+        "sha256": "b308b4832597825350eb23bdc8206083139ffb126534d35d0438f3f344293172"
+      },
+      {
+        "path": "/assets/ui-C1HsG-MY.js",
+        "status": 200,
+        "sha256": "cb82e8b9e96e9d633dba8a932be50c78607735393f591d5a2b99275c0bba21ab"
+      },
+      {
+        "path": "/assets/Icon-CWlzTe03.js",
+        "status": 200,
+        "sha256": "77d7f97ec6ddab8e972498bac79b267c37586aadbdfba7c240a24346124ba9cd"
+      },
+      {
+        "path": "/assets/Toast-CtIpqpnB.js",
+        "status": 200,
+        "sha256": "14c58b14fb270e3fe359966c75019d418ab5fe6b75c32ea34609b95fab74061b"
+      },
+      {
+        "path": "/assets/Map-Cq6cXaIa.js",
+        "status": 200,
+        "sha256": "ce5b9e068fcb71822fdd16e8620a5ce392b3be485107de5029f785bb29d0067a"
+      },
+      {
+        "path": "/assets/index-DqOAttLO.css",
+        "status": 200,
+        "sha256": "9f7ee6c103c71a90e868ab10e648e3122b63f26378ee8df859c7504d2a6ae59f"
+      },
+      {
+        "path": "/assets/Register-CAhjUuqC.js",
+        "status": 200,
+        "sha256": "9cad77b8f8e2415eccf4720949e9d5ddf54b129b26f1a355df7ec9db1287dcc6"
+      },
+      {
+        "path": "/assets/Target-DMUzGVV_.js",
+        "status": 200,
+        "sha256": "81c921367ff1bbc554548877b66d0fde67fde8c256b89f44d31779044a26cf54"
+      }
+    ],
+    "prodEndpointMatches": true,
+    "cssMatchesLocal": true
+  },
+  "publicDetailCases": [
+    {
+      "id": "3566c4ad-8733-402f-b741-04b9828a47fa",
+      "rank": 1,
+      "tied": false,
+      "count": 3,
+      "kind": "PLACE",
+      "hasAddress": true
+    },
+    {
+      "id": "495bc784-32b9-45e3-a3af-760b9740ecb7",
+      "rank": 2,
+      "tied": true,
+      "count": 2,
+      "kind": "COURSE",
+      "hasAddress": false
+    },
+    {
+      "id": "5c154d52-f9bf-4ed3-ace7-8b36452b30ec",
+      "rank": 2,
+      "tied": true,
+      "count": 2,
+      "kind": "COURSE",
+      "hasAddress": false
+    },
+    {
+      "id": "d72c2510-2c47-46ff-996c-4883190ffb35",
+      "rank": 2,
+      "tied": true,
+      "count": 2,
+      "kind": "PLACE",
+      "hasAddress": true
+    },
+    {
+      "id": "12f25efe-1331-49cb-90ee-52115b2a8fbc",
+      "rank": 5,
+      "tied": true,
+      "count": 1,
+      "kind": "COURSE",
+      "hasAddress": false
+    },
+    {
+      "id": "55b4e975-ae39-44c4-9627-0f2670a41303",
+      "rank": 5,
+      "tied": true,
+      "count": 1,
+      "kind": "COURSE",
+      "hasAddress": false
+    },
+    {
+      "id": "62ef2200-d30c-433f-a2d5-b843156ec821",
+      "rank": 5,
+      "tied": true,
+      "count": 1,
+      "kind": "PLACE",
+      "hasAddress": true
+    },
+    {
+      "id": "9304f071-e192-4338-96e7-840ab6c82880",
+      "rank": 5,
+      "tied": true,
+      "count": 1,
+      "kind": "COURSE",
+      "hasAddress": false
+    },
+    {
+      "id": "9c105b50-b961-4089-9a46-bee53bd8153b",
+      "rank": 5,
+      "tied": true,
+      "count": 1,
+      "kind": "PLACE",
+      "hasAddress": true
+    },
+    {
+      "id": "a327f809-1f38-4ead-93e1-0059fdf8d1d8",
+      "rank": 5,
+      "tied": true,
+      "count": 1,
+      "kind": "PLACE",
+      "hasAddress": true
+    },
+    {
+      "id": "a7507bf1-afca-4b63-9174-1f7dd2531812",
+      "rank": 5,
+      "tied": true,
+      "count": 1,
+      "kind": "PLACE",
+      "hasAddress": true
+    },
+    {
+      "id": "b44f978f-3ab7-4579-8147-bc799ffa5bea",
+      "rank": 5,
+      "tied": true,
+      "count": 1,
+      "kind": "PLACE",
+      "hasAddress": true
+    },
+    {
+      "id": "cd9ad4db-d1c3-42ab-b4fc-e1e27b31efa4",
+      "rank": 5,
+      "tied": true,
+      "count": 1,
+      "kind": "PLACE",
+      "hasAddress": true
+    }
+  ],
+  "db": {
+    "qa": {
+      "favorites": 10146,
+      "participants": 200,
+      "targets": 1000,
+      "revision": "150"
+    },
+    "production": {
+      "favorites": 18,
+      "participants": 10,
+      "targets": 13,
+      "revision": "22"
+    }
+  },
+  "api": {
+    "qaVersion": 8,
+    "productionVersion": 9,
+    "status": "ACTIVE",
+    "verifyJwt": false,
+    "bundleSha256": "50cac0fc183eca032eca04e6111591036caddccf10ba49765861847e166300de"
+  },
+  "checks": {
+    "unitTests": 88,
+    "build": true,
+    "denoCheck": true,
+    "localDbRegression": true,
+    "localProfileApi": true,
+    "qaProfileApi": true,
+    "qaTestProfileCleaned": true,
+    "productionProfileWithoutToken": 401,
+    "securityAdvisorErrors": 0,
+    "productionFixtureSubmissions": 0
+  }
+}

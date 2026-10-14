@@ -14,7 +14,8 @@
 - `origin`: `https://github.com/tunggary/it-center-food-map.git`.
 - `main`은 기본·운영 브랜치, `develop`은 통합 브랜치다. 두 브랜치에는 직접 push하지 않고 PR로 반영한다.
 - 기능은 `develop` → `feature/*` → `develop` PR, 릴리스는 `develop` → `release/*` → `main`·`develop` PR, 긴급 수정은 `main` → `hotfix/*` → `main`·`develop` PR로 진행한다.
-- 커밋·PR 제목은 `<type>: <한국어 제목>`, PR 본문은 한국어로 작성한다. Assignee는 `tunggary`, Reviewers는 `peter-lansik`, `paulkim-lansik`이다.
+- 커밋·PR 제목은 `<type>: <한국어 제목>`, PR 본문은 한국어로 작성한다. Assignee는 `tunggary`다.
+- 이 저장소에서는 PR 생성·수정 시 리뷰어를 지정하지 않는다. 전역 지침의 리뷰어 지정 기본값보다 이 로컬 규칙을 우선한다.
 
 ## Vercel — 개인 계정 전용
 
