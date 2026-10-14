@@ -27,12 +27,14 @@
 
 - [x] 6. **피드백 접수·검토**: 사용자가 경험한 문제를 파악하고, 중복 의견을 모아 우선순위와 처리 여부를 정한다.
 - [x] 7. **작은 개선 구현**: 선택한 피드백의 완료 기준과 최소 변경 범위를 정하고 구현한다.
-- [ ] 8. **검증·배포·해결 확인**: 개선 사항과 기존 핵심 흐름을 검증해 배포하고, 문제가 해결됐는지 확인한다.
+- [x] 8. **검증·배포·해결 확인**: 개선 사항과 기존 핵심 흐름을 검증해 배포하고, 문제가 해결됐는지 확인한다.
 
 첫 배포 이후에는 별도 v2 계획 없이 사용자 피드백을 기준으로 6~8단계를 반복한다.
 장애·보안 취약점·의존 서비스 종료 등 운영에 필요한 유지보수도 같은 처리 흐름을 따른다.
 
 ## 최근 작업 컨텍스트
+
+- 등록·상세·폼 개선 운영 배포 확인 완료 (2026-10-14): 기능 PR #34 → develop `3cdb4ba`, 릴리스 PR #35 → main `31c4726`을 머지했다. Production `dpl_FGXxRzMwwi4fsJLEeo7UF3K5xAg6` READY·대상 main SHA·canonical alias와 주요 직접 경로 200/없는 자산 404, 운영 Supabase 연결·CSS 로컬 일치를 확인했다. 운영 공개 상세 13개의 전체 순위/횟수가 랭킹과 일치한다. PC1280×800/모바일390×844에서 장소1위/공동2위/코스공동2위/5위의 주소 배치·12px/동일색상/테두리없는 복사 아이콘·20×22.5px 트로피·지도 타일·가로넘침없음을 확인했다. 실제 주소 복사와 기존 참여자의 등록 진입/안내 제거·참여정보 카테고리 위 강조도 확인했으며 운영 프로필/등록/사진 시험 제출은 하지 않았다. 운영 데이터 18등록/10참여자/13대상/revision22 유지, QA 자료 정리 완료다. [배포/API 근거](../artifacts/registration-detail-production-verification.json) · [운영 브라우저 근거](../artifacts/registration-detail-production-browser-verification.json). 이번 개선의 소프트웨어 검증·운영 반영을 확인해 8단계를 완료하며 독립QA·실기기·기존 성능 보류는 별도로 유지한다. 로컬 AGENTS.md에 PR 리뷰어 미지정/전역 기본값보다 우선 규칙을 추가했다. 검증 기록·로컬 규칙은 release PR로 main/develop 양쪽에 반영하고 최종 main READY·운영 응답을 재확인한다.
 
 - QA/운영 DB·API 반영 및 develop 머지 완료 (2026-10-14): 후속코드3533a55/문서15fd204를기능브랜치에push하고PR#34→develop3cdb4ba를merge했다. 기능Preview dpl_CeTp14QTA5qDsFDe5pNrmLWpxJyB READY·보호HTML/JS/CSS200·QA연결/최종스타일을확인했다. QA/운영에20261014083119·20261014085635를CLI dry-run후적용하고api를QA8/운영9 ACTIVE·verify_jwt=false로배포했다. 두번들SHA256=50cac0fc183eca032eca04e6111591036caddccf10ba49765861847e166300de다. QA실제프로필201/재생200/충돌409/무자격401/검증400·빈목록/상세순위일치를확인하고생성한시험프로필을정리했다. QA등록/참여자/대상10146/200/1000(프로필시험revision150), 운영18/10/13/revision22유지·전체순위/권한정상·보안advisor ERROR0이다. release/registration-detail-ui의main PR#35를준비했다. 사용자후속요청에따라이번릴리스PR은리뷰어미지정이며현재reviewRequests=[]다. 운영FE배포/8단계완료는아직미확인이다.
 
