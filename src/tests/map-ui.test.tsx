@@ -15,7 +15,7 @@ function setup(initial = '/') {
   vi.mocked(rpc).mockImplementation(async (name, body) => {
     if (name === 'read_catalog') return { allTeams: [], selectableTeams: [], allCategories: [{ id: categoryId, name: '맛집' }], selectableCategories: [], revision: '1', dataEpoch: 'epoch' };
     if (name === 'read_explore') return { pins: [], rankingPage: body?.p_rank_page === 2 ? rows.slice(20) : rows.slice(0, 20), hasMore: body?.p_rank_page !== 2, revision: '1', dataEpoch: 'epoch' };
-    if (name === 'read_target') return { target: { id: body?.p_target_id, name: '선택 장소', kind: 'PLACE', lng: 127, lat: 37, address: '서울' }, favorites: [{ id: body?.p_cursor ? 'second' : 'first', nickname: body?.p_cursor ? '두 번째 동료' : '첫 번째 동료', teamName: '팀', categoryName: '맛집', message: '최애 문구', photos: [], createdAt: '2026-10-13' }], nextCursor: body?.p_cursor ? null : 'next', revision: '1', dataEpoch: 'epoch', totalCount: 2, filteredCount: 2 };
+    if (name === 'read_target') return { target: { id: body?.p_target_id, name: '선택 장소', kind: 'PLACE', lng: 127, lat: 37, address: '서울' }, favorites: [{ id: body?.p_cursor ? 'second' : 'first', nickname: body?.p_cursor ? '두 번째 동료' : '첫 번째 동료', teamName: '팀', categoryName: '맛집', message: '최애 문구', photos: [], createdAt: '2026-10-13' }], nextCursor: body?.p_cursor ? null : 'next', revision: '1', dataEpoch: 'epoch', totalCount: 2, overallRank: 2, overallRankTied: true, filteredCount: 2 };
     throw new Error('unexpected RPC');
   });
   const client = new QueryClient({ defaultOptions: { queries: { retry: false, staleTime: Infinity } } });

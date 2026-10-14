@@ -53,3 +53,11 @@
 ## Fixture 정규화 수정
 
 2026-10-13 ADM-W1-02: B/C팀의 normalized_name을 공유 계약과 같은 trim·NFC·lower로 보정했다. `supabase/tests/fixture_normalization.sql`은 FIX-01에서 소문자 b팀/c팀 중복 거절을 실제 DB에서 확인하며 트랜잭션을 롤백한다. 전체 seed를 재실행하지 않고 원 등록·사진·event 내용을 보존했다. UI 재검증은 관리자 QA 담당이 수행한다.
+
+## 등록 진입 참여 정보 모달 — 2026-10-14
+
+- 새 계약은 PRD §2와 참여자 QA-P-03-02/05-01/05-10/08-03을 따른다. 변경된 항목의 과거 통과는 새 정책 검증으로 재사용하지 않는다. 독립 재검증 대기다.
+- 로컬 새 gateway 마이그레이션을 적용하고 최신 Edge/FE를 사용한다. `pnpm test:db`는 프로필 SQL/동시성과 기존 회귀를 실행한다. Edge를 실행한 상태에서 `python3 supabase/tests/profile_api.py`로 실제 HTTP 인증/입력/멱등성/충돌을 확인한다. 두 도구는 로컬만 사용하고 자신의 fixture만 정리한다.
+- 저장 전 모달 취소는 프로필 없음, 저장 후 최애 작성 취소는 프로필 유지/등록 없음이다. 프로필 저장만으로 등록 알림·랭킹은 변하지 않는다. 본인 UI는 현재 유효한 참여자에게만 제공한다.
+- 개발 검증 근거: [브라우저 JSON](../artifacts/registration-profile-browser-verification.json). 실제 새 모바일/PC 모달·상세 등록·소유권 UI를 확인했다. 실기기/독립QA·운영배포는 미완료다.
+- 운영 반영 시 새 DB 함수→Edge POST /me→프런트 순으로 배포한다. 기존 first-favorite profile 계약은 유지되어 이전 FE와 호환된다. 프런트를 먼저 배포하면 신규 참여 정보 저장이 실패하므로 금지한다.

@@ -4,6 +4,7 @@ import type { Target } from '../../shared/contracts';
 import { MapView } from './Map';
 import { useMobileScreen } from '../lib/viewport';
 import { SideMenu } from './SideMenu';
+import { RegistrationLink } from './Registration';
 import { Icon } from './Icon';
 const GeometryContext = createContext<(target: Target | undefined) => void>(() => {});
 export const useMapGeometry = () => useContext(GeometryContext);
@@ -28,7 +29,7 @@ export function usePanelClose(fallback: string) {
   const navigate = useNavigate();
   return () => { const [path, search = ''] = fallback.split('?'); const params = new URLSearchParams(search); params.delete('rankPage'); navigate(`${path}${params.size ? `?${params}` : ''}`, { replace: true }); };
 }
-export function MapPanel({ title, eyebrow, children, footer, onClose, className = '', initialSize = 'middle', contentKey }: { title: string; eyebrow?: string; children: ReactNode; footer?: ReactNode; onClose?: () => void; className?: string; initialSize?: 'middle' | 'expanded' | 'summary' | 'detail'; contentKey?: string }) {
+export function MapPanel({ title, titleAccessory, headerDescription, eyebrow, children, footer, onClose, className = '', initialSize = 'middle', contentKey }: { title: string; titleAccessory?: ReactNode; headerDescription?: ReactNode; eyebrow?: string; children: ReactNode; footer?: ReactNode; onClose?: () => void; className?: string; initialSize?: 'middle' | 'expanded' | 'summary' | 'detail'; contentKey?: string }) {
   const [size, setSize] = useState(initialSize);
   const ref = useRef<HTMLElement>(null), handle = useRef<HTMLButtonElement>(null);
   const ignoreClick = useRef(false);
@@ -49,9 +50,9 @@ export function MapPanel({ title, eyebrow, children, footer, onClose, className 
   };
   return <section ref={ref} className={`map-panel size-${size} ${className}`} data-map-panel aria-labelledby={titleId} onKeyDown={e => { if (e.key === 'Escape' && onClose && !(e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement)) { e.stopPropagation(); onClose(); } }}>
     <button ref={handle} className="sheet-handle" type="button" aria-label="시트 높이 조절" onClick={() => { if (ignoreClick.current) { ignoreClick.current = false; return; } cycle(); }} onPointerDown={e => { if (!matchMedia('(max-width: 760px)').matches || !ref.current) return; drag.current = { y: e.clientY, height: ref.current.getBoundingClientRect().height, current: ref.current.getBoundingClientRect().height }; ref.current.classList.add('dragging'); e.currentTarget.setPointerCapture(e.pointerId); }} onPointerMove={e => { if (!drag.current || !ref.current) return; const h = window.visualViewport?.height ?? window.innerHeight; drag.current.current = Math.max(h * .28, Math.min(h * .9, drag.current.height + drag.current.y - e.clientY)); ref.current.style.setProperty('--drag-height', `${drag.current.current}px`); }} onPointerUp={e => { if (drag.current && Math.abs(e.clientY - drag.current.y) > 4) { ignoreClick.current = true; finishDrag(); e.preventDefault(); } else { drag.current = null; ref.current?.classList.remove('dragging'); } }} onPointerCancel={finishDrag}><span/></button>
-    <div className="panel-heading">{eyebrow ? <p className="eyebrow notranslate" translate="no">{eyebrow}</p> : null}<div className="panel-title-row"><h1 id={titleId} data-panel-title tabIndex={-1}>{title}</h1><div className="panel-heading-actions"><button className="icon-button sheet-expand" type="button" onClick={cycle} aria-label={size === 'expanded' ? '시트 줄이기' : '시트 펼치기'}><Icon name="expand"/></button>{onClose ? <button className="icon-button" type="button" onClick={onClose} aria-label="패널 닫기"><Icon name="close"/></button> : null}</div></div></div>
+    <div className="panel-heading">{eyebrow ? <p className="eyebrow notranslate" translate="no">{eyebrow}</p> : null}<div className="panel-title-row"><h1 id={titleId} data-panel-title tabIndex={-1}>{titleAccessory ? <>{titleAccessory}<span>{title}</span></> : title}</h1><div className="panel-heading-actions"><button className="icon-button sheet-expand" type="button" onClick={cycle} aria-label={size === 'expanded' ? '시트 줄이기' : '시트 펼치기'}><Icon name="expand"/></button>{onClose ? <button className="icon-button" type="button" onClick={onClose} aria-label="패널 닫기"><Icon name="close"/></button> : null}</div></div>{headerDescription}</div>
     <div className="panel-content">{children}</div>{footer ? <footer className="panel-footer">{footer}</footer> : null}
   </section>;
 }
 export function MapMessages({ children }: { children: ReactNode }) { return <div className="map-messages">{children}</div>; }
-export function FloatingRegister({ query = '' }: { query?: string }) { return <div className="floating-register"><Link className="button primary" to={`/register${query ? `?return=${encodeURIComponent(query)}` : ''}`}><Icon name="plus"/>최애 등록하기</Link></div>; }
+export function FloatingRegister({ query = '' }: { query?: string }) { return <div className="floating-register"><RegistrationLink className="button primary" to={`/register${query ? `?return=${encodeURIComponent(query)}` : ''}`}><Icon name="plus"/>최애 등록하기</RegistrationLink></div>; }

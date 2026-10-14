@@ -15,6 +15,7 @@ export const targetInput = z.discriminatedUnion('type', [
 export const createFavoriteSchema = z.object({ requestKey: uuid, target: targetInput, categoryId: uuid, message: text(100), photos: photoSlots, profile: z.object({ nickname: text(20), teamId: uuid }).strict().optional() }).strict();
 export const editFavoriteSchema = z.object({ requestKey: uuid, expectedVersion: z.number().int().positive(), categoryId: uuid, message: text(100), photos: photoSlots }).strict();
 export const deleteSchema = z.object({ requestKey: uuid, expectedVersion: z.number().int().positive() }).strict();
+export const createProfileSchema = z.object({ requestKey: uuid, nickname: text(20), teamId: uuid }).strict();
 export const profileSchema = z.object({ requestKey: uuid, expectedVersion: z.number().int().positive(), nickname: text(20) }).strict();
 export const catalogCreateSchema = z.object({ requestKey: uuid, name: text(30), kind: z.enum(['PLACE', 'COURSE']).optional() }).strict();
 export const catalogEditSchema = z.object({ requestKey: uuid, expectedVersion: z.number().int().positive(), name: text(30), selectable: z.boolean() }).strict();

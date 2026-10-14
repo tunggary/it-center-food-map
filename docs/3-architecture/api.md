@@ -28,7 +28,7 @@ type CreateFavorite = Command & {
 };
 ```
 
-UUID·배열 크기·필수값·알 수 없는 필드는 Zod strict로 검사한다. 일반 JSON 본문 상한 64KiB, 사진 바이트는 signed upload에만 보낸다. POST/수정/삭제의 command는 requestKey 필수다. profile은 첫 등록에서만 필수다. 같은 명령 키의 성공 결과 재생을 먼저 처리한 뒤, 새로운 명령에서 기존 참여자가 profile을 보내면 검증 오류로 폼을 동기화한다. 첫 성공 응답 유실 후 profile을 포함한 원래 요청의 재시도를 차단하지 않는다.
+UUID·배열 크기·필수값·알 수 없는 필드는 Zod strict로 검사한다. 일반 JSON 본문 상한 64KiB, 사진 바이트는 signed upload에만 보낸다. POST/수정/삭제의 command는 requestKey 필수다. 새 FE는 POST /me로 프로필을 먼저 저장하고 최애 요청에 profile을 보내지 않는다. profile은 기존 FE의 첫 등록 호환용으로만 유지하며, 프로필 없는 첫 등록에서는 필수다. 같은 명령 키의 성공 결과 재생을 먼저 처리한 뒤, 새로운 명령에서 기존 참여자가 profile을 보내면 검증 오류로 폼을 동기화한다. 첫 성공 응답 유실 후 profile을 포함한 원래 요청의 재시도를 차단하지 않는다.
 
 명령 응답: `{requestId, data:{resourceId, targetId?, revision, replayed}}`. 공개 read 응답은 각 DTO와 revision/dataEpoch를 반환한다. Edge 오류는 `{requestId,error:{code,message,details?,retryAfterSeconds?}}`; raw SQL·서버 스택을 노출하지 않는다. Data API 오류는 FE adapter에서 같은 오류 분류로 정규화한다. DB의 예상 업무 오류는 SQLSTATE P0001과 허용된 message code, 제한된 JSON detail로 발생시키고 Edge/FE adapter가 아래 상태로 변환한다. 알 수 없는 DB 오류는 500으로 처리하고 원문 detail을 사용자에게 노출하지 않는다.
 
@@ -41,7 +41,7 @@ UUID·배열 크기·필수값·알 수 없는 필드는 Zod strict로 검사한
 | `read_revision` | 없음 | `{revision, dataEpoch, serverTime}`; 가벼운 한 행 조회 |
 | `read_catalog` | 없음 | revision, selectableTeams/categories, allTeams/categories |
 | `read_explore` | p_team_id nullable, p_category_id nullable, p_rank_page 기본1 | revision, filters, pins[], rankingPage, hasMore |
-| `read_target` | p_target_id, p_team_id, p_category_id, p_cursor nullable, p_expected_revision nullable | revision, target, filteredCount, totalCount, favorites[], nextCursor |
+| `read_target` | p_target_id, p_team_id, p_category_id, p_cursor nullable, p_expected_revision nullable | revision, target, filteredCount, totalCount, overallRank, overallRankTied, favorites[], nextCursor |
 | `read_booth` | p_pin_category_id nullable | revision, pins[], categoryRankings[]; 전체 팀 고정 |
 | `read_events` | p_after_revision, p_until_revision, p_limit 1~100 | rows[{revision,favoriteId nullable}], nextCursor, done |
 | `read_announcement` | p_event_revision | 현재 nickname/team/target 이름 또는 `{skip:true}` |
@@ -49,6 +49,8 @@ UUID·배열 크기·필수값·알 수 없는 필드는 Zod strict로 검사한
 pins는 targetId/kind/좌표/count만 포함한다. 이름은 랭킹·선택 상세에서 읽는다. 코스 전체 좌표와 사진·문구는 pins 응답에 넣지 않는다. read_explore/read_booth의 압축 전송 크기와 전체 갱신 비용을 실측한다.
 
 랭킹은 20건씩, 전체 조건 집합에서 rank를 계산한 뒤 페이지를 자른다. 상세는 `(created_at DESC,id DESC)` cursor 20건씩이다. 같은 상세에서 더 보기를 할 때 p_expected_revision과 현재 revision이 다르면 `SNAPSHOT_CHANGED`로 첫 페이지를 다시 읽는다. 이미 본 필터/대상과 다른 늦은 응답은 적용하지 않는다.
+
+`TargetDetail`에 `overallRank: number | null`, `overallRankTied: boolean`을 포함한다. `read_target`은 같은 snapshot에서 `app_private.rankings(null,null)`의 전체 팀·전체 카테고리·장소/코스 순위를 조회한다. 상세의 team/category 인수는 기존 등록 목록 필터에만 적용하고 전체 순위에는 영향을 주지 않는다. 동일 전체 등록 횟수의 다른 대상이 있으면 공동이다. 등록0건은 `overallRank=null`, `overallRankTied=false`이며 모든 상세 페이지가 이 필드를 반환한다. 기존 RPC 인수·권한·오류 계약은 유지한다. 외부 적용은 RPC 확장 후 FE 순서다.
 
 등록이 0건인 기존 target 직접 상세는 0건 상태·등록 행동을 제공한다. 물리 삭제된 target은 `TARGET_GONE`. 임의 지역 바깥이라는 이유로 조회/등록을 막지 않는다.
 
@@ -59,6 +61,7 @@ pins는 targetId/kind/좌표/count만 포함한다. 이름은 랭킹·선택 상
 | `POST /session` | header의 32바이트 자격 | identity 준비 여부·expiresAt·hasProfile; raw token 반환 없음 |
 | `GET /me` | 참여자 자격 | participant 또는 null; version |
 | `GET /me/favorites` | cursor nullable | 본인 등록만, 20건, 소유 상태 |
+| `POST /me` | requestKey, nickname(trim 1~20 grapheme), teamId | 독립 프로필 생성 201, 같은 명령 재생 200; CommandResult. 기존 프로필은 VERSION_CONFLICT 후 GET /me로 확인, 덮어쓰기 없음 |
 | `PATCH /me` | requestKey, expectedVersion, nickname | 팀 변경 필드 거절 |
 | `GET /places/search` | q 1~100자, page 1~45 | 카카오 결과·signed selection token·isEnd; 서버가 페이지 크기 15 고정 |
 | `POST /favorites` | CreateFavorite | 신규 등록 201, 동일 명령 재생 200 |
@@ -121,3 +124,7 @@ public schema에 있는 `gateway_create_favorite`, `gateway_edit_favorite`, `gat
 ## 등록 RPC 왕복 최적화 구현
 
 `POST /favorites`는 Edge strict 입력/HMAC 검증과 canonical hash를 유지하고 `gateway_submit_favorite(p_token_hash,p_payload,p_selection_identity,p_selection_expires_at,p_validation_error)`를 한 번 호출한다. 내부에서 기존 자격·30회/분 rate·replay와 기존 create gateway를 재사용한다. 업무 쓰기는 subtransaction에 두고 오류를 제한된 envelope로 반환하여 실패해도 바깥 rate 증가가 유지된다. expired selection은 신규 등록만 거절하며 성공 replay는 허용하고, identity 만료/selection 소유자 불일치는 replay에도 거절한다. 기존 원장·revision·이벤트·사진 연결의 단일 트랜잭션 결정은 유지한다. 함수는 service_role 전용·전용 NOLOGIN owner·닫힌 search_path이며 공개 read는 변경하지 않는다.
+
+## 등록 진입 모달 (2026-10-14)
+
+POST /me는 기존 참여자 인증/명령 속도 제한·해시·원장을 사용한다. identity별 프로필은 하나이며 선택 가능한 팀만 허용한다. app_state 잠금 후 자격을 재검사하고 명령 재생을 먼저 처리한다. 성공 시 revision을 올리지만 최애·대상·registration_events는 생성하지 않는다. 최신 GET /me 확인 후 목적지로 이동하며 응답 유실은 같은 requestKey/body로 재시도한다. 기존 PATCH /me의 닉네임 수정/팀 변경 금지는 유지한다.

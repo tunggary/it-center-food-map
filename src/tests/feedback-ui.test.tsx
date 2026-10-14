@@ -36,11 +36,17 @@ it('opens the side menu using an inward edge drag and closes via its button', ()
  fireEvent.click(screen.getByRole('button', { name: '개인 메뉴 닫기' })); expect(screen.queryByRole('dialog')).toBeNull();
 });
 it('overlays processing photos and removes the dim at readiness', () => {
- const photo = { id: 'image', preview: 'blob:preview', prepareKey: 'a', finalizeKey: 'b', status: 'processing' as const };
+ const photo = { id: 'image', preview: 'blob:preview', prepareKey: 'a', finalizeKey: 'b', status: 'processing' as const, error: '사진을 확인하고 있어요.' };
  const { rerender } = render(<PhotoPicker photos={[photo]} onChange={() => {}} token="token"/>);
+ expect(screen.queryByText('사진을 확인하고 있어요.')).toBeNull(); expect(document.querySelector('.photo-loading')?.textContent).toBe(''); expect(document.querySelector('.photo-loading .loading-spinner')).toBeNull();
  expect(screen.getByRole('progressbar', { name: '사진 준비 중' })).toBeTruthy(); expect(document.querySelector('.photo-preview')?.getAttribute('aria-busy')).toBe('true');
  rerender(<PhotoPicker photos={[{ ...photo, status: 'ready' }]} onChange={() => {}} token="token"/>);
  expect(screen.queryByRole('progressbar')).toBeNull(); expect(document.querySelector('.photo-preview')?.getAttribute('aria-busy')).toBe('false');
+ expect(screen.queryByText('준비 완료')).toBeNull();
+ rerender(<PhotoPicker photos={[{ ...photo, status: 'preparing' }]} onChange={() => {}} token="token"/>);
+ expect(screen.getByRole('progressbar', { name: '사진 준비 중' })).toBeTruthy(); expect(screen.queryByText('사진 줄이는 중')).toBeNull();
+ rerender(<PhotoPicker photos={[{ ...photo, status: 'failed', error: '사진 처리 실패' }]} onChange={() => {}} token="token"/>);
+ expect(screen.getByText('준비 실패')).toBeTruthy(); expect(screen.getByRole('button', { name: '사진 다시 시도' })).toBeTruthy();
 });
 it('announces errors in a dismissible toast', () => {
  render(<ToastHost/>); act(() => showToast('사진 준비가 끝난 뒤 제출해 주세요.'));
