@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { afterEach, expect, it, vi } from 'vitest';
-import { cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import ExplorePage, { RankingsPanel } from '../routes/Explore';
@@ -23,7 +23,7 @@ function setup(initial = '/') {
   render(<QueryClientProvider client={client}><RouterProvider router={router}/></QueryClientProvider>);
   return { client, router };
 }
-it('keeps the same map DOM across ranking/detail navigation and restores the ranking page', async () => {
+it('keeps the same map DOM and closes detail directly to the filtered main map', async () => {
   const { router, client } = setup('/rankings?category=food');
   const map = screen.getByTestId('shared-map');
   fireEvent.click(await screen.findByRole('button', { name: '다음 20건 보기' }));
@@ -31,14 +31,19 @@ it('keeps the same map DOM across ranking/detail navigation and restores the ran
   await screen.findByRole('heading', { name: '선택 장소' });
   expect(screen.getByTestId('shared-map')).toBe(map);
   fireEvent.click(screen.getByRole('button', { name: '패널 닫기' }));
-  await screen.findByRole('link', { name: /장소 20/ });
-  expect(router.state.location.search).toContain('rankPage=2');
+  await screen.findByRole('heading', { name: '동료들의 요즘 최애' });
+  expect(router.state.location.pathname).toBe('/');
+  expect(router.state.location.search).toContain('category=food');
+  expect(router.state.location.search).not.toContain('rankPage');
   expect(screen.getByTestId('shared-map')).toBe(map);
   router.dispose(); client.clear();
 });
 it('appends target comments using the first snapshot revision', async () => {
-  const { router, client } = setup('/targets/place-0');
+  const { router, client } = setup('/targets/place-0?team=other&category=food');
   await screen.findByText('첫 번째 동료');
+  expect(vi.mocked(rpc).mock.calls.find(([name]) => name === 'read_target')?.[1]).toMatchObject({ p_team_id: null, p_category_id: null });
+  expect(screen.queryByRole('combobox', { name: '팀 필터' })).toBeNull();
+  expect(vi.mocked(rpc).mock.calls.find(([name]) => name === 'read_explore')?.[1]).toMatchObject({ p_team_id: null, p_category_id: null });
   fireEvent.click(screen.getByRole('button', { name: '최애 더 보기' }));
   await screen.findByText('두 번째 동료');
   expect(screen.getByText('첫 번째 동료')).toBeTruthy();
@@ -71,4 +76,28 @@ it('snaps a dragged sheet from its pointer distance, without waiting for CSS ani
   expect(panel.classList.contains('size-expanded')).toBe(true);
   expect(panel.classList.contains('dragging')).toBe(false);
   vi.unstubAllGlobals();
+});
+
+it('starts with all teams and categories instead of forcing food', async () => {
+ const { router, client } = setup();
+ await screen.findByRole('heading', { name: '동료들의 요즘 최애' });
+ await waitFor(() => expect(vi.mocked(rpc).mock.calls.some(([name, body]) => name === 'read_explore' && body?.p_category_id === null && body?.p_team_id === null)).toBe(true));
+ router.dispose(); client.clear();
+});
+
+it('reuses one detail panel across repeated selections and closes to main in one action', async () => {
+ const { router, client } = setup('/');
+ fireEvent.click(await screen.findByRole('link', { name: /장소 0/ }));
+ await screen.findByRole('heading', { name: '선택 장소' });
+ const panel = screen.getByRole('region', { name: '선택 장소' });
+ const content = panel.querySelector('.panel-content')!; content.scrollTop = 150;
+ await act(async () => { await router.navigate('/targets/place-1', { replace: true }); });
+ await screen.findByRole('heading', { name: '선택 장소' });
+ expect(screen.getByRole('region', { name: '선택 장소' })).toBe(panel);
+ expect(content.scrollTop).toBe(0);
+ expect(document.querySelectorAll('[data-map-panel]')).toHaveLength(1);
+ fireEvent.click(screen.getByRole('button', { name: '패널 닫기' }));
+ await screen.findByRole('heading', { name: '동료들의 요즘 최애' });
+ expect(router.state.location.pathname).toBe('/');
+ router.dispose(); client.clear();
 });
