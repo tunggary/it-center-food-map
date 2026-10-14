@@ -7,7 +7,7 @@ import TargetPage from '../routes/Target';
 import RegisterEntry from '../routes/RegisterEntry';
 import { ApiError, edge, rpc } from '../lib/api';
 
-vi.mock('../lib/identity', () => ({ prepareIdentity: async () => 'participant', storedToken: () => 'participant', resetIdentity: vi.fn() }));
+vi.mock('../lib/identity', async original => ({ ...await original<typeof import('../lib/identity')>(), prepareIdentity: async () => 'participant', storedToken: () => 'participant', resetIdentity: vi.fn() }));
 vi.mock('../components/Map', () => ({ MapView: () => <div/> }));
 vi.mock('../features/media/PhotoPicker', () => ({ PhotoPicker: () => <div/> }));
 vi.mock('../lib/api', async original => ({ ...await original<typeof import('../lib/api')>(), edge: vi.fn(), rpc: vi.fn() }));
@@ -26,7 +26,7 @@ function setup({ kind = 'PLACE', own = false, initial = detailUrl, deleteFails =
   const favorite = { id: favoriteId, targetId, target, participantId: 'me', nickname: '나', teamId: 'test', teamName: '팀', categoryId: 'food', categoryName: '분류', message: '기존 후기', photos: [], version: 1, createdAt: '2026-10-14' };
   vi.mocked(rpc).mockImplementation(async name => {
     if (name === 'read_catalog') return { selectableTeams: [], allTeams: [], selectableCategories: [], allCategories: [], revision: '1', dataEpoch: 'epoch' };
-    if (name === 'read_target') return { target, favorites: own && !deleted ? [favorite] : [], totalCount: own && !deleted ? 1 : 0, filteredCount: own && !deleted ? 1 : 0, nextCursor: null, revision: deleted ? '2' : '1', dataEpoch: 'epoch' };
+    if (name === 'read_target') return { target, favorites: own && !deleted ? [favorite] : [], totalCount: own && !deleted ? 1 : 0, overallRank: own && !deleted ? 1 : null, overallRankTied: false, filteredCount: own && !deleted ? 1 : 0, nextCursor: null, revision: deleted ? '2' : '1', dataEpoch: 'epoch' };
     throw new Error(`Unexpected RPC: ${name}`);
   });
   vi.mocked(edge).mockImplementation(async (path, options) => {

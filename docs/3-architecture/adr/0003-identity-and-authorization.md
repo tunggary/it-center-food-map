@@ -21,7 +21,7 @@
 
 ## 결정
 
-Web Crypto로 만든 32바이트 무작위 토큰을 네트워크 요청 전에 localStorage에 저장하고 서버에는 SHA-256 해시만 보관한다. 여러 탭 초기화는 Web Locks로 보호하고, 쓰기는 X-Participant-Token header로 인증한다. 열람에는 자격을 만들지 않으며 첫 favorite 트랜잭션에서 participant를 생성한다. 180일 활동 갱신과 만료 후 자동 복구 없음이 기본안이다.
+Web Crypto로 만든 32바이트 무작위 토큰을 네트워크 요청 전에 localStorage에 저장하고 서버에는 SHA-256 해시만 보관한다. 여러 탭 초기화는 Web Locks로 보호하고, 쓰기는 X-Participant-Token header로 인증한다. 열람에는 자격을 만들지 않으며 등록 진입 모달의 독립 POST /me에서 participant를 생성한다(2026-10-14 사용자 승인 변경). 기존 첫 favorite의 profile 생성은 이전 클라이언트 호환용으로 유지한다. 180일 활동 갱신과 만료 후 자동 복구 없음이 기본안이다.
 
 관리자만 Supabase Auth의 사전 계정을 사용하며 Edge getUser와 DB allowlist로 검증한다. 일반 signup과 익명 Auth는 사용하지 않는다. 모든 도메인 쓰기 RPC는 service_role 전용이다. CORS·저장·오류·권한의 상세는 연결 문서에 규정한다.
 

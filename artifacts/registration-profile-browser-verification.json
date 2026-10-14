@@ -1,0 +1,244 @@
+{
+  "date": "2026-10-14",
+  "environment": "local Supabase / localhost:5173",
+  "identityIsolation": "Task tab sessionStorage fixture; original browser localStorage unchanged",
+  "profileCreation": "POST /me saved QA모달20261014 / A팀; GET /me + SQL verified",
+  "registered": {
+    "path": "/targets/30000000-0000-4000-8000-000000000001?team=test",
+    "ownManagement": 1,
+    "ownEdit": 1,
+    "errors": [],
+    "requests": [
+      {
+        "path": "/rest/v1/rpc/read_catalog",
+        "method": "POST",
+        "status": 200,
+        "count": 3
+      },
+      {
+        "path": "/functions/v1/api/me",
+        "method": "GET",
+        "status": 200,
+        "count": 8
+      },
+      {
+        "path": "/rest/v1/rpc/read_explore",
+        "method": "POST",
+        "status": 200,
+        "count": 3
+      },
+      {
+        "path": "/rest/v1/rpc/read_target",
+        "method": "POST",
+        "status": 200,
+        "count": 6
+      },
+      {
+        "path": "/functions/v1/api/me/favorites",
+        "method": "GET",
+        "status": 200,
+        "count": 5
+      },
+      {
+        "path": "/rest/v1/rpc/read_revision",
+        "method": "POST",
+        "status": 200,
+        "count": 66
+      },
+      {
+        "path": "/functions/v1/api/session",
+        "method": "POST",
+        "status": 200,
+        "count": 1
+      },
+      {
+        "path": "/functions/v1/api/favorites",
+        "method": "POST",
+        "status": 201,
+        "count": 1
+      }
+    ]
+  },
+  "desktop": {
+    "path": "/targets/30000000-0000-4000-8000-000000000001?team=test",
+    "ownManagement": 0,
+    "ownEdit": 0,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "modal": {
+      "x": 390,
+      "y": 187.5625,
+      "width": 500,
+      "height": 424.875,
+      "overflow": false
+    },
+    "focus": "닉네임"
+  },
+  "mobile": {
+    "path": "/targets/30000000-0000-4000-8000-000000000001?team=test",
+    "ownManagement": 0,
+    "ownEdit": 0,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "modal": {
+      "x": 16,
+      "y": 209.5625,
+      "width": 358,
+      "height": 424.875,
+      "overflow": false
+    },
+    "focus": "닉네임"
+  },
+  "canceled": {
+    "path": "/targets/30000000-0000-4000-8000-000000000001?team=test",
+    "focus": "나도 최애로 등록"
+  },
+  "deleteAndCancel": {
+    "path": "/targets/30000000-0000-4000-8000-000000000001?team=test",
+    "ownManagement": false,
+    "requests": [
+      {
+        "path": "/rest/v1/rpc/read_catalog",
+        "method": "POST",
+        "status": 200
+      },
+      {
+        "path": "/rest/v1/rpc/read_target",
+        "method": "POST",
+        "status": 200
+      },
+      {
+        "path": "/rest/v1/rpc/read_explore",
+        "method": "POST",
+        "status": 200
+      },
+      {
+        "path": "/functions/v1/api/me",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/functions/v1/api/me/favorites",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/functions/v1/api/me",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/functions/v1/api/me/favorites",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/rest/v1/rpc/read_catalog",
+        "method": "POST",
+        "status": 200
+      },
+      {
+        "path": "/rest/v1/rpc/read_target",
+        "method": "POST",
+        "status": 200
+      },
+      {
+        "path": "/functions/v1/api/me",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/functions/v1/api/session",
+        "method": "POST",
+        "status": 200
+      },
+      {
+        "path": "/functions/v1/api/me/favorites",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/functions/v1/api/favorites/6da1f90f-3199-459d-8ea7-119e5650e802",
+        "method": "DELETE",
+        "status": 200
+      },
+      {
+        "path": "/rest/v1/rpc/read_catalog",
+        "method": "POST",
+        "status": 200
+      },
+      {
+        "path": "/rest/v1/rpc/read_target",
+        "method": "POST",
+        "status": 200
+      },
+      {
+        "path": "/functions/v1/api/me",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "path": "/rest/v1/rpc/read_target",
+        "method": "POST",
+        "status": 200
+      },
+      {
+        "path": "/rest/v1/rpc/read_explore",
+        "method": "POST",
+        "status": 200
+      },
+      {
+        "path": "/functions/v1/api/me",
+        "method": "GET",
+        "status": 200
+      }
+    ],
+    "errors": [],
+    "cancelKeepsProfile": {
+      "modalOpen": false,
+      "path": "/targets/30000000-0000-4000-8000-000000000001?team=test"
+    }
+  },
+  "finalDirectUrl": {
+    "desktop": {
+      "path": "/register?target=30000000-0000-4000-8000-000000000001&from=detail&return=team%3Dtest",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "modal": {
+        "x": 390,
+        "y": 181.4375,
+        "width": 500,
+        "height": 437.1171875,
+        "overflow": false
+      },
+      "focus": "참여 정보 모달 닫기"
+    },
+    "mobile": {
+      "path": "/register?target=30000000-0000-4000-8000-000000000001&from=detail&return=team%3Dtest",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "modal": {
+        "x": 16,
+        "y": 203.4375,
+        "width": 358,
+        "height": 437.1171875,
+        "overflow": false
+      },
+      "focus": "참여 정보 모달 닫기"
+    },
+    "backdropCanceled": {
+      "path": "/targets/30000000-0000-4000-8000-000000000001?team=test",
+      "openDialogs": 0,
+      "errors": []
+    }
+  },
+  "fixtureCleanup": "Created favorite was deleted through the UI; only its profile/identity/commands/events were removed from the local DB after verification."
+}

@@ -54,6 +54,7 @@ export const serve=handler(async req=>{
  const {data,error}=await admin.storage.from(bucket).createSignedUploadUrl(asset.rawObjectKey,{upsert:false});if(error||!data)throw new Fault('DEPENDENCY_UNAVAILABLE');const publicBase=Deno.env.get('PUBLIC_SUPABASE_URL');const signedUrl=publicBase?publicBase.replace(/\/$/,'')+new URL(data.signedUrl).pathname+new URL(data.signedUrl).search:data.signedUrl;return json({...asset,signedUrl,token:data.token,path:data.path,uploadExpiresAt:expiresAt});
  }
  await rate('participant-command',actor);
+ if(route==='/me'&&method==='POST'){const result=await rpc('gateway_create_profile',{p_actor:actor,p_payload:await command(parse(v.createProfileSchema,await body(req)))});return json(result,result.replayed?200:201);}
  if(route==='/me'&&method==='PATCH')return json(await rpc('gateway_edit_profile',{p_actor:actor,p_payload:await command(parse(v.profileSchema,await body(req)))}));
  const favorite=route.match(/^\/favorites\/([^/]+)$/);
  if(favorite&&['PATCH','DELETE'].includes(method)){const payload=await command({...parse(method==='PATCH'?v.editFavoriteSchema:v.deleteSchema,await body(req)),id:parse(v.uuid,favorite[1])});return json(await rpc(method==='PATCH'?'gateway_edit_favorite':'gateway_delete_favorite',{p_actor:actor,p_payload:payload}));}

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import trophySprite from '../assets/ranking/trophies.webp';
+import { RankTrophy } from '../components/RankTrophy';
 import { Link, Outlet, useLocation, useNavigate, useOutletContext, useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import type { Explore, Participant, Pin, Ranking } from '../../shared/contracts';
@@ -22,7 +22,7 @@ function RankingRow({ item, emphasize, tied }: { item: Ranking; emphasize: boole
   const trophy = item.rank >= 1 && item.rank <= 3;
   const trophyName = item.rank === 1 ? '금색 트로피' : item.rank === 2 ? '은색 트로피' : item.rank === 3 ? '코랄 트로피' : '';
   return <>{emphasize ? <span className="rank rank-badge">
-    <span className="rank-symbol" aria-hidden="true">{trophy ? <span className={`rank-trophy trophy-${item.rank}`} style={{ backgroundImage: `url("${trophySprite}")` }}/> : item.rank}</span>
+    <span className="rank-symbol" aria-hidden="true">{trophy ? <RankTrophy rank={item.rank}/> : item.rank}</span>
     <span className="visually-hidden">{tied ? '공동 ' : ''}{item.rank}위{trophyName ? ` · ${trophyName}` : ''}</span>
     {tied ? <small className="rank-tie" aria-hidden="true">공동</small> : null}
   </span> : <span className={`rank ${item.rank === 1 ? 'first' : ''}`}>{String(item.rank).padStart(2, '0')}</span>}<span className="rank-name"><strong>{item.name}</strong><small>{item.kind === 'COURSE' ? '산책코스' : '장소'}</small></span><span className="rank-count"><b>{item.count}</b><small>최애</small></span><Icon name="chevron"/></>; }
