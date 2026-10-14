@@ -44,7 +44,7 @@ export const serve=handler(async req=>{
  if(route==='/me/favorites'&&method==='GET')return json(await rpc('gateway_my_favorites',{p_actor:actor,p_cursor:url.searchParams.get('cursor')}));
  if(route==='/places/search'&&method==='GET'){
  const q=parse(v.text(100),url.searchParams.get('q'));const page=parse(z.coerce.number().int().min(1).max(45),url.searchParams.get('page')??1);await rate('search',actor);
- const search=new URL('https://dapi.kakao.com/v2/local/search/keyword.json');search.searchParams.set('query',q);search.searchParams.set('page',String(page));search.searchParams.set('size','15');
+ const search=new URL('https://dapi.kakao.com/v2/local/search/keyword.json');search.searchParams.set('query',q);search.searchParams.set('page',String(page));search.searchParams.set('size','15');search.searchParams.set('x','127.0632');search.searchParams.set('y','37.5088');search.searchParams.set('sort','distance');
  const response=await fetch(search,{headers:{Authorization:'KakaoAK '+Deno.env.get('KAKAO_REST_KEY')},signal:AbortSignal.timeout(10000)});if(!response.ok)throw new Fault('DEPENDENCY_UNAVAILABLE');const result=await response.json();
  const places=await Promise.all(result.documents.map(async(p:any)=>{const value={placeId:p.id,name:p.place_name,address:p.road_address_name||p.address_name,lng:Number(p.x),lat:Number(p.y),identityId:actor,expiresAt:Date.now()+1800000};return {...value,selectionToken:await signSelection(value)};}));return json({places,isEnd:result.meta.is_end});
  }

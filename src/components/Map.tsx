@@ -6,7 +6,7 @@ import { showToast } from './Toast';
 import { Icon } from './Icon';
 export type MapPin = Pin & { name?: string };
 const EMPTY_PINS: MapPin[] = [], EMPTY_POINTS: Point[] = [];
-export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, onCenter, editing = false, selectedId, focusPoint, fullscreen = false, fitPins = false }: { pins?: MapPin[]; points?: Point[]; onSelect?: (id: string) => void; onCenter?: (point: Point) => void; editing?: boolean; selectedId?: string; focusPoint?: Point; fullscreen?: boolean; fitPins?: boolean }) {
+export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, onCenter, editing = false, selectedId, focusPoint, focusLevel, fullscreen = false, fitPins = false }: { pins?: MapPin[]; points?: Point[]; onSelect?: (id: string) => void; onCenter?: (point: Point) => void; editing?: boolean; selectedId?: string; focusPoint?: Point; focusLevel?: number; fullscreen?: boolean; fitPins?: boolean }) {
   const element = useRef<HTMLDivElement>(null), shell = useRef<HTMLDivElement>(null);
   const instance = useRef<KakaoObject | null>(null);
   const markers = useRef(new Map<string, { marker: KakaoObject; label: KakaoObject; button: HTMLButtonElement; click: () => void }>());
@@ -76,6 +76,11 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
   // Switching between browsing and course input must preserve the existing map.
   useEffect(() => { anchor.current = selectedLng !== undefined && selectedLat !== undefined ? [selectedLng, selectedLat] : undefined; reposition.current(); }, [selectedLng, selectedLat]);
   useEffect(() => { reposition.current(); }, [editing, ready]);
+  useEffect(() => {
+    if (!ready || !instance.current || focusLevel === undefined || selectedLng === undefined || selectedLat === undefined) return;
+    instance.current.setLevel(Math.min(instance.current.getLevel(), focusLevel));
+    reposition.current();
+  }, [ready, focusLevel, selectedLng, selectedLat]);
   const pinBoundsKey = pins.map(p => `${p.lng},${p.lat}`).join(';');
   useEffect(() => {
     if (!fitPins || !ready || !instance.current || !pins.length) return;
