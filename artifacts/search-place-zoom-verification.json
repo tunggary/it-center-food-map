@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-14",
+  "desktop": {
+    "width": 1728,
+    "height": 865,
+    "beforeLevel": 6,
+    "selectedLevel": 3,
+    "pinLeft": 1016,
+    "panelRight": 404
+  },
+  "mobileBefore": 8,
+  "mobile": {
+    "level": 3,
+    "pin": {
+      "top": 219,
+      "bottom": 249,
+      "left": 137,
+      "right": 254.890625
+    },
+    "panelTop": 371.3671875,
+    "width": 390,
+    "height": 844
+  },
+  "selection": {
+    "desktop": "list",
+    "mobile": "map-pin"
+  },
+  "favoriteSubmitted": false
+}

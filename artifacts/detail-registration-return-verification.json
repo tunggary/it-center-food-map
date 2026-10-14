@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-14",
+  "environment": "localhost:5173 / local Supabase 54321",
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "addCloseAfterReload": true,
+    "courseEditClose": true,
+    "emptyCourse": {
+      "url": "/targets/f3cfe1c2-97bd-4886-9119-3f925691d54e?team=&category=",
+      "title": "QA상세복귀1014단일후기",
+      "total": "0명",
+      "empty": "등록된 문구가 아직 없어요.",
+      "overflow": false
+    },
+    "courseAddClose": true
+  },
+  "desktop": {
+    "width": 1280,
+    "height": 800,
+    "editCloseAfterReload": true,
+    "draftCancelRetainsText": true,
+    "draftDiscardReturnsToDetail": true,
+    "placeDeletion": {
+      "targetId": "30000000-0000-4000-8000-000000000001",
+      "totalAfter": "5명",
+      "ownLinks": 0,
+      "temporaryReviewPresent": false
+    }
+  },
+  "fixtures": {
+    "temporaryPlaceFavoriteDeleted": true,
+    "temporaryCourseFavoriteDeleted": true,
+    "courseTargetId": "f3cfe1c2-97bd-4886-9119-3f925691d54e",
+    "zeroFavoriteTargetRetained": true
+  }
+}

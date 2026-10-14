@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-14",
+  "environment": "localhost:5173 / local Supabase 54321",
+  "desktop": {
+    "width": 1280,
+    "height": 800,
+    "documentWidth": 1280,
+    "personalMenuLinks": 2,
+    "choiceButtonHeight": 56,
+    "choiceButtonWidth": 330,
+    "existingTargetForm": true,
+    "existingTargetChoicePanels": 0
+  },
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "documentWidth": 390,
+    "choiceButtonHeight": 56,
+    "choiceButtonWidth": 344,
+    "menus": {
+      "choice": false,
+      "search": false,
+      "course": false,
+      "placeForm": false,
+      "main": true
+    },
+    "draftBackGuard": "작성 내용을 버릴까요?",
+    "page2Count": 15,
+    "returnQueryPreserved": true
+  },
+  "search": {
+    "query": "카페",
+    "origin": [
+      127.0632,
+      37.5088
+    ],
+    "page1DistancesM": [
+      89,
+      105,
+      106,
+      109,
+      118,
+      124,
+      135,
+      135,
+      143,
+      162,
+      162,
+      182,
+      187,
+      187,
+      190
+    ],
+    "page2DistancesM": [
+      192,
+      194,
+      202,
+      205,
+      208,
+      210,
+      211,
+      214,
+      215,
+      215,
+      216,
+      216,
+      216,
+      216,
+      218
+    ],
+    "sorted": true,
+    "distanceMethod": "Rounded haversine distance from returned coordinates; 2m tolerance for projection differences"
+  },
+  "writes": "No favorite submitted; local session prepared"
+}
