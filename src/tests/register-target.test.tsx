@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import RegisterPage from '../routes/Register';
 import { ApiError, edge, rpc } from '../lib/api';
-vi.mock('../lib/identity', () => ({ prepareIdentity: vi.fn().mockResolvedValue('participant'), resetIdentity: vi.fn() }));
+vi.mock('../lib/identity', async original => ({ ...await original<typeof import('../lib/identity')>(), prepareIdentity: vi.fn().mockResolvedValue('participant'), resetIdentity: vi.fn() }));
 vi.mock('../lib/api', async original => ({ ...await original<typeof import('../lib/api')>(), edge: vi.fn(), rpc: vi.fn() }));
 vi.mock('../features/media/PhotoPicker', () => ({ PhotoPicker: ({ photos, onChange }: { photos: { id: string }[]; onChange: (next: unknown[]) => void }) => <div><span>{photos.map(p => p.id).join(',')}</span><button type="button" onClick={() => onChange([...photos, { id: 'ready-photo', assetId: '33333333-3333-4333-8333-333333333333', prepareKey: 'ready', finalizeKey: 'ready', status: 'ready' }])}>준비된 사진 추가</button></div> }));
 beforeAll(() => {

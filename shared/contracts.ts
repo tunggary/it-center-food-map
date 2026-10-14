@@ -16,6 +16,7 @@ export type Favorite = { id: string; targetId: string; participantId: string; ni
 export type TargetDetail = Snapshot & { target: Target; filteredCount: number; totalCount: number; favorites: Favorite[]; nextCursor: string | null };
 export type Command = { requestKey: string; expectedVersion?: number };
 export type TargetInput = { type: 'existing'; targetId: string } | { type: 'place'; selectionToken: string } | { type: 'course'; name: string; points: Point[] };
+export type CreateProfile = { requestKey: string; nickname: string; teamId: string };
 export type CreateFavorite = Command & { target: TargetInput; categoryId: string; message: string; photos: PhotoSlot[]; profile?: { nickname: string; teamId: string } };
 export type CommandResult = { resourceId: string; targetId?: string; revision: Revision; replayed: boolean };
 export type Booth = Snapshot & { pins: Pin[]; categoryRankings: { categoryId: string; categoryName: string; rankings: Ranking[] }[] };

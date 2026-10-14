@@ -8,7 +8,7 @@ import TargetPage from '../routes/Target';
 import { ApiError, edge, rpc } from '../lib/api';
 import { storedToken } from '../lib/identity';
 vi.mock('../components/Map', () => ({ MapView: ({ pins }: { pins?: { targetId: string }[] }) => <div data-testid="map">{pins?.map(p => p.targetId).join(',')}</div> }));
-vi.mock('../lib/identity', () => ({ storedToken: vi.fn(() => null) }));
+vi.mock('../lib/identity', async original => ({ ...await original<typeof import('../lib/identity')>(), storedToken: vi.fn(() => null) }));
 vi.mock('../lib/api', async original => ({ ...await original<typeof import('../lib/api')>(), rpc: vi.fn(), edge: vi.fn() }));
 const catalog = { allTeams: [{ id: 'a', name: 'A팀' }, { id: 'b', name: 'B팀' }], allCategories: [{ id: 'food', name: '맛집' }, { id: 'cafe', name: '카페' }, { id: 'walk', name: '산책' }, { id: 'extra', name: '기타' }], selectableTeams: [], selectableCategories: [], revision: '1', dataEpoch: 'e' };
 function setup(url = '/rankings') {

@@ -7,7 +7,7 @@ import TargetPage from '../routes/Target';
 import RegisterEntry from '../routes/RegisterEntry';
 import { ApiError, edge, rpc } from '../lib/api';
 
-vi.mock('../lib/identity', () => ({ prepareIdentity: async () => 'participant', storedToken: () => 'participant', resetIdentity: vi.fn() }));
+vi.mock('../lib/identity', async original => ({ ...await original<typeof import('../lib/identity')>(), prepareIdentity: async () => 'participant', storedToken: () => 'participant', resetIdentity: vi.fn() }));
 vi.mock('../components/Map', () => ({ MapView: () => <div/> }));
 vi.mock('../features/media/PhotoPicker', () => ({ PhotoPicker: () => <div/> }));
 vi.mock('../lib/api', async original => ({ ...await original<typeof import('../lib/api')>(), edge: vi.fn(), rpc: vi.fn() }));

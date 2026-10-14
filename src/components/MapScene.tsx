@@ -4,6 +4,7 @@ import type { Target } from '../../shared/contracts';
 import { MapView } from './Map';
 import { useMobileScreen } from '../lib/viewport';
 import { SideMenu } from './SideMenu';
+import { RegistrationLink } from './Registration';
 import { Icon } from './Icon';
 const GeometryContext = createContext<(target: Target | undefined) => void>(() => {});
 export const useMapGeometry = () => useContext(GeometryContext);
@@ -54,4 +55,4 @@ export function MapPanel({ title, eyebrow, children, footer, onClose, className 
   </section>;
 }
 export function MapMessages({ children }: { children: ReactNode }) { return <div className="map-messages">{children}</div>; }
-export function FloatingRegister({ query = '' }: { query?: string }) { return <div className="floating-register"><Link className="button primary" to={`/register${query ? `?return=${encodeURIComponent(query)}` : ''}`}><Icon name="plus"/>최애 등록하기</Link></div>; }
+export function FloatingRegister({ query = '' }: { query?: string }) { return <div className="floating-register"><RegistrationLink className="button primary" to={`/register${query ? `?return=${encodeURIComponent(query)}` : ''}`}><Icon name="plus"/>최애 등록하기</RegistrationLink></div>; }
