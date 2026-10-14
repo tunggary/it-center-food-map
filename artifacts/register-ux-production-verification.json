@@ -1,0 +1,104 @@
+{
+  "search": {
+    "origin": "https://gpsbnmgwowsbgclcottl.supabase.co",
+    "pages": [
+      {
+        "page": 1,
+        "distances": [
+          89,
+          105,
+          106,
+          109,
+          118,
+          124,
+          135,
+          135,
+          143,
+          162,
+          162,
+          182,
+          187,
+          187,
+          190
+        ]
+      },
+      {
+        "page": 2,
+        "distances": [
+          192,
+          194,
+          202,
+          205,
+          208,
+          210,
+          211,
+          214,
+          215,
+          215,
+          216,
+          216,
+          216,
+          216,
+          218
+        ]
+      }
+    ],
+    "sorted": true
+  },
+  "before": 5,
+  "selected": {
+    "level": 3,
+    "footerLinks": 0,
+    "pinBottom": 219,
+    "panelTop": 371.3671875
+  },
+  "restored": {
+    "query": "카페",
+    "results": 15,
+    "pins": 15
+  },
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "searchTop": 16,
+    "toolsTop": 74,
+    "choiceHeight": 56
+  },
+  "favoriteSubmitted": false,
+  "placeRegistration": "/register?target=3566c4ad-8733-402f-b741-04b9828a47fa&from=detail&return=team%3D%26category%3D",
+  "placeReturn": true,
+  "courseRegistration": {
+    "url": "/register?target=5c154d52-f9bf-4ed3-ace7-8b36452b30ec&from=detail",
+    "badge": "선택한 코스",
+    "personalLinks": 2,
+    "documentWidth": 1280,
+    "width": 1280
+  },
+  "courseReturn": {
+    "url": "/targets/5c154d52-f9bf-4ed3-ace7-8b36452b30ec",
+    "title": "혈당 스파이크 해소 산책길!",
+    "width": 1280,
+    "documentWidth": 1280
+  },
+  "date": "2026-10-14",
+  "productionCommit": "9ac0cdf32c6f460e9c52f37e294e78991760249d",
+  "deploymentId": "dpl_2m9aPvtRr3PqRUVPEV5N5gGW3Tjm",
+  "deploymentState": "READY",
+  "canonical": "https://it-center-food-map.vercel.app",
+  "featurePr": 26,
+  "releasePr": 27,
+  "supabase": {
+    "qaApiVersion": 7,
+    "productionApiVersion": 8,
+    "bundleSha256": "a4f897eabddaeb61ec3fd68a301c01b15860df8f2c14208fa5bc0a37400706a5"
+  },
+  "http": {
+    "/": 200,
+    "/register": 200,
+    "/register/places": 200,
+    "/courses/new": 200,
+    "missingAsset": 404
+  },
+  "tests": 52,
+  "limitations": "Real device GPS/keyboard and previous QA/performance holds remain; production favorite writes not performed"
+}

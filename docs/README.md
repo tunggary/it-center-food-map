@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- 등록 UX 개선 운영 반영·검증 (2026-10-14): 사용자 요청으로 기능PR #26→develop(ddb2e88), 릴리스PR #27→main(9ac0cdf)을 merge했다. 개인 Vercel Production dpl_2m9aPvtRr3PqRUVPEV5N5gGW3Tjm READY·대상커밋·주요직접경로HTTP200/없는asset404를 확인했다. 개인 Supabase QAapi7/운영api8 ACTIVE로 검색정렬도 반영했다. 운영 검색30건 거리순·모바일 선택/상단배치/확대/검색복귀·장소/코스상세 등록X복귀·PC개인메뉴/overflow없음을 실제 확인했다. 운영 후기 fixture는 만들지 않았다. 근거는 artifacts/register-ux-production-verification.json과 docs/deployment.md다. 소프트웨어 검증/배포를 완료했으며 실기기/기존QA·성능보류는 유지해8단계는 미체크다. 이 확인기록을 release→main/develop PR로 반영하고 최종커밋 READY/HTTP를 확인한다.
+
 - 등록 UX 개선 커밋·기능 브랜치 push (2026-10-14): 사용자 요청으로 기존 커밋/push 보류를 해제했다. 최신 origin/develop과 같은 기준에서 시작한 feature/register-ux-feedback에 검색 API(a9ae91d)와 등록 UI·회귀 테스트(9ca2c8a)를 논리적 커밋으로 나눠 원격 push 완료했다. 최종 Vitest52개·타입/build·Deno API check·diff검사와 검증 JSON4개를 확인했다. 참여자/FE/진행 문서와 검증자료4개는 별도 문서 커밋으로 함께 반영한다. main/develop 머지·운영/원격Edge 배포는 수행하지 않았으며 8단계와 실기기/기존QA 보류는 유지한다.
 
 - 상세 진입 등록·수정 복귀 로컬 구현·검증 완료 (2026-10-14): 상세의 추가등록/관리/후기수정 링크에 from=detail·target·return필터를 남기고 X/삭제 성공을 같은 상세로 replace 복귀하도록 변경했다. 새로고침에서도 대상/필터를 유지하며 내 목록 진입·검색결과 복귀·초안 확인/취소·삭제 실패 입력유지는 보존한다. 삭제 후 대상 후기 캐시를 제거하고 본인등록 캐시를 null로 갱신해 최신 후기/횟수/등록버튼을 조회한다. Vitest52개·타입/build·diff검사 통과. 실제 로컬 모바일390×844/PC1280×800에서 등록/수정 새로고침 후X·문구폐기 확인/취소·임시 장소후기 삭제 후원래5명/본인링크0·코스마지막후기 삭제 후동일상세0명/빈후기/다시등록·가로넘침없음을 확인했다. 임시후기2건은 본인삭제했고 후기0건 코스 대상은 제품 정책대로 로컬에 유지하며 운영/QA 원격DB는 변경하지 않았다. 근거는 artifacts/detail-registration-return-verification.json이다. 참여자 흐름·FE 복귀 계약 문서를 갱신했다. 7단계 완료, 커밋·push·배포는 수행하지 않았으며 8단계/기존 실기기·QA 보류는 유지한다.
