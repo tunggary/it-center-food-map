@@ -10,7 +10,7 @@ export class ApiError extends Error {
 const messages: Partial<Record<ErrorCode, string>> = {
   IDENTITY_EXPIRED: '참여 정보가 만료됐어요. 새 참여자로 시작하면 이전 등록의 수정 권한은 이어지지 않아요.',
   ADMIN_SESSION_EXPIRED: '운영자 로그인이 만료됐어요. 다시 로그인한 뒤 직접 재시도해 주세요.',
-  FORBIDDEN: '이 작업을 할 권한이 없어요.', TARGET_GONE: '이 장소나 코스가 삭제됐어요. 다른 대상을 선택해 주세요.',
+  FORBIDDEN: '이 작업을 할 권한이 없어요.', TARGET_GONE: '이 장소나 코스가 삭제됐어요. 작성을 취소한 뒤 새 최애 등록을 시작해 주세요.',
   ALREADY_REGISTERED: '이미 등록한 최애예요. 내 최애에서 수정할 수 있어요.',
   VERSION_CONFLICT: '다른 변경이 먼저 저장됐어요. 최신 내용을 확인한 뒤 다시 저장해 주세요.',
   SNAPSHOT_CHANGED: '목록이 갱신됐어요. 첫 페이지부터 다시 확인해 주세요.',

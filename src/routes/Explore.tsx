@@ -5,25 +5,28 @@ import { rpc } from '../lib/api';
 import { useCatalog } from '../lib/state';
 import { Empty, ErrorNotice, FiltersForm, Loading, useFilters } from '../components/ui';
 import { FloatingRegister, MapMessages, MapPanel, MapScene, MapToolbar, usePanelClose } from '../components/MapScene';
+import { useMobileScreen } from '../lib/viewport';
+import { RankingTicker } from '../components/RankingTicker';
 import { Icon } from '../components/Icon';
 export function RankingList({ items, query = '', onSelect }: { items: Ranking[]; query?: string; onSelect?: (id: string) => void }) {
-  return <ol className="rankings">{items.map(item => <li key={item.targetId}>{onSelect ? <button type="button" className="ranking-item" onClick={() => onSelect(item.targetId)}><RankingRow item={item}/></button> : <Link className="ranking-item" to={`/targets/${item.targetId}${query ? `?${query}` : ''}`} state={{ mapBack: true }}><RankingRow item={item}/></Link>}</li>)}</ol>;
+  const location = useLocation();
+  return <ol className="rankings">{items.map(item => <li key={item.targetId}>{onSelect ? <button type="button" className="ranking-item" onClick={() => onSelect(item.targetId)}><RankingRow item={item}/></button> : <Link className="ranking-item" to={`/targets/${item.targetId}${query ? `?${query}` : ''}`} replace={location.pathname !== '/'}><RankingRow item={item}/></Link>}</li>)}</ol>;
 }
 function RankingRow({ item }: { item: Ranking }) { return <><span className={`rank ${item.rank === 1 ? 'first' : ''}`}>{String(item.rank).padStart(2, '0')}</span><span className="rank-name"><strong>{item.name}</strong><small>{item.kind === 'COURSE' ? '산책코스' : '장소'}</small></span><span className="rank-count"><b>{item.count}</b><small>최애</small></span><Icon name="chevron"/></>; }
 export function useExploreFilters() {
-  const catalog = useCatalog(), [baseFilters, setFilters, query] = useFilters(), [params] = useSearchParams();
-  const defaultCategory = catalog.data?.allCategories.find(c => c.name === '맛집')?.id ?? null;
-  const filters = { ...baseFilters, categoryId: params.has('category') ? baseFilters.categoryId : defaultCategory };
-  const effectiveQuery = new URLSearchParams(query); effectiveQuery.set('category', filters.categoryId ?? '');
-  return { catalog, filters, setFilters, query: effectiveQuery.toString() };
+  const catalog = useCatalog(), [filters, setFilters, query] = useFilters();
+  return { catalog, filters, setFilters, query };
 }
 export default function ExplorePage() {
   const { catalog, filters, setFilters, query } = useExploreFilters();
   const navigate = useNavigate(), location = useLocation();
-  const snapshot = useQuery({ queryKey: ['explore', filters.teamId, filters.categoryId, 1], enabled: !!catalog.data, queryFn: ({ signal }) => rpc<Explore>('read_explore', { p_team_id: filters.teamId, p_category_id: filters.categoryId, p_rank_page: 1 }, signal) });
+  const mobile = useMobileScreen();
+  const detailOpen = location.pathname.startsWith('/targets/');
+  const mapFilters = detailOpen ? { teamId: null, categoryId: null } : filters;
+  const snapshot = useQuery({ queryKey: ['explore', mapFilters.teamId, mapFilters.categoryId, 1], enabled: !!catalog.data, queryFn: ({ signal }) => rpc<Explore>('read_explore', { p_team_id: mapFilters.teamId, p_category_id: mapFilters.categoryId, p_rank_page: 1 }, signal) });
   const home = location.pathname === '/';
   const pins = snapshot.data?.pins.map(pin => ({ ...pin, name: snapshot.data?.rankingPage.find(r => r.targetId === pin.targetId)?.name }));
-  return <MapScene pins={pins} onSelect={id => navigate(`/targets/${id}?${query}`, { state: { mapBack: true } })} className="explore-scene"><MapToolbar/><div className="floating-filters">{catalog.data ? <FiltersForm catalog={catalog.data} filters={filters} onChange={setFilters}/> : null}</div><MapMessages>{catalog.error ? <ErrorNotice error={catalog.error} retry={() => void catalog.refetch()}/> : null}{snapshot.error ? <ErrorNotice error={snapshot.error} retry={() => void snapshot.refetch()}/> : null}</MapMessages>{home ? <><MapPanel title="동료들의 요즘 최애" eyebrow="AROUND THE IT CENTER" className="compact-ranking" footer={<Link className="text-link" to={`/rankings?${query}`} state={{ mapBack: true }}>전체 랭킹 보기 <Icon name="chevron"/></Link>}>{snapshot.isPending ? <Loading text="랭킹을 불러오고 있어요…"/> : snapshot.isError && !snapshot.data ? <p className="muted">랭킹을 불러오지 못했어요</p> : snapshot.data?.rankingPage.length ? <RankingList items={snapshot.data.rankingPage.slice(0, 5)} query={query}/> : snapshot.data ? <Empty>이 조건의 최애가 아직 없어요. 조건을 바꾸거나 첫 최애를 남겨 주세요.</Empty> : null}</MapPanel><FloatingRegister query={query}/></> : <Outlet/>}</MapScene>;
+  return <MapScene pins={pins} onSelect={id => navigate(`/targets/${id}?${query}`, { replace: location.pathname !== '/' })} className={`explore-scene ${detailOpen ? 'detail-scene' : ''}`}><MapToolbar/>{home && mobile ? <RankingTicker items={snapshot.data?.rankingPage.slice(0, 5) ?? []} query={query} pending={snapshot.isPending} failed={snapshot.isError && !snapshot.data}/> : null}<div className="floating-filters">{catalog.data && !detailOpen ? <FiltersForm catalog={catalog.data} filters={filters} onChange={setFilters}/> : null}</div><MapMessages>{catalog.error ? <ErrorNotice error={catalog.error} retry={() => void catalog.refetch()}/> : null}{snapshot.error ? <ErrorNotice error={snapshot.error} retry={() => void snapshot.refetch()}/> : null}</MapMessages>{home ? <>{!mobile ? <MapPanel title="동료들의 요즘 최애" eyebrow="AROUND THE IT CENTER" className="compact-ranking" footer={<Link className="text-link" to={`/rankings?${query}`}>전체 랭킹 보기 <Icon name="chevron"/></Link>}>{snapshot.isPending ? <Loading text="랭킹을 불러오고 있어요…"/> : snapshot.isError && !snapshot.data ? <p className="muted">랭킹을 불러오지 못했어요</p> : snapshot.data?.rankingPage.length ? <RankingList items={snapshot.data.rankingPage.slice(0, 5)} query={query}/> : snapshot.data ? <Empty>이 조건의 최애가 아직 없어요. 조건을 바꾸거나 첫 최애를 남겨 주세요.</Empty> : null}</MapPanel> : null}<FloatingRegister query={query}/></> : <Outlet/>}</MapScene>;
 }
 export function RankingsPanel() {
   const { catalog, filters, query } = useExploreFilters();

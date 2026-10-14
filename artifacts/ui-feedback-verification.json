@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-14",
+  "tests": 32,
+  "typecheck": "passed",
+  "build": "passed",
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "brandElements": 0,
+    "defaultFilters": [
+      "",
+      ""
+    ],
+    "ticker": {
+      "top": 12,
+      "height": 50,
+      "liveRotation": true
+    },
+    "drawer": {
+      "right": 390,
+      "width": 300,
+      "edgeDrag": true,
+      "backdropEscapeClose": true,
+      "focusRestore": true
+    },
+    "geolocation": {
+      "testInjected": true,
+      "blueDotCenter": [
+        195,
+        422
+      ],
+      "deniedToast": true,
+      "visibleAboveDetailSheet": true
+    },
+    "detail": {
+      "filterElements": 0,
+      "heightPercent": 70,
+      "unfilteredRead": true,
+      "unfilteredBackgroundMap": true,
+      "returnFilterURLPreserved": true,
+      "invalidReturnFiltersCauseNoDetailAlert": true
+    },
+    "photo": {
+      "realLocalUpload": true,
+      "previewDuringBusy": true,
+      "dim": "rgba(16,44,33,0.66)",
+      "readyDimRemoved": true
+    },
+    "modalCenter": [
+      195,
+      422
+    ],
+    "reselectionButton": false,
+    "errorToast": true
+  },
+  "desktop": {
+    "viewport": [
+      1440,
+      900
+    ],
+    "brandElements": 0,
+    "overflow": false,
+    "modalCenter": [
+      720,
+      450
+    ]
+  },
+  "booth": {
+    "viewport": [
+      1920,
+      1080
+    ],
+    "brandElements": 0,
+    "overflow": false
+  },
+  "excluded": [
+    "브라우저 연결",
+    "로그인"
+  ],
+  "limits": [
+    "실기기 GPS/권한/키보드 미검증",
+    "기존 QA/성능 보류 유지"
+  ],
+  "reducedMotionAnimation": "none",
+  "delivery": "local-only; user requested no commit/merge/deploy",
+  "additionalLayoutFeedback": {
+    "longCourseNameChars": 100,
+    "beforeMobileDocumentWidth": 1170,
+    "afterMobile": [
+      {
+        "viewport": 390,
+        "documentWidth": 390,
+        "cardWidth": 354
+      },
+      {
+        "viewport": 320,
+        "documentWidth": 320,
+        "cardWidth": 284
+      }
+    ],
+    "desktop": {
+      "viewport": [
+        1280,
+        800
+      ],
+      "filtersWidth": 440,
+      "captionHeight": 17.05,
+      "captionSingleLine": true,
+      "overflow": false
+    },
+    "personalScreenLabel": "내 장소/코스",
+    "profileLinkText": "내 정보",
+    "menuTranslate": "no",
+    "pinBoxShadow": "none",
+    "testedPins": 5
+  },
+  "singlePanelNavigation": {
+    "desktopViewport": [
+      1280,
+      800
+    ],
+    "filtersWidth": 380,
+    "rankingWidth": 380,
+    "filterHeights": [
+      44,
+      44
+    ],
+    "personalMenuHeight": 44,
+    "personalLinkHeights": [
+      44,
+      44
+    ],
+    "desktopPanelDOMPreserved": true,
+    "mobilePanelDOMPreserved": true,
+    "panelCount": 1,
+    "scrollReset": 0,
+    "closeToMainInOneAction": true,
+    "rankPageCleared": true,
+    "filterPreserved": true,
+    "noCommitOrDeploy": true
+  },
+  "desktopTopAlignment": {
+    "viewports": [
+      [
+        1280,
+        800
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "filterTop": 24,
+    "personalMenuTop": 24,
+    "filterHeight": 44,
+    "personalMenuHeight": 44,
+    "filterWidth": 380,
+    "rankingWidth": 380,
+    "rankingTop": 84,
+    "gap": 16,
+    "overflow": false,
+    "mobileTickerTopUnchanged": 12,
+    "mobileFilterTopUnchanged": 76
+  }
+}

@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 const paths: Record<string, ReactNode> = {
+  menu: <path d="M4 6h16M4 12h16M4 18h16"/>, pause: <path d="M8 5v14M16 5v14"/>, play: <path d="m8 5 11 7-11 7Z"/>,
   map: <><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Z"/><path d="M9 3v15M15 6v15"/></>,
   pin: <><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></>,
   search: <><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></>,
