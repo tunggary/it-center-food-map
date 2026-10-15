@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- develop 머지·QA 및 운영 DB/API 반영 완료 (2026-10-15): 네 커밋6c83c68/47c798b/3fb769d/45da4e0을 기능브랜치에push하고 PR#38을develop439d59f에merge했다. 개인조직/대상을확인한뒤 QA/운영에20261014233653을각각dry-run후적용하고api를QA9/운영10 ACTIVE·verify_jwt=false로배포했다. 두번들SHA256=afd8afc8fafcc4dd2f7da52e88356e917a39d0f809d36399e6e16f3c21556492다. QA실제빈문구생성/공백정규화/수정삭제/100이모지/검증/재생·충돌/공개·본인조회/알림을확인하고시험자료를정리했다(QA10146등록/200참여자/1000대상/revision154). 운영19등록/10참여자/13대상/revision23유지·양쪽보안advisor ERROR0이다. 보호된기능Preview READY·HTML/JS/CSS200·QA연결/최종선택스타일·PC/모바일11카드날짜시간/넘침없음을확인했다. Preview지도도메인미설정과브라우저Edge쓰기검증미수행은분리하며실제API는QA HTTP/실제폼흐름은로컬에서검증했다. [근거](../artifacts/registration-optional-release-verification.json). release/registration-optional-message에서main PR을준비하며8단계는운영FE확인전미완료다.
+
 - 누적 개선 릴리스 착수 (2026-10-15): 사용자 요청으로 검색창 숨김·소개 선택 입력/선택표시 통일·작성자 영역 날짜/시간 표시를 논리별 커밋/push 후 PR로 develop→release→main에 반영한다. 개인 Vercel계정/scope/팀/프로젝트ID와 Supabase개인조직/QA/운영소속을 재확인했고 전체Vitest119개·타입/build·Deno check·diff검사를 통과했다. QA DB→Edge→Preview 검증 후 운영 DB→Edge→main 자동배포를 진행하며8단계는 실제운영확인전 미완료다.
 
 - 상세 등록 일시 구현·검증 완료 (2026-10-15): 카드 하단 날짜를 제거하고 작성자 정보 오른쪽에 time 요소로 최초 등록 일시를 표시했다. 한국시간(Asia/Seoul), YYYY. MM. DD. HH:mm의24시간제·분 단위이며 원본 timestamp는 datetime 속성에 유지한다. 10px/보통굵기/muted를 유지하고 좁은 카드에서는 팀/분류 아래로 줄바꿈한다. 실제 로컬 공개RPC의5개카드에서 PC1280·모바일390 오른쪽/320px아래 배치·겹침/넘침없음·이전하단날짜없음을 확인했다. [브라우저근거](../artifacts/registration-datetime-verification.json). 관련테스트23개(한국시간날짜경계/00시표시포함)·타입/build·diff검사통과. 기존미커밋작업보존·API/DB/운영변경없음. 7단계완료/8단계배포전이며 다음작업은 누적변경의QA·PR릴리스다.
