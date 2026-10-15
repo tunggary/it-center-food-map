@@ -128,3 +128,7 @@ public schema에 있는 `gateway_create_favorite`, `gateway_edit_favorite`, `gat
 ## 등록 진입 모달 (2026-10-14)
 
 POST /me는 기존 참여자 인증/명령 속도 제한·해시·원장을 사용한다. identity별 프로필은 하나이며 선택 가능한 팀만 허용한다. app_state 잠금 후 자격을 재검사하고 명령 재생을 먼저 처리한다. 성공 시 revision을 올리지만 최애·대상·registration_events는 생성하지 않는다. 최신 GET /me 확인 후 목적지로 이동하며 응답 유실은 같은 requestKey/body로 재시도한다. 기존 PATCH /me의 닉네임 수정/팀 변경 금지는 유지한다.
+
+## 소개 문구 문자열 계약 (2026-10-15)
+
+POST /favorites와 PATCH /favorites/:id의 `message` 키는 필수 문자열로 유지한다. 사용자 입력은 선택이며 빈 문자열을 허용한다. trim 후0~100 grapheme, 필드 누락·null·숫자는 VALIDATION_ERROR다. PATCH의 `message: ""`는 기존 소개를 지운다. 누락을 삭제로 해석하지 않는다. Favorite 응답도 항상 문자열이며 소개가 없으면 `""`다. 공유 스키마가 정규화한 결과로 기존 canonical JSON/payloadHash를 계산한다. DB 제약 완화→api Edge 재배포→FE 배포 순서로 반영한다.
