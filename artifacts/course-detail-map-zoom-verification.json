@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-15",
+  "before": {
+    "levelBeforeSelection": 6,
+    "levelAfterSelection": 6,
+    "courseName": "QA버스트코스001",
+    "selectedName": "QA버스트코스001 · 1",
+    "pathCount": 1,
+    "environment": "Local pre-fix bfab709"
+  },
+  "after": {
+    "source": "Local actual Kakao SDK and existing RPC; no DB/remote writes",
+    "scenarios": [
+      {
+        "width": 1280,
+        "levelBeforeSelection": 6,
+        "name": "QA버스트코스001",
+        "level": 3,
+        "kind": "COURSE",
+        "expected": {
+          "lng": 127.06,
+          "lat": 37.5
+        },
+        "actual": {
+          "lng": 127.06,
+          "lat": 37.5
+        },
+        "pointCount": 2,
+        "pathCount": 1,
+        "insideMap": true,
+        "coveredByPanel": false,
+        "overflow": false,
+        "manualLevelAfterRefresh": 2
+      },
+      {
+        "width": 390,
+        "levelBeforeSelection": 6,
+        "name": "QA버스트코스001",
+        "level": 3,
+        "kind": "COURSE",
+        "expected": {
+          "lng": 127.06,
+          "lat": 37.5
+        },
+        "actual": {
+          "lng": 127.06,
+          "lat": 37.5
+        },
+        "pointCount": 2,
+        "pathCount": 1,
+        "insideMap": true,
+        "coveredByPanel": false,
+        "overflow": false,
+        "manualLevelAfterRefresh": 2
+      },
+      {
+        "width": 320,
+        "levelBeforeSelection": 6,
+        "name": "QA버스트코스001",
+        "level": 3,
+        "kind": "COURSE",
+        "expected": {
+          "lng": 127.06,
+          "lat": 37.5
+        },
+        "actual": {
+          "lng": 127.06,
+          "lat": 37.5
+        },
+        "pointCount": 2,
+        "pathCount": 1,
+        "insideMap": true,
+        "coveredByPanel": false,
+        "overflow": false,
+        "manualLevelAfterRefresh": 2
+      }
+    ],
+    "booth": {
+      "name": "QA버스트코스001",
+      "level": 3,
+      "kind": "COURSE",
+      "expected": {
+        "lng": 127.06,
+        "lat": 37.5
+      },
+      "actual": {
+        "lng": 127.06,
+        "lat": 37.5
+      },
+      "pointCount": 2,
+      "pathCount": 1,
+      "insideMap": true,
+      "coveredByPanel": false,
+      "overflow": false
+    }
+  },
+  "cause": "MapScene passed focusLevel=3 only for PLACE; COURSE received no focus level",
+  "checks": {
+    "regression": "2 COURSE cases failed with setLevel called 0 times before fix; both pass after fix",
+    "fullTestsPassed": 149,
+    "testFiles": 22,
+    "finalLocationTestsPassed": 8,
+    "typecheck": "passed",
+    "build": "passed",
+    "deployment": "not performed",
+    "database": "unchanged"
+  }
+}
