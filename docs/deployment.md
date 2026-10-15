@@ -126,3 +126,11 @@ message는 NOT NULL 문자열과8KiB 바이트 상한을 유지하고 빈 문자
 - 실제 운영PC1280·모바일390/320에서 코스랭킹 선택level6→3·직접상세level3·사용자확대2유지, 부스선택6→3의7조건을 검증했다. 실제시작점/경로점일치·경로선·선택핀패널비가림·가로넘침/동작오류0을 확인했다. Vercel배포오류로그15분조회반환0이다.
 - 전체149개테스트·타입/build를 통과했다. DB/API/환경변수/인증보호 변경과 운영등록·프로필·사진 시험쓰기는 없다. 복구는 이 한 조건을 되돌리는 hotfix PR이며 기존 데이터에 영향이 없다.
 - [배포/API근거](../artifacts/course-detail-map-zoom-release-verification.json) · [운영브라우저](../artifacts/course-detail-map-zoom-production-browser-verification.json). 이 기록은 문서전용PR로main/develop에반영하고 마지막main READY/실제응답을 다시 확인한다.
+
+## 산책코스 전체 경로 맞춤 릴리스 (2026-10-15)
+
+- 기능 `e1e0543`은 [PR#51](https://github.com/tunggary/it-center-food-map/pull/51) → develop `f3ffae0`, [릴리스 PR#52](https://github.com/tunggary/it-center-food-map/pull/52) → main `449310d3d044ec08278b66d8792c522d5d302700`으로 반영했다.
+- 개인 계정·scope·프로젝트를 확인하고 보호 Preview READY·HTML/JS/CSS/API/지도 모듈 200·QA endpoint를 확인했다. Production `dpl_98fv36FSXkuG5z1rwx3Wru6mHQAQ` READY·정확한 대상 SHA·canonical alias·직접경로 9개 200/없는 자산 404를 확인했다. JS는 `/assets/index-CWlqiVxH.js`, 지도 모듈은 `/assets/Map-_6-d1M2D.js`다.
+- 실제 운영 15조건에서 PC의 코스 5개, 모바일390/320의 일반·확장·요약 시트와 부스의 전체 경로 비가림을 확인했다. 장소는 기존 줌을 유지하고 중앙 오차 2px 이내·경로 맞춤 호출 0회다. 가로넘침·동작 오류 및 30분 오류로그 조회 반환은 0이다.
+- 전체153개·후속관련12개 테스트·타입/build 통과. DB/API/환경변수 변경 및 운영 등록·프로필·사진 시험쓰기는 없다. 복구는 FE 변경을 되돌리는 PR이며 데이터 복구는 필요 없다.
+- [배포 근거](../artifacts/course-map-fit-release-verification.json) · [운영 브라우저](../artifacts/course-map-fit-production-browser-verification.json). 완료 기록은 문서 PR로 main/develop에 반영하고 마지막 main READY·응답·동일 앱 자산을 확인한다.

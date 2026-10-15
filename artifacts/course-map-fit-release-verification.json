@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-15",
+  "featureCommit": "e1e0543a2f8dbd41d171d24f3e4a43435fc39f2d",
+  "featurePR": 51,
+  "developCommit": "f3ffae08aca0bd2412cc01c37d87231acd7a4bce",
+  "mainPR": 52,
+  "mainCommit": "449310d3d044ec08278b66d8792c522d5d302700",
+  "deployment": {
+    "id": "dpl_98fv36FSXkuG5z1rwx3Wru6mHQAQ",
+    "url": "it-center-food-qsd92vdh3-tunggary2-navercoms-projects.vercel.app",
+    "readyState": "READY",
+    "aliases": [
+      "it-center-food-map.vercel.app",
+      "it-center-food-map-tunggary2-navercoms-projects.vercel.app",
+      "it-center-food-map-git-main-tunggary2-navercoms-projects.vercel.app"
+    ]
+  },
+  "preview": {
+    "url": "it-center-food-lv3be47vt-tunggary2-navercoms-projects.vercel.app",
+    "state": "READY",
+    "protectedHtmlJsCssApiMapStatus": 200,
+    "qaEndpoint": true
+  },
+  "http": {
+    "/": 200,
+    "/rankings": 200,
+    "/targets/495bc784-32b9-45e3-a3af-760b9740ecb7": 200,
+    "/register": 200,
+    "/register/places": 200,
+    "/courses/new": 200,
+    "/me/favorites": 200,
+    "/me/profile": 200,
+    "/booth": 200,
+    "/assets/course-map-fit-missing.js": 404
+  },
+  "assets": {
+    "js": "/assets/index-CWlqiVxH.js",
+    "css": "/assets/index-N51aabdx.css",
+    "api": "/assets/api-BzLtG-Em.js",
+    "map": "/assets/Map-_6-d1M2D.js",
+    "status": 200,
+    "productionEndpoint": true,
+    "fitPointsModule": true,
+    "cssMatchesLocal": true
+  },
+  "previousProduction": {
+    "id": "dpl_8o1UkTgYgXrME1s9i9U3XoVweipE",
+    "url": "it-center-food-qmjpbqpjl-tunggary2-navercoms-projects.vercel.app"
+  },
+  "verification": {
+    "testsPassed": 153,
+    "finalRelatedTestsPassed": 12,
+    "typecheck": "passed",
+    "build": "passed",
+    "dbApiEnvChanges": false,
+    "productionBrowserCases": 15,
+    "productionBrowserEvidence": "course-map-fit-production-browser-verification.json",
+    "errorLogWindowMinutes": 30,
+    "errorLogLines": 0
+  }
+}
