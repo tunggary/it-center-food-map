@@ -114,3 +114,6 @@ message는 NOT NULL 문자열과8KiB 바이트 상한을 유지하고 빈 문자
 ## 지도 클러스터링·랭킹 무한 스크롤 릴리스 (2026-10-15)
 
 기능PR#42→develop7ed98e3. QA/운영의20261015013119를각각dry-run후적용했으며운영데이터19등록/10참여자/13대상/revision23유지·양쪽보안advisor ERROR0이다. 모든핀name·페이지/부스핀일치·기존권한을확인했다. Edge변경은없다. 기능Preview READY·보호HTML/JS/CSS·QA연결을확인했다. 전체144개테스트·타입/build·로컬PC/모바일지도/누적스크롤검증통과다. release/map-clusters-ranking-scroll에서main에반영한뒤READY·대상SHA·운영응답/UI를확인한다. 복구는FE를이전main으로되돌리는PR이며추가name필드는기존FE와호환되므로DB응답확장은유지할수있다. [릴리스근거](../artifacts/map-ranking-release-verification.json).
+
+
+실행 결과: 릴리스PR#43 main49e2f91 이후 사용자피드백의상세자동확대누락을hotfixPR#44 main41b557f에반영했다. 상세좌표에focusLevel=3이전달되지않아확대명령이호출되지않던원인을수정했고같은좌표의선택ID변경도재초점한다. Production dpl_2yYDvh6wYZqe6hUdf4kxmTknMxH6 READY·대상SHA·canonical alias·직접경로8개200/없는자산404·초기JS/CSS·운영Supabase연결을확인했다. 실제운영PC1280·모바일390/320에서장소선택level6→3/직접상세level3·선택라벨지도내/패널비가림·랭킹13개/페이지버튼없음/끝중단·overflow/앱오류0을확인했다. 운영19등록/10참여자/13대상/revision23유지·시험등록없음이다. 전체147개테스트·타입/build통과. [운영브라우저](../artifacts/map-ranking-production-browser-verification.json). 결과기록을문서PR로main과hotfixPR#45로develop에반영하며최종main READY/응답을재확인한다.

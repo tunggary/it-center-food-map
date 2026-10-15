@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-15",
+  "main": "41b557f0f25f2a2e0e68b958415ca080f5d4fd7e",
+  "environment": "Production actual API/Kakao SDK; public reads only; no fixture or registration writes",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "detail": {
+        "level": 3,
+        "selectedName": "중앙해장 · 3",
+        "coveredByPanel": false,
+        "insideMap": true,
+        "noOverflow": true,
+        "errors": []
+      },
+      "directLevel": 3,
+      "ranking": {
+        "rows": 13,
+        "hasPagination": false,
+        "hasSentinel": false,
+        "noOverflow": true,
+        "errors": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "detail": {
+        "level": 3,
+        "selectedName": "중앙해장 · 3",
+        "coveredByPanel": false,
+        "insideMap": true,
+        "noOverflow": true,
+        "errors": []
+      },
+      "directLevel": 3,
+      "ranking": {
+        "rows": 13,
+        "hasPagination": false,
+        "hasSentinel": false,
+        "noOverflow": true,
+        "errors": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "detail": {
+        "level": 3,
+        "selectedName": "중앙해장 · 3",
+        "coveredByPanel": false,
+        "insideMap": true,
+        "noOverflow": true,
+        "errors": []
+      },
+      "directLevel": 3,
+      "ranking": {
+        "rows": 13,
+        "hasPagination": false,
+        "hasSentinel": false,
+        "noOverflow": true,
+        "errors": []
+      }
+    }
+  ]
+}
