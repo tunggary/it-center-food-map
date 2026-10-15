@@ -7,7 +7,7 @@ import { Icon } from './Icon';
 import { ClusteredPins } from './ClusteredPins';
 export type MapPin = Pin;
 const EMPTY_PINS: MapPin[] = [], EMPTY_POINTS: Point[] = [];
-export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, onCenter, editing = false, selectedId, focusPoint, focusLevel, fullscreen = false, fitPins = false, clustering = false, clusterContextKey }: { pins?: MapPin[]; points?: Point[]; onSelect?: (id: string) => void; onCenter?: (point: Point) => void; editing?: boolean; selectedId?: string; focusPoint?: Point; focusLevel?: number; fullscreen?: boolean; fitPins?: boolean; clustering?: boolean; clusterContextKey?: string }) {
+export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, onCenter, editing = false, selectedId, focusPoint, focusLevel, fullscreen = false, fitPins = false, fitPoints = false, clustering = false, clusterContextKey }: { pins?: MapPin[]; points?: Point[]; onSelect?: (id: string) => void; onCenter?: (point: Point) => void; editing?: boolean; selectedId?: string; focusPoint?: Point; focusLevel?: number; fullscreen?: boolean; fitPins?: boolean; fitPoints?: boolean; clustering?: boolean; clusterContextKey?: string }) {
   const element = useRef<HTMLDivElement>(null), shell = useRef<HTMLDivElement>(null);
   const instance = useRef<KakaoObject | null>(null);
   const markers = useRef(new Map<string, { marker: KakaoObject; label: KakaoObject; button: HTMLButtonElement; click: () => void }>());
@@ -21,7 +21,8 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
   const selectedPin = pins.find(p => p.targetId === selectedId);
   const selectedLng = focusPoint?.[0] ?? selectedPin?.lng, selectedLat = focusPoint?.[1] ?? selectedPin?.lat;
   const anchor = useRef<Point | undefined>(undefined);
-  const reposition = useRef<() => void>(() => {});
+  const courseGeometry = useRef({ fitPoints, points }); courseGeometry.current = { fitPoints, points };
+  const reposition = useRef<(refitCourse?: boolean) => void>(() => {});
   const [ready, setReady] = useState(false), [error, setError] = useState<unknown>(), [retry, setRetry] = useState(0);
   useEffect(() => {
     let active = true, cleanup = () => {};
@@ -29,7 +30,7 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
     void loadMap().then(() => {
       if (!active || !element.current) return;
       const sdk = kakao(), map = new sdk.Map(element.current, { center: new sdk.LatLng(37.5088, 127.0632), level: 5 }); instance.current = map;
-      const visibleCenter = () => {
+      const visibleArea = () => {
         const box = element.current!.getBoundingClientRect();
         let left = 0, top = 0, bottom = box.height;
         const scene = shell.current?.closest('.map-scene');
@@ -40,8 +41,9 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
           if (matchMedia('(max-width:760px)').matches) bottom = Math.max(top + 40, r.top - box.top);
           else left = r.right - box.left + 20;
         }
-        return { x: (left + box.width) / 2, y: (top + bottom) / 2 };
+        return { left, top, right: box.width, bottom };
       };
+      const visibleCenter = () => { const area = visibleArea(); return { x: (area.left + area.right) / 2, y: (area.top + area.bottom) / 2 }; };
       const emitCenter = () => {
         if (!active || !element.current) return;
         const center = visibleCenter();
@@ -49,11 +51,30 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
         const p = fullscreen && editingRef.current ? map.getProjection().coordsFromContainerPoint(new sdk.Point(center.x, center.y)) : map.getCenter();
         callbacks.current.onCenter?.([p.getLng(), p.getLat()]);
       };
-      reposition.current = () => {
+      reposition.current = (refitCourse = true) => {
         if (!active || !element.current) return;
         const box = element.current.getBoundingClientRect();
         map.relayout();
-        if (anchor.current) {
+        const course = courseGeometry.current;
+        if (refitCourse && course.fitPoints && course.points.length > 1) {
+          const area = visibleArea(), scene = shell.current?.closest('.map-scene');
+          const panel = scene?.querySelector<HTMLElement>('[data-map-panel]:not(.compact-ranking)');
+          if (panel && matchMedia('(max-width:760px)').matches) area.bottom = Math.min(area.bottom, panel.getBoundingClientRect().top - box.top);
+          const tools = shell.current?.querySelector<HTMLElement>('.map-tools');
+          if (tools?.getClientRects().length) area.right = Math.min(area.right, tools.getBoundingClientRect().left - box.left - 12);
+          scene?.querySelectorAll<HTMLElement>('.booth-announcement,.booth-title').forEach(control => {
+            if (!control.getClientRects().length) return;
+            const r = control.getBoundingClientRect();
+            if (control.matches('.booth-announcement')) area.bottom = Math.min(area.bottom, r.top - box.top - 12);
+            else area.top = Math.max(area.top, r.bottom - box.top + 12);
+          });
+          const width = area.right - area.left, height = area.bottom - area.top;
+          if (width > 0 && height > 0) {
+            const bounds = new sdk.LatLngBounds();
+            course.points.forEach(([lng, lat]) => bounds.extend(new sdk.LatLng(lat, lng)));
+            map.setBounds(bounds, area.top + Math.min(48, height / 3), box.width - area.right + Math.min(32, width / 4), box.height - area.bottom + Math.min(24, height / 6), area.left + Math.min(32, width / 4));
+          }
+        } else if (anchor.current) {
           const position = new sdk.LatLng(anchor.current[1], anchor.current[0]);
           const projection = map.getProjection(), px = projection.containerPointFromCoords(position), desired = visibleCenter();
           const center = projection.coordsFromContainerPoint(new sdk.Point(px.x + box.width / 2 - desired.x, px.y + box.height / 2 - desired.y));
@@ -66,7 +87,7 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
       const observer = new ResizeObserver(() => reposition.current());
       observer.observe(element.current);
       const scene = shell.current?.closest('.map-scene');
-      const observePanel = () => { observer.disconnect(); if (element.current) observer.observe(element.current); scene?.querySelectorAll('[data-map-panel]').forEach(p => observer.observe(p)); reposition.current(); };
+      const observePanel = () => { observer.disconnect(); if (element.current) observer.observe(element.current); scene?.querySelectorAll('[data-map-panel],.map-tools,.booth-announcement,.booth-title').forEach(p => observer.observe(p)); reposition.current(); };
       const mutation = new MutationObserver(observePanel);
       if (scene) mutation.observe(scene, { childList: true });
       observePanel(); setReady(true); setError(undefined);
@@ -75,13 +96,15 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
     return () => { active = false; cleanup(); if (instance.current) { for (const { marker, label, button, click } of markers.current.values()) { kakao().event.removeListener(marker, 'click', click); button.removeEventListener('click', click); marker.setMap(null); label.setMap(null); } polyline.current?.setMap(null); userLocation.current?.setMap(null); userLocation.current = null; } markers.current.clear(); polyline.current = null; instance.current = null; reposition.current = () => {}; };
   }, [retry, fullscreen]);
   // Switching between browsing and course input must preserve the existing map.
-  useEffect(() => { anchor.current = selectedLng !== undefined && selectedLat !== undefined ? [selectedLng, selectedLat] : undefined; reposition.current(); }, [selectedLng, selectedLat]);
+  useEffect(() => { anchor.current = !fitPoints && selectedLng !== undefined && selectedLat !== undefined ? [selectedLng, selectedLat] : undefined; reposition.current(); }, [selectedLng, selectedLat, fitPoints]);
   useEffect(() => { reposition.current(); }, [editing, ready]);
+  const courseBoundsKey = fitPoints ? points.map(point => point.join(',')).join(';') : '';
+  useEffect(() => { if (fitPoints) reposition.current(); }, [fitPoints, courseBoundsKey, selectedId, ready]);
   useEffect(() => {
-    if (!ready || !instance.current || focusLevel === undefined || selectedLng === undefined || selectedLat === undefined) return;
+    if (fitPoints || !ready || !instance.current || focusLevel === undefined || selectedLng === undefined || selectedLat === undefined) return;
     instance.current.setLevel(Math.min(instance.current.getLevel(), focusLevel));
     reposition.current();
-  }, [ready, focusLevel, selectedLng, selectedLat, selectedId]);
+  }, [ready, focusLevel, selectedLng, selectedLat, selectedId, fitPoints]);
   const pinBoundsKey = pins.map(p => `${p.lng},${p.lat}`).join(';');
   useEffect(() => {
     if (!fitPins || !ready || !instance.current || !pins.length) return;
@@ -143,7 +166,7 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
       } else userLocation.current.setPosition(point);
       instance.current.setCenter(point);
       anchor.current = [position.coords.longitude, position.coords.latitude];
-      reposition.current();
+      reposition.current(false);
       showToast('내 위치로 이동했어요.', 'success');
     }, failure => {
       if (!alive.current) return;
