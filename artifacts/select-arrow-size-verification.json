@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-15",
+  "environment": "Local app; page-local session/profile fixtures; no remote writes",
+  "results": [
+    {
+      "page": "registration (shared edit form)",
+      "width": 1280,
+      "backgroundSize": "12px 12px",
+      "backgroundPosition": "calc(100% - 16px) 50%",
+      "paddingRight": "36px",
+      "height": 44.796875,
+      "noOverflow": true
+    },
+    {
+      "page": "registration (shared edit form)",
+      "width": 390,
+      "backgroundSize": "12px 12px",
+      "backgroundPosition": "calc(100% - 16px) 50%",
+      "paddingRight": "36px",
+      "height": 44.796875,
+      "noOverflow": true
+    },
+    {
+      "page": "registration (shared edit form)",
+      "width": 320,
+      "backgroundSize": "12px 12px",
+      "backgroundPosition": "calc(100% - 16px) 50%",
+      "paddingRight": "36px",
+      "height": 44.796875,
+      "noOverflow": true
+    },
+    {
+      "page": "map filters",
+      "selects": [
+        {
+          "backgroundSize": "12px 12px",
+          "backgroundPosition": "calc(100% - 16px) 50%",
+          "paddingRight": "36px"
+        },
+        {
+          "backgroundSize": "12px 12px",
+          "backgroundPosition": "calc(100% - 16px) 50%",
+          "paddingRight": "36px"
+        }
+      ],
+      "noOverflow": true
+    }
+  ]
+}

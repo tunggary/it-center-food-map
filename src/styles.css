@@ -97,7 +97,6 @@ dialog.side-menu{position:fixed;top:0;right:0;bottom:0;left:auto;margin:0;border
 .target-detail .detail-stats{flex-wrap:wrap}
 .target-detail .detail-rank{color:var(--green);font-weight:650}
 
-.registration-dialog select{appearance:none;-webkit-appearance:none;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m3 6 5 5 5-5' fill='none' stroke='%2320332e' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:16px 16px}
 
 /* Shared registration/edit form styling. */
 .register-scene #favorite-form{display:grid;gap:18px}
@@ -121,3 +120,6 @@ dialog.side-menu{position:fixed;top:0;right:0;bottom:0;left:auto;margin:0;border
 .comment-author{display:flex;flex:1;min-width:0;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:4px 12px}
 .comment-identity{flex:1 1 140px;min-width:0;overflow-wrap:anywhere}
 .comment-created-at{color:var(--muted);font-size:10px;font-weight:400;white-space:nowrap}
+
+/* Share the inset arrow across native select controls. */
+select,.floating-filters select,.map-panel .filters select,.map-panel select,.register-scene #favorite-form label select{appearance:none;-webkit-appearance:none;padding-right:36px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m3 6 5 5 5-5' fill='none' stroke='%2320332e' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:12px 12px}
