@@ -46,7 +46,7 @@ UUID·배열 크기·필수값·알 수 없는 필드는 Zod strict로 검사한
 | `read_events` | p_after_revision, p_until_revision, p_limit 1~100 | rows[{revision,favoriteId nullable}], nextCursor, done |
 | `read_announcement` | p_event_revision | 현재 nickname/team/target 이름 또는 `{skip:true}` |
 
-pins는 targetId/kind/좌표/count만 포함한다. 이름은 랭킹·선택 상세에서 읽는다. 코스 전체 좌표와 사진·문구는 pins 응답에 넣지 않는다. read_explore/read_booth의 압축 전송 크기와 전체 갱신 비용을 실측한다.
+pins는 `{targetId, name, kind, lng, lat, count}`를 포함한다. name은 현재 대상 이름이며 랭킹 페이지와 관계없이 모든 핀에 제공한다. count는 현재 조회 조건의 최애 등록 수다. read_booth도 read_explore의 같은 핀 계약을 사용한다. 코스 전체 좌표와 사진·문구는 pins 응답에 넣지 않는다. read_explore/read_booth의 압축 전송 크기와 전체 갱신 비용을 실측한다.
 
 랭킹은 20건씩, 전체 조건 집합에서 rank를 계산한 뒤 페이지를 자른다. 상세는 `(created_at DESC,id DESC)` cursor 20건씩이다. 같은 상세에서 더 보기를 할 때 p_expected_revision과 현재 revision이 다르면 `SNAPSHOT_CHANGED`로 첫 페이지를 다시 읽는다. 이미 본 필터/대상과 다른 늦은 응답은 적용하지 않는다.
 

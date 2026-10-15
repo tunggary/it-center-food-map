@@ -1,0 +1,508 @@
+{
+  "date": "2026-10-15",
+  "source": "Real Kakao SDK with page-only Query snapshot fixtures; no DB or remote writes",
+  "rule": "intersection area / smaller original label area >= 0.5; every pair in a group must qualify; no badge-based or transitive merging",
+  "scenarios": [
+    {
+      "name": "1280-mostly-hidden-group",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "장소·코스 106개",
+          "r": {
+            "x": 515,
+            "y": 624,
+            "width": 107.7265625,
+            "height": 34.59375,
+            "top": 624,
+            "right": 622.7265625,
+            "bottom": 658.59375,
+            "left": 515
+          }
+        },
+        {
+          "text": "장소·코스 25개",
+          "r": {
+            "x": 610,
+            "y": 380,
+            "width": 100.8515625,
+            "height": 34.59375,
+            "top": 380,
+            "right": 710.8515625,
+            "bottom": 414.59375,
+            "left": 610
+          }
+        },
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 652,
+            "y": 388,
+            "width": 92.8828125,
+            "height": 34.59375,
+            "top": 388,
+            "right": 744.8828125,
+            "bottom": 422.59375,
+            "left": 652
+          }
+        },
+        {
+          "text": "QA중단팀프로필준비 · 2",
+          "r": {
+            "x": 520,
+            "y": 376,
+            "width": 142.7265625,
+            "height": 34,
+            "top": 376,
+            "right": 662.7265625,
+            "bottom": 410,
+            "left": 520
+          }
+        },
+        {
+          "text": "삼성중앙역 9호선 · 2",
+          "r": {
+            "x": 353,
+            "y": 266,
+            "width": 125.90625,
+            "height": 34,
+            "top": 266,
+            "right": 478.90625,
+            "bottom": 300,
+            "left": 353
+          }
+        },
+        {
+          "text": "ㄴㄹㄴㄹ · 2",
+          "r": {
+            "x": 809,
+            "y": 424,
+            "width": 83.515625,
+            "height": 34,
+            "top": 424,
+            "right": 892.515625,
+            "bottom": 458,
+            "left": 809
+          }
+        },
+        {
+          "text": "목포명가 봉은사역점 · 1",
+          "r": {
+            "x": 621,
+            "y": 191,
+            "width": 136.96875,
+            "height": 34,
+            "top": 191,
+            "right": 757.96875,
+            "bottom": 225,
+            "left": 621
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "overflow": false
+    },
+    {
+      "name": "1280-zoom-splits-below-50-percent",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "중앙해장 · 1",
+          "r": {
+            "x": 567,
+            "y": 382,
+            "width": 81.921875,
+            "height": 34,
+            "top": 382,
+            "right": 648.921875,
+            "bottom": 416,
+            "left": 567
+          }
+        },
+        {
+          "text": "갓포아키 삼성점 · 1",
+          "r": {
+            "x": 621,
+            "y": 382,
+            "width": 116.203125,
+            "height": 34,
+            "top": 382,
+            "right": 737.203125,
+            "bottom": 416,
+            "left": 621
+          }
+        }
+      ],
+      "overlapRatio": 0.3408353995803929,
+      "overflow": false
+    },
+    {
+      "name": "1280-zoom-back-popup",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 594,
+            "y": 380,
+            "width": 92.8828125,
+            "height": 34.59375,
+            "top": 380,
+            "right": 686.8828125,
+            "bottom": 414.59375,
+            "left": 594
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "popup": {
+        "x": 500.5,
+        "y": 434,
+        "width": 280,
+        "height": 161.390625,
+        "top": 434,
+        "right": 780.5,
+        "bottom": 595.390625,
+        "left": 500.5
+      },
+      "popupRows": 2,
+      "overflow": false
+    },
+    {
+      "name": "1280-exact-detail",
+      "path": "http://localhost:5173/targets/73ec77e7-169f-4f09-ac19-7c0ef4661c6e"
+    },
+    {
+      "name": "390-mostly-hidden-group",
+      "width": 390,
+      "labels": [
+        {
+          "text": "장소·코스 106개",
+          "r": {
+            "x": 79,
+            "y": 628,
+            "width": 90.6953125,
+            "height": 31.5,
+            "top": 628,
+            "right": 169.6953125,
+            "bottom": 659.5,
+            "left": 79
+          }
+        },
+        {
+          "text": "장소·코스 25개",
+          "r": {
+            "x": 173,
+            "y": 384,
+            "width": 84.84375,
+            "height": 31.5,
+            "top": 384,
+            "right": 257.84375,
+            "bottom": 415.5,
+            "left": 173
+          }
+        },
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 214,
+            "y": 392,
+            "width": 78.09375,
+            "height": 31.5,
+            "top": 392,
+            "right": 292.09375,
+            "bottom": 423.5,
+            "left": 214
+          }
+        },
+        {
+          "text": "QA중단팀프로필준비 · 2",
+          "r": {
+            "x": 86,
+            "y": 380,
+            "width": 119.640625,
+            "height": 30,
+            "top": 380,
+            "right": 205.640625,
+            "bottom": 410,
+            "left": 86
+          }
+        },
+        {
+          "text": "목포명가 봉은사역점 · 1",
+          "r": {
+            "x": 187,
+            "y": 195,
+            "width": 114.7265625,
+            "height": 30,
+            "top": 195,
+            "right": 301.7265625,
+            "bottom": 225,
+            "left": 187
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "overflow": false
+    },
+    {
+      "name": "390-zoom-splits-below-50-percent",
+      "width": 390,
+      "labels": [
+        {
+          "text": "중앙해장 · 1",
+          "r": {
+            "x": 129,
+            "y": 386,
+            "width": 68.7421875,
+            "height": 30,
+            "top": 386,
+            "right": 197.7421875,
+            "bottom": 416,
+            "left": 129
+          }
+        },
+        {
+          "text": "갓포아키 삼성점 · 1",
+          "r": {
+            "x": 186,
+            "y": 386,
+            "width": 97.421875,
+            "height": 30,
+            "top": 386,
+            "right": 283.421875,
+            "bottom": 416,
+            "left": 186
+          }
+        }
+      ],
+      "overlapRatio": 0.1708148653256052,
+      "overflow": false
+    },
+    {
+      "name": "390-zoom-back-popup",
+      "width": 390,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 156,
+            "y": 384,
+            "width": 78.09375,
+            "height": 31.5,
+            "top": 384,
+            "right": 234.09375,
+            "bottom": 415.5,
+            "left": 156
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "popup": {
+        "x": 55.5,
+        "y": 434,
+        "width": 280,
+        "height": 161.390625,
+        "top": 434,
+        "right": 335.5,
+        "bottom": 595.390625,
+        "left": 55.5
+      },
+      "popupRows": 2,
+      "overflow": false
+    },
+    {
+      "name": "390-exact-detail",
+      "path": "http://localhost:5173/targets/73ec77e7-169f-4f09-ac19-7c0ef4661c6e"
+    },
+    {
+      "name": "320-mostly-hidden-group",
+      "width": 320,
+      "labels": [
+        {
+          "text": "장소·코스 106개",
+          "r": {
+            "x": 44,
+            "y": 628,
+            "width": 90.6953125,
+            "height": 31.5,
+            "top": 628,
+            "right": 134.6953125,
+            "bottom": 659.5,
+            "left": 44
+          }
+        },
+        {
+          "text": "장소·코스 25개",
+          "r": {
+            "x": 138,
+            "y": 384,
+            "width": 84.84375,
+            "height": 31.5,
+            "top": 384,
+            "right": 222.84375,
+            "bottom": 415.5,
+            "left": 138
+          }
+        },
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 179,
+            "y": 392,
+            "width": 78.09375,
+            "height": 31.5,
+            "top": 392,
+            "right": 257.09375,
+            "bottom": 423.5,
+            "left": 179
+          }
+        },
+        {
+          "text": "QA중단팀프로필준비 · 2",
+          "r": {
+            "x": 51,
+            "y": 380,
+            "width": 119.640625,
+            "height": 30,
+            "top": 380,
+            "right": 170.640625,
+            "bottom": 410,
+            "left": 51
+          }
+        },
+        {
+          "text": "목포명가 봉은사역점 · 1",
+          "r": {
+            "x": 152,
+            "y": 195,
+            "width": 114.7265625,
+            "height": 30,
+            "top": 195,
+            "right": 266.7265625,
+            "bottom": 225,
+            "left": 152
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "overflow": false
+    },
+    {
+      "name": "320-zoom-splits-below-50-percent",
+      "width": 320,
+      "labels": [
+        {
+          "text": "중앙해장 · 1",
+          "r": {
+            "x": 94,
+            "y": 386,
+            "width": 68.7421875,
+            "height": 30,
+            "top": 386,
+            "right": 162.7421875,
+            "bottom": 416,
+            "left": 94
+          }
+        },
+        {
+          "text": "갓포아키 삼성점 · 1",
+          "r": {
+            "x": 151,
+            "y": 386,
+            "width": 97.421875,
+            "height": 30,
+            "top": 386,
+            "right": 248.421875,
+            "bottom": 416,
+            "left": 151
+          }
+        }
+      ],
+      "overlapRatio": 0.1708148653256052,
+      "overflow": false
+    },
+    {
+      "name": "320-zoom-back-popup",
+      "width": 320,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 121,
+            "y": 384,
+            "width": 78.09375,
+            "height": 31.5,
+            "top": 384,
+            "right": 199.09375,
+            "bottom": 415.5,
+            "left": 121
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "popup": {
+        "x": 20.5,
+        "y": 434,
+        "width": 280,
+        "height": 161.390625,
+        "top": 434,
+        "right": 300.5,
+        "bottom": 595.390625,
+        "left": 20.5
+      },
+      "popupRows": 2,
+      "overflow": false
+    },
+    {
+      "name": "320-exact-detail",
+      "path": "http://localhost:5173/targets/73ec77e7-169f-4f09-ac19-7c0ef4661c6e"
+    },
+    {
+      "name": "coincident-pins-at-max-zoom-remain-selectable",
+      "width": 320,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 136,
+            "y": 382,
+            "width": 78.09375,
+            "height": 31.5,
+            "top": 382,
+            "right": 214.09375,
+            "bottom": 413.5,
+            "left": 136
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "popup": {
+        "x": 28,
+        "y": 432,
+        "width": 280,
+        "height": 161.390625,
+        "top": 432,
+        "right": 308,
+        "bottom": 593.390625,
+        "left": 28
+      },
+      "popupRows": 2,
+      "overflow": false
+    }
+  ],
+  "timings": {
+    "runs": 20,
+    "meanMs": 2.9849999994039536,
+    "maxMs": 8.599999994039536,
+    "groups": 500,
+    "uniqueIds": 1000
+  },
+  "checks": {
+    "targetedTestsPassed": 15,
+    "typecheck": "passed",
+    "build": "passed",
+    "thresholdInclusive": 0.5,
+    "deployment": "not performed"
+  }
+}
