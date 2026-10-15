@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-15",
+  "environment": "Local app and existing local read API; no data writes; DOM-triggered pagination clicks",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "page": "1",
+      "currentBackground": "rgb(237, 245, 239)",
+      "currentWidth": 32,
+      "currentCentered": true,
+      "buttons": [
+        {
+          "text": "이전",
+          "disabled": true,
+          "height": 44,
+          "border": "0px",
+          "fontSize": "12px",
+          "iconWidth": 14
+        },
+        {
+          "text": "다음",
+          "disabled": false,
+          "height": 44,
+          "border": "0px",
+          "fontSize": "12px",
+          "iconWidth": 14
+        }
+      ],
+      "noOverflow": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "page": "1",
+      "currentBackground": "rgb(237, 245, 239)",
+      "currentWidth": 32,
+      "currentCentered": true,
+      "buttons": [
+        {
+          "text": "이전",
+          "disabled": true,
+          "height": 44,
+          "border": "0px",
+          "fontSize": "12px",
+          "iconWidth": 14
+        },
+        {
+          "text": "다음",
+          "disabled": false,
+          "height": 44,
+          "border": "0px",
+          "fontSize": "12px",
+          "iconWidth": 14
+        }
+      ],
+      "noOverflow": true
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "page": "1",
+      "currentBackground": "rgb(237, 245, 239)",
+      "currentWidth": 32,
+      "currentCentered": true,
+      "buttons": [
+        {
+          "text": "이전",
+          "disabled": true,
+          "height": 44,
+          "border": "0px",
+          "fontSize": "12px",
+          "iconWidth": 14
+        },
+        {
+          "text": "다음",
+          "disabled": false,
+          "height": 44,
+          "border": "0px",
+          "fontSize": "12px",
+          "iconWidth": 14
+        }
+      ],
+      "noOverflow": true
+    },
+    {
+      "state": "page navigation",
+      "nextDisabled": false,
+      "page": 1
+    },
+    {
+      "state": "page navigation",
+      "nextDisabled": false,
+      "page": 2
+    },
+    {
+      "state": "page navigation",
+      "nextDisabled": false,
+      "page": 3
+    },
+    {
+      "state": "page navigation",
+      "nextDisabled": false,
+      "page": 4
+    },
+    {
+      "state": "page navigation",
+      "nextDisabled": false,
+      "page": 5
+    },
+    {
+      "state": "page navigation",
+      "nextDisabled": false,
+      "page": 6
+    },
+    {
+      "state": "page navigation",
+      "nextDisabled": false,
+      "page": 7
+    },
+    {
+      "state": "page navigation",
+      "nextDisabled": true,
+      "page": 8
+    },
+    {
+      "state": "previous from last",
+      "passed": true
+    }
+  ]
+}

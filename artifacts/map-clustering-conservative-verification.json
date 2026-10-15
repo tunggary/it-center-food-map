@@ -1,0 +1,332 @@
+{
+  "date": "2026-10-15",
+  "source": "Real Kakao SDK with page-only Query snapshot fixtures; no DB or remote writes",
+  "rule": "intersection area / smaller original label area >= 0.8; every pair in a group must qualify; no badge-based or transitive merging",
+  "scenarios": [
+    {
+      "name": "1280-mostly-hidden-group",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 594,
+            "y": 380,
+            "width": 92.8828125,
+            "height": 34.59375,
+            "top": 380,
+            "right": 686.8828125,
+            "bottom": 414.59375,
+            "left": 594
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "overflow": false
+    },
+    {
+      "name": "1280-one-zoom-splits-even-with-partial-overlap",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "중앙해장 · 1",
+          "r": {
+            "x": 583,
+            "y": 382,
+            "width": 81.921875,
+            "height": 34,
+            "top": 382,
+            "right": 664.921875,
+            "bottom": 416,
+            "left": 583
+          }
+        },
+        {
+          "text": "갓포아키 삼성점 · 1",
+          "r": {
+            "x": 600,
+            "y": 382,
+            "width": 116.203125,
+            "height": 34,
+            "top": 382,
+            "right": 716.203125,
+            "bottom": 416,
+            "left": 600
+          }
+        }
+      ],
+      "overlapRatio": 0.7924852183864199,
+      "overflow": false
+    },
+    {
+      "name": "1280-zoom-back-popup",
+      "width": 1280,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 594,
+            "y": 380,
+            "width": 92.8828125,
+            "height": 34.59375,
+            "top": 380,
+            "right": 686.8828125,
+            "bottom": 414.59375,
+            "left": 594
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "popup": {
+        "x": 500.5,
+        "y": 434,
+        "width": 280,
+        "height": 161.390625,
+        "top": 434,
+        "right": 780.5,
+        "bottom": 595.390625,
+        "left": 500.5
+      },
+      "popupRows": 2,
+      "overflow": false
+    },
+    {
+      "name": "1280-exact-detail",
+      "path": "http://localhost:5173/targets/73ec77e7-169f-4f09-ac19-7c0ef4661c6e"
+    },
+    {
+      "name": "390-mostly-hidden-group",
+      "width": 390,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 156,
+            "y": 384,
+            "width": 78.09375,
+            "height": 31.5,
+            "top": 384,
+            "right": 234.09375,
+            "bottom": 415.5,
+            "left": 156
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "overflow": false
+    },
+    {
+      "name": "390-one-zoom-splits-even-with-partial-overlap",
+      "width": 390,
+      "labels": [
+        {
+          "text": "중앙해장 · 1",
+          "r": {
+            "x": 145,
+            "y": 386,
+            "width": 68.7421875,
+            "height": 30,
+            "top": 386,
+            "right": 213.7421875,
+            "bottom": 416,
+            "left": 145
+          }
+        },
+        {
+          "text": "갓포아키 삼성점 · 1",
+          "r": {
+            "x": 165,
+            "y": 386,
+            "width": 97.421875,
+            "height": 30,
+            "top": 386,
+            "right": 262.421875,
+            "bottom": 416,
+            "left": 165
+          }
+        }
+      ],
+      "overlapRatio": 0.7090578474826685,
+      "overflow": false
+    },
+    {
+      "name": "390-zoom-back-popup",
+      "width": 390,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 156,
+            "y": 384,
+            "width": 78.09375,
+            "height": 31.5,
+            "top": 384,
+            "right": 234.09375,
+            "bottom": 415.5,
+            "left": 156
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "popup": {
+        "x": 55.5,
+        "y": 434,
+        "width": 280,
+        "height": 161.390625,
+        "top": 434,
+        "right": 335.5,
+        "bottom": 595.390625,
+        "left": 55.5
+      },
+      "popupRows": 2,
+      "overflow": false
+    },
+    {
+      "name": "390-exact-detail",
+      "path": "http://localhost:5173/targets/73ec77e7-169f-4f09-ac19-7c0ef4661c6e"
+    },
+    {
+      "name": "320-mostly-hidden-group",
+      "width": 320,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 121,
+            "y": 384,
+            "width": 78.09375,
+            "height": 31.5,
+            "top": 384,
+            "right": 199.09375,
+            "bottom": 415.5,
+            "left": 121
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "overflow": false
+    },
+    {
+      "name": "320-one-zoom-splits-even-with-partial-overlap",
+      "width": 320,
+      "labels": [
+        {
+          "text": "중앙해장 · 1",
+          "r": {
+            "x": 110,
+            "y": 386,
+            "width": 68.7421875,
+            "height": 30,
+            "top": 386,
+            "right": 178.7421875,
+            "bottom": 416,
+            "left": 110
+          }
+        },
+        {
+          "text": "갓포아키 삼성점 · 1",
+          "r": {
+            "x": 130,
+            "y": 386,
+            "width": 97.421875,
+            "height": 30,
+            "top": 386,
+            "right": 227.421875,
+            "bottom": 416,
+            "left": 130
+          }
+        }
+      ],
+      "overlapRatio": 0.7090578474826685,
+      "overflow": false
+    },
+    {
+      "name": "320-zoom-back-popup",
+      "width": 320,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 121,
+            "y": 384,
+            "width": 78.09375,
+            "height": 31.5,
+            "top": 384,
+            "right": 199.09375,
+            "bottom": 415.5,
+            "left": 121
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "popup": {
+        "x": 20.5,
+        "y": 434,
+        "width": 280,
+        "height": 161.390625,
+        "top": 434,
+        "right": 300.5,
+        "bottom": 595.390625,
+        "left": 20.5
+      },
+      "popupRows": 2,
+      "overflow": false
+    },
+    {
+      "name": "320-exact-detail",
+      "path": "http://localhost:5173/targets/73ec77e7-169f-4f09-ac19-7c0ef4661c6e"
+    },
+    {
+      "name": "coincident-pins-at-max-zoom-remain-selectable",
+      "width": 320,
+      "labels": [
+        {
+          "text": "장소·코스 2개",
+          "r": {
+            "x": 136,
+            "y": 382,
+            "width": 78.09375,
+            "height": 31.5,
+            "top": 382,
+            "right": 214.09375,
+            "bottom": 413.5,
+            "left": 136
+          }
+        }
+      ],
+      "overlapRatio": null,
+      "popup": {
+        "x": 28,
+        "y": 432,
+        "width": 280,
+        "height": 161.390625,
+        "top": 432,
+        "right": 308,
+        "bottom": 593.390625,
+        "left": 28
+      },
+      "popupRows": 2,
+      "overflow": false
+    }
+  ],
+  "timings": {
+    "runs": 20,
+    "meanMs": 4.835000000149011,
+    "maxMs": 14.400000005960464,
+    "groups": 1000,
+    "uniqueIds": 1000
+  },
+  "verification": {
+    "frontendTests": 134,
+    "testFiles": 21,
+    "typecheck": "passed",
+    "build": "passed",
+    "initialRegression": "4 failures before fix; all pass after fix",
+    "diagnosis": [
+      "Any overlap plus 8px spacing caused transitive grouping",
+      "Synthetic cluster badge width absorbed otherwise separate original labels",
+      "Actual zoom recalculation works; 106 local targets have identical coordinates"
+    ],
+    "scope": "local frontend and docs only; DB/remote/commit/deployment unchanged"
+  }
+}

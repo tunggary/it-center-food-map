@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
-import { afterEach, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { installRankingObserver, intersectRankingEnd } from './ranking-observer';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import ExplorePage, { RankingsPanel } from '../routes/Explore';
@@ -9,7 +10,8 @@ import TargetPage from '../routes/Target';
 import { rpc } from '../lib/api';
 vi.mock('../components/Map', () => ({ MapView: () => { return <div data-testid="shared-map">지도</div>; } }));
 vi.mock('../lib/api', async original => ({ ...await original<typeof import('../lib/api')>(), rpc: vi.fn() }));
-afterEach(() => { cleanup(); vi.clearAllMocks(); });
+beforeEach(installRankingObserver);
+afterEach(() => { cleanup(); vi.unstubAllGlobals(); vi.clearAllMocks(); });
 const categoryId = 'food', rows = Array.from({ length: 21 }, (_, i) => ({ targetId: `place-${i}`, name: `장소 ${i}`, kind: 'PLACE', rank: i + 1, count: 21 - i }));
 function setup(initial = '/') {
   vi.mocked(rpc).mockImplementation(async (name, body) => {
@@ -26,7 +28,8 @@ function setup(initial = '/') {
 it('keeps the same map DOM and closes detail directly to the filtered main map', async () => {
   const { router, client } = setup('/rankings?category=food');
   const map = screen.getByTestId('shared-map');
-  fireEvent.click(await screen.findByRole('button', { name: '다음 20건 보기' }));
+  await waitFor(() => expect(document.querySelector('.ranking-sentinel')).not.toBeNull());
+  await intersectRankingEnd();
   fireEvent.click(await screen.findByRole('link', { name: /장소 20/ }));
   await screen.findByRole('heading', { name: '선택 장소' });
   expect(screen.getByTestId('shared-map')).toBe(map);
@@ -55,7 +58,8 @@ it('main shows five ranks even after visiting the second ranking page', async ()
   const panel = await screen.findByRole('region', { name: '동료들의 요즘 최애' });
   await waitFor(() => expect(within(panel).getAllByRole('listitem')).toHaveLength(5));
   fireEvent.click(screen.getByRole('link', { name: '전체 랭킹 보기' }));
-  fireEvent.click(await screen.findByRole('button', { name: '다음 20건 보기' }));
+  await waitFor(() => expect(document.querySelector('.ranking-sentinel')).not.toBeNull());
+  await intersectRankingEnd();
   await screen.findByRole('link', { name: /장소 20/ });
   fireEvent.click(screen.getByRole('button', { name: '패널 닫기' }));
   await screen.findByRole('heading', { name: '동료들의 요즘 최애' });
