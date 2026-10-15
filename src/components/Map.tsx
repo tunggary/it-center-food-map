@@ -4,9 +4,10 @@ import { kakao, loadMap, type KakaoObject } from '../lib/maps';
 import { ErrorNotice } from './ui';
 import { showToast } from './Toast';
 import { Icon } from './Icon';
-export type MapPin = Pin & { name?: string };
+import { ClusteredPins } from './ClusteredPins';
+export type MapPin = Pin;
 const EMPTY_PINS: MapPin[] = [], EMPTY_POINTS: Point[] = [];
-export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, onCenter, editing = false, selectedId, focusPoint, focusLevel, fullscreen = false, fitPins = false }: { pins?: MapPin[]; points?: Point[]; onSelect?: (id: string) => void; onCenter?: (point: Point) => void; editing?: boolean; selectedId?: string; focusPoint?: Point; focusLevel?: number; fullscreen?: boolean; fitPins?: boolean }) {
+export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, onCenter, editing = false, selectedId, focusPoint, focusLevel, fullscreen = false, fitPins = false, clustering = false, clusterContextKey }: { pins?: MapPin[]; points?: Point[]; onSelect?: (id: string) => void; onCenter?: (point: Point) => void; editing?: boolean; selectedId?: string; focusPoint?: Point; focusLevel?: number; fullscreen?: boolean; fitPins?: boolean; clustering?: boolean; clusterContextKey?: string }) {
   const element = useRef<HTMLDivElement>(null), shell = useRef<HTMLDivElement>(null);
   const instance = useRef<KakaoObject | null>(null);
   const markers = useRef(new Map<string, { marker: KakaoObject; label: KakaoObject; button: HTMLButtonElement; click: () => void }>());
@@ -93,6 +94,10 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
   useEffect(() => {
     if (!ready || !instance.current) return;
     const sdk = kakao(), seen = new Set<string>();
+    if (clustering) {
+      for (const { marker, label, button, click } of markers.current.values()) { sdk.event.removeListener(marker, 'click', click); button.removeEventListener('click', click); marker.setMap(null); label.setMap(null); }
+      markers.current.clear(); return;
+    }
     for (const pin of pins) {
       seen.add(pin.targetId);
       const text = pin.name ?? `${pin.kind === 'COURSE' ? '코스' : '장소'} · ${pin.count}건`;
@@ -116,7 +121,7 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
       value.label.setZIndex(pin.targetId === selectedId ? 5 : 1);
     }
     for (const [id, value] of markers.current) if (!seen.has(id)) { sdk.event.removeListener(value.marker, 'click', value.click); value.button.removeEventListener('click', value.click); value.marker.setMap(null); value.label.setMap(null); markers.current.delete(id); }
-  }, [pins, ready, selectedId]);
+  }, [pins, ready, selectedId, clustering]);
   useEffect(() => {
     if (!ready || !instance.current) return;
     const sdk = kakao();
@@ -147,5 +152,5 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
     }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 });
   };
   const zoom = (delta: number) => { if (instance.current) instance.current.setLevel(Math.min(12, Math.max(1, instance.current.getLevel() + delta))); };
-  return <div ref={shell} className={`map-shell ${fullscreen ? 'full-map' : ''} ${editing ? 'editing' : ''}`}><div ref={element} className="map" role="region" aria-label={editing ? '중심점을 움직여 산책 경로를 만드는 지도' : '최애 장소와 코스 지도'}/>{editing ? <span ref={crosshair} className="crosshair" aria-hidden="true">＋</span> : null}{fullscreen ? <div className="map-tools"><div className="map-tool-group"><button className="icon-button" type="button" aria-label="지도 확대" onClick={() => zoom(-1)}><Icon name="plus"/></button><button className="icon-button" type="button" aria-label="지도 축소" onClick={() => zoom(1)}><Icon name="minus"/></button></div><button className="icon-button map-tool-group" type="button" aria-label="내 위치" disabled={!ready || locating} aria-busy={locating} onClick={locate}><Icon name="locate"/></button></div> : null}{error ? <div className="map-error"><ErrorNotice error={error} retry={() => setRetry(v => v + 1)}/></div> : null}</div>;
+  return <div ref={shell} className={`map-shell ${fullscreen ? 'full-map' : ''} ${editing ? 'editing' : ''}`}><div ref={element} className="map" role="region" aria-label={editing ? '중심점을 움직여 산책 경로를 만드는 지도' : '최애 장소와 코스 지도'}/>{clustering && ready && instance.current ? <ClusteredPins map={instance.current} pins={pins} selectedId={selectedId} onSelect={onSelect} contextKey={clusterContextKey}/> : null}{editing ? <span ref={crosshair} className="crosshair" aria-hidden="true">＋</span> : null}{fullscreen ? <div className="map-tools"><div className="map-tool-group"><button className="icon-button" type="button" aria-label="지도 확대" onClick={() => zoom(-1)}><Icon name="plus"/></button><button className="icon-button" type="button" aria-label="지도 축소" onClick={() => zoom(1)}><Icon name="minus"/></button></div><button className="icon-button map-tool-group" type="button" aria-label="내 위치" disabled={!ready || locating} aria-busy={locating} onClick={locate}><Icon name="locate"/></button></div> : null}{error ? <div className="map-error"><ErrorNotice error={error} retry={() => setRetry(v => v + 1)}/></div> : null}</div>;
 }

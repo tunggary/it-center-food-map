@@ -1,0 +1,273 @@
+{
+  "date": "2026-10-15",
+  "source": "Real Kakao Marker.getPosition vs local public target snapshot; place pair uses page-only Explore snapshot fixture, course/booth use unchanged local data",
+  "scenarios": [
+    {
+      "width": 1280,
+      "name": "갓포아키 삼성점",
+      "id": "73ec77e7-169f-4f09-ac19-7c0ef4661c6e",
+      "kind": "PLACE",
+      "expected": {
+        "lng": 127.064536526183,
+        "lat": 37.5088201211109
+      },
+      "actual": {
+        "lng": 127.064536526183,
+        "lat": 37.508820121110894
+      },
+      "zIndex": 5,
+      "label": "갓포아키 삼성점 · 1",
+      "labelRect": {
+        "x": 795,
+        "y": 424,
+        "width": 116.203125,
+        "height": 34,
+        "top": 424,
+        "right": 911.203125,
+        "bottom": 458,
+        "left": 795
+      },
+      "insideMap": true,
+      "coveredByPanel": false,
+      "pathCount": 1,
+      "remainingGroups": [],
+      "overflow": false,
+      "regroupedOnClose": true
+    },
+    {
+      "width": 1280,
+      "name": "QA버스트코스001",
+      "id": "1930a304-d3a5-4940-80ba-53e650982f36",
+      "kind": "COURSE",
+      "expected": {
+        "lng": 127.06,
+        "lat": 37.5
+      },
+      "actual": {
+        "lng": 127.06,
+        "lat": 37.5
+      },
+      "zIndex": 5,
+      "label": "QA버스트코스001 · 1",
+      "labelRect": {
+        "x": 787,
+        "y": 424,
+        "width": 132.25,
+        "height": 34,
+        "top": 424,
+        "right": 919.25,
+        "bottom": 458,
+        "left": 787
+      },
+      "insideMap": true,
+      "coveredByPanel": false,
+      "courseFirstPoint": [
+        127.06,
+        37.5
+      ],
+      "pathCount": 1,
+      "remainingGroups": [
+        "장소·코스 25개",
+        "장소·코스 2개",
+        "장소·코스 105개"
+      ],
+      "overflow": false,
+      "remainingCoincidentCount": 105,
+      "regroupedOnClose": true
+    },
+    {
+      "width": 390,
+      "name": "갓포아키 삼성점",
+      "id": "73ec77e7-169f-4f09-ac19-7c0ef4661c6e",
+      "kind": "PLACE",
+      "expected": {
+        "lng": 127.064536526183,
+        "lat": 37.5088201211109
+      },
+      "actual": {
+        "lng": 127.064536526183,
+        "lat": 37.508820121110894
+      },
+      "zIndex": 5,
+      "label": "갓포아키 삼성점 · 1",
+      "labelRect": {
+        "x": 148,
+        "y": 129,
+        "width": 97.421875,
+        "height": 30,
+        "top": 129,
+        "right": 245.421875,
+        "bottom": 159,
+        "left": 148
+      },
+      "insideMap": true,
+      "coveredByPanel": false,
+      "pathCount": 1,
+      "remainingGroups": [],
+      "overflow": false,
+      "regroupedOnClose": true
+    },
+    {
+      "width": 390,
+      "name": "QA버스트코스001",
+      "id": "1930a304-d3a5-4940-80ba-53e650982f36",
+      "kind": "COURSE",
+      "expected": {
+        "lng": 127.06,
+        "lat": 37.5
+      },
+      "actual": {
+        "lng": 127.06,
+        "lat": 37.5
+      },
+      "zIndex": 5,
+      "label": "QA버스트코스001 · 1",
+      "labelRect": {
+        "x": 140,
+        "y": 129,
+        "width": 111.265625,
+        "height": 30,
+        "top": 129,
+        "right": 251.265625,
+        "bottom": 159,
+        "left": 140
+      },
+      "insideMap": true,
+      "coveredByPanel": false,
+      "courseFirstPoint": [
+        127.06,
+        37.5
+      ],
+      "pathCount": 1,
+      "remainingGroups": [
+        "장소·코스 105개"
+      ],
+      "overflow": false,
+      "remainingCoincidentCount": 105,
+      "regroupedOnClose": true
+    },
+    {
+      "width": 320,
+      "name": "갓포아키 삼성점",
+      "id": "73ec77e7-169f-4f09-ac19-7c0ef4661c6e",
+      "kind": "PLACE",
+      "expected": {
+        "lng": 127.064536526183,
+        "lat": 37.5088201211109
+      },
+      "actual": {
+        "lng": 127.064536526183,
+        "lat": 37.508820121110894
+      },
+      "zIndex": 5,
+      "label": "갓포아키 삼성점 · 1",
+      "labelRect": {
+        "x": 113,
+        "y": 129,
+        "width": 97.421875,
+        "height": 30,
+        "top": 129,
+        "right": 210.421875,
+        "bottom": 159,
+        "left": 113
+      },
+      "insideMap": true,
+      "coveredByPanel": false,
+      "pathCount": 1,
+      "remainingGroups": [],
+      "overflow": false,
+      "regroupedOnClose": true
+    },
+    {
+      "width": 320,
+      "name": "QA버스트코스001",
+      "id": "1930a304-d3a5-4940-80ba-53e650982f36",
+      "kind": "COURSE",
+      "expected": {
+        "lng": 127.06,
+        "lat": 37.5
+      },
+      "actual": {
+        "lng": 127.06,
+        "lat": 37.5
+      },
+      "zIndex": 5,
+      "label": "QA버스트코스001 · 1",
+      "labelRect": {
+        "x": 105,
+        "y": 129,
+        "width": 111.265625,
+        "height": 30,
+        "top": 129,
+        "right": 216.265625,
+        "bottom": 159,
+        "left": 105
+      },
+      "insideMap": true,
+      "coveredByPanel": false,
+      "courseFirstPoint": [
+        127.06,
+        37.5
+      ],
+      "pathCount": 1,
+      "remainingGroups": [
+        "장소·코스 105개"
+      ],
+      "overflow": false,
+      "remainingCoincidentCount": 105,
+      "regroupedOnClose": true
+    },
+    {
+      "width": 1280,
+      "name": "QA버스트코스001",
+      "id": "1930a304-d3a5-4940-80ba-53e650982f36",
+      "kind": "COURSE",
+      "expected": {
+        "lng": 127.06,
+        "lat": 37.5
+      },
+      "actual": {
+        "lng": 127.06,
+        "lat": 37.5
+      },
+      "zIndex": 5,
+      "label": "QA버스트코스001 · 1",
+      "labelRect": {
+        "x": 786,
+        "y": 443,
+        "width": 132.25,
+        "height": 34,
+        "top": 443,
+        "right": 918.25,
+        "bottom": 477,
+        "left": 786
+      },
+      "insideMap": true,
+      "coveredByPanel": false,
+      "courseFirstPoint": [
+        127.06,
+        37.5
+      ],
+      "pathCount": 1,
+      "remainingGroups": [
+        "장소·코스 25개",
+        "장소·코스 2개",
+        "장소·코스 105개"
+      ],
+      "overflow": false,
+      "booth": true,
+      "regroupedOnClose": true
+    }
+  ],
+  "checks": {
+    "initialRegression": "2 selected-pin tests failed before fix",
+    "testsPassed": 136,
+    "testFiles": 21,
+    "finalTargetedTestsPassed": 7,
+    "typecheck": "passed",
+    "build": "passed",
+    "coordinateToleranceDegrees": 1e-12,
+    "deployment": "not performed",
+    "database": "unchanged"
+  }
+}

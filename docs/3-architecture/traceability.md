@@ -5,7 +5,7 @@
 
 | 스토리 | 담당 설계 | 확인할 QA 묶음 |
 | --- | --- | --- |
-| US-P-01 | explore snapshot, 필터 URL, 지도 클라이언트 | QA-P-01-01~03 |
+| US-P-01 | 이름 포함 explore snapshot, 필터 URL, 지도 클러스터/팝업 | QA-P-01-01~04 |
 | US-P-02 | DB rank와 같은 집계, 지도 위 랭킹 패널 | QA-P-02-01~03 |
 | US-P-03 | 지도 위 필터 없는 전체 상세 시트, 내 등록 상태 | QA-P-03-01~02 |
 | US-P-04 | 카카오 검색 증명과 provider ID 유일성 | QA-P-04-01~02 |
@@ -13,7 +13,7 @@
 | US-P-06 | COURSE 경로·기존 대상·신규 명령 | QA-P-06-01~02 |
 | US-P-07 | 소유권·version·등록만 삭제 | QA-P-07-01~07 |
 | US-P-08 | 참여자 nickname JOIN, 관리자 team 변경 | QA-P-08-01~03 |
-| US-B-01 | 카테고리별 랭킹, 시작점·선택 경로 | QA-B-01-01~03 |
+| US-B-01 | 카테고리별 랭킹, 시작점 클러스터/팝업·선택 경로 | QA-B-01-01~04 |
 | US-B-02 | DB 이벤트·완료 cursor·독립 동기화 | QA-B-02-01~04 |
 | US-A-01 | catalog selectable와 조회 분리 | QA-A-01-01~05 |
 | US-A-02 | 관리자 가드, participant/course version | QA-A-02-01~03 |

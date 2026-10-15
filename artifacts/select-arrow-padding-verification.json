@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-15",
+  "environment": "Local app; page-local session/profile fixtures; no remote writes",
+  "results": [
+    {
+      "page": "registration (shared edit form)",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "appearance": "none",
+      "paddingRight": "44px",
+      "backgroundPosition": "calc(100% - 16px) 50%",
+      "backgroundSize": "16px 16px",
+      "hasArrow": true,
+      "selectWidth": 330,
+      "noOverflow": true
+    },
+    {
+      "page": "registration (shared edit form)",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "appearance": "none",
+      "paddingRight": "44px",
+      "backgroundPosition": "calc(100% - 16px) 50%",
+      "backgroundSize": "16px 16px",
+      "hasArrow": true,
+      "selectWidth": 344,
+      "noOverflow": true
+    },
+    {
+      "page": "registration (shared edit form)",
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "appearance": "none",
+      "paddingRight": "44px",
+      "backgroundPosition": "calc(100% - 16px) 50%",
+      "backgroundSize": "16px 16px",
+      "hasArrow": true,
+      "selectWidth": 274,
+      "noOverflow": true
+    },
+    {
+      "page": "map filters",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "selects": [
+        {
+          "label": "팀 필터",
+          "appearance": "none",
+          "paddingRight": "44px",
+          "backgroundPosition": "calc(100% - 16px) 50%",
+          "backgroundSize": "16px 16px",
+          "hasArrow": true,
+          "width": 148.484375
+        },
+        {
+          "label": "카테고리 필터",
+          "appearance": "none",
+          "paddingRight": "44px",
+          "backgroundPosition": "calc(100% - 16px) 50%",
+          "backgroundSize": "16px 16px",
+          "hasArrow": true,
+          "width": 119.9375
+        }
+      ],
+      "noOverflow": true
+    },
+    {
+      "page": "map filters",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "selects": [
+        {
+          "label": "팀 필터",
+          "appearance": "none",
+          "paddingRight": "44px",
+          "backgroundPosition": "calc(100% - 16px) 50%",
+          "backgroundSize": "16px 16px",
+          "hasArrow": true,
+          "width": 163
+        },
+        {
+          "label": "카테고리 필터",
+          "appearance": "none",
+          "paddingRight": "44px",
+          "backgroundPosition": "calc(100% - 16px) 50%",
+          "backgroundSize": "16px 16px",
+          "hasArrow": true,
+          "width": 163
+        }
+      ],
+      "noOverflow": true
+    },
+    {
+      "page": "map filters",
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "selects": [
+        {
+          "label": "팀 필터",
+          "appearance": "none",
+          "paddingRight": "44px",
+          "backgroundPosition": "calc(100% - 16px) 50%",
+          "backgroundSize": "16px 16px",
+          "hasArrow": true,
+          "width": 128
+        },
+        {
+          "label": "카테고리 필터",
+          "appearance": "none",
+          "paddingRight": "44px",
+          "backgroundPosition": "calc(100% - 16px) 50%",
+          "backgroundSize": "16px 16px",
+          "hasArrow": true,
+          "width": 128
+        }
+      ],
+      "noOverflow": true
+    }
+  ]
+}

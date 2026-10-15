@@ -1,0 +1,257 @@
+{
+  "date": "2026-10-15",
+  "source": "Actual Kakao SDK + page-only local snapshot fixture, no DB/remote writes",
+  "scenarios": [
+    {
+      "width": 1280,
+      "origin": {
+        "originalCrossPairOverlap": 0.38953846153846156,
+        "initialBadgeOverlap": 0.6662461098494407
+      },
+      "merged": {
+        "labels": [
+          {
+            "text": "장소·코스 4개",
+            "selected": false,
+            "r": {
+              "x": 594,
+              "y": 380,
+              "width": 93.4140625,
+              "height": 34.59375,
+              "top": 380,
+              "right": 687.4140625,
+              "bottom": 414.59375,
+              "left": 594
+            }
+          }
+        ],
+        "maxNonSelectedOverlap": 0,
+        "violations": [],
+        "popupRows": 0,
+        "overflow": false
+      },
+      "split": {
+        "labels": [
+          {
+            "text": "장소·코스 2개",
+            "selected": false,
+            "r": {
+              "x": 564,
+              "y": 380,
+              "width": 92.8828125,
+              "height": 34.59375,
+              "top": 380,
+              "right": 656.8828125,
+              "bottom": 414.59375,
+              "left": 564
+            }
+          },
+          {
+            "text": "장소·코스 2개",
+            "selected": false,
+            "r": {
+              "x": 626,
+              "y": 380,
+              "width": 92.8828125,
+              "height": 34.59375,
+              "top": 380,
+              "right": 718.8828125,
+              "bottom": 414.59375,
+              "left": 626
+            }
+          }
+        ],
+        "maxNonSelectedOverlap": 0.3324922196988813,
+        "violations": [],
+        "popupRows": 0,
+        "overflow": false
+      },
+      "selected": {
+        "lat": 37.508273597184,
+        "lng": 127.06547254091902,
+        "groups": [
+          "장소·코스 3개"
+        ]
+      },
+      "exactSelectedCoordinates": true
+    },
+    {
+      "width": 390,
+      "origin": {
+        "originalCrossPairOverlap": 0.2755157933175096,
+        "initialBadgeOverlap": 0.6030412164865946
+      },
+      "merged": {
+        "labels": [
+          {
+            "text": "장소·코스 4개",
+            "selected": false,
+            "r": {
+              "x": 156,
+              "y": 384,
+              "width": 78.53125,
+              "height": 31.5,
+              "top": 384,
+              "right": 234.53125,
+              "bottom": 415.5,
+              "left": 156
+            }
+          }
+        ],
+        "maxNonSelectedOverlap": 0,
+        "violations": [],
+        "popupRows": 0,
+        "overflow": false
+      },
+      "split": {
+        "labels": [
+          {
+            "text": "장소·코스 2개",
+            "selected": false,
+            "r": {
+              "x": 126,
+              "y": 384,
+              "width": 78.09375,
+              "height": 31.5,
+              "top": 384,
+              "right": 204.09375,
+              "bottom": 415.5,
+              "left": 126
+            }
+          },
+          {
+            "text": "장소·코스 2개",
+            "selected": false,
+            "r": {
+              "x": 188,
+              "y": 384,
+              "width": 78.09375,
+              "height": 31.5,
+              "top": 384,
+              "right": 266.09375,
+              "bottom": 415.5,
+              "left": 188
+            }
+          }
+        ],
+        "maxNonSelectedOverlap": 0.2060824329731893,
+        "violations": [],
+        "popupRows": 0,
+        "overflow": false
+      },
+      "selected": {
+        "lat": 37.508273597184,
+        "lng": 127.06547254091902,
+        "groups": [
+          "장소·코스 3개"
+        ]
+      },
+      "exactSelectedCoordinates": true
+    },
+    {
+      "width": 320,
+      "origin": {
+        "originalCrossPairOverlap": 0.2755157933175096,
+        "initialBadgeOverlap": 0.6030412164865946
+      },
+      "merged": {
+        "labels": [
+          {
+            "text": "장소·코스 4개",
+            "selected": false,
+            "r": {
+              "x": 121,
+              "y": 384,
+              "width": 78.53125,
+              "height": 31.5,
+              "top": 384,
+              "right": 199.53125,
+              "bottom": 415.5,
+              "left": 121
+            }
+          }
+        ],
+        "maxNonSelectedOverlap": 0,
+        "violations": [],
+        "popupRows": 0,
+        "overflow": false
+      },
+      "split": {
+        "labels": [
+          {
+            "text": "장소·코스 2개",
+            "selected": false,
+            "r": {
+              "x": 91,
+              "y": 384,
+              "width": 78.09375,
+              "height": 31.5,
+              "top": 384,
+              "right": 169.09375,
+              "bottom": 415.5,
+              "left": 91
+            }
+          },
+          {
+            "text": "장소·코스 2개",
+            "selected": false,
+            "r": {
+              "x": 153,
+              "y": 384,
+              "width": 78.09375,
+              "height": 31.5,
+              "top": 384,
+              "right": 231.09375,
+              "bottom": 415.5,
+              "left": 153
+            }
+          }
+        ],
+        "maxNonSelectedOverlap": 0.2060824329731893,
+        "violations": [],
+        "popupRows": 0,
+        "overflow": false
+      },
+      "selected": {
+        "lat": 37.508273597184,
+        "lng": 127.06547254091902,
+        "groups": [
+          "장소·코스 3개"
+        ]
+      },
+      "exactSelectedCoordinates": true
+    }
+  ],
+  "booth": {
+    "labels": [
+      {
+        "text": "장소·코스 4개",
+        "selected": false,
+        "r": {
+          "x": 594,
+          "y": 380,
+          "width": 93.4140625,
+          "height": 34.59375,
+          "top": 380,
+          "right": 687.4140625,
+          "bottom": 414.59375,
+          "left": 594
+        }
+      }
+    ],
+    "maxNonSelectedOverlap": 0,
+    "violations": [],
+    "popupRows": 4,
+    "overflow": false
+  },
+  "checks": {
+    "initialRegression": "3 failures before fix, 50% inclusive float boundary also corrected",
+    "testFiles": 22,
+    "testsPassed": 141,
+    "typecheck": "passed",
+    "productionBuild": "passed",
+    "selectedDetail": "excluded from both passes and kept at exact stored coordinates",
+    "deployment": "not performed",
+    "database": "unchanged"
+  }
+}
