@@ -27,12 +27,14 @@
 
 - [x] 6. **피드백 접수·검토**: 사용자가 경험한 문제를 파악하고, 중복 의견을 모아 우선순위와 처리 여부를 정한다.
 - [x] 7. **작은 개선 구현**: 선택한 피드백의 완료 기준과 최소 변경 범위를 정하고 구현한다.
-- [ ] 8. **검증·배포·해결 확인**: 개선 사항과 기존 핵심 흐름을 검증해 배포하고, 문제가 해결됐는지 확인한다.
+- [x] 8. **검증·배포·해결 확인**: 개선 사항과 기존 핵심 흐름을 검증해 배포하고, 문제가 해결됐는지 확인한다.
 
 첫 배포 이후에는 별도 v2 계획 없이 사용자 피드백을 기준으로 6~8단계를 반복한다.
 장애·보안 취약점·의존 서비스 종료 등 운영에 필요한 유지보수도 같은 처리 흐름을 따른다.
 
 ## 최근 작업 컨텍스트
+
+- 누적 등록 개선 운영 배포·검증 완료 (2026-10-15): 기능PR#38→develop439d59f, 릴리스PR#39→main a408882를머지했다. Production dpl_7TUG9DUwZD8HYz1ygtzhU7DC6BcD READY·대상SHA·canonical alias를확인했다. 운영직접경로8개200/없는자산404·초기/등록/상세자산200·운영Supabase연결·CSS로컬일치를확인했다. PC1280/모바일390/320의실제상세3카드에서작성자오른쪽날짜시간·좁은화면아래줄바꿈·겹침/넘침없음을검증했다. 페이지한정프로필/session fixture로PC/모바일등록폼의검색창없음·한마디선택·카테고리필수·한마디/사진선택안내11px/400/muted/6px일치도확인했다(운영프로필/등록/사진쓰기없음). 지도이미지18개정상·지도오류없음, 운영19등록/10참여자/13대상/revision23유지다. [릴리스/API근거](../artifacts/registration-optional-release-verification.json) · [운영브라우저](../artifacts/registration-optional-production-browser-verification.json). 이번개선8단계를완료하며기존독립QA/실기기/성능보류는별도로유지한다. 이결과기록을같은release브랜치의문서PR로main/develop양쪽에반영하고최종main READY·응답을재확인한다.
 
 - develop 머지·QA 및 운영 DB/API 반영 완료 (2026-10-15): 네 커밋6c83c68/47c798b/3fb769d/45da4e0을 기능브랜치에push하고 PR#38을develop439d59f에merge했다. 개인조직/대상을확인한뒤 QA/운영에20261014233653을각각dry-run후적용하고api를QA9/운영10 ACTIVE·verify_jwt=false로배포했다. 두번들SHA256=afd8afc8fafcc4dd2f7da52e88356e917a39d0f809d36399e6e16f3c21556492다. QA실제빈문구생성/공백정규화/수정삭제/100이모지/검증/재생·충돌/공개·본인조회/알림을확인하고시험자료를정리했다(QA10146등록/200참여자/1000대상/revision154). 운영19등록/10참여자/13대상/revision23유지·양쪽보안advisor ERROR0이다. 보호된기능Preview READY·HTML/JS/CSS200·QA연결/최종선택스타일·PC/모바일11카드날짜시간/넘침없음을확인했다. Preview지도도메인미설정과브라우저Edge쓰기검증미수행은분리하며실제API는QA HTTP/실제폼흐름은로컬에서검증했다. [근거](../artifacts/registration-optional-release-verification.json). release/registration-optional-message에서main PR을준비하며8단계는운영FE확인전미완료다.
 
