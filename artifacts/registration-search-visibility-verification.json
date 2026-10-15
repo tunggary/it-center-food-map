@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-15",
+  "environment": "Local app; page-local API fixtures; no remote writes; map SDK unavailable",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "form": {
+        "heading": "이곳을 최애로 등록",
+        "searchAbsent": true,
+        "formVisible": true,
+        "noOverflow": true
+      },
+      "back": {
+        "value": "카페",
+        "searchVisible": true,
+        "resultsRestored": true
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "form": {
+        "heading": "이곳을 최애로 등록",
+        "searchAbsent": true,
+        "formVisible": true,
+        "noOverflow": true
+      },
+      "back": {
+        "value": "카페",
+        "searchVisible": true,
+        "resultsRestored": true
+      }
+    }
+  ],
+  "note": "Both viewport assertion loops passed. Initial artifact save failed because the browser runtime working directory differs from the repository; recorded the successful observations here. A later repeat lost its API fixture and is excluded."
+}
