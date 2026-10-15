@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { RankTrophy } from '../components/RankTrophy';
 import { Link, Outlet, useLocation, useNavigate, useOutletContext, useSearchParams } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
+import { useInfiniteQuery, useQuery } from '@tanstack/react-query';
 import type { Explore, Participant, Pin, Ranking } from '../../shared/contracts';
 import { ApiError, edge, rpc } from '../lib/api';
 import { useCatalog } from '../lib/state';
@@ -48,41 +48,56 @@ export default function ExplorePage() {
     if (!rankingOpen || !catalog.data || waitingForTeam || meError) return;
     const copy = new URLSearchParams(params);
     copy.set('rankingTab', tab);
+    copy.delete('rankPage');
     if (!params.has('rankingTab') && tab !== 'custom') { copy.delete('team'); copy.delete('category'); }
     if (needsTeam) copy.set('team', identityMissing ? '' : me.data?.teamId ?? '');
     if (tab === 'custom' && !copy.has('category')) copy.set('category', '');
     if (copy.toString() !== params.toString()) setParams(copy, { replace: true });
   }, [rankingOpen, catalog.data, waitingForTeam, needsTeam, identityMissing, meError, me.data?.teamId, tab, params, setParams]);
-  const requestedPage = Number(params.get('rankPage'));
-  const page = rankingOpen && Number.isSafeInteger(requestedPage) && requestedPage > 0 ? requestedPage : 1;
   const selectedFilters = rankingFilters(tab, params, catalog.data);
   const mapFilters = detailOpen ? { teamId: null, categoryId: null } : rankingOpen ? selectedFilters : filters;
   const ready = !!catalog.data && !!mapFilters && !(rankingOpen && (waitingForTeam || needsTeam || params.get('rankingTab') !== tab));
-  const snapshot = useQuery({ queryKey: ['explore', mapFilters?.teamId, mapFilters?.categoryId, page], enabled: ready, queryFn: ({ signal }) => rpc<Explore>('read_explore', { p_team_id: mapFilters!.teamId, p_category_id: mapFilters!.categoryId, p_rank_page: page }, signal) });
-  const changeRanking = (next: { tab?: RankingTab; teamId?: string | null; categoryId?: string | null; page?: number }) => {
+  const mapSnapshot = useQuery({ queryKey: ['explore', mapFilters?.teamId, mapFilters?.categoryId, 1], enabled: ready && !rankingOpen, queryFn: ({ signal }) => rpc<Explore>('read_explore', { p_team_id: mapFilters!.teamId, p_category_id: mapFilters!.categoryId, p_rank_page: 1 }, signal) });
+  const rankingSnapshot = useInfiniteQuery({
+    queryKey: ['ranking', tab, selectedFilters?.teamId, selectedFilters?.categoryId],
+    enabled: ready && rankingOpen,
+    initialPageParam: 1,
+    queryFn: ({ pageParam, signal }) => rpc<Explore>('read_explore', { p_team_id: selectedFilters!.teamId, p_category_id: selectedFilters!.categoryId, p_rank_page: pageParam }, signal),
+    getNextPageParam: (last, pages) => last.hasMore && last.rankingPage.length ? pages.length + 1 : undefined,
+    select: data => {
+      const seen = new Set<string>();
+      return { ...data.pages.at(-1)!, rankingPage: data.pages.flatMap(page => page.rankingPage).filter(item => {
+        if (seen.has(item.targetId)) return false;
+        seen.add(item.targetId); return true;
+      }) };
+    },
+  });
+  const snapshot = rankingOpen ? rankingSnapshot : mapSnapshot;
+  const changeRanking = (next: { tab?: RankingTab; teamId?: string | null; categoryId?: string | null }) => {
     const copy = new URLSearchParams(params);
     if (!params.has('rankingTab') && tab !== 'custom') { copy.delete('team'); copy.delete('category'); }
     if (next.tab) copy.set('rankingTab', next.tab);
     if ('teamId' in next) copy.set('team', next.teamId ?? '');
     if ('categoryId' in next) copy.set('category', next.categoryId ?? '');
-    if (next.page && next.page > 1) copy.set('rankPage', String(next.page)); else copy.delete('rankPage');
+    copy.delete('rankPage');
     setParams(copy);
   };
-  const ranking = { catalog, tab, filters: selectedFilters, snapshot, page, changeRanking, query, ready, meError, retryMe: () => void me.refetch() };
+  const ranking = { catalog, tab, filters: selectedFilters, snapshot: rankingSnapshot, hasMore: rankingSnapshot.hasNextPage, fetching: rankingSnapshot.isFetching, loadingMore: rankingSnapshot.isFetchingNextPage, moreError: rankingSnapshot.isFetchNextPageError, loadMore: () => { void rankingSnapshot.fetchNextPage({ cancelRefetch: false }); }, changeRanking, query, ready, meError, retryMe: () => void me.refetch() };
   const home = location.pathname === '/';
   const pins = (rankingOpen && !ready ? undefined : snapshot.data)?.pins;
   return <MapScene clustering clusterContextKey={query} pins={pins} onSelect={id => navigate(`/targets/${id}?${query}`, { replace: location.pathname !== '/' })} className={`explore-scene ${detailOpen ? 'detail-scene' : ''} ${rankingOpen ? 'ranking-scene' : ''}`}><MapToolbar/>{home && mobile ? <RankingTicker items={snapshot.data?.rankingPage.slice(0, 5) ?? []} query={query} pending={snapshot.isPending} failed={snapshot.isError && !snapshot.data}/> : null}<div className="floating-filters">{catalog.data && !detailOpen && !rankingOpen ? <FiltersForm catalog={catalog.data} filters={filters} onChange={setFilters}/> : null}</div><MapMessages>{catalog.error ? <ErrorNotice error={catalog.error} retry={() => void catalog.refetch()}/> : null}{!rankingOpen && snapshot.error ? <ErrorNotice error={snapshot.error} retry={() => void snapshot.refetch()}/> : null}</MapMessages>{home ? <>{!mobile ? <MapPanel title="동료들의 요즘 최애" eyebrow="AROUND THE IT CENTER" className="compact-ranking" footer={<Link className="text-link" to={`/rankings?${query}`}>전체 랭킹 보기 <Icon name="chevron"/></Link>}>{snapshot.isPending ? <Loading text="랭킹을 불러오고 있어요…"/> : snapshot.isError && !snapshot.data ? <p className="muted">랭킹을 불러오지 못했어요</p> : snapshot.data?.rankingPage.length ? <RankingList items={snapshot.data.rankingPage.slice(0, 5)} query={query}/> : snapshot.data ? <Empty>이 조건의 최애가 아직 없어요. 조건을 바꾸거나 첫 최애를 남겨 주세요.</Empty> : null}</MapPanel> : null}<FloatingRegister query={query}/></> : <Outlet context={ranking}/>}</MapScene>;
 }
 type RankingContext = {
   catalog: ReturnType<typeof useCatalog>; tab: RankingTab; filters: ReturnType<typeof rankingFilters>;
-  snapshot: ReturnType<typeof useQuery<Explore>>; page: number; query: string; ready: boolean;
-  changeRanking: (next: { tab?: RankingTab; teamId?: string | null; categoryId?: string | null; page?: number }) => void;
+  snapshot: { data?: Explore; error: Error | null; isPending: boolean; refetch: () => unknown }; query: string; ready: boolean;
+  hasMore: boolean; fetching: boolean; loadingMore: boolean; moreError: boolean; loadMore: () => void;
+  changeRanking: (next: { tab?: RankingTab; teamId?: string | null; categoryId?: string | null }) => void;
   meError: unknown; retryMe: () => void;
 };
 export function RankingsPanel() {
-  const { catalog, tab, filters, snapshot, page, changeRanking, query, ready, meError, retryMe } = useOutletContext<RankingContext>();
+  const { catalog, tab, filters, snapshot, hasMore, fetching, loadingMore, moreError, loadMore, changeRanking, query, ready, meError, retryMe } = useOutletContext<RankingContext>();
   const close = usePanelClose(`/?${rankingHomeQuery(new URLSearchParams(query), catalog.data)}`);
-  return <MapPanel title="우리의 최애 랭킹" eyebrow="FAVORITES RANKING" onClose={close} className="tabbed-ranking">
+  return <MapPanel title="우리의 최애 랭킹" eyebrow="FAVORITES RANKING" onClose={close} className="tabbed-ranking" contentKey={`${tab}:${filters?.teamId}:${filters?.categoryId}`}>
     <div className="ranking-tabs" role="tablist" aria-label="랭킹 분류">{rankingTabs.map((item, index) => <button key={item.id} id={`ranking-tab-${item.id}`} role="tab" type="button" aria-selected={tab === item.id} aria-controls="ranking-results" tabIndex={tab === item.id ? 0 : -1} onClick={() => changeRanking({ tab: item.id })} onKeyDown={event => {
       const offset = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0;
       const next = event.key === 'Home' ? 0 : event.key === 'End' ? rankingTabs.length - 1 : offset ? (index + offset + rankingTabs.length) % rankingTabs.length : null;
@@ -94,8 +109,22 @@ export function RankingsPanel() {
       {meError ? <ErrorNotice error={meError} retry={retryMe}/> : null}
       {catalog.data && !filters ? <Empty>이 카테고리를 찾을 수 없어요.</Empty> : null}
       {!meError && ((!catalog.data && !catalog.error) || (filters && (!ready || snapshot.isPending))) ? <Loading/> : null}
-      {ready && snapshot.error ? <ErrorNotice error={snapshot.error} retry={() => void snapshot.refetch()}/> : null}
-      {ready && snapshot.data ? snapshot.data.rankingPage.length ? <><RankingList items={snapshot.data.rankingPage} query={query} population={snapshot.data.pins}/><div className="pagination">{page > 1 ? <button onClick={() => changeRanking({ page: page - 1 })}>이전 20건</button> : null}<span>{page}페이지</span>{snapshot.data.hasMore ? <button onClick={() => changeRanking({ page: page + 1 })}>다음 20건 보기</button> : null}</div></> : <Empty>이 조건의 최애가 아직 없어요.</Empty> : null}
+      {ready && snapshot.error && !moreError ? <ErrorNotice error={snapshot.error} retry={() => void snapshot.refetch()}/> : null}
+      {ready && snapshot.data ? snapshot.data.rankingPage.length ? <><RankingList items={snapshot.data.rankingPage} query={query} population={snapshot.data.pins}/>{moreError ? <ErrorNotice error={snapshot.error} retry={loadMore}/> : null}{hasMore ? <RankingSentinel enabled={ready && !fetching && !snapshot.error} loadMore={loadMore}/> : null}{loadingMore ? <p className="ranking-loading" role="status">랭킹을 더 불러오고 있어요…</p> : null}</> : <Empty>이 조건의 최애가 아직 없어요.</Empty> : null}
     </div>
   </MapPanel>;
+}
+
+function RankingSentinel({ enabled, loadMore }: { enabled: boolean; loadMore: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const element = ref.current;
+    if (!element || !enabled) return;
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) loadMore();
+    }, { root: element.closest('.panel-content'), rootMargin: '0px 0px 160px 0px' });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [enabled, loadMore]);
+  return <div ref={ref} className="ranking-sentinel" aria-hidden="true"/>;
 }
