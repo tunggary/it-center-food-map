@@ -2,12 +2,12 @@
 import { afterEach, expect, it, vi } from 'vitest';
 import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MapView } from '../components/Map';
-const sdk = vi.hoisted(() => ({ center: vi.fn(), geolocation: vi.fn(), level: vi.fn(), getLevel: vi.fn(() => 5), path: vi.fn() }));
+const sdk = vi.hoisted(() => ({ center: vi.fn(), geolocation: vi.fn(), level: vi.fn(), getLevel: vi.fn(() => 5) }));
 vi.mock('../lib/maps', () => ({ loadMap: async () => {}, kakao: () => ({
  Map: class { setCenter = sdk.center; getCenter = () => ({ getLng: () => 127, getLat: () => 37 }); relayout() {} getProjection() { return { containerPointFromCoords: (p: { lng: number; lat: number }) => ({ x: p.lng, y: p.lat }), coordsFromContainerPoint: (p: { x: number; y: number }) => ({ lat: p.y, lng: p.x, getLng: () => p.x, getLat: () => p.y }) }; } getLevel = sdk.getLevel; setLevel = sdk.level; },
  LatLng: class { constructor(public lat: number, public lng: number) {} }, Point: class { constructor(public x: number, public y: number) {} },
  Marker: class { setPosition() {} setTitle() {} setMap() {} },
- Polyline: class { setPath = sdk.path; setMap() {} },
+ Polyline: class { setPath() {} setMap() {} },
  CustomOverlay: class { constructor({ content }: { content: HTMLElement }) { document.body.append(content); } setPosition() {} setMap() {} setContent() {} setZIndex() {} },
  event: { addListener() {}, removeListener() {} },
 }) }));
@@ -38,19 +38,18 @@ it.each([[5, 3], [2, 2]])('focuses a selected search place from level %i at leve
  expect(sdk.level).toHaveBeenCalledTimes(callCount);
 });
 
-it.each([['PLACE', 5, 3], ['PLACE', 2, 2], ['COURSE', 5, 3], ['COURSE', 2, 2]] as const)('focuses %s detail selection from level %i at level %i', async (kind, initialLevel, expectedLevel) => {
+it.each([[5, 3], [2, 2]])('focuses place detail selection from level %i at level %i', async (initialLevel, expectedLevel) => {
  sdk.getLevel.mockReturnValue(initialLevel);
  vi.stubGlobal('ResizeObserver', class { observe() {} disconnect() {} });
  const { MapScene, useMapGeometry } = await import('../components/MapScene');
  function DetailSelection() {
    const setGeometry = useMapGeometry();
-   return <button onClick={() => setGeometry({ id: 'detail', kind, name: '상세 대상', lng: 127.0632, lat: 37.5088, address: kind === 'PLACE' ? '서울' : null, points: kind === 'COURSE' ? [[127.0632, 37.5088], [127.064, 37.509]] : null, approximateLengthM: null, version: 1 })}>상세 열기</button>;
+   return <button onClick={() => setGeometry({ id: 'detail', kind: 'PLACE', name: '상세 대상', lng: 127.0632, lat: 37.5088, address: '서울', points: null, approximateLengthM: null, version: 1 })}>상세 열기</button>;
  }
  render(<MapScene><DetailSelection/></MapScene>);
  await waitFor(() => expect(screen.getByRole('button', { name: '내 위치' }).hasAttribute('disabled')).toBe(false));
  fireEvent.click(screen.getByRole('button', { name: '상세 열기' }));
  await waitFor(() => expect(sdk.level).toHaveBeenCalledWith(expectedLevel));
- if (kind === 'COURSE') expect(sdk.path).toHaveBeenLastCalledWith([expect.objectContaining({ lng: 127.0632, lat: 37.5088 }), expect.objectContaining({ lng: 127.064, lat: 37.509 })]);
  sdk.level.mockClear(); sdk.getLevel.mockReturnValue(7);
  fireEvent.click(screen.getByRole('button', { name: '상세 열기' }));
  expect(sdk.level).not.toHaveBeenCalled();

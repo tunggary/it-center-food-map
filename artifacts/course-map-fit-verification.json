@@ -1,0 +1,765 @@
+{
+  "date": "2026-10-15",
+  "source": "Local actual Kakao SDK; existing data plus explicitly page-only target geometry fixtures, no DB/remote writes",
+  "cases": [
+    {
+      "mode": "existing-course",
+      "width": 1280,
+      "level": 4,
+      "pointCount": 6,
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 594,
+        "right": 1031,
+        "top": 218,
+        "bottom": 734
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 844,
+        "top": 0,
+        "right": 1280,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 24,
+        "y": 84,
+        "width": 380,
+        "height": 712,
+        "top": 84,
+        "right": 404,
+        "bottom": 796,
+        "left": 24
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "long-two-point",
+      "width": 1280,
+      "level": 6,
+      "pointCount": 2,
+      "fitCalls": 5,
+      "routeBounds": {
+        "left": 537,
+        "right": 1089,
+        "top": 198,
+        "bottom": 753
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 844,
+        "top": 0,
+        "right": 1280,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 24,
+        "y": 84,
+        "width": 380,
+        "height": 712,
+        "top": 84,
+        "right": 404,
+        "bottom": 796,
+        "left": 24
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "intermediate-extremes",
+      "width": 1280,
+      "level": 7,
+      "pointCount": 6,
+      "fitCalls": 6,
+      "routeBounds": {
+        "left": 565,
+        "right": 1062,
+        "top": 198,
+        "bottom": 753
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 844,
+        "top": 0,
+        "right": 1280,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 24,
+        "y": 84,
+        "width": 380,
+        "height": 712,
+        "top": 84,
+        "right": 404,
+        "bottom": 796,
+        "left": 24
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "closed-loop-200",
+      "width": 1280,
+      "level": 6,
+      "pointCount": 200,
+      "fitCalls": 7,
+      "routeBounds": {
+        "left": 481,
+        "right": 1144,
+        "top": 198,
+        "bottom": 753
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 844,
+        "top": 0,
+        "right": 1280,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 24,
+        "y": 84,
+        "width": 380,
+        "height": 712,
+        "top": 84,
+        "right": 404,
+        "bottom": 796,
+        "left": 24
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "same-geometry-refresh-preserves-manual",
+      "width": 1280,
+      "before": {
+        "level": 5,
+        "calls": 7
+      },
+      "after": {
+        "level": 5,
+        "calls": 7
+      }
+    },
+    {
+      "mode": "desktop-resize",
+      "width": 1000,
+      "level": 7,
+      "pointCount": 200,
+      "fitCalls": 8,
+      "routeBounds": {
+        "left": 508,
+        "right": 839,
+        "top": 336,
+        "bottom": 614
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1000,
+        "height": 844,
+        "top": 0,
+        "right": 1000,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 24,
+        "y": 84,
+        "width": 380,
+        "height": 712,
+        "top": 84,
+        "right": 404,
+        "bottom": 796,
+        "left": 24
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "place-unchanged",
+      "width": 1280,
+      "level": 2,
+      "fitCalls": 0,
+      "name": "QA페이지 장소 01",
+      "actual": {
+        "x": 853,
+        "y": 464
+      },
+      "desired": {
+        "x": 852,
+        "y": 464
+      },
+      "centerError": 1
+    },
+    {
+      "mode": "existing-course",
+      "width": 390,
+      "level": 7,
+      "pointCount": 6,
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 136,
+        "right": 191,
+        "top": 145,
+        "bottom": 209
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 253.203125,
+        "width": 390,
+        "height": 590.796875,
+        "top": 253.203125,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "long-two-point",
+      "width": 390,
+      "level": 9,
+      "pointCount": 2,
+      "fitCalls": 5,
+      "routeBounds": {
+        "left": 130,
+        "right": 199,
+        "top": 142,
+        "bottom": 211
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 253.203125,
+        "width": 390,
+        "height": 590.796875,
+        "top": 253.203125,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "intermediate-extremes",
+      "width": 390,
+      "level": 10,
+      "pointCount": 6,
+      "fitCalls": 6,
+      "routeBounds": {
+        "left": 132,
+        "right": 195,
+        "top": 142,
+        "bottom": 211
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 253.203125,
+        "width": 390,
+        "height": 590.796875,
+        "top": 253.203125,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "closed-loop-200",
+      "width": 390,
+      "level": 9,
+      "pointCount": 200,
+      "fitCalls": 7,
+      "routeBounds": {
+        "left": 122,
+        "right": 205,
+        "top": 142,
+        "bottom": 211
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 253.203125,
+        "width": 390,
+        "height": 590.796875,
+        "top": 253.203125,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "same-geometry-refresh-preserves-manual",
+      "width": 390,
+      "before": {
+        "level": 8,
+        "calls": 7
+      },
+      "after": {
+        "level": 8,
+        "calls": 7
+      }
+    },
+    {
+      "mode": "expanded-sheet",
+      "width": 390,
+      "level": 10,
+      "pointCount": 200,
+      "fitCalls": 9,
+      "routeBounds": {
+        "left": 174,
+        "right": 216,
+        "top": 103,
+        "bottom": 137
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 151.921875,
+        "width": 390,
+        "height": 692.078125,
+        "top": 151.921875,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "summary-sheet",
+      "width": 390,
+      "level": 8,
+      "pointCount": 200,
+      "fitCalls": 11,
+      "routeBounds": {
+        "left": 81,
+        "right": 246,
+        "top": 276,
+        "bottom": 415
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 590.8046875,
+        "width": 390,
+        "height": 253.1953125,
+        "top": 590.8046875,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "place-unchanged",
+      "width": 390,
+      "level": 2,
+      "fitCalls": 0,
+      "name": "QA페이지 장소 01",
+      "actual": {
+        "x": 196,
+        "y": 165
+      },
+      "desired": {
+        "x": 195,
+        "y": 165.6015625
+      },
+      "centerError": 1.1669950477213904
+    },
+    {
+      "mode": "existing-course",
+      "width": 320,
+      "level": 7,
+      "pointCount": 6,
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 101,
+        "right": 156,
+        "top": 145,
+        "bottom": 209
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 253.203125,
+        "width": 320,
+        "height": 590.796875,
+        "top": 253.203125,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "long-two-point",
+      "width": 320,
+      "level": 9,
+      "pointCount": 2,
+      "fitCalls": 5,
+      "routeBounds": {
+        "left": 94,
+        "right": 163,
+        "top": 142,
+        "bottom": 211
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 253.203125,
+        "width": 320,
+        "height": 590.796875,
+        "top": 253.203125,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "intermediate-extremes",
+      "width": 320,
+      "level": 10,
+      "pointCount": 6,
+      "fitCalls": 6,
+      "routeBounds": {
+        "left": 97,
+        "right": 160,
+        "top": 142,
+        "bottom": 211
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 253.203125,
+        "width": 320,
+        "height": 590.796875,
+        "top": 253.203125,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "closed-loop-200",
+      "width": 320,
+      "level": 9,
+      "pointCount": 200,
+      "fitCalls": 7,
+      "routeBounds": {
+        "left": 86,
+        "right": 169,
+        "top": 142,
+        "bottom": 211
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 253.203125,
+        "width": 320,
+        "height": 590.796875,
+        "top": 253.203125,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "same-geometry-refresh-preserves-manual",
+      "width": 320,
+      "before": {
+        "level": 8,
+        "calls": 7
+      },
+      "after": {
+        "level": 8,
+        "calls": 7
+      }
+    },
+    {
+      "mode": "expanded-sheet",
+      "width": 320,
+      "level": 10,
+      "pointCount": 200,
+      "fitCalls": 9,
+      "routeBounds": {
+        "left": 139,
+        "right": 181,
+        "top": 103,
+        "bottom": 137
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 151.921875,
+        "width": 320,
+        "height": 692.078125,
+        "top": 151.921875,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "summary-sheet",
+      "width": 320,
+      "level": 8,
+      "pointCount": 200,
+      "fitCalls": 11,
+      "routeBounds": {
+        "left": 45,
+        "right": 210,
+        "top": 276,
+        "bottom": 415
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 590.8046875,
+        "width": 320,
+        "height": 253.1953125,
+        "top": 590.8046875,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "insideMap": true,
+      "covered": [],
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    },
+    {
+      "mode": "place-unchanged",
+      "width": 320,
+      "level": 2,
+      "fitCalls": 0,
+      "name": "QA페이지 장소 01",
+      "actual": {
+        "x": 161,
+        "y": 165
+      },
+      "desired": {
+        "x": 160,
+        "y": 165.6015625
+      },
+      "centerError": 1.1669950477213904
+    },
+    {
+      "mode": "booth-full-course",
+      "width": 1280,
+      "level": 7,
+      "pointCount": 200,
+      "routeBounds": {
+        "left": 647,
+        "right": 978,
+        "top": 298,
+        "bottom": 576
+      },
+      "covered": [],
+      "insideMap": true,
+      "errors": [],
+      "pathElements": 1,
+      "overflow": false
+    }
+  ],
+  "checks": {
+    "initialFitTestsFailed": 4,
+    "fullTestsPassed": 153,
+    "testFiles": 23,
+    "finalTargetedTestsPassed": 12,
+    "typecheck": "passed",
+    "build": "passed",
+    "placeZoomAndCenterPreserved": true,
+    "locationButtonUnitRegression": "passed",
+    "deployment": "not performed",
+    "database": "unchanged"
+  }
+}
