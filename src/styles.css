@@ -120,6 +120,22 @@ dialog.side-menu{position:fixed;top:0;right:0;bottom:0;left:auto;margin:0;border
 .comment-author{display:flex;flex:1;min-width:0;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:4px 12px}
 .comment-identity{flex:1 1 140px;min-width:0;overflow-wrap:anywhere}
 .comment-created-at{color:var(--muted);font-size:10px;font-weight:400;white-space:nowrap}
+.cluster-pin-label{max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pin-cluster{font-weight:700;border-style:solid;border-width:2px}
+.cluster-measure{position:absolute;visibility:hidden;pointer-events:none;left:0;top:0;contain:layout style;display:flex;width:max-content}
+.cluster-layer{position:absolute;inset:0;pointer-events:none;z-index:4}
+.cluster-popup{position:absolute;pointer-events:auto;display:flex;flex-direction:column;max-width:calc(100% - 24px);background:var(--surface,#fff);border:1px solid #d4e0d5;border-radius:12px;overflow:hidden;color:var(--text);font-size:13px}
+.cluster-popup header{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 8px 6px 14px;flex-shrink:0}
+.cluster-popup header .icon-button{width:32px;height:32px;min-height:32px}
+.cluster-popup ul{list-style:none;margin:0;padding:0;overflow-y:auto;max-height:300px;overscroll-behavior:contain}
+.cluster-popup li+li{border-top:1px solid #e7ece7}
+.cluster-popup li button{width:100%;display:flex;align-items:center;gap:8px;min-height:52px;padding:10px 12px;text-align:left;border:0;border-radius:0;background:transparent;color:inherit}
+.cluster-popup li button:hover,.cluster-popup li button[aria-current=true]{background:#edf5ef}
+.cluster-popup li button>span:first-child{flex:1;min-width:0}
+.cluster-popup li strong{display:block;overflow-wrap:anywhere;font-size:13px}
+.cluster-popup li small{display:block;font-size:11px;color:var(--muted)}
+.cluster-popup .cluster-count{white-space:nowrap;font-size:11px;color:var(--green)}
+.cluster-popup li svg{width:14px;height:14px;flex-shrink:0}
 
 /* Share the inset arrow across native select controls. */
 select,.floating-filters select,.map-panel .filters select,.map-panel select,.register-scene #favorite-form label select{appearance:none;-webkit-appearance:none;padding-right:36px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m3 6 5 5 5-5' fill='none' stroke='%2320332e' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:12px 12px}
