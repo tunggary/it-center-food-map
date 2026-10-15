@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-15",
+  "before": {
+    "environment": "Production main 49e2f91",
+    "place": "중앙해장",
+    "levelBeforeSelection": 6,
+    "levelAfterSelection": 6
+  },
+  "after": {
+    "environment": "Local actual SDK and existing RPC, no data writes",
+    "results": [
+      {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "level": 3,
+        "name": "QA페이지 장소 01 · 21",
+        "coveredByPanel": false,
+        "insideMap": true
+      },
+      {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "level": 3,
+        "name": "QA페이지 장소 01 · 21",
+        "coveredByPanel": false,
+        "insideMap": true
+      }
+    ]
+  },
+  "tests": 147,
+  "build": "passed"
+}
