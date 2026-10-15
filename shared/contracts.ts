@@ -12,6 +12,7 @@ export type Explore = Snapshot & { filters: Filters; pins: Pin[]; rankingPage: R
 export type Participant = { id: string; nickname: string; teamId: string; teamName: string; version: number };
 export type PhotoSlot = { assetId: string; slot: 1 | 2 | 3 };
 export type Target = { id: string; kind: Kind; name: string; address: string | null; lng: number; lat: number; points: Point[] | null; approximateLengthM: number | null; version: number };
+// message is always a string; an omitted introduction is represented by "".
 export type Favorite = { id: string; targetId: string; participantId: string; nickname: string; teamId: string; teamName: string; categoryId: string; categoryName: string; message: string; photos: PhotoSlot[]; version: number; createdAt: string; target?: Target };
 export type TargetDetail = Snapshot & { target: Target; filteredCount: number; totalCount: number; overallRank: number | null; overallRankTied: boolean; favorites: Favorite[]; nextCursor: string | null };
 export type Command = { requestKey: string; expectedVersion?: number };

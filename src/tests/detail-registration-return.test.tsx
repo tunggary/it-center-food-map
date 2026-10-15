@@ -74,7 +74,7 @@ it.each(['PLACE', 'COURSE'] as const)('%s detail returns from add, edit and dele
   await screen.findByRole('heading', { name: '내 최애 수정' });
   fireEvent.click(screen.getByRole('button', { name: '내 등록 삭제' }));
   fireEvent.click(screen.getByRole('button', { name: '삭제' }));
-  await screen.findByText('등록된 문구가 아직 없어요.');
+  await screen.findByText('등록된 최애가 아직 없어요.');
   expect(await screen.findByRole('link', { name: '나도 최애로 등록' })).toBeTruthy();
   expect(screen.queryByText('기존 후기')).toBeNull();
   expect(edited.router.state.location.pathname + edited.router.state.location.search).toBe(detailUrl);

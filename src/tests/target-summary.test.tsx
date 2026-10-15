@@ -70,3 +70,17 @@ it('updates count, rank and trophy together after detail invalidation', async ()
   await waitFor(() => expect(document.querySelector('.trophy-1')).toBeTruthy());
   expect(screen.getByText('5명')).toBeTruthy();
 });
+it.each([
+  { message: '', photos: [] },
+  { message: '', photos: [{ assetId: 'photo', slot: 1 as const }] },
+  { message: '소개', photos: [] },
+  { message: '소개', photos: [{ assetId: 'photo', slot: 1 as const }] },
+])('keeps registration cards with optional content: %j', async content => {
+  setup({ ...response, totalCount: 1, filteredCount: 1, favorites: [{ id: 'favorite', targetId: 'place', participantId: 'person', nickname: '동료', teamId: 'team', teamName: 'A팀', categoryId: 'category', categoryName: '맛집', version: 1, createdAt: '2026-10-14T15:05:00Z', ...content }] });
+  await screen.findByText('동료');
+  expect(document.querySelectorAll('.comment')).toHaveLength(1);
+  expect(document.querySelectorAll('.comment .message')).toHaveLength(content.message ? 1 : 0);
+  expect(document.querySelectorAll('.comment .photos img')).toHaveLength(content.photos.length);
+  expect(screen.getByText('A팀 · 맛집')).toBeTruthy();
+  expect(screen.getByText('1명')).toBeTruthy();
+});
