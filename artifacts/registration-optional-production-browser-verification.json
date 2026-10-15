@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-15",
+  "environment": "Production public detail RPC and deployed UI; form uses tab-only profile/session read fixtures; no production writes",
+  "details": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "cards": [
+        {
+          "time": "2026. 10. 14. 13:00",
+          "inHeader": true,
+          "oldDateAbsent": true,
+          "noOverlap": true,
+          "position": "right"
+        },
+        {
+          "time": "2026. 10. 14. 12:56",
+          "inHeader": true,
+          "oldDateAbsent": true,
+          "noOverlap": true,
+          "position": "right"
+        },
+        {
+          "time": "2026. 10. 14. 08:19",
+          "inHeader": true,
+          "oldDateAbsent": true,
+          "noOverlap": true,
+          "position": "right"
+        }
+      ],
+      "mapTiles": 0,
+      "noOverflow": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "cards": [
+        {
+          "time": "2026. 10. 14. 13:00",
+          "inHeader": true,
+          "oldDateAbsent": true,
+          "noOverlap": true,
+          "position": "right"
+        },
+        {
+          "time": "2026. 10. 14. 12:56",
+          "inHeader": true,
+          "oldDateAbsent": true,
+          "noOverlap": true,
+          "position": "right"
+        },
+        {
+          "time": "2026. 10. 14. 08:19",
+          "inHeader": true,
+          "oldDateAbsent": true,
+          "noOverlap": true,
+          "position": "right"
+        }
+      ],
+      "mapTiles": 0,
+      "noOverflow": true
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "cards": [
+        {
+          "time": "2026. 10. 14. 13:00",
+          "inHeader": true,
+          "oldDateAbsent": true,
+          "noOverlap": true,
+          "position": "below"
+        },
+        {
+          "time": "2026. 10. 14. 12:56",
+          "inHeader": true,
+          "oldDateAbsent": true,
+          "noOverlap": true,
+          "position": "below"
+        },
+        {
+          "time": "2026. 10. 14. 08:19",
+          "inHeader": true,
+          "oldDateAbsent": true,
+          "noOverlap": true,
+          "position": "below"
+        }
+      ],
+      "mapTiles": 0,
+      "noOverflow": true
+    }
+  ],
+  "forms": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "heading": "이곳을 최애로 등록",
+      "messageOptional": true,
+      "categoryRequired": true,
+      "searchAbsent": true,
+      "notes": [
+        {
+          "text": "선택",
+          "font": "11px",
+          "weight": "400",
+          "color": "rgb(119, 135, 125)",
+          "margin": "6px"
+        },
+        {
+          "text": "선택 · 최대 3장",
+          "font": "11px",
+          "weight": "400",
+          "color": "rgb(119, 135, 125)",
+          "margin": "6px"
+        }
+      ],
+      "noOverflow": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "heading": "이곳을 최애로 등록",
+      "messageOptional": true,
+      "categoryRequired": true,
+      "searchAbsent": true,
+      "notes": [
+        {
+          "text": "선택",
+          "font": "11px",
+          "weight": "400",
+          "color": "rgb(119, 135, 125)",
+          "margin": "6px"
+        },
+        {
+          "text": "선택 · 최대 3장",
+          "font": "11px",
+          "weight": "400",
+          "color": "rgb(119, 135, 125)",
+          "margin": "6px"
+        }
+      ],
+      "noOverflow": true
+    }
+  ],
+  "mapAfterLoad": {
+    "images": 18,
+    "loaded": 18,
+    "error": false
+  },
+  "note": "Initial per-viewport map image counts were captured before SDK completion; mapAfterLoad records the subsequent loaded images."
+}

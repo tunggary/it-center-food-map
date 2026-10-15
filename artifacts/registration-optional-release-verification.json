@@ -33,7 +33,13 @@
     "messageNotNull": true,
     "messageCheck": "octet_length(message) <= 8192",
     "securityAdvisorErrors": 0,
-    "fixtureWrites": false
+    "fixtureWrites": false,
+    "countsAfterBrowser": {
+      "favorites": 19,
+      "participants": 10,
+      "targets": 13,
+      "revision": "23"
+    }
   },
   "apiBundleSha256": "afd8afc8fafcc4dd2f7da52e88356e917a39d0f809d36399e6e16f3c21556492",
   "preview": {
@@ -80,5 +86,41 @@
     "typeAndBuild": "PASS",
     "deno": "PASS"
   },
-  "productionFrontend": "Pending main merge"
+  "productionFrontend": {
+    "id": "dpl_7TUG9DUwZD8HYz1ygtzhU7DC6BcD",
+    "url": "https://it-center-food-7yt3ozvcv-tunggary2-navercoms-projects.vercel.app",
+    "state": "READY",
+    "target": "production",
+    "commit": "a408882e405bb5d5a7638c1b58e21339dea91560",
+    "canonicalAlias": "it-center-food-map.vercel.app",
+    "http": {
+      "canonicalUrl": "https://it-center-food-map.vercel.app",
+      "paths": {
+        "/": 200,
+        "/rankings": 200,
+        "/register": 200,
+        "/register/places": 200,
+        "/courses/new": 200,
+        "/me/favorites": 200,
+        "/me/profile": 200,
+        "/assets/does-not-exist-release.js": 404
+      },
+      "entry": "/assets/index-DkhdXTp-.js",
+      "css": "/assets/index-Dt-YYWxJ.css",
+      "cssMatchesLocalBuild": true,
+      "chunks": [
+        "Register-DUXlkXiw.js",
+        "RegisterEntry-7TYFLKcE.js",
+        "Target-_TN9WfI1.js",
+        "api-BzLtG-Em.js",
+        "validation-BiR4RVKl.js"
+      ],
+      "productionEndpoint": true,
+      "targetId": "3566c4ad-8733-402f-b741-04b9828a47fa",
+      "targetCount": 3,
+      "fixtureWrites": false
+    }
+  },
+  "mainPr": "https://github.com/tunggary/it-center-food-map/pull/39",
+  "mainMerge": "a408882e405bb5d5a7638c1b58e21339dea91560"
 }
