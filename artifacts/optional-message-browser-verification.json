@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-15",
+  "environment": "Local app and real local Edge/DB; no hosted writes",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "flow": "create-empty",
+      "cardPresent": true,
+      "noOverflow": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "flow": "clear-existing",
+      "cardPresent": true,
+      "messageAbsent": true,
+      "manageLink": true,
+      "noOverflow": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "flow": "mobile-create-empty",
+      "cardPresent": true,
+      "messageAbsent": true,
+      "photosAbsent": true,
+      "noOverflow": true,
+      "before": {
+        "required": false,
+        "categoryRequired": true,
+        "categoryValid": false,
+        "counter": "0/100자",
+        "textareaFont": "13px"
+      }
+    },
+    {
+      "flow": "owner-list",
+      "cards": 2,
+      "messages": 0,
+      "manageLinks": 2,
+      "noOverflow": true
+    }
+  ],
+  "network": [
+    {
+      "method": "POST",
+      "message": "",
+      "photoCount": 0,
+      "status": 201
+    },
+    {
+      "method": "PATCH",
+      "message": "기존 문구 삭제 검증",
+      "photoCount": 0,
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "message": "",
+      "photoCount": 0,
+      "status": 200
+    }
+  ]
+}

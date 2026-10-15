@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-15",
+  "environment": "Real local public target RPC; read-only",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "noOverflow": true,
+      "cards": [
+        {
+          "value": "2026. 10. 13. 22:07",
+          "dateTime": "2026-10-13T13:07:37.464465+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "right",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 07. 20:32",
+          "dateTime": "2026-10-07T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "right",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 06. 20:32",
+          "dateTime": "2026-10-06T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "right",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 05. 20:32",
+          "dateTime": "2026-10-05T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "right",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 04. 20:32",
+          "dateTime": "2026-10-04T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "right",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "noOverflow": true,
+      "cards": [
+        {
+          "value": "2026. 10. 13. 22:07",
+          "dateTime": "2026-10-13T13:07:37.464465+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "right",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 07. 20:32",
+          "dateTime": "2026-10-07T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "right",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 06. 20:32",
+          "dateTime": "2026-10-06T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "right",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 05. 20:32",
+          "dateTime": "2026-10-05T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "right",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 04. 20:32",
+          "dateTime": "2026-10-04T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "right",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "noOverflow": true,
+      "cards": [
+        {
+          "value": "2026. 10. 13. 22:07",
+          "dateTime": "2026-10-13T13:07:37.464465+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "below",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 07. 20:32",
+          "dateTime": "2026-10-07T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "below",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 06. 20:32",
+          "dateTime": "2026-10-06T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "below",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 05. 20:32",
+          "dateTime": "2026-10-05T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "below",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        },
+        {
+          "value": "2026. 10. 04. 20:32",
+          "dateTime": "2026-10-04T11:32:03.481148+00:00",
+          "formatValid": true,
+          "withinHeader": true,
+          "placement": "below",
+          "noOverlap": true,
+          "oldDateAbsent": true,
+          "fontSize": "10px",
+          "color": "rgb(119, 135, 125)"
+        }
+      ]
+    }
+  ]
+}

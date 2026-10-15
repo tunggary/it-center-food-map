@@ -3,6 +3,7 @@ const segmenter = new Intl.Segmenter('ko', { granularity: 'grapheme' });
 export const graphemeLength = (value: string) => [...segmenter.segment(value)].length;
 export const normalizeName = (value: string) => value.trim().normalize('NFC').toLocaleLowerCase('ko');
 export const text = (max: number) => z.string().trim().refine(v => graphemeLength(v) >= 1 && graphemeLength(v) <= max, `1~${max}자로 입력해 주세요`);
+const favoriteMessage = z.string().trim().refine(v => graphemeLength(v) <= 100, '소개 한마디는 100자 이내로 입력해 주세요.');
 export const uuid = z.string().uuid();
 export const point = z.tuple([z.number().finite('지도에서 정상 위치를 선택해 주세요.').min(-180, '지도에서 정상 위치를 선택해 주세요.').max(180, '지도에서 정상 위치를 선택해 주세요.'), z.number().finite('지도에서 정상 위치를 선택해 주세요.').min(-90, '지도에서 정상 위치를 선택해 주세요.').max(90, '지도에서 정상 위치를 선택해 주세요.')]);
 export const points = z.array(point).min(2, '경로에 서로 다른 점을 두 개 이상 추가해 주세요.').max(200, '경로의 점은 200개까지 추가할 수 있어요.').refine(v => new Set(v.map(p => p.join(','))).size >= 2, '서로 다른 점 두 개가 필요해요');
@@ -12,8 +13,8 @@ export const targetInput = z.discriminatedUnion('type', [
   z.object({ type: z.literal('place'), selectionToken: z.string().min(1).max(8000) }).strict(),
   z.object({ type: z.literal('course'), name: text(50), points }).strict(),
 ]);
-export const createFavoriteSchema = z.object({ requestKey: uuid, target: targetInput, categoryId: uuid, message: text(100), photos: photoSlots, profile: z.object({ nickname: text(20), teamId: uuid }).strict().optional() }).strict();
-export const editFavoriteSchema = z.object({ requestKey: uuid, expectedVersion: z.number().int().positive(), categoryId: uuid, message: text(100), photos: photoSlots }).strict();
+export const createFavoriteSchema = z.object({ requestKey: uuid, target: targetInput, categoryId: uuid, message: favoriteMessage, photos: photoSlots, profile: z.object({ nickname: text(20), teamId: uuid }).strict().optional() }).strict();
+export const editFavoriteSchema = z.object({ requestKey: uuid, expectedVersion: z.number().int().positive(), categoryId: uuid, message: favoriteMessage, photos: photoSlots }).strict();
 export const deleteSchema = z.object({ requestKey: uuid, expectedVersion: z.number().int().positive() }).strict();
 export const createProfileSchema = z.object({ requestKey: uuid, nickname: text(20), teamId: uuid }).strict();
 export const profileSchema = z.object({ requestKey: uuid, expectedVersion: z.number().int().positive(), nickname: text(20) }).strict();
