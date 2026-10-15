@@ -82,5 +82,9 @@ it.each([
   expect(document.querySelectorAll('.comment .message')).toHaveLength(content.message ? 1 : 0);
   expect(document.querySelectorAll('.comment .photos img')).toHaveLength(content.photos.length);
   expect(screen.getByText('A팀 · 맛집')).toBeTruthy();
+  const timestamp = document.querySelector<HTMLTimeElement>('.comment header time')!;
+  expect(timestamp.dateTime).toBe('2026-10-14T15:05:00Z');
+  expect(timestamp.textContent).toBe('2026. 10. 15. 00:05');
+  expect(document.querySelector('.comment > small')).toBeNull();
   expect(screen.getByText('1명')).toBeTruthy();
 });
