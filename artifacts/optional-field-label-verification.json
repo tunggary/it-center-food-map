@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-15",
+  "results": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "notes": [
+        {
+          "text": "선택",
+          "fontSize": "11px",
+          "fontWeight": "400",
+          "color": "rgb(119, 135, 125)",
+          "marginLeft": "6px",
+          "display": "inline"
+        },
+        {
+          "text": "선택 · 최대 3장",
+          "fontSize": "11px",
+          "fontWeight": "400",
+          "color": "rgb(119, 135, 125)",
+          "marginLeft": "6px",
+          "display": "inline"
+        }
+      ],
+      "noOverflow": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "notes": [
+        {
+          "text": "선택",
+          "fontSize": "11px",
+          "fontWeight": "400",
+          "color": "rgb(119, 135, 125)",
+          "marginLeft": "6px",
+          "display": "inline"
+        },
+        {
+          "text": "선택 · 최대 3장",
+          "fontSize": "11px",
+          "fontWeight": "400",
+          "color": "rgb(119, 135, 125)",
+          "marginLeft": "6px",
+          "display": "inline"
+        }
+      ],
+      "noOverflow": true
+    }
+  ]
+}

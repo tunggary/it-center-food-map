@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-15",
+  "featurePr": "https://github.com/tunggary/it-center-food-map/pull/38",
+  "developMerge": "439d59f02d916edef563d3cb4bc83204dc43ced1",
+  "migration": "20261014233653_optional_favorite_message.sql",
+  "qa": {
+    "projectRef": "yxgmpbjcvjeacnrgtcbq",
+    "migrationDryRunAndApplied": true,
+    "apiVersion": 9,
+    "apiStatus": "ACTIVE",
+    "verifyJwt": false,
+    "countsAfterCleanup": {
+      "favorites": 10146,
+      "participants": 200,
+      "targets": 1000,
+      "revision": "154"
+    },
+    "httpRegression": "PASS: empty create, normalize, 100 emoji, invalid/missing/null/101 validation, clear, replay/conflict, public/owner read, announcement",
+    "securityAdvisorErrors": 0
+  },
+  "productionBackend": {
+    "projectRef": "gpsbnmgwowsbgclcottl",
+    "migrationDryRunAndApplied": true,
+    "apiVersion": 10,
+    "apiStatus": "ACTIVE",
+    "verifyJwt": false,
+    "countsBeforeAndAfter": {
+      "favorites": 19,
+      "participants": 10,
+      "targets": 13,
+      "revision": "23"
+    },
+    "messageNotNull": true,
+    "messageCheck": "octet_length(message) <= 8192",
+    "securityAdvisorErrors": 0,
+    "fixtureWrites": false
+  },
+  "apiBundleSha256": "afd8afc8fafcc4dd2f7da52e88356e917a39d0f809d36399e6e16f3c21556492",
+  "preview": {
+    "url": "it-center-food-nef0yrlai-tunggary2-navercoms-projects.vercel.app",
+    "state": "READY",
+    "protectedHtml": 200,
+    "entry": "/assets/index-DoD2IvMR.js",
+    "css": "/assets/index-Dt-YYWxJ.css",
+    "checkedChunks": [
+      "Register-B6QIh0Vy.js",
+      "RegisterEntry-CtsOSmU9.js",
+      "Target-BbMPVb_z.js",
+      "api-s1Gx4jkA.js",
+      "validation-Q1I322QA.js"
+    ],
+    "qaEndpoint": true,
+    "datetimeAndOptionalStyles": true,
+    "browser": {
+      "publicDetail": [
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "times": 11,
+          "allTimesFormatted": true,
+          "noOverflow": true
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "times": 11,
+          "allTimesFormatted": true,
+          "noOverflow": true
+        }
+      ],
+      "note": "Preview SDK domain not configured; map loading is outside this change. Edge browser-origin writes not exercised; hosted QA HTTP and real local browser flows tested."
+    }
+  },
+  "checks": {
+    "vitest": 119,
+    "typeAndBuild": "PASS",
+    "deno": "PASS"
+  },
+  "productionFrontend": "Pending main merge"
+}

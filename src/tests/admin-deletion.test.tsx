@@ -4,9 +4,9 @@ import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/re
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MemoryRouter } from 'react-router-dom';
 import AdminPage from '../routes/Admin';
-import { edge } from '../lib/api';
+import { edge, rpc } from '../lib/api';
 vi.mock('../lib/auth', () => ({ adminToken: vi.fn().mockResolvedValue('admin-test'), adminClient: vi.fn() }));
-vi.mock('../lib/api', async original => ({ ...await original<typeof import('../lib/api')>(), edge: vi.fn() }));
+vi.mock('../lib/api', async original => ({ ...await original<typeof import('../lib/api')>(), edge: vi.fn(), rpc: vi.fn() }));
 beforeAll(() => {
   HTMLDialogElement.prototype.showModal = function () { this.setAttribute('open', ''); };
   HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); };
@@ -45,5 +45,18 @@ it('keeps an uncertain deletion after its target card disappears, then explicitl
   expect(commands[1]).toEqual(commands[0]);
   expect(commands[1]).toMatchObject({ expectedVersion: 4, expectedCount: 1 });
   expect(screen.queryByRole('dialog')).toBeNull();
+  client.clear();
+});
+
+it('keeps the admin registration and deletion action without an introduction', async () => {
+  vi.mocked(edge).mockImplementation(async path => path === '/admin/catalog' ? { allTeams: [], allCategories: [] } : { targets: [{ id: 'target', name: '문구 없는 대상', kind: 'PLACE', count: 1, version: 1 }], nextCursor: null });
+  vi.mocked(rpc).mockResolvedValue({ target: {}, favorites: [{ id: 'favorite', nickname: '작성자', teamName: 'A팀', message: '', photos: [] }], nextCursor: null });
+  const client = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  render(<MemoryRouter><QueryClientProvider client={client}><AdminPage/></QueryClientProvider></MemoryRouter>);
+  fireEvent.click(screen.getByRole('button', { name: '등록·코스·삭제' }));
+  fireEvent.click(await screen.findByRole('button', { name: '등록·코스 관리' }));
+  await screen.findByText('작성자 · A팀');
+  expect(screen.getByRole('button', { name: '이 등록만 삭제' })).toBeTruthy();
+  expect(document.querySelector('.favorite .message')).toBeNull();
   client.clear();
 });

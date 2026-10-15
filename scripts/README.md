@@ -11,3 +11,7 @@ Python 도구는 별도 가상환경에 `backup-requirements.txt`를 설치하�
 암호화 검증은 `python -m unittest discover -s scripts -p test_backup.py`로 실행한다. 실제 DB+사진 백업/복원은 별도 비운영 프로젝트에서 수행해야 하며 이 단위 검증만으로 완료 처리하지 않는다.
 
 복원은 비밀 없는 DB 이름을 `pg_restore --dbname` 인수에 지정하고 호스트·사용자·비밀번호·TLS 설정은 PG 환경변수로 전달한다. dump 목록에서 공급자 계정의 DEFAULT ACL만 제외하며 앱 ACL은 유지한다. 복원 전후 `restore-security.sql`이 전용 NOLOGIN 소유자와 RLS·정확한 공개 읽기 7개·service_role 전용 gateway·닫힌 search_path/default privileges를 재적용하고 조건이 깨지면 중단한다. 대상에는 같은 제품 migration과 private 사진 버킷이 먼저 있어야 한다. 기존 사진이 hash/크기까지 같으면 재사용하고, 다른 내용이면 덮어쓰지 않고 실패한다.
+
+## 소개 한마디 선택 입력 회귀
+
+`pnpm test:db`는 로컬 DB의 `optional_message.sql`을 포함한다. 로컬 Edge가 실행 중이면 `python3 supabase/tests/optional_message_api.py`로 실제 HTTP 생성/수정·검증·재생·조회 계약을 확인한다. 이 스크립트는 localhost54321만 허용하며 자신의 시험 자료만 정리한다.

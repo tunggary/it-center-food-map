@@ -41,7 +41,7 @@ registration_events N ─ 0..1 favorites (삭제 후 tombstone)
 
 - PLACE: provider=`kakao`, place_id 문자열·이름·좌표 필수, route_json NULL. 좌표는 위도 -90~90/경도 -180~180의 유한 수. 장소명의 사용자 수정은 허용하지 않는다.
 - COURSE: provider/place_id/address NULL, 이름·GeoJSON LineString 필수, 2~200점·서로 다른 점 2개 이상. 배열은 `[경도,위도]`; 시작점 lng/lat는 첫 점에서 생성한다. self-intersection은 산책 경로의 유효성 거절 사유로 쓰지 않는다.
-- API에서 문구 trim 후 grapheme 1~100, 닉네임 1~20, 코스명 1~50. DB는 NOT NULL·빈 값 금지·UTF-8 바이트 상한(문구 8KiB, 이름 2KiB)을 방어한다. grapheme 계산을 PostgreSQL char_length로 대체하지 않는다.
+- API에서 문구 trim 후 grapheme 0~100(선택), 닉네임 1~20, 코스명 1~50. DB는 NOT NULL·UTF-8 바이트 상한(문구 8KiB, 이름 2KiB)을 방어한다. 문구는 빈 문자열을 허용하며 이름의 빈 값 금지는 유지한다. grapheme 계산을 PostgreSQL char_length로 대체하지 않는다.
 - 공유 Zod를 우회하는 직접 gateway 실행은 service_role에만 가능하다. Edge가 검증한 값만 전달하고 SQL도 id/FK/길이 안전 상한·타입·좌표·사진 슬롯·권한을 재검증한다.
 - 이름 중복 키는 trim·Unicode NFC·소문자화한 값이다. 일반 닉네임에는 unique를 두지 않는다. 이름 정규화는 Edge 단일 함수에서 수행한다.
 

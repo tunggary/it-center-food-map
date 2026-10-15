@@ -97,3 +97,13 @@ vercel curl / --deployment <deployment-url> --scope tunggary2-navercoms-projects
 - 복구는이전main상태로되돌리는PR과기존Vercelrollback절차를사용한다. 추가DB함수/응답필드는기존FE/API와호환되므로급히삭제하지않고, 필요시이전main의api코드로재배포한다. 운영fixture등록은만들지않는다.
 
 실행 결과: PR #35의 main `31c472609f1bcfd9d88cf7a1b063b99be990cf0e`은 Production `dpl_FGXxRzMwwi4fsJLEeo7UF3K5xAg6` (`it-center-food-23lbm25g0-tunggary2-navercoms-projects.vercel.app`) READY이며 canonical 운영 alias를 확인했다. 직접 경로8개200·없는asset404, 초기/상세 자산9개200·운영 endpoint·CSS 로컬 일치를 확인했다. 운영 공개 상세13개의 순위/횟수와 PC·모바일 실제 상세8조건·주소복사·기존참여자 등록폼 진입/참여정보 강조를 검증했다. 운영 데이터18/10/13/revision22를 유지했고 profile/favorite/photo 시험 제출은 하지 않았다. 실제3위 자료는 없어 코랄/공동3위는 기존 컴포넌트/SQL 검증을 따른다. 근거는 [배포·API 검증](../artifacts/registration-detail-production-verification.json)과 [운영 브라우저](../artifacts/registration-detail-production-browser-verification.json)다. 사용자 요청으로 로컬 AGENTS.md에 PR 리뷰어 미지정 규칙을 반영했다. 이 실행 기록과 로컬 규칙을 문서 전용 PR로 main/develop에 반영하고 최종 main READY·운영 응답을 재확인한다.
+
+## 소개 선택 입력 적용·복구 (2026-10-15)
+
+개인 조직·QA/운영 프로젝트를 먼저 확인한다. 신규 optional_favorite_message migration의 dry-run→QA DB 적용→QA api Edge→Preview 실제 등록/수정/조회 검증을 수행한다. 운영은 DB 제약 완화→api Edge→FE 순서다. FE 선배포 시 이전 Edge/DB가 빈 문구를 거절하므로 순서를 바꾸지 않는다. READY·대상 커밋·실제 응답 확인 후에만 운영 완료를 기록한다. 운영에 검증 fixture를 생성하지 않는다.
+
+message는 NOT NULL 문자열과8KiB 바이트 상한을 유지하고 빈 문자열만 추가 허용한다. 기존 데이터 백필은 없다. 롤백은 FE/Edge에서 신규 빈 입력을 차단하되 완화한 DB CHECK는 유지한다. 빈 문구가 이미 저장되었다면 옛 CHECK를 바로 복원하지 않으며 데이터를 삭제하거나 임의 문구를 채우지 않는다. 백업은 스키마/데이터를 함께 복원하고 새 빈 문구 데이터를 옛 스키마에 데이터만 복원하지 않는다.
+
+## 소개 선택·등록 일시 릴리스 (2026-10-15)
+
+기능PR #38→develop439d59f를머지했다. QA/운영DB에20261014233653을dry-run후적용했고api는QA9/운영10 ACTIVE·verify_jwt=false, 번들SHA256은양쪽afd8afc8fafcc4dd2f7da52e88356e917a39d0f809d36399e6e16f3c21556492다. 운영19등록/10참여자/13대상/revision23을유지하며시험등록은없다. QA실제API/시험자료정리·보안advisor ERROR0·보호Preview READY/자산200/PC·모바일날짜시간표시를확인했다. 근거는 [릴리스검증](../artifacts/registration-optional-release-verification.json)이다. main머지후실제운영FE READY·대상SHA·canonical응답·UI를추가확인한다.

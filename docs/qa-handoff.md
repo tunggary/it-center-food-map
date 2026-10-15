@@ -61,3 +61,9 @@
 - 저장 전 모달 취소는 프로필 없음, 저장 후 최애 작성 취소는 프로필 유지/등록 없음이다. 프로필 저장만으로 등록 알림·랭킹은 변하지 않는다. 본인 UI는 현재 유효한 참여자에게만 제공한다.
 - 개발 검증 근거: [브라우저 JSON](../artifacts/registration-profile-browser-verification.json). 실제 새 모바일/PC 모달·상세 등록·소유권 UI를 확인했다. 실기기/독립QA·운영배포는 미완료다.
 - 운영 반영 시 새 DB 함수→Edge POST /me→프런트 순으로 배포한다. 기존 first-favorite profile 계약은 유지되어 이전 FE와 호환된다. 프런트를 먼저 배포하면 신규 참여 정보 저장이 실패하므로 금지한다.
+
+## 소개 선택 입력 인계 (2026-10-15)
+
+정책은 trim 후0~100 grapheme, 공백만 입력은 빈 문자열이며 문구·사진이 없어도 등록 카드를 유지한다. QA-P-05-03·11은 이전의0자/공백 거절과 달라 재검증한다. QA-P-03-01·05-01·05-04·06-01·07-01·07-02에는 빈 문구 조합을 추가한다. 과거 실행 기록·artifact는 보존하고 새로운 빌드의 결과를 구분한다. 로컬 자동검증과 독립QA/hosted QA는 구별해 기록한다.
+
+로컬 구현 검증은 [요약](../artifacts/optional-message-verification.json)·[실제 브라우저](../artifacts/optional-message-browser-verification.json)에 기록했다. Vitest119개·타입/build·Deno·DB회귀/동시성·실제Edge HTTP·보안advisor를 통과했으며 독립QA/hosted반영을 의미하지 않는다.
