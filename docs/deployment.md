@@ -117,3 +117,12 @@ message는 NOT NULL 문자열과8KiB 바이트 상한을 유지하고 빈 문자
 
 
 실행 결과: 릴리스PR#43 main49e2f91 이후 사용자피드백의상세자동확대누락을hotfixPR#44 main41b557f에반영했다. 상세좌표에focusLevel=3이전달되지않아확대명령이호출되지않던원인을수정했고같은좌표의선택ID변경도재초점한다. Production dpl_2yYDvh6wYZqe6hUdf4kxmTknMxH6 READY·대상SHA·canonical alias·직접경로8개200/없는자산404·초기JS/CSS·운영Supabase연결을확인했다. 실제운영PC1280·모바일390/320에서장소선택level6→3/직접상세level3·선택라벨지도내/패널비가림·랭킹13개/페이지버튼없음/끝중단·overflow/앱오류0을확인했다. 운영19등록/10참여자/13대상/revision23유지·시험등록없음이다. 전체147개테스트·타입/build통과. [운영브라우저](../artifacts/map-ranking-production-browser-verification.json). 결과기록을문서PR로main과hotfixPR#45로develop에반영하며최종main READY/응답을재확인한다.
+
+## 산책코스 상세 자동 확대 hotfix (2026-10-15)
+
+- 코스에 확대값을 전달하지 않던 조건을8192997로 수정했다. [운영PR#47](https://github.com/tunggary/it-center-food-map/pull/47) → main `cc940761118bd3aed9bc3e26ab334aa3f613dd5f`, [develop PR#48](https://github.com/tunggary/it-center-food-map/pull/48) → `9b0dfc87453c87f29158488f7420ab8c318a83a3`. Assignee tunggary·리뷰어 없음이다.
+- 개인 계정/scope/프로젝트ID를 확인했다. 소스 SHA의 Preview READY·보호된 HTML/JS/CSS/API 200·QA endpoint를 확인한 뒤 머지했다.
+- Production `dpl_9V1R8DBD3X9GNzgZAGAf8Nnq7oSV` (`it-center-food-qph8wca00-tunggary2-navercoms-projects.vercel.app`) READY·대상 main SHA·canonical alias·8개 직접경로200/없는자산404·운영endpoint·확대조건·CSS로컬일치를 확인했다.
+- 실제 운영PC1280·모바일390/320에서 코스랭킹 선택level6→3·직접상세level3·사용자확대2유지, 부스선택6→3의7조건을 검증했다. 실제시작점/경로점일치·경로선·선택핀패널비가림·가로넘침/동작오류0을 확인했다. Vercel배포오류로그15분조회반환0이다.
+- 전체149개테스트·타입/build를 통과했다. DB/API/환경변수/인증보호 변경과 운영등록·프로필·사진 시험쓰기는 없다. 복구는 이 한 조건을 되돌리는 hotfix PR이며 기존 데이터에 영향이 없다.
+- [배포/API근거](../artifacts/course-detail-map-zoom-release-verification.json) · [운영브라우저](../artifacts/course-detail-map-zoom-production-browser-verification.json). 이 기록은 문서전용PR로main/develop에반영하고 마지막main READY/실제응답을 다시 확인한다.

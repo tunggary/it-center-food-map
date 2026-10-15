@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-15",
+  "environment": "Production canonical URL, existing public data, no fixture or data writes",
+  "main": "cc940761118bd3aed9bc3e26ab334aa3f613dd5f",
+  "cases": [
+    {
+      "mode": "ranking-course-selection",
+      "width": 1280,
+      "levelBefore": 6,
+      "name": "ㄹㄹㄹ",
+      "url": "https://it-center-food-map.vercel.app/targets/495bc784-32b9-45e3-a3af-760b9740ecb7?rankingTab=walk",
+      "level": 3,
+      "start": {
+        "lng": 127.062585015898,
+        "lat": 37.5092064710585
+      },
+      "pathPoints": 2,
+      "firstPathPoint": {
+        "lng": 127.06258501589814,
+        "lat": 37.50920647105852
+      },
+      "pathElements": 1,
+      "insideMap": true,
+      "coveredByPanel": false,
+      "overflow": false,
+      "errors": [],
+      "manualLevelPreserved": 2
+    },
+    {
+      "mode": "direct-course",
+      "width": 1280,
+      "name": "ㄹㄹㄹ",
+      "url": "https://it-center-food-map.vercel.app/targets/495bc784-32b9-45e3-a3af-760b9740ecb7?rankingTab=walk",
+      "level": 3,
+      "start": {
+        "lng": 127.062585015898,
+        "lat": 37.5092064710585
+      },
+      "firstPathPoint": null,
+      "pathElements": 1,
+      "insideMap": true,
+      "coveredByPanel": false,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "mode": "ranking-course-selection",
+      "width": 390,
+      "levelBefore": 6,
+      "name": "ㄹㄹㄹ",
+      "url": "https://it-center-food-map.vercel.app/targets/495bc784-32b9-45e3-a3af-760b9740ecb7?rankingTab=walk",
+      "level": 3,
+      "start": {
+        "lng": 127.062585015898,
+        "lat": 37.5092064710585
+      },
+      "pathPoints": 2,
+      "firstPathPoint": {
+        "lng": 127.06258501589814,
+        "lat": 37.50920647105852
+      },
+      "pathElements": 1,
+      "insideMap": true,
+      "coveredByPanel": false,
+      "overflow": false,
+      "errors": [],
+      "manualLevelPreserved": 2
+    },
+    {
+      "mode": "direct-course",
+      "width": 390,
+      "name": "ㄹㄹㄹ",
+      "url": "https://it-center-food-map.vercel.app/targets/495bc784-32b9-45e3-a3af-760b9740ecb7?rankingTab=walk",
+      "level": 3,
+      "start": {
+        "lng": 127.062585015898,
+        "lat": 37.5092064710585
+      },
+      "firstPathPoint": null,
+      "pathElements": 1,
+      "insideMap": true,
+      "coveredByPanel": false,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "mode": "ranking-course-selection",
+      "width": 320,
+      "levelBefore": 6,
+      "name": "ㄹㄹㄹ",
+      "url": "https://it-center-food-map.vercel.app/targets/495bc784-32b9-45e3-a3af-760b9740ecb7?rankingTab=walk",
+      "level": 3,
+      "start": {
+        "lng": 127.062585015898,
+        "lat": 37.5092064710585
+      },
+      "pathPoints": 2,
+      "firstPathPoint": {
+        "lng": 127.06258501589814,
+        "lat": 37.50920647105852
+      },
+      "pathElements": 1,
+      "insideMap": true,
+      "coveredByPanel": false,
+      "overflow": false,
+      "errors": [],
+      "manualLevelPreserved": 2
+    },
+    {
+      "mode": "direct-course",
+      "width": 320,
+      "name": "ㄹㄹㄹ",
+      "url": "https://it-center-food-map.vercel.app/targets/495bc784-32b9-45e3-a3af-760b9740ecb7?rankingTab=walk",
+      "level": 3,
+      "start": {
+        "lng": 127.062585015898,
+        "lat": 37.5092064710585
+      },
+      "firstPathPoint": null,
+      "pathElements": 1,
+      "insideMap": true,
+      "coveredByPanel": false,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "mode": "booth-course-selection",
+      "width": 1280,
+      "levelBefore": 6,
+      "name": "ㄹㄹㄹ",
+      "url": "https://it-center-food-map.vercel.app/booth",
+      "level": 3,
+      "start": {
+        "lng": 127.062585015898,
+        "lat": 37.5092064710585
+      },
+      "pathPoints": 2,
+      "firstPathPoint": {
+        "lng": 127.06258501589814,
+        "lat": 37.50920647105852
+      },
+      "pathElements": 1,
+      "insideMap": true,
+      "coveredByPanel": false,
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "summary": {
+    "casesPassed": 7,
+    "courseSelectionLevel": "6 -> 3",
+    "directLevel": 3,
+    "manualZoomPreserved": 2,
+    "actionErrors": 0,
+    "dataWrites": false
+  }
+}
