@@ -1,0 +1,845 @@
+{
+  "date": "2026-10-15",
+  "environment": "Production canonical; actual public data only, no fixtures or data writes",
+  "main": "449310d3d044ec08278b66d8792c522d5d302700",
+  "cases": [
+    {
+      "mode": "desktop-course",
+      "width": 1280,
+      "name": "ㄹㄹㄹ",
+      "url": "https://it-center-food-map.vercel.app/targets/495bc784-32b9-45e3-a3af-760b9740ecb7?rankingTab=walk",
+      "level": 2,
+      "pointCount": 2,
+      "points": [
+        [
+          127.06258501589814,
+          37.50920647105852
+        ],
+        [
+          127.0663183858435,
+          37.51028563938073
+        ]
+      ],
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 483,
+        "right": 1143,
+        "top": 356,
+        "bottom": 596
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 844,
+        "top": 0,
+        "right": 1280,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 24,
+        "y": 84,
+        "width": 380,
+        "height": 712,
+        "top": 84,
+        "right": 404,
+        "bottom": 796,
+        "left": 24
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "desktop-course",
+      "width": 1280,
+      "name": "혈당 스파이크 해소 산책길!",
+      "url": "https://it-center-food-map.vercel.app/targets/5c154d52-f9bf-4ed3-ace7-8b36452b30ec?rankingTab=walk",
+      "level": 3,
+      "pointCount": 3,
+      "points": [
+        [
+          127.07066752427882,
+          37.5096905867284
+        ],
+        [
+          127.07093658690283,
+          37.50716761241473
+        ],
+        [
+          127.07242752677152,
+          37.50511241626618
+        ]
+      ],
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 735,
+        "right": 892,
+        "top": 222,
+        "bottom": 731
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 844,
+        "top": 0,
+        "right": 1280,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 24,
+        "y": 84,
+        "width": 380,
+        "height": 712,
+        "top": 84,
+        "right": 404,
+        "bottom": 796,
+        "left": 24
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "desktop-course",
+      "width": 1280,
+      "name": "루첸 동네 한바퀴",
+      "url": "https://it-center-food-map.vercel.app/targets/12f25efe-1331-49cb-90ee-52115b2a8fbc?rankingTab=walk",
+      "level": 2,
+      "pointCount": 5,
+      "points": [
+        [
+          127.0602026931389,
+          37.50634014107166
+        ],
+        [
+          127.06116219068353,
+          37.50407812512808
+        ],
+        [
+          127.05882052276515,
+          37.50333147983088
+        ],
+        [
+          127.05751029806122,
+          37.50551255787134
+        ],
+        [
+          127.06014620140671,
+          37.50641225025079
+        ]
+      ],
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 491,
+        "right": 1137,
+        "top": 133,
+        "bottom": 817
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 844,
+        "top": 0,
+        "right": 1280,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 24,
+        "y": 84,
+        "width": 380,
+        "height": 712,
+        "top": 84,
+        "right": 404,
+        "bottom": 796,
+        "left": 24
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "desktop-course",
+      "width": 1280,
+      "name": "푸릇푸릇하니 좋아요",
+      "url": "https://it-center-food-map.vercel.app/targets/55b4e975-ae39-44c4-9627-0f2670a41303?rankingTab=walk",
+      "level": 4,
+      "pointCount": 2,
+      "points": [
+        [
+          127.0683590984536,
+          37.508484599083985
+        ],
+        [
+          127.07332675329931,
+          37.49943552631179
+        ]
+      ],
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 703,
+        "right": 924,
+        "top": 225,
+        "bottom": 728
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 844,
+        "top": 0,
+        "right": 1280,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 24,
+        "y": 84,
+        "width": 380,
+        "height": 712,
+        "top": 84,
+        "right": 404,
+        "bottom": 796,
+        "left": 24
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "desktop-course",
+      "width": 1280,
+      "name": "엣지 코스",
+      "url": "https://it-center-food-map.vercel.app/targets/9304f071-e192-4338-96e7-840ab6c82880?rankingTab=walk",
+      "level": 2,
+      "pointCount": 9,
+      "points": [
+        [
+          127.06692463144489,
+          37.50838799432967
+        ],
+        [
+          127.06740171908241,
+          37.507082940360625
+        ],
+        [
+          127.06723121223605,
+          37.50612797227722
+        ],
+        [
+          127.06640523195087,
+          37.505722987216735
+        ],
+        [
+          127.06533057940659,
+          37.50547130501542
+        ],
+        [
+          127.0640769727248,
+          37.50755331318688
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ]
+      ],
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 519,
+        "right": 1107,
+        "top": 140,
+        "bottom": 812
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 844,
+        "top": 0,
+        "right": 1280,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 24,
+        "y": 84,
+        "width": 380,
+        "height": 712,
+        "top": 84,
+        "right": 404,
+        "bottom": 796,
+        "left": 24
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "mobile-course",
+      "width": 390,
+      "name": "엣지 코스",
+      "url": "https://it-center-food-map.vercel.app/targets/9304f071-e192-4338-96e7-840ab6c82880?rankingTab=walk",
+      "level": 5,
+      "pointCount": 9,
+      "points": [
+        [
+          127.06692463144489,
+          37.50838799432967
+        ],
+        [
+          127.06740171908241,
+          37.507082940360625
+        ],
+        [
+          127.06723121223605,
+          37.50612797227722
+        ],
+        [
+          127.06640523195087,
+          37.505722987216735
+        ],
+        [
+          127.06533057940659,
+          37.50547130501542
+        ],
+        [
+          127.0640769727248,
+          37.50755331318688
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ]
+      ],
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 126,
+        "right": 199,
+        "top": 135,
+        "bottom": 219
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 253.203125,
+        "width": 390,
+        "height": 590.796875,
+        "top": 253.203125,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "expanded-sheet",
+      "width": 390,
+      "name": "엣지 코스",
+      "url": "https://it-center-food-map.vercel.app/targets/9304f071-e192-4338-96e7-840ab6c82880?rankingTab=walk",
+      "level": 7,
+      "pointCount": 9,
+      "points": [
+        [
+          127.06692463144489,
+          37.50838799432967
+        ],
+        [
+          127.06740171908241,
+          37.507082940360625
+        ],
+        [
+          127.06723121223605,
+          37.50612797227722
+        ],
+        [
+          127.06640523195087,
+          37.505722987216735
+        ],
+        [
+          127.06533057940659,
+          37.50547130501542
+        ],
+        [
+          127.0640769727248,
+          37.50755331318688
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ]
+      ],
+      "fitCalls": 5,
+      "routeBounds": {
+        "left": 186,
+        "right": 204,
+        "top": 111,
+        "bottom": 132
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 151.921875,
+        "width": 390,
+        "height": 692.078125,
+        "top": 151.921875,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "summary-sheet",
+      "width": 390,
+      "name": "엣지 코스",
+      "url": "https://it-center-food-map.vercel.app/targets/9304f071-e192-4338-96e7-840ab6c82880?rankingTab=walk",
+      "level": 4,
+      "pointCount": 9,
+      "points": [
+        [
+          127.06692463144489,
+          37.50838799432967
+        ],
+        [
+          127.06740171908241,
+          37.507082940360625
+        ],
+        [
+          127.06723121223605,
+          37.50612797227722
+        ],
+        [
+          127.06640523195087,
+          37.505722987216735
+        ],
+        [
+          127.06533057940659,
+          37.50547130501542
+        ],
+        [
+          127.0640769727248,
+          37.50755331318688
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ]
+      ],
+      "fitCalls": 7,
+      "routeBounds": {
+        "left": 89,
+        "right": 236,
+        "top": 263,
+        "bottom": 431
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 590.8046875,
+        "width": 390,
+        "height": 253.1953125,
+        "top": 590.8046875,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "mobile-course",
+      "width": 320,
+      "name": "엣지 코스",
+      "url": "https://it-center-food-map.vercel.app/targets/9304f071-e192-4338-96e7-840ab6c82880?rankingTab=walk",
+      "level": 5,
+      "pointCount": 9,
+      "points": [
+        [
+          127.06692463144489,
+          37.50838799432967
+        ],
+        [
+          127.06740171908241,
+          37.507082940360625
+        ],
+        [
+          127.06723121223605,
+          37.50612797227722
+        ],
+        [
+          127.06640523195087,
+          37.505722987216735
+        ],
+        [
+          127.06533057940659,
+          37.50547130501542
+        ],
+        [
+          127.0640769727248,
+          37.50755331318688
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ]
+      ],
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 91,
+        "right": 164,
+        "top": 135,
+        "bottom": 219
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 253.203125,
+        "width": 320,
+        "height": 590.796875,
+        "top": 253.203125,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "expanded-sheet",
+      "width": 320,
+      "name": "엣지 코스",
+      "url": "https://it-center-food-map.vercel.app/targets/9304f071-e192-4338-96e7-840ab6c82880?rankingTab=walk",
+      "level": 7,
+      "pointCount": 9,
+      "points": [
+        [
+          127.06692463144489,
+          37.50838799432967
+        ],
+        [
+          127.06740171908241,
+          37.507082940360625
+        ],
+        [
+          127.06723121223605,
+          37.50612797227722
+        ],
+        [
+          127.06640523195087,
+          37.505722987216735
+        ],
+        [
+          127.06533057940659,
+          37.50547130501542
+        ],
+        [
+          127.0640769727248,
+          37.50755331318688
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ]
+      ],
+      "fitCalls": 5,
+      "routeBounds": {
+        "left": 151,
+        "right": 169,
+        "top": 111,
+        "bottom": 132
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 151.921875,
+        "width": 320,
+        "height": 692.078125,
+        "top": 151.921875,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "summary-sheet",
+      "width": 320,
+      "name": "엣지 코스",
+      "url": "https://it-center-food-map.vercel.app/targets/9304f071-e192-4338-96e7-840ab6c82880?rankingTab=walk",
+      "level": 4,
+      "pointCount": 9,
+      "points": [
+        [
+          127.06692463144489,
+          37.50838799432967
+        ],
+        [
+          127.06740171908241,
+          37.507082940360625
+        ],
+        [
+          127.06723121223605,
+          37.50612797227722
+        ],
+        [
+          127.06640523195087,
+          37.505722987216735
+        ],
+        [
+          127.06533057940659,
+          37.50547130501542
+        ],
+        [
+          127.0640769727248,
+          37.50755331318688
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ],
+        [
+          127.06670175631032,
+          37.50849791517991
+        ]
+      ],
+      "fitCalls": 7,
+      "routeBounds": {
+        "left": 54,
+        "right": 201,
+        "top": 263,
+        "bottom": 431
+      },
+      "mapRect": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "panelRect": {
+        "x": 0,
+        "y": 590.8046875,
+        "width": 320,
+        "height": 253.1953125,
+        "top": 590.8046875,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "mode": "place-unchanged",
+      "width": 1280,
+      "name": "중앙해장",
+      "level": 3,
+      "expected": 3,
+      "fitCalls": 0,
+      "centerError": 1.4142135623730951,
+      "errors": []
+    },
+    {
+      "mode": "place-unchanged",
+      "width": 390,
+      "name": "중앙해장",
+      "level": 2,
+      "expected": 2,
+      "fitCalls": 0,
+      "centerError": 0.6015625,
+      "errors": []
+    },
+    {
+      "mode": "place-unchanged",
+      "width": 320,
+      "name": "중앙해장",
+      "level": 2,
+      "expected": 2,
+      "fitCalls": 0,
+      "centerError": 0.6015625,
+      "errors": []
+    },
+    {
+      "mode": "booth-course",
+      "width": 1280,
+      "name": "엣지 코스",
+      "level": 3,
+      "pointCount": 9,
+      "fitCalls": 3,
+      "routeBounds": {
+        "left": 666,
+        "right": 960,
+        "top": 269,
+        "bottom": 605
+      },
+      "covered": [],
+      "insideMap": true,
+      "pathElements": 1,
+      "errors": [],
+      "overflow": false
+    }
+  ],
+  "courses": [
+    {
+      "name": "ㄹㄹㄹ",
+      "kind": "산책코스",
+      "href": "/targets/495bc784-32b9-45e3-a3af-760b9740ecb7?rankingTab=walk"
+    },
+    {
+      "name": "혈당 스파이크 해소 산책길!",
+      "kind": "산책코스",
+      "href": "/targets/5c154d52-f9bf-4ed3-ace7-8b36452b30ec?rankingTab=walk"
+    },
+    {
+      "name": "루첸 동네 한바퀴",
+      "kind": "산책코스",
+      "href": "/targets/12f25efe-1331-49cb-90ee-52115b2a8fbc?rankingTab=walk"
+    },
+    {
+      "name": "푸릇푸릇하니 좋아요",
+      "kind": "산책코스",
+      "href": "/targets/55b4e975-ae39-44c4-9627-0f2670a41303?rankingTab=walk"
+    },
+    {
+      "name": "엣지 코스",
+      "kind": "산책코스",
+      "href": "/targets/9304f071-e192-4338-96e7-840ab6c82880?rankingTab=walk"
+    }
+  ]
+}
