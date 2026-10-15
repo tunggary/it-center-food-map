@@ -6,8 +6,9 @@ const sdk = vi.hoisted(() => ({ center: vi.fn(), geolocation: vi.fn(), level: vi
 vi.mock('../lib/maps', () => ({ loadMap: async () => {}, kakao: () => ({
  Map: class { setCenter = sdk.center; getCenter = () => ({ getLng: () => 127, getLat: () => 37 }); relayout() {} getProjection() { return { containerPointFromCoords: (p: { lng: number; lat: number }) => ({ x: p.lng, y: p.lat }), coordsFromContainerPoint: (p: { x: number; y: number }) => ({ lat: p.y, lng: p.x, getLng: () => p.x, getLat: () => p.y }) }; } getLevel = sdk.getLevel; setLevel = sdk.level; },
  LatLng: class { constructor(public lat: number, public lng: number) {} }, Point: class { constructor(public x: number, public y: number) {} },
+ Marker: class { setPosition() {} setTitle() {} setMap() {} },
  Polyline: class { setPath() {} setMap() {} },
- CustomOverlay: class { constructor({ content }: { content: HTMLElement }) { document.body.append(content); } setPosition() {} setMap() {} },
+ CustomOverlay: class { constructor({ content }: { content: HTMLElement }) { document.body.append(content); } setPosition() {} setMap() {} setContent() {} setZIndex() {} },
  event: { addListener() {}, removeListener() {} },
 }) }));
 afterEach(() => { cleanup(); document.querySelectorAll('.user-location-dot').forEach(x => x.remove()); vi.unstubAllGlobals(); vi.clearAllMocks(); sdk.getLevel.mockReturnValue(5); });
@@ -35,4 +36,27 @@ it.each([[5, 3], [2, 2]])('focuses a selected search place from level %i at leve
  const callCount = sdk.level.mock.calls.length;
  rerender(<MapView focusPoint={[127.0632, 37.5088]} focusLevel={3}/>);
  expect(sdk.level).toHaveBeenCalledTimes(callCount);
+});
+
+it.each([[5, 3], [2, 2]])('focuses detail selection from level %i at level %i', async (initialLevel, expectedLevel) => {
+ sdk.getLevel.mockReturnValue(initialLevel);
+ vi.stubGlobal('ResizeObserver', class { observe() {} disconnect() {} });
+ const { MapScene, useMapGeometry } = await import('../components/MapScene');
+ function DetailSelection() {
+   const setGeometry = useMapGeometry();
+   return <button onClick={() => setGeometry({ id: 'detail', kind: 'PLACE', name: '상세 장소', lng: 127.0632, lat: 37.5088, address: '서울', points: null, approximateLengthM: null, version: 1 })}>상세 열기</button>;
+ }
+ render(<MapScene><DetailSelection/></MapScene>);
+ await waitFor(() => expect(screen.getByRole('button', { name: '내 위치' }).hasAttribute('disabled')).toBe(false));
+ fireEvent.click(screen.getByRole('button', { name: '상세 열기' }));
+ await waitFor(() => expect(sdk.level).toHaveBeenCalledWith(expectedLevel));
+});
+
+it('focuses a different target at the same coordinates after the user zooms out', async () => {
+ vi.stubGlobal('ResizeObserver', class { observe() {} disconnect() {} });
+ const { rerender } = render(<MapView selectedId="first" focusPoint={[127.0632, 37.5088]} focusLevel={3}/>);
+ await waitFor(() => expect(sdk.level).toHaveBeenCalledWith(3));
+ sdk.level.mockClear(); sdk.getLevel.mockReturnValue(7);
+ rerender(<MapView selectedId="second" focusPoint={[127.0632, 37.5088]} focusLevel={3}/>);
+ await waitFor(() => expect(sdk.level).toHaveBeenCalledWith(3));
 });

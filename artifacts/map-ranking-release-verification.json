@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-15",
+  "featurePR": 42,
+  "featureCommit": "87b04964e59c32cd275de9b8adc7ce40a063ed6f",
+  "developCommit": "7ed98e3f112fd7f0527037feb188a10450c2c836",
+  "featurePreview": {
+    "url": "https://it-center-food-ezomwvkt2-tunggary2-navercoms-projects.vercel.app",
+    "state": "READY",
+    "protectedHtmlJsCss": "passed",
+    "supabase": "QA"
+  },
+  "migration": "20261015013119_map_pin_names.sql",
+  "database": {
+    "qa": {
+      "projectRef": "yxgmpbjcvjeacnrgtcbq",
+      "dryRun": "only intended migration",
+      "applied": true,
+      "pins": 1000,
+      "favorites": 10146,
+      "participants": 200,
+      "targets": 1000,
+      "revision": 154,
+      "namesMatch": true,
+      "pageTwoAndBoothSamePins": true,
+      "boundaryPreserved": true,
+      "securityAdvisorErrors": 0
+    },
+    "production": {
+      "projectRef": "gpsbnmgwowsbgclcottl",
+      "dryRun": "only intended migration",
+      "applied": true,
+      "pins": 13,
+      "favorites": 19,
+      "participants": 10,
+      "targets": 13,
+      "revision": 23,
+      "namesMatch": true,
+      "pageTwoAndBoothSamePins": true,
+      "boundaryPreserved": true,
+      "securityAdvisorErrors": 0
+    }
+  },
+  "productionFrontend": {
+    "main": "41b557f0f25f2a2e0e68b958415ca080f5d4fd7e",
+    "deployment": "dpl_2yYDvh6wYZqe6hUdf4kxmTknMxH6",
+    "state": "READY",
+    "alias": "https://it-center-food-map.vercel.app",
+    "routes": {
+      "/": 200,
+      "/rankings": 200,
+      "/targets/3566c4ad-8733-402f-b741-04b9828a47fa": 200,
+      "/register": 200,
+      "/register/places": 200,
+      "/courses/new": 200,
+      "/me/favorites": 200,
+      "/me/profile": 200
+    },
+    "missingAsset": 404,
+    "assets": {
+      "/assets/index-EK33ucBI.js": 200,
+      "/assets/api-BzLtG-Em.js": 200,
+      "/assets/ui-C1HsG-MY.js": 200,
+      "/assets/Icon-CWlzTe03.js": 200,
+      "/assets/Toast-CtIpqpnB.js": 200,
+      "/assets/Map-BN3jiW-8.js": 200,
+      "/assets/index-N51aabdx.css": 200
+    },
+    "productionSupabaseEndpoint": true,
+    "infiniteScrollCss": true
+  }
+}

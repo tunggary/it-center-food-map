@@ -23,16 +23,24 @@
 
 ## 첫 배포 이후 개선
 
-현재 개선 건: 랭킹 무한 스크롤 전환. 아래 체크는 개선 건마다 초기화한다.
+현재 개선 건: 장소 상세 진입 시 자동 확대 복구. 아래 체크는 개선 건마다 초기화한다.
 
 - [x] 6. **피드백 접수·검토**: 사용자가 경험한 문제를 파악하고, 중복 의견을 모아 우선순위와 처리 여부를 정한다.
 - [x] 7. **작은 개선 구현**: 선택한 피드백의 완료 기준과 최소 변경 범위를 정하고 구현한다.
-- [ ] 8. **검증·배포·해결 확인**: 개선 사항과 기존 핵심 흐름을 검증해 배포하고, 문제가 해결됐는지 확인한다.
+- [x] 8. **검증·배포·해결 확인**: 개선 사항과 기존 핵심 흐름을 검증해 배포하고, 문제가 해결됐는지 확인한다.
 
 첫 배포 이후에는 별도 v2 계획 없이 사용자 피드백을 기준으로 6~8단계를 반복한다.
 장애·보안 취약점·의존 서비스 종료 등 운영에 필요한 유지보수도 같은 처리 흐름을 따른다.
 
 ## 최근 작업 컨텍스트
+
+- 지도·랭킹 릴리스와 상세 확대 운영 검증 완료 (2026-10-15): 기능PR#42→develop7ed98e3, 릴리스PR#43→main49e2f91, 확대hotfixPR#44→main41b557f를머지했다. Production dpl_2yYDvh6wYZqe6hUdf4kxmTknMxH6 READY·대상SHA·canonical alias·직접경로8개200/없는자산404·초기JS/CSS/운영endpoint를확인했다. 실제운영PC1280·모바일390/320에서중앙해장목록선택level6→3/직접접속level3·선택라벨지도내/패널비가림·랭킹13개/페이지UI없음/끝sentinel없음·가로넘침/앱오류0을확인했다. 운영19등록/10참여자/13대상/revision23을다시조회해변경없음을확인했다. [배포/API근거](../artifacts/map-ranking-release-verification.json) · [운영브라우저](../artifacts/map-ranking-production-browser-verification.json). 전체147개테스트·타입/build통과다. 현재개선8단계를완료하며기존독립QA/실기기/100명성능보류는유지한다. 이기록은같은hotfix브랜치의문서PR로main과PR#45로develop에반영하고최종main READY/응답을재확인한다.
+
+- 상세 자동 확대 로컬 검증 완료 (2026-10-15): 운영49e2f91에서중앙해장선택전/후level6유지와실패테스트(setLevel호출0회)를재현했다. 상세좌표에focusLevel이전달되지않는원인을수정해장소상세에서level3까지확대하되이미더확대된배율은유지한다. 동일좌표다른선택ID도재초점하며동일선택의재렌더는사용자줌을초기화하지않는다. 실제SDK/로컬RPC의PC1280·모바일390에서level6→3·선택라벨지도내/패널비가림을확인했다. 전체147개테스트·타입/build·diff통과. [검증근거](../artifacts/detail-map-zoom-verification.json). 7단계완료/8단계운영검증전이며hotfix를main/develop PR로반영한다.
+
+- 상세 자동 확대 수정 착수 (2026-10-15): 기능PR#42→develop7ed98e3, 릴리스PR#43→main49e2f91 머지·Production READY를 확인했다. 사용자 추가 피드백으로 상세선택시확대명령0회인실패회귀를재현했다. hotfix/detail-map-zoom에서 장소상세의focusLevel전달누락을수정하고같은좌표의다른대상선택도재초점하도록검증한다. 기존DB선반영/무한스크롤릴리스는보존하며전체8단계는운영UI/후속수정확인전미완료다.
+
+- 기능 머지·운영 DB 선반영 (2026-10-15): PR#42→develop7ed98e3 머지완료. 개인Vercel계정/프로젝트·Supabase개인조직/QA/운영소속을 재확인했다. QA/운영에20261015013119만dry-run→적용했으며 pins이름·2페이지/부스동일핀·gateway권한/비공개테이블유지·양쪽보안advisor ERROR0을 확인했다. QA10146등록/200참여자/1000대상/revision154, 운영19등록/10참여자/13대상/revision23유지다. 기능Preview READY/보호HTML·JS·CSS/QA연결·무한스크롤스타일을 확인했다. [릴리스근거](../artifacts/map-ranking-release-verification.json). release/map-clusters-ranking-scroll에서 main PR을 진행하며8단계는실제운영FE확인전미완료다.
 
 - 랭킹 무한 스크롤 변경 확정 (2026-10-15): 사용자 커밋·push 요청에 따라 최종 구현/회귀테스트/스토리·FE설계·QA/브라우저 근거를 feature/map-label-clustering에 함께 반영한다. 직전 페이지 이동 디자인의 검증 기록은 과거 이력으로 보존한다. 전체144개 테스트·타입/build·PC/모바일 실제스크롤 검증 결과를 유지하며 staged diff를 확인한다. 8단계는 운영 반영 전 미완료로 유지하고 다음 작업은 QA/Preview 검증과 PR 릴리스다.
 

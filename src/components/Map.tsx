@@ -81,7 +81,7 @@ export function MapView({ pins = EMPTY_PINS, points = EMPTY_POINTS, onSelect, on
     if (!ready || !instance.current || focusLevel === undefined || selectedLng === undefined || selectedLat === undefined) return;
     instance.current.setLevel(Math.min(instance.current.getLevel(), focusLevel));
     reposition.current();
-  }, [ready, focusLevel, selectedLng, selectedLat]);
+  }, [ready, focusLevel, selectedLng, selectedLat, selectedId]);
   const pinBoundsKey = pins.map(p => `${p.lng},${p.lat}`).join(';');
   useEffect(() => {
     if (!fitPins || !ready || !instance.current || !pins.length) return;
