@@ -34,6 +34,8 @@
 
 ## 최근 작업 컨텍스트
 
+- 기능 머지·운영 DB 선반영 (2026-10-15): PR#42→develop7ed98e3 머지완료. 개인Vercel계정/프로젝트·Supabase개인조직/QA/운영소속을 재확인했다. QA/운영에20261015013119만dry-run→적용했으며 pins이름·2페이지/부스동일핀·gateway권한/비공개테이블유지·양쪽보안advisor ERROR0을 확인했다. QA10146등록/200참여자/1000대상/revision154, 운영19등록/10참여자/13대상/revision23유지다. 기능Preview READY/보호HTML·JS·CSS/QA연결·무한스크롤스타일을 확인했다. [릴리스근거](../artifacts/map-ranking-release-verification.json). release/map-clusters-ranking-scroll에서 main PR을 진행하며8단계는실제운영FE확인전미완료다.
+
 - 랭킹 무한 스크롤 변경 확정 (2026-10-15): 사용자 커밋·push 요청에 따라 최종 구현/회귀테스트/스토리·FE설계·QA/브라우저 근거를 feature/map-label-clustering에 함께 반영한다. 직전 페이지 이동 디자인의 검증 기록은 과거 이력으로 보존한다. 전체144개 테스트·타입/build·PC/모바일 실제스크롤 검증 결과를 유지하며 staged diff를 확인한다. 8단계는 운영 반영 전 미완료로 유지하고 다음 작업은 QA/Preview 검증과 PR 릴리스다.
 
 - 랭킹 무한 스크롤 구현·검증 완료 (2026-10-15): 페이지 이동 UI를 제거하고 패널 스크롤 하단160px 전에서 다음20건을 누적하는 infinite query/IntersectionObserver로 전환했다. 조건별 캐시·추가조회중복방지·targetId중복제거·끝중단·실패시기존목록유지/하단재시도·탭필터변경스크롤초기화·기존rankPage정규화를 구현했다. 실제로컬RPC/PC1280·모바일390/320에서20→40→60→80→100→120→140→143개누적, 추가요청2~8각1회·중복항목0·이전행유지·끝sentinel제거·페이지UI없음·가로넘침없음을 확인했다. [브라우저 근거](../artifacts/ranking-infinite-scroll-verification.json). 오류/재시도·동시교차·늦은이전필터응답·상세복귀·메인상위5개 포함 전체Vitest144개(22files)·타입/build·diff통과. 스토리/FE설계/QA를 갱신했다. 6·7단계완료/8단계배포전이며API/DB/원격변경·커밋·push·배포는수행하지않았다.

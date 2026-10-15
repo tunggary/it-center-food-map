@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-15",
+  "featurePR": 42,
+  "featureCommit": "87b04964e59c32cd275de9b8adc7ce40a063ed6f",
+  "developCommit": "7ed98e3f112fd7f0527037feb188a10450c2c836",
+  "featurePreview": {
+    "url": "https://it-center-food-ezomwvkt2-tunggary2-navercoms-projects.vercel.app",
+    "state": "READY",
+    "protectedHtmlJsCss": "passed",
+    "supabase": "QA"
+  },
+  "migration": "20261015013119_map_pin_names.sql",
+  "database": {
+    "qa": {
+      "projectRef": "yxgmpbjcvjeacnrgtcbq",
+      "dryRun": "only intended migration",
+      "applied": true,
+      "pins": 1000,
+      "favorites": 10146,
+      "participants": 200,
+      "targets": 1000,
+      "revision": 154,
+      "namesMatch": true,
+      "pageTwoAndBoothSamePins": true,
+      "boundaryPreserved": true,
+      "securityAdvisorErrors": 0
+    },
+    "production": {
+      "projectRef": "gpsbnmgwowsbgclcottl",
+      "dryRun": "only intended migration",
+      "applied": true,
+      "pins": 13,
+      "favorites": 19,
+      "participants": 10,
+      "targets": 13,
+      "revision": 23,
+      "namesMatch": true,
+      "pageTwoAndBoothSamePins": true,
+      "boundaryPreserved": true,
+      "securityAdvisorErrors": 0
+    }
+  },
+  "productionFrontend": "pending main merge and verification"
+}
