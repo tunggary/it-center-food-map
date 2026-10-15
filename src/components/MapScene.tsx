@@ -18,7 +18,7 @@ export function MapScene({ children, className = '', ...map }: ComponentProps<ty
     return () => { viewport?.removeEventListener('resize', resize); viewport?.removeEventListener('scroll', resize); };
   }, []);
   const pins = target ? [...(map.pins ?? []).filter(p => p.targetId !== target.id), { targetId: target.id, kind: target.kind, lng: target.lng, lat: target.lat, count: map.pins?.find(p => p.targetId === target.id)?.count ?? 0, name: target.name }] : map.pins;
-  return <GeometryContext.Provider value={setTarget}><section ref={root} className={`map-scene ${className}`}><MapView fullscreen {...map} pins={pins} focusLevel={target?.kind === 'PLACE' ? 3 : map.focusLevel} focusPoint={target ? [target.lng, target.lat] : map.focusPoint} points={target?.kind === 'COURSE' ? target.points ?? [] : map.points} selectedId={target?.id ?? map.selectedId}/>{children}</section></GeometryContext.Provider>;
+  return <GeometryContext.Provider value={setTarget}><section ref={root} className={`map-scene ${className}`}><MapView fullscreen {...map} pins={pins} focusLevel={target ? 3 : map.focusLevel} focusPoint={target ? [target.lng, target.lat] : map.focusPoint} points={target?.kind === 'COURSE' ? target.points ?? [] : map.points} selectedId={target?.id ?? map.selectedId}/>{children}</section></GeometryContext.Provider>;
 }
 export function MapToolbar({ booth = false, hideMobileMenu = false }: { booth?: boolean; hideMobileMenu?: boolean }) {
   const mobile = useMobileScreen();
