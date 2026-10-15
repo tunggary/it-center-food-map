@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-15",
+  "sourceCommit": "81929971f96dd8db922735b159714548708fa1f8",
+  "mainPR": 47,
+  "mainCommit": "cc940761118bd3aed9bc3e26ab334aa3f613dd5f",
+  "developPR": 48,
+  "developCommit": "9b0dfc87453c87f29158488f7420ab8c318a83a3",
+  "deployment": {
+    "id": "dpl_9V1R8DBD3X9GNzgZAGAf8Nnq7oSV",
+    "url": "it-center-food-qph8wca00-tunggary2-navercoms-projects.vercel.app",
+    "state": "READY",
+    "aliases": [
+      "it-center-food-map.vercel.app",
+      "it-center-food-map-tunggary2-navercoms-projects.vercel.app",
+      "it-center-food-map-git-main-tunggary2-navercoms-projects.vercel.app"
+    ]
+  },
+  "preview": {
+    "url": "it-center-food-af8jggulk-tunggary2-navercoms-projects.vercel.app",
+    "state": "READY",
+    "protectedHtmlJsCssApiStatus": 200,
+    "qaEndpoint": true
+  },
+  "http": {
+    "/": 200,
+    "/rankings": 200,
+    "/register": 200,
+    "/register/places": 200,
+    "/courses/new": 200,
+    "/me/favorites": 200,
+    "/me/profile": 200,
+    "/booth": 200,
+    "/assets/course-detail-zoom-missing.js": 404
+  },
+  "assets": {
+    "js": "/assets/index-ChGEkhTX.js",
+    "css": "/assets/index-N51aabdx.css",
+    "api": "/assets/api-BzLtG-Em.js",
+    "status": 200,
+    "productionEndpoint": true,
+    "courseFocusLevelIncluded": true,
+    "cssMatchesLocal": true
+  },
+  "verification": {
+    "tests": 149,
+    "typecheck": "passed",
+    "build": "passed",
+    "databaseChanges": false
+  },
+  "productionBrowserEvidence": "course-detail-map-zoom-production-browser-verification.json",
+  "observability": {
+    "deploymentErrorLogsSince": "15m",
+    "returnedErrorLogLines": 0,
+    "scope": "Vercel deployment request/runtime error filter; browser action errors checked separately"
+  }
+}
