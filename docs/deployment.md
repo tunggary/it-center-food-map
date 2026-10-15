@@ -103,3 +103,9 @@ vercel curl / --deployment <deployment-url> --scope tunggary2-navercoms-projects
 개인 조직·QA/운영 프로젝트를 먼저 확인한다. 신규 optional_favorite_message migration의 dry-run→QA DB 적용→QA api Edge→Preview 실제 등록/수정/조회 검증을 수행한다. 운영은 DB 제약 완화→api Edge→FE 순서다. FE 선배포 시 이전 Edge/DB가 빈 문구를 거절하므로 순서를 바꾸지 않는다. READY·대상 커밋·실제 응답 확인 후에만 운영 완료를 기록한다. 운영에 검증 fixture를 생성하지 않는다.
 
 message는 NOT NULL 문자열과8KiB 바이트 상한을 유지하고 빈 문자열만 추가 허용한다. 기존 데이터 백필은 없다. 롤백은 FE/Edge에서 신규 빈 입력을 차단하되 완화한 DB CHECK는 유지한다. 빈 문구가 이미 저장되었다면 옛 CHECK를 바로 복원하지 않으며 데이터를 삭제하거나 임의 문구를 채우지 않는다. 백업은 스키마/데이터를 함께 복원하고 새 빈 문구 데이터를 옛 스키마에 데이터만 복원하지 않는다.
+
+## 소개 선택·등록 일시 릴리스 (2026-10-15)
+
+기능PR #38→develop439d59f를머지했다. QA/운영DB에20261014233653을dry-run후적용했고api는QA9/운영10 ACTIVE·verify_jwt=false, 번들SHA256은양쪽afd8afc8fafcc4dd2f7da52e88356e917a39d0f809d36399e6e16f3c21556492다. 운영19등록/10참여자/13대상/revision23을유지하며시험등록은없다. QA실제API/시험자료정리·보안advisor ERROR0·보호Preview READY/자산200/PC·모바일날짜시간표시를확인했다. 근거는 [릴리스검증](../artifacts/registration-optional-release-verification.json)이다. main머지후실제운영FE READY·대상SHA·canonical응답·UI를추가확인한다.
+
+실행 결과 (2026-10-15): main PR#39의a408882가Production dpl_7TUG9DUwZD8HYz1ygtzhU7DC6BcD READY이며 canonical 운영alias·직접경로200/없는asset404·최종JS/CSS/운영endpoint를확인했다. PC/모바일/320px상세시간배치·페이지한정profile/session fixture의등록폼선택표시/검색창없음·지도이미지18개정상·가로넘침없음을확인했다. 운영자료19등록/10참여자/13대상/revision23유지·프로필/등록/사진시험제출없음이다. [브라우저근거](../artifacts/registration-optional-production-browser-verification.json). 완료기록은문서PR로main/develop에반영하고마지막main배포도READY/실제응답을재확인한다.
